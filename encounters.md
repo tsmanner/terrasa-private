@@ -17,3 +17,14 @@
     "Infestation: Investigate" -> "Heist - attacking" -> "Caught!"
   }
 '>
+
+<img src='https://g.gravizo.com/svg?
+  digraph G {
+    label = "Town Hall"
+    labelloc = "t"
+    fontsize = 24
+    pad = 0.25
+    "Infestation: Investigate" -> ""
+  }
+'>
+

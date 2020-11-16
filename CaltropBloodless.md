@@ -14,3 +14,6 @@ Why did Caltrop abandon the crew?
   - He grew a conscience?
   - He refused to take part in an unjustified slaughter?
   - He found out that the captain was under the influence of dark magic and banished or is thought dead?
+
+
+After a bounty/treasure, did some terrible things.  Caltrop showed a little empathy, the captain saw that.  Things got pregresively worse, and on that last voyage he had a moment of realization, thinking "how did we get here?"  His crew didn't appreciate that and treated him as one of their victims after that, denying him any payment etc.
