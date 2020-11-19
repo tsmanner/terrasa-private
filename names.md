@@ -25,6 +25,7 @@
 - Achiq: town clerk
 - Thani: guard at silo
 - Manco: Necromancer and current leader of the Cult of Myrkul (God of Death)
+- Myrkul: God of Death
 
 
 ## Places
