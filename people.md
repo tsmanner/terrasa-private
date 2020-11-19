@@ -1,6 +1,6 @@
 # People
 
-## Go' - 
+## Go' -
 
 Nomadic and not affiliated with any one country, these disparate tribes of people can be found all across the continent Sherago.
 
@@ -18,7 +18,7 @@ Ciann is a relatively small country along the western coast of Sherago.  It is t
 
 To the north, it is bordered by Tunii.
 To the east is a large area dominated by wetlands, making construction very difficult and serving as an effective barrier against invasion.
-To the south 
+To the south
 
 Cities:
 1. **Ciannllaqta, Chawpisuyu** - central
@@ -53,6 +53,6 @@ Country: Tunii (inuit)
 People: Tuniim ("too" "neem" or "too" "nim" depending on where you are.)
 
 
-## 
-Country: 
-People: 
+##
+Country:
+People:
