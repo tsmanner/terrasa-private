@@ -104,7 +104,7 @@ The crew takes a short rest, hidden in the other alleyway to recuperate before t
 
 ---
 
-Ttika, Michik, and Llaska will be 3 rounds late to combat when it finally starts, coming in through the back door.  Additional lateness, possibly some damage if the trip wires aren't disarmed and they fail to notice/save against them.
+Ttika, Michik, and Llaska will be 3 rounds late to combat when it finally starts, coming in through the back door.  Additional lateness, possibly some damage if the trip wires aren't disarmed and they fail to notice/save against them.  Llaska is a low ranking member of the K'anchay Order, equipped with a single Dawn Dagger (+0/1d4/5'), which will remain concealed until the presence of undead is detected.
 
 
 
