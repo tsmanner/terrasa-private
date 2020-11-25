@@ -3,10 +3,12 @@ An organization that spans all of terrasa, working in the service of Lathander, 
 
 There are several types of K'anchay chapter:
 
-
-## Monastaries
+## Locations
 ---
-Members at monastaries focus on studying ways to channel and manipulate radiant energy.  They're typically located in hard to reach areas, like the top of a mountain, or at the end of a long trek through a desert.  Settlements have cropped up near a few, as the families of people associated with the monastaries have followed them and expanded.  These settlements are mostly aligned in purpose with the K'anchay Order, supporting the monastary and the cause.  They are also the source of many of the martial personnel, as the monastary itself is inhabited mostly by Monks and Wizards.
+
+### Monasteries
+---
+Members at monasteries focus on studying ways to channel and manipulate radiant energy.  They're typically located in hard to reach areas, like the top of a mountain, or at the end of a long trek through a desert.  Settlements have cropped up near a few, as the families of people associated with the monasteries have followed them and expanded.  These settlements are mostly aligned in purpose with the K'anchay Order, supporting the monastery and the cause.  They are also the source of many of the martial personnel, as the monastery itself is inhabited mostly by Monks and Wizards.
   - Cleric
     - Forge Domain
   - Fighter
@@ -31,9 +33,9 @@ Members at monastaries focus on studying ways to channel and manipulate radiant 
     - War Magic?
 
 
-## Temples, Chapels, and Churches
+### Temples, Chapels, and Churches
 ---
-Found in many cities, though most keep their ties to the K'anchay Order a secret.  These locations, when possible, are openly places of worship to Lathander.  When that is not possible, they are places of worship to other Good dieties whos interests align with those of Lathander.  Training here focuses on a combination of martial prowess and channeling divine energy to destroy the forces of death.
+Found in many cities, though most keep their ties to the K'anchay Order a secret.  These locations, when possible, are openly places of worship to Lathander.  When that is not possible, they are places of worship to other Good deities who's interests align with those of Lathander, or mutual enemies of Myrkul.  Training here focuses on a combination of martial prowess and channeling divine energy to destroy the forces of death.
   - Cleric
     - Life Domain
     - Light Domain
@@ -48,9 +50,9 @@ Found in many cities, though most keep their ties to the K'anchay Order a secret
     - The Celestial (Homebrew Wall of Fire to Wall of Light?)
 
 
-## Gardens and Oases
+### Gardens and Oases
 ---
-Tucked into quiet corners of the world, these locations are habitats tended by those that wish to protect and maintain the natural world.  Often headed by Druids, Gardens and Oases tend to focus their training on survival in the wilderness, encouraging natural growth, and channeling the energy of the natural world and it's spirits and gods.
+Tucked into quiet corners of the world, these locations are habitats tended by those that wish to protect and maintain the natural world.  Often headed by Druids, Gardens and Oases tend to focus their training on survival in the wilderness, encouraging natural growth, and channeling the energy of the natural world and it's spirits and gods.  Gardens can be anything from a tended area of forest or prairie, to a curated botanical garden at a university.  Oases are islands of life in otherwise lifeless regions, usually the result of a spring, they exist in deserts and wastelands.
   - Barbarian
   - Cleric
     - Life Domain
@@ -67,6 +69,38 @@ Tucked into quiet corners of the world, these locations are habitats tended by t
     - Swarmkeeper
   - Warlock
     - The Undying
+
+
+## Travel Between Locations
+---
+
+Members of the K'anchay Order are able to travel between sites via portals to the gateway cities in the Outlands.  Travel is achieved through a re-skin of the Astral Projection spell which sends players to a particular location in the Outlands.  Less experienced members are chaperoned on their journeys, instructed not to stray, especially while traveling the region near Faunel.
+
+### Monastery
+
+Monasteries are connected to the region immediately surrounding Tradegate.  The public portions of their interiors are straightforward, though some rooms have apparently false door, which open into solid walls, or open cliff faces.  When their command word is spoken, these doors open into a mirror image of the monastery in the Outlands, near the city of Tradegate.  The two monasteries are exact mirror images of each other.
+
+### Temples
+
+### Chapels
+
+### Churches
+
+### Gardens
+
+Trails through the dense foliage, either forest, tall grass, reeds, or something similar, emerge from it 
+
+### Oases
+
+| Location  | Outlands<br/>Gate-Town |  | Outer Plane
+|-----------|------------------------|--|------------------
+| Monastery | Tradegate              | Mirror of the Monastery | The Twin Paradises of Bytopia
+| Temple    | Ecstasy                |  | The Blessed Fields of Elysium
+| Chapel    | Ecstasy                |  | The Blessed Fields of Elysium
+| Church    | Ecstasy                |  | The Blessed Fields of Elysium
+| Garden    | Faunel                 |  | The Wilderness of the Beastlands
+| Oasis     | Faunel                 |  | The Wilderness of the Beastlands
+
 
 
 ## Class Builds
@@ -123,23 +157,34 @@ Tucked into quiet corners of the world, these locations are habitats tended by t
 ## Light-Craft
 ---
 
-Item Name Ideas:
-  Twilight
-  Dawn
-  Daybreak
-  Auroral
-  Matins
-  Morning
-  Day
-  Light
-  Diurnal
-  Sun
-  Zenith
+### Obtaining and Improving:
+
+Light-Craft is a very personal endeavor.  After an evaluation, prospective members are provided with instructions to imbue a weapon or piece of armor with radiant energy.  The actual crafting must be done by the individual, who must demonstrate the completed item to have their membership recognized.
+
+|   Level | Points | Average Time | Materials |
+|---------|--------|--------------|-----------|
+|    Dawn |     20 |           2h | Item to imbue<br/>Ruby and Diamond dust (50gp)
+| Morning |     50 |           5h | Dawn Item<br/>
+|     Sun |    150 |          15h | Morning Item<br/>
+|  Zenith |    500 |          50h | Sun Item<br/>
+
+### Item Name Ideas:
+- Twilight
+- Dawn
+- Daybreak
+- Auroral
+- Matins
+- Morning
+- Day
+- Light
+- Diurnal
+- Sun
+- Zenith
 
 
 ### Weapons
 ---
-Common properies:
+Common properties:
 - May be any simple or martial weapon.
 - The item appears to be just a hilt, shaft, or quiver of normal arrows or bolts.
 - While holding it, you can use a bonus action to cause a blade or head of pure radiance to spring into existence, or make the blade or head disappear.
@@ -173,12 +218,12 @@ Light-Craft weapons take on different appearances, depending on their light radi
 Common properties:
 - It has N charges, and it regains all expended charges daily at dawn. While wearing it, you may expend one charge to cast [Detect Evil and Good](https://www.dndbeyond.com/spells/detect-evil-and-good), or two or more charges to use [Channel Divinity: Turn Undead](https://www.dndbeyond.com/classes/cleric#ClassFeatures) with a Cleric level equal to two times the number of charges spent, or your own Cleric level, whichever is higher.
 
-|   Name      (rarity) | Armor Class<br/>Bonus | Resistance | Charges | DC |
-|----------------------|-----------------------|------------|---------|----|
-|   Dawn  (_uncommon_) |                    +0 |            |       1 | 11 |
-|    Day      (_rare_) |                    +1 |   Necrotic |       2 | 13 |
-|    Sun (_very rare_) |                    +2 |   Necrotic |       3 | 15 |
-| Zenith (_legendary_) |                    +3 |   Necrotic |       4 | 17 |
+|    Name      (rarity) | Armor Class<br/>Bonus | Resistance | Charges | DC |
+|-----------------------|-----------------------|------------|---------|----|
+|    Dawn  (_uncommon_) |                    +0 |            |       1 | 11 |
+| Morning      (_rare_) |                    +1 |   Necrotic |       2 | 13 |
+|     Sun (_very rare_) |                    +2 |   Necrotic |       3 | 15 |
+|  Zenith (_legendary_) |                    +3 |   Necrotic |       4 | 17 |
 
 #### **Heavy**
 Trait ideas
@@ -192,7 +237,7 @@ Trait ideas
 
 #### **Light**
 Trait ideas
-- You can expend one charge to cause radiant energy to bend the light around you, giving advantage on stealth rolls made to hide in dim or bright light for 1 minute.
+- When you make a stealth check, you may expend one charge to bend the light around you, allowing you to reroll one of the dice, using either value.
 -
 
 
@@ -200,6 +245,8 @@ Trait ideas
 
 
 ### Cloak
+Trait ideas
+- Player wearing this cloak may hide when in bright or dim light, and they gain advantage on stealth checks made while in bright or dim light.  
 
 ### Other
 ---
