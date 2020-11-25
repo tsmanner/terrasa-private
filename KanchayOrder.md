@@ -92,6 +92,9 @@ Trails through the dense foliage, either forest, tall grass, reeds, or something
 
 ### Oases
 
+There is a small semicircular building next to the pool in the center of the oasis, the flat wall spanning a small portion of it, the wall disappearing beneath the surface.  A basin inside is filled with water drawn from the pool, which is still and glass-like.  The reflection in the surface of it shows the same room, with some subtle differences, a decoration is oriented differently, or is a different shade.  Perhaps most notably, your companions in the room aren't there, though you do catch some other people walking by.  When you touch the surface, it feels cool, but when you remove your hand, it is dry. Submerging in the pool is disorienting, as gravity seems to reverse itself, and when you break the surface, you are in the reflected room.
+
+
 | Location  | Outlands<br/>Gate-Town |  | Outer Plane
 |-----------|------------------------|--|------------------
 | Monastery | Tradegate              |  | The Twin Paradises of Bytopia
