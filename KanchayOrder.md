@@ -88,13 +88,13 @@ Monasteries are connected to the region immediately surrounding Tradegate.  The 
 
 ### Gardens
 
-Trails through the dense foliage, either forest, tall grass, reeds, or something similar, emerge from it 
+Trails through the dense foliage, either forest, tall grass, reeds, or something similar, emerge from it within sight of Faunel. The ends of these trails can place you at the edge of a dense wood across a meadow from the city, in the middle of a garden within its limits, or rounding a large tree or boulder to find yourself exiting an alley.  When you look over your shoulder the trail is no longer there, though occasionally you catch a glimmer of motion where there is only air, or the faint incongruous sound of the space you transitioned from.
 
 ### Oases
 
 | Location  | Outlands<br/>Gate-Town |  | Outer Plane
 |-----------|------------------------|--|------------------
-| Monastery | Tradegate              | Mirror of the Monastery | The Twin Paradises of Bytopia
+| Monastery | Tradegate              |  | The Twin Paradises of Bytopia
 | Temple    | Ecstasy                |  | The Blessed Fields of Elysium
 | Chapel    | Ecstasy                |  | The Blessed Fields of Elysium
 | Church    | Ecstasy                |  | The Blessed Fields of Elysium
