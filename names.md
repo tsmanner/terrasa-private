@@ -2,30 +2,37 @@
 
 ## Female
 
-- Wayra
+- Canchon
 - Illapha
 - Inti
-- Canchon
+- Mayu
 - Uchu
 
-- Olaya: Tavernkeeper at The Rusty Nail
-- Waskhar: owner/captain of the Windwharf
-- Chalco: Dockmaster (mistress?)
-- Sayre: "The King" of the organized crime network in Yalaqta.  Has a sending stone (paired to one held by Manco).  Also a modified Wand of Animate Dead, which animates a corpse as a skeleton of zombie under the command of Manco, instead of the wielder.
 - Allcca: 30 something hooker
+- Chalco: Dock master (mistress?)
+- Olaya: Tavern keeper at The Rusty Nail
+- Sayre: "The King" of the organized crime network in Yalaqta.  Has a sending stone (paired to one held by Manco).  Also a modified Wand of Animate Dead, which animates a corpse as a skeleton of zombie under the command of Manco, instead of the wielder.
+- Waskhar: owner/captain of the Windwharf
+- Wayra: Lieutenant of Manco, necromancer outside Yalaqta giving Sayre orders and support.
 
 ## Male
 
 - Kayara
+- Khuyana
+- Oqllo
+- Nayarak
+- Shulla
+- Sumat'Ika
+- Suyana
 
-- Ttika: "Cart Guy" they chased and stabbed, then enlisted to tell Llaska and Michik to meet them near the hideout at 8
-- Izhi: Ryan's former pirate captain
-- Waqar: dock guard
-- Llaska and Michik: Pair of former petty criminals, edged out by the new "king" in town.  Met the party at The Rusty Nail
 - Achiq: town clerk
-- Thani: guard at silo
+- Izhi: Ryan's former pirate captain
+- Llaska and Michik: Pair of former petty criminals, edged out by the new "king" in town.  Met the party at The Rusty Nail
+- Ttika: "Cart Guy" they chased and stabbed, then enlisted to tell Llaska and Michik to meet them near the hideout at 8
 - Manco: Necromancer and current leader of the Cult of Myrkul (God of Death)
 - Myrkul: God of Death
+- Thani: guard at silo
+- Waqar: dock guard
 
 
 ## Places

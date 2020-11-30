@@ -6,6 +6,15 @@ There are several types of K'anchay chapter:
 ## Locations
 ---
 
+| Location  | Outlands<br/>Gate-Town | Outer Plane
+|-----------|------------------------|------------------
+| Monastery | Tradegate              | The Twin Paradises of Bytopia
+| Temple    | Ecstasy                | The Blessed Fields of Elysium
+| Chapel    | Ecstasy                | The Blessed Fields of Elysium
+| Church    | Ecstasy                | The Blessed Fields of Elysium
+| Garden    | Faunel                 | The Wilderness of the Beastlands
+| Oasis     | Faunel                 | The Wilderness of the Beastlands
+
 ### Monasteries
 ---
 Members at monasteries focus on studying ways to channel and manipulate radiant energy.  They're typically located in hard to reach areas, like the top of a mountain, or at the end of a long trek through a desert.  Settlements have cropped up near a few, as the families of people associated with the monasteries have followed them and expanded.  These settlements are mostly aligned in purpose with the K'anchay Order, supporting the monastery and the cause.  They are also the source of many of the martial personnel, as the monastery itself is inhabited mostly by Monks and Wizards.
@@ -88,22 +97,11 @@ Monasteries are connected to the region immediately surrounding Tradegate.  The 
 
 ### Gardens
 
-Trails through the dense foliage, either forest, tall grass, reeds, or something similar, emerge from it within sight of Faunel. The ends of these trails can place you at the edge of a dense wood across a meadow from the city, in the middle of a garden within its limits, or rounding a large tree or boulder to find yourself exiting an alley.  When you look over your shoulder the trail is no longer there, though occasionally you catch a glimmer of motion where there is only air, or the faint incongruous sound of the space you transitioned from.
+Trails through dense foliage, either forest, tall grass, reeds, or something similar, wind through the Garden.  When followed precisely, they end at the edge of a dense wood across a meadow from Faunel, in the middle of a garden within it, or rounding a large tree or boulder to find yourself coming out of a partially overgrown alley.  When you look over your shoulder the trail is no longer there, though occasionally you catch a glimmer of motion where there shouldn't be any, or the faint incongruous sound of the space you transitioned from.
 
 ### Oases
 
 There is a small semicircular building next to the pool in the center of the oasis, the flat wall spanning a small portion of it, the wall disappearing beneath the surface.  A basin inside is filled with water drawn from the pool, which is still and glass-like.  The reflection in the surface of it shows the same room, with some subtle differences, a decoration is oriented differently, or is a different shade.  Perhaps most notably, your companions in the room aren't there, though you do catch some other people walking by.  When you touch the surface, it feels cool, but when you remove your hand, it is dry. Submerging in the pool is disorienting, as gravity seems to reverse itself, and when you break the surface, you are in the reflected room.
-
-
-| Location  | Outlands<br/>Gate-Town |  | Outer Plane
-|-----------|------------------------|--|------------------
-| Monastery | Tradegate              |  | The Twin Paradises of Bytopia
-| Temple    | Ecstasy                |  | The Blessed Fields of Elysium
-| Chapel    | Ecstasy                |  | The Blessed Fields of Elysium
-| Church    | Ecstasy                |  | The Blessed Fields of Elysium
-| Garden    | Faunel                 |  | The Wilderness of the Beastlands
-| Oasis     | Faunel                 |  | The Wilderness of the Beastlands
-
 
 
 ## Class Builds
@@ -162,26 +160,32 @@ There is a small semicircular building next to the pool in the center of the oas
 
 ### Obtaining and Improving:
 
-Light-Craft is a very personal endeavor.  After an evaluation, prospective members are provided with instructions to imbue a weapon or piece of armor with radiant energy.  The actual crafting must be done by the individual, who must demonstrate the completed item to have their membership recognized.
+Light-Craft is a very personal endeavor.  After an evaluation, prospective members are provided with instructions to imbue a weapon or piece of armor with radiant energy.  The actual [crafting](https://www.dndbeyond.com/sources/dmg/between-adventures#CraftingaMagicItem) must be done by the individual, who must demonstrate the completed item to have their membership recognized.
 
-|   Level | Points | Average Time | Materials |
-|---------|--------|--------------|-----------|
-|    Dawn |     20 |           2h | Item to imbue<br/>Ruby and Diamond dust (50gp)
-| Morning |     50 |           5h | Dawn Item<br/>
-|     Sun |    150 |          15h | Morning Item<br/>
-|  Zenith |    500 |          50h | Sun Item<br/>
+|   Level | Cost | Min. Level | Materials |
+|---------|------|------------|-----------|
+|    Dawn |   50 |          3 | Item to imbue<br/>50gp worth of Carnelian, Citrine, Tiger Eye, Rhodochrosite, or Moss Agate.
+| Morning |  500 |          6 | Dawn Item<br/>500gp worth of Amber, Red Tourmaline, or Topaz.
+|     Sun | 1500 |         10 | Morning Item<br/>1500gp worth of Fire Opal, Star Ruby, or Yellow Sapphire.
+|  Zenith | 5000 |         15 | Sun Item<br/>5000gp worth of Jacinthe or Diamonds.
+
+Enchantment can be transferred to another item for 1/2 the cost, minus any unique components.
 
 ### Item Name Ideas:
-- Twilight
-- Dawn
-- Daybreak
 - Auroral
+- Dawn
+- Day
+- Daybreak
+- Diurnal
+- Illuminated
+- Spark
+- Light
+- Lumen
+- Luminous
 - Matins
 - Morning
-- Day
-- Light
-- Diurnal
 - Sun
+- Twilight
 - Zenith
 
 
@@ -192,16 +196,16 @@ Common properties:
 - The item appears to be just a hilt, shaft, or quiver of normal arrows or bolts.
 - While holding it, you can use a bonus action to cause a blade or head of pure radiance to spring into existence, or make the blade or head disappear.
 - While the blade or head of a one handed or versatile weapon exists, the weapon has the finesse property.
-- Radiant damage instead of it's normal type.
+- Radiant damage instead of it's normal type to undead.
 - When you hit an undead with it, that target takes extra radiant damage, as shown in the light-craft weapon table
 - The weapon's radiant blade or head emits bright light in an N foot radius and dim light for an additional N feet.  This light is sunlight.  While the blade persists, you can use an action or bonus action to speak the command word, expanding or reducing its radius of bright and dim light by 5 feet each, to a minimum of 5 feet.
 
 |    Name      (rarity) | Attack and<br/>Damage Bonus | Radiant Damage<br/>to Undead | Max Light | Start Light |
 |-----------------------|-----------------------------|------------------------------|-----------|-------------|
 |    Dawn  (_uncommon_) |                          +0 |                          1d4 |    5 foot |      5 foot |
-| Morning      (_rare_) |                          +1 |                          2d4 |   10 foot |      5 foot |
-|     Sun (_very rare_) |                          +2 |                          3d4 |   15 foot |     10 foot |
-|  Zenith (_legendary_) |                          +3 |                          4d4 |   30 foot |     15 foot |
+| Morning      (_rare_) |                          +1 |                          1d8 |   10 foot |      5 foot |
+|     Sun (_very rare_) |                          +2 |                          2d8 |   15 foot |     10 foot |
+|  Zenith (_legendary_) |                          +3 |                          3d8 |   30 foot |     15 foot |
 
 Light-Craft weapons take on different appearances, depending on their light radius.
 
@@ -219,7 +223,7 @@ Light-Craft weapons take on different appearances, depending on their light radi
 ### Armor
 ---
 Common properties:
-- It has N charges, and it regains all expended charges daily at dawn. While wearing it, you may expend one charge to cast [Detect Evil and Good](https://www.dndbeyond.com/spells/detect-evil-and-good), or two or more charges to use [Channel Divinity: Turn Undead](https://www.dndbeyond.com/classes/cleric#ClassFeatures) with a Cleric level equal to two times the number of charges spent, or your own Cleric level, whichever is higher.
+- It has N charges, and it regains all expended charges daily at dawn. While wearing it, you may expend one charge to use [Eyes of the Grave](https://www.dndbeyond.com/classes/cleric#GraveDomain), or two or more charges to use [Channel Divinity: Turn Undead](https://www.dndbeyond.com/classes/cleric#ClassFeatures) with a Cleric level equal to two times the number of charges spent, or your own Cleric level, whichever is higher.
 
 |    Name      (rarity) | Armor Class<br/>Bonus | Resistance | Charges | DC |
 |-----------------------|-----------------------|------------|---------|----|
@@ -230,26 +234,44 @@ Common properties:
 
 #### **Heavy**
 Trait ideas
-- When you are struck, the armor releases a burst of radiant energy, dealing (1/1d4/1d6/1d8) radiant damage to all enemies within 5 feet of you.
+- When you are struck, the armor glows, storing the energy of the attack.  The energy is released on your first successful attack before the end of your next turn, dealing an additional (1/2/3/4) radiant damage.
 
 
 #### **Medium**
 Trait ideas
-- When an attack is made against you, you can use your reaction and expend one charge to cause the armor to flash brightly, imposing disadvantage on melee attack rolls made against you until the end of the round.
+- When you would be hit by a melee attack, you can use your reaction and expend one charge to cause the armor to flash brightly, imposing disadvantage on the attack, and preventing the attacker from making an attack of opportunity against you before the end of your next turn.
 
 
 #### **Light**
 Trait ideas
 - When you make a stealth check, you may expend one charge to bend the light around you, allowing you to reroll one of the dice, using either value.
--
 
 
 #### **Shield**
+Trait ideas
+- When a ranged weapon attack is made against a creature other than you, within 15' of you, you can use your reaction and expend one charge to cause a ray of light to intercept the missile, destroying it before it hits it's target.
 
 
 ### Cloak
 Trait ideas
-- Player wearing this cloak may hide when in bright or dim light, and they gain advantage on stealth checks made while in bright or dim light.  
+- Player wearing this cloak may hide when in bright light, and they gain advantage on stealth checks that rely on sight.
+
+
+### Boots
+Trait ideas
+- Increases walking speed by 5' in dim light and 10' in bright light.
+
 
 ### Other
+
 ---
+
+## Ranking System
+
+[Inspiration](https://www.reddit.com/r/worldbuilding/comments/45n7p3/in_need_of_ranking_systemstitles/)
+
+Novice
+Initiate
+Apprentice
+Fellow
+

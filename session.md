@@ -76,15 +76,15 @@ Successfully fight off 4 swarms of rats, which are largely ineffective against K
 
 Tracked the ladder to some rubble near a decrepit shanty, which is abandoned.  They leave Kilvin behind to keep an eye out, in case anyone comes for the ladder.
 
-They go to The Rusty Nail, a tavern by the dockside.  Ask drunk dockworker about the tavernkeepr, Olaya.  Approach the bar and talk to Olaya a bit, interrupted by Llaska, who speaks to Caltrop in the Thieves' Cant.  He and Michik had been small time thieves before.
+They go to The Rusty Nail, a tavern by the dockside.  Ask drunk dockworker about the tavern keeper, Olaya.  Approach the bar and talk to Olaya a bit, interrupted by Llaska, who speaks to Caltrop in the Thieves' Cant.  He and Michik had been small time thieves before.
 
-Dockside: East side, more spaced out, more active, mostly loading/unloading, and and out for a day.  3 Guard posts along the waterfront, small 1 room spaces with an open window and a small desk, where guards store a ledger and maintain a static presence.  Dockmaster's office on the eastern end, nearest the river, a small two room office with a window on the front to interact with people through, and a side door.
+Dockside: East side, more spaced out, more active, mostly loading/unloading, and and out for a day.  3 Guard posts along the waterfront, small 1 room spaces with an open window and a small desk, where guards store a ledger and maintain a static presence.  Dock master's office on the eastern end, nearest the river, a small two room office with a window on the front to interact with people through, and a side door.
 
-Party talked to a guard at the nearest post (middle, spoke to Waqar) who directed them to the dockmaster for more on the goings on at the docks.  They tried to ask Chalco, the dockmaster(mistress?), with heavy innuendo, about smuggling or moving goods through the docks "discreetly."  She replied that there are rare random searches, but generally, if the goods you have on your manifest match the goods you move around, that's all the scrutiny you'll get.  A nearby ship was loading up mostly food stuffs, the Windwharf, for a trip north.  Among other things they were carrying grain.  Gluteus went to fetch Kilvin, while Caltrop and Gromag investigate the Windwharf.
+Party talked to a guard at the nearest post (middle, spoke to Waqar) who directed them to the dock master for more on the goings on at the docks.  They tried to ask Chalco, the dock master(mistress?), with heavy innuendo, about smuggling or moving goods through the docks "discreetly."  She replied that there are rare random searches, but generally, if the goods you have on your manifest match the goods you move around, that's all the scrutiny you'll get.  A nearby ship was loading up mostly food stuffs, the Windwharf, for a trip north.  Among other things they were carrying grain.  Gluteus went to fetch Kilvin, while Caltrop and Gromag investigate the Windwharf.
 
 While Gromag creates a distraction by jumping atop a cart being unloaded and playing his bagpipes, Caltrop slips below.  Snooping through the captain's quarters and the cargo hold, he suspects that the stolen grain is being laundered as part of larger sales to merchants like this.  He thinks better of setting the ship on fire, instead sneaking back up on deck.
 
-Gromag is shouted at and capitulates, hopping off the cart, attempting to do a cartwheel down the gangplank to set back up on the dock to play.  He loses his balance on the way and slips, falling into the water.  Shortly after swimming ashore and walking back out the dock, Caltrop returns and they meet Kilvin and Gluteus at the base of the dock, near the dockmaster's office.  After checking in with her, they manage to track down a susicious cart they had seen loading the boat with some stolen grain, and follow it.  The man pulling it marks them, beginning to flee, and is almost immediately caught by Gluteus, using his rope to trip the man.  Caltrop follows with a painful, but not fatal wound, at which point he surrenders and tells the party about the theives' den, the side entrance, and that evening, around dinner, is probably the best time to enter.
+Gromag is shouted at and capitulates, hopping off the cart, attempting to do a cartwheel down the gangplank to set back up on the dock to play.  He loses his balance on the way and slips, falling into the water.  Shortly after swimming ashore and walking back out the dock, Caltrop returns and they meet Kilvin and Gluteus at the base of the dock, near the dock master's office.  After checking in with her, they manage to track down a suspicious cart they had seen loading the boat with some stolen grain, and follow it.  The man pulling it marks them, beginning to flee, and is almost immediately caught by Gluteus, using his rope to trip the man.  Caltrop follows with a painful, but not fatal wound, at which point he surrenders and tells the party about the thieves' den, the side entrance, and that evening, around dinner, is probably the best time to enter.
 
 
 ### 15 Nov 2020
@@ -92,7 +92,7 @@ Gromag is shouted at and capitulates, hopping off the cart, attempting to do a c
 
 ~4pm: head back to slums to try to "drum up an army of thugs."  30-something hooker they door-knock tells them of 3 men, 2 normal sized and one burly one that seemed dumb "because the others had to keep shouting at him." The big one seemed to be injured, kinda shuffling and with a limp (he's a ghoul).
 
-Head down to the den and scope it out.  Kurt to the roof, Ryan/Nick to a general store acros the street, asking an old man about the area.  Strange noises at night from the den.  Ryan decides _not_ to steal anything from the guy.
+Head down to the den and scope it out.  Kurt to the roof, Ryan/Nick to a general store across the street, asking an old man about the area.  Strange noises at night from the den.  Ryan decides _not_ to steal anything from the guy.
 
 They approach the "beggar" out front to try and social engineer some information out of him, when Gromag decides to knee him in the face.  3 more thugs come out of the building, one to the street, one in the door, and one inside with a crossbow.  They take down all four pretty quickly, Gromag taking a few hits.  Gluteus gets some good hits in on the ones in the street from the roof of the general store.  Caltrop grapples and eventually finishes off the "beggar," moving across the street and threading the needle through the front door to soften up the crossbow wielding thug inside.  Gromag finishes off the one in the door with a crack to the head with his staff, somersaulting over his falling body and dashing to the one inside, knocking him out with a jab to the face.
 
@@ -102,22 +102,12 @@ Two men exit the back door with hammers, nails, and spools of wire, each moving 
 
 The crew takes a short rest, hidden in the other alleyway to recuperate before their final assault on the thieves' den.
 
----
 
-Ttika, Michik, and Llaska will be 3 rounds late to combat when it finally starts, coming in through the back door.  Additional lateness, possibly some damage if the trip wires aren't disarmed and they fail to notice/save against them.  Llaska is a low ranking member of the K'anchay Order, equipped with a single Dawn Dagger (+0/1d4/5'), which will remain concealed until the presence of undead is detected.
-
-
-
-### Items
-
----
-
-**Manco's Wand of Animate Dead** - Once per day can be used by the wielder to cast Animate Dead as if it were being cast by Manco.  The undead created in this way are created using the statistics of Manco, and they are under his direct control.  if the wielder of the wand is a known ally of Manco, the undead are friendly to them, otherwise they are hostile.
-
-**Bead of Alarm** kinda like bead of force, but when broken notifies another party or rings a distant bell.
+### 29 Nov 2020
 
 
 ## Encounter Progressions
+---
 
 Slums:
   - `Infestation` to "recover" some grain to sell on the black market (1gp each)
