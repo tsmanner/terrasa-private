@@ -1,5 +1,5 @@
 # The K'anchay (Light) Order
-An organization that spans all of terrasa, working in the service of Lathander, god of birth and renewal.
+An organization that spans all of terrasa, working in the service of (Inti)[https://en.wikipedia.org/wiki/Inti], or Lathander, sun god of birth and renewal.
 
 There are several types of K'anchay chapter:
 
@@ -18,6 +18,12 @@ There are several types of K'anchay chapter:
 ### Monasteries
 ---
 Members at monasteries focus on studying ways to channel and manipulate radiant energy.  They're typically located in hard to reach areas, like the top of a mountain, or at the end of a long trek through a desert.  Settlements have cropped up near a few, as the families of people associated with the monasteries have followed them and expanded.  These settlements are mostly aligned in purpose with the K'anchay Order, supporting the monastery and the cause.  They are also the source of many of the martial personnel, as the monastery itself is inhabited mostly by Monks and Wizards.
+
+#### Architecture
+  - Mountains: Terraced enclaves with ashlar ("dry-stone", or mortarless stonework) structures and some small square tiered pyramid temples.
+  - Desert: A complex of square tiered pyramids made of sandstone and shale, which serve as temples, dormitories, and tradehouses.
+
+#### Classes and Archetypes
   - Cleric
     - Forge Domain
   - Fighter
@@ -55,6 +61,8 @@ Found in many cities, though most keep their ties to the K'anchay Order a secret
   - Paladin
     - Oath of Devotion
     - Oath of Redemption
+  - Rogue
+    - Inquisitive
   - Warlock
     - The Celestial (Homebrew Wall of Fire to Wall of Light?)
 
@@ -83,7 +91,7 @@ Tucked into quiet corners of the world, these locations are habitats tended by t
 ## Travel Between Locations
 ---
 
-Members of the K'anchay Order are able to travel between sites via portals to the gateway cities in the Outlands.  Travel is achieved through a re-skin of the Astral Projection spell which sends players to a particular location in the Outlands.  Less experienced members are chaperoned on their journeys, instructed not to stray, especially while traveling the region near Faunel.
+Members of the K'anchay Order are able to travel between sites via portals to the gateway cities in the Outlands.  Travel is achieved through a re-skin of the [Astral Projection](https://www.dndbeyond.com/spells/astral-projection) spell which sends players to a particular location in the Outlands.  Less experienced members are chaperoned on their journeys, instructed not to stray, especially while traveling the region near Faunel.  This allows them to travel great distances often by simply walking a block or two through a Gate-Town, and doesn't technically violate the Cianni ban of teleportation circles.
 
 ### Monastery
 
