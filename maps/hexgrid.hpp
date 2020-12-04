@@ -93,7 +93,7 @@ struct Triangle {
       << inTriangle.a()
       << " " << inTriangle.b()
       << " " << inTriangle.c()
-      << "\" fill=\"none\" stroke=\"gray\" stroke-width=\"0.25\"/>";
+      << "\"/>";
   }
 
 private:
@@ -134,7 +134,7 @@ struct Hex {
         << Vertex(inHex.center().x()-R, inHex.center().y()           )
         ;
     }
-    return os << "\" fill=\"none\" stroke=\"gray\" stroke-width=\"" << (0.75 * R) << "\"/>";
+    return os << "\"/>";
   }
 
 

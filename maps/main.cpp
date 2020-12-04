@@ -48,19 +48,21 @@ inline Triangle odd_top(const int& x, const int& y) {
 
 
 inline void triangles(std::ostream& os, const int& x, const int& y) {
+  cout << "  <g fill=\"none\" stroke=\"gray\" stroke-width=\"" << (0.25) << "\">" << endl;
   if (y & 0x1) {
-    cout << "  " << odd_bottom(x, y) << endl;
-    cout << "  " << odd_top(x, y) << endl;
+    cout << "    " << odd_bottom(x, y) << endl;
+    cout << "    " << odd_top(x, y) << endl;
   }
   else {
-    cout << "  " << even_bottom(x, y) << endl;
-    cout << "  " << even_top(x, y) << endl;
+    cout << "    " << even_bottom(x, y) << endl;
+    cout << "    " << even_top(x, y) << endl;
   }
+  cout << "  <g/>" << endl;
 }
 
 
 template <unsigned R, int X, int Y=0>
-inline void hexes(std::ostream& os, const int& x, const int& y) {
+inline void hex(std::ostream& os, const int& x, const int& y) {
   int x_translated = x + X;
   int y_translated = y + Y;
   if (
@@ -68,22 +70,48 @@ inline void hexes(std::ostream& os, const int& x, const int& y) {
     or
     (((x_translated+R/2) % (3*R) == (2*R)) and (y_translated % (2*R) == 0))
   ) {
-    os << "  " << Hex<R>(Vertex(x, y)) << endl;
+    os << "    " << Hex<R>(Vertex(x, y)) << endl;
   }
 }
 
 
 template <unsigned R>
 inline typename std::enable_if<(R == 1)>::type
-hexes(std::ostream& os, const int& x, const int& y) {
-  hexes<R, 1, 0>(os, x, y);
+hex(std::ostream& os, const int& x, const int& y) {
+  hex<R, 1, 0>(os, x, y);
 }
 
 
 template <unsigned R>
 inline typename std::enable_if<(R > 1)>::type
-hexes(std::ostream& os, const int& x, const int& y) {
-  hexes<R, R/2, 0>(os, x, y);
+hex(std::ostream& os, const int& x, const int& y) {
+  hex<R, R/2, 0>(os, x, y);
+}
+
+
+template <unsigned R, int dx, int dy>
+inline void hexes(std::ostream& os, const int& start, const int& end) {
+  cout << "  <g fill=\"none\" stroke=\"gray\" stroke-width=\"" << (0.75 * R) << "\">" << endl;
+  for (int x = start; x < end; x += dx) {
+    for (int y = start; y < end; y += dy) {
+      hex<R>(os, x, y);
+    }
+  }
+  cout << "  <g/>" << endl;
+}
+
+
+template <unsigned R>
+inline typename std::enable_if<(R == 1)>::type
+hexes(std::ostream& os, const int& start, const int& end) {
+  hexes<R, 1, 1>(os, start, end);
+}
+
+
+template <unsigned R>
+inline typename std::enable_if<(R > 1)>::type
+hexes(std::ostream& os, const int& start, const int& end) {
+  hexes<R, R/2, R>(os, start, end);
 }
 
 
@@ -98,14 +126,9 @@ int main() {
     << "\" xmlns=\"http://www.w3.org/2000/svg\">"
     << endl;
 
-  for (int x = start; x < end; ++x) {
-    for (int y = start; y < end; ++y) {
-      // triangles(cout, x, y);
-      hexes<1>(cout, x, y);
-      hexes<6>(cout, x, y);
-      hexes<60>(cout, x, y);
-    }
-  }
+  hexes< 1>(cout, start, end);
+  hexes< 6>(cout, start, end);
+  hexes<60>(cout, start, end);
 
   cout << "</svg>" << endl;
 
