@@ -76,5 +76,15 @@
         "wayra’s",
         "windwharf",
         "yalaqta"
-    ]
+    ],
+    "files.associations": {
+        "*.T": "cpp",
+        "*.h": "cpp",
+        "*.svhdl": "vhdl",
+        "deque": "cpp",
+        "string": "cpp",
+        "vector": "cpp",
+        "iosfwd": "cpp"
+    },
+    "svg.preview.background": "black"
 }
