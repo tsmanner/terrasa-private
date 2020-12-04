@@ -84,7 +84,10 @@
         "deque": "cpp",
         "string": "cpp",
         "vector": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "ostream": "cpp",
+        "iostream": "cpp",
+        "type_traits": "cpp"
     },
     "svg.preview.background": "black"
 }

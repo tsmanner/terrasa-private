@@ -112,7 +112,7 @@ struct Hex {
   const Vertex& center() const { return mCenter; }
 
   friend std::ostream& operator<<(std::ostream& os, const Hex& inHex) {
-    // os << "<circle cx=\"" << inHex.center().x_translated() << "\" cy=\"" << inHex.center().y_translated() << "\" r=2 fill=\"gray\"/>";
+    // os << "<circle cx=\"" << inHex.center().x_translated() << "\" cy=\"" << inHex.center().y_translated() << "\" r=\"2\" fill=\"gray\"/>";
     os << "<polygon points=\"";
     if (inHex.center().y() & 1) {
       os
