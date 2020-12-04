@@ -1,4 +1,4 @@
 # Welcome to Terrasa
 
-[Players](players/)
-[Locations](locations/)
+- [Players](players/)
+- [Locations](locations/)
