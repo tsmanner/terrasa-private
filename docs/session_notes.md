@@ -28,16 +28,16 @@ Two other members of the roughly ten person caravan escort. The first is a tall 
 
 Caltrop tries attempts to pick pocket the robed man, but ends up roughly bumping into him. Caltrop manages to play it off as though he stumbled, raising the suspicious of both men, but not inciting anything worse.
 
-Once {the_party} reaches town hall, they look over the job board, deciding between a rat infestation and mysterious disappearances in the woods. They choose to investigate the disappearances, hearing that a couple of farmers went missing and the three person militia squad that went out in search of them only had one member return. The remaining member is stable, recovering from wounds, at the militia barracks.
+Once The party reaches town hall, they look over the job board, deciding between a rat infestation and mysterious disappearances in the woods. They choose to investigate the disappearances, hearing that a couple of farmers went missing and the three person militia squad that went out in search of them only had one member return. The remaining member is stable, recovering from wounds, at the militia barracks.
 
 
-{the_party} heads over to the militia barracks and learn that the surviving militiaman is named Frankie. After convincing someone that Caltrop is Frankie's friend, they head up to Frankie's room and ask him some questions. Frankie was clearly scratched and bitten by something and he still seems shocked or horrified by whatever he saw. He tells {the_party} that he found "it" in the forest west of town, just to the north of the giant birch on the right.
+The party heads over to the militia barracks and learn that the surviving militiaman is named Frankie. After convincing someone that Caltrop is Frankie's friend, they head up to Frankie's room and ask him some questions. Frankie was clearly scratched and bitten by something and he still seems shocked or horrified by whatever he saw. He tells The party that he found "it" in the forest west of town, just to the north of the giant birch on the right.
 
 
 ### Session 2
 ---
 
-{the_party} heads to the market, leaving Kilvin behind to keep an eye out
+The party heads to the market, leaving Kilvin behind to keep an eye out
 
 Approach a teen playing in the market and ask about Frankie.
 "Who's that?"
