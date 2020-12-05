@@ -12,7 +12,7 @@
 
 ## Homebrew
 
-**Manco's Wand of Animate Dead** - Once per day can be used by the wielder to cast Animate Dead as if it were being cast by Manco.  The undead created in this way are created using the statistics of Manco, and they are under his direct control.  if the wielder of the wand is a known ally of Manco, the undead are friendly to them, otherwise they are hostile.
+**Manco's Wand of Animate Dead** - Once per day can be used by the wielder to cast Animate Dead as if it were being cast by Manco.  The undead created in this way are created using the statistics of Manco, and they are under his control.  If the wielder of the wand is a known ally of Manco, the undead are friendly to them and follow their orders, otherwise they are hostile.
 
 **Bead of Alarm** kinda like bead of force, but when broken notifies another party or rings a distant bell.
 

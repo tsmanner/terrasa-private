@@ -14,7 +14,5 @@ Hunting Trap : DC 10 DEX save.  No damage on save, 1d10 and speed 0 on failure. 
 
 
 
-Sayre won't tell them anything, would rather die and be "reborn" in service to her master
+Sayre won't tell them anything, would rather die and be "raised" in service to her master.
 
-Sayre Death Saves
-  pass
