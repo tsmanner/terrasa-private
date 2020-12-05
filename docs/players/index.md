@@ -1,5 +1,5 @@
 # Players
 
-Caltrop Bloodless
-Brother Gromag
-Gluteus Maximus
+- [Caltrop Bloodless](CaltropBloodless.md)
+- [Brother Gromag](BrotherGromag.md)
+- [Gluteus Maximus](GluteusMaximus.md)
