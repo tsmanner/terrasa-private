@@ -102,3 +102,7 @@ Two men exit the back door with hammers, nails, and spools of wire, each moving 
 
 The crew takes a short rest, hidden in the other alleyway to recuperate before their final assault on the thieves' den.
 
+### 5 Dec 2020
+
+Set traps outside on either side of the door, then take positions on either side in the alleyway, with Caltrop peeking through the now barricaded window across the way.  Gluteus intentionally trips the wire, triggering a crashing sound inside, while Kilvin also accidentally trips over the other wire to get closer to the door.  Two thugs burst into the alleyway, one attacking Brother Gromag, the other Kilvin.  Both step in the traps, drawing blood and holding them in place.  A volley of arrows and bolts from Gluteus and Caltrop soften them up, as they try to get out of the traps.  Gromag takes a moment to line of a strike, slamming the butt of his staff into the back of one's head, using it to vault over behind the next, punching him at the base of his neck.  Both crumple to the ground unconscious.
+The party enters the building, Kilvin taking point, followed by Gromag, Caltrop, with Gluteus taking up the rear.  They have Kilvin
