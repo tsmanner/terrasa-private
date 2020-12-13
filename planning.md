@@ -9,10 +9,3 @@ Michik wants to travel to the temple the next day to confront Wayra.
 "This could be what gets me to Morning."
 
 
-
-Hunting Trap : DC 10 DEX save.  No damage on save, 1d10 and speed 0 on failure.  Strength DC15 to escape the trap.
-
-
-
-Sayre won't tell them anything, would rather die and be "raised" in service to her master.
-

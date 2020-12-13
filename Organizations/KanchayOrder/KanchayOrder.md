@@ -34,6 +34,8 @@ Members at monasteries focus on studying ways to channel and manipulate radiant 
     - Way of Shadow?
     - Way of the Kensei
     - Way of the Sun Soul
+  - Paladin
+    - Oath of Devotion
   - Rogue
     - Arcane Trickster
     - Inquisitive
@@ -163,12 +165,12 @@ There is a small semicircular building next to the pool in the center of the oas
   - 8 Sunburst
 
 
-## Light-Craft
+## Lightcraft
 ---
 
 ### Obtaining and Improving:
 
-Light-Craft is a very personal endeavor.  After an evaluation, prospective members are provided with instructions to imbue a weapon or piece of armor with radiant energy.  The actual [crafting](https://www.dndbeyond.com/sources/dmg/between-adventures#CraftingaMagicItem) must be done by the individual, who must demonstrate the completed item to have their membership recognized.
+Lightcraft is a very personal endeavor.  After an evaluation, prospective members are provided with instructions to imbue a weapon or piece of armor with radiant energy.  The actual [crafting](https://www.dndbeyond.com/sources/dmg/between-adventures#CraftingaMagicItem) must be done by the individual, who must demonstrate the completed item to have their membership recognized.
 
 |   Level | Cost | Min. Level | Materials |
 |---------|------|------------|-----------|
@@ -205,7 +207,7 @@ Common properties:
 - While holding it, you can use a bonus action to cause a blade or head of pure radiance to spring into existence, or make the blade or head disappear.
 - While the blade or head of a one handed or versatile weapon exists, the weapon has the finesse property.
 - Radiant damage instead of it's normal type to undead.
-- When you hit an undead with it, that target takes extra radiant damage, as shown in the light-craft weapon table
+- When you hit an undead with it, that target takes extra radiant damage, as shown in the lightcraft weapon table
 - The weapon's radiant blade or head emits bright light in an N foot radius and dim light for an additional N feet.  This light is sunlight.  While the blade persists, you can use an action or bonus action to speak the command word, expanding or reducing its radius of bright and dim light by 5 feet each, to a minimum of 5 feet.
 
 |    Name      (rarity) | Attack and<br/>Damage Bonus | Radiant Damage<br/>to Undead | Max Light | Start Light |
@@ -215,7 +217,7 @@ Common properties:
 |     Sun (_very rare_) |                          +2 |                          2d8 |   15 foot |     10 foot |
 |  Zenith (_legendary_) |                          +3 |                          3d8 |   30 foot |     15 foot |
 
-Light-Craft weapons take on different appearances, depending on their light radius.
+Lightcraft weapons take on different appearances, depending on their light radius.
 
 |  Radius | Appearance
 |---------|------------
