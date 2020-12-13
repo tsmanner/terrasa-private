@@ -32,3 +32,11 @@ The Outlands gate-town around the portal to The Blessed Fields of Elysium.
 ### Faunel
 
 The Outlands gate-town around the portal to The Wilderness of the Beastlands.
+
+
+## Spitballing
+
+The Shadow Coast
+The Dreaming Coast
+The Crossroad Coast
+
