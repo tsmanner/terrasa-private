@@ -71,6 +71,7 @@ Head to silo, talk to Thani, a militia member tasked with guarding the grain, wh
 
 Successfully fight off 4 swarms of rats, which are largely ineffective against Kilvin's armor.  Gluteus is on FIRE with his bow, skewering multiple rats per shot. They clear out the silo of rats, and end the session telling Thani what they found and taking a short rest so that Kilvin and Gromag can recover their strength and energy.
 
+
 ### 8 Nov 2020
 ---
 
@@ -102,7 +103,9 @@ Two men exit the back door with hammers, nails, and spools of wire, each moving 
 
 The crew takes a short rest, hidden in the other alleyway to recuperate before their final assault on the thieves' den.
 
+
 ### 5 Dec 2020
+---
 
 Set traps outside on either side of the door, then take positions on either side in the alleyway, with Caltrop peeking through the now barricaded window across the way.  Gluteus intentionally trips the wire, triggering a crashing sound inside, while Kilvin also accidentally trips over the other wire to get closer to the door.  Two thugs burst into the alleyway, one attacking Brother Gromag, the other Kilvin.  Both step in the traps, drawing blood and holding them in place.  A volley of arrows and bolts from Gluteus and Caltrop soften them up, as they try to get out of the traps.  Gromag takes a moment to line of a strike, slamming the butt of his staff into the back of one's head, using it to vault over behind the next, punching him at the base of his neck.  Both crumple to the ground unconscious.
 
@@ -111,3 +114,11 @@ The party enters the building, Kilvin taking point, followed by Gromag, Caltrop,
 Caltrop asks about the dagger, and Michik tells him that the blade is "my Dawn dagger, and it is tied to my essence," then offers Caltrop the hilt for a moment as he summons and dismisses the blade.  He tells them that he is a member of a guild or organization of some kind that hunts undead, and has been trying to track down agents of a cult of Myrkul.  As they're talking he walks to Sayre's body, and rummages through her pockets, pulling out a perfectly round gray stone.  He holds it up and says "I believe this stone is connected directly to her master, and could be used to locate them.  If you help me take them out, I can set up an introduction."
 
 The party reaches level 3
+
+
+### 20 Dec 2020
+---
+
+The party agrees to meet Llaska in the morning by the northern gate to the city.  They return to town hall to get their reward of 40 gp for dealing with the grain and finding the head of the new crime ring in town.  After spending the night with the caravan they came in with, they head out to meet Llaska.  Gluteus sees him skulking near the gate and gets the drop on him, just for fun, and they head north along the road.  After traveling for a while, Llaska stops them, gesturing to the west saying there's a structure that direction in the forest where they determined the Sending Stone's counterpart is.  Gluteus flies above the forest and confirms that there's an old pyramid temple out there, and they hike over.  After dispatching two skeletons wandering outside, Gluteus flies to the roof of the temple to look around, when a woman appears in the doorway one terrace down.  She immediately paralyzes him and the encounter begins.  There's a mad dash by the members of the party to catch up to Gluteus, followed by a chaotic fight across multiple levels of the temple.  The party eventually defeats the necromancer Wayra along with several of her skeleton and zombie minions.  Brother Gromag finds a hidden lever in the bottom of the temple, which opens a passage to what appears to be Wayra's secret study, where they find some papers mentioning a fortress or outpost of some kind in the Oqemarsh, an intentionally disabled teleportation circle, and a small locked box.  Caltrop picks the lock on the box, and is blasted with fire upon opening it, but doesn't seem too bothered by it.  Inside is a single smooth silver ring.
+
+As the fight was drawing to a close, a small group approached outside, led by a dwarf on horseback in full plate wielding a warhammer and shield.  The dwarf shouts to Gromag, who steps out from the bottom floor, "who are you, what are you doing here?"  He identifies himself as The Forgemaker, saying that they had received word that the necromancer they were hunting was located here.  Around this time, Llaska starts down the stairs from the top of the temple, followed by Kilvin.  Llaska intentionally left in the morning to do this with the party to try and get here and defeat the necromancer before other members of the organization could get there.  As they reach the bottom, Kilvin and the Forgemaker recognize each other and begin to talk.  Kilvin introduces him as Dazoluk Forgemaker.

@@ -1,4 +1,4 @@
-# Dalozuk Forgemaker
+# [Dalozuk Forgemaker](https://www.dndbeyond.com/profile/UngodlySalmon/characters/40740308)
 
 Score Rolls:
 

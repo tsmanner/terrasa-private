@@ -1,4 +1,4 @@
-# Izhi
+# [Izhi](https://www.dndbeyond.com/profile/UngodlySalmon/characters/40583913)
 
 Score Rolls:
 
