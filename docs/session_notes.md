@@ -177,9 +177,9 @@ The party heads back to Yalaqta with Dazoluk, and enters a small chapel in the T
 The party heads back upstairs, where Dazoluk gives them a pair of Lightcraft Boots and 200gp each.  He answers some of their questions about the K'anchay Order, and explains some of the amenities available at the Chapel.
 
 > **Dazoluk - back in the common area:** This is a K'anchay Chapel, one of our smaller establishments in this part of the world.  We have enough space to do some limited training, crafting, and research here.  As thanks for defeating Wayra, I'd like to offer you our services and access to our training space, where you can spar to hone your skills or blow off some steam.<br/>
-> As for a tangible reward, I don't have too much I can offer at the moment, other than some coin and this pair of Lightcraft Boots.  They'll make you a little lighter on your feet, when you're in dim or bright light.<br/>
+> As for a tangible reward, I don't have too much I can offer at the moment, other than some coin and this pair of [Lightcraft Boots](https://www.dndbeyond.com/magic-items/2626745-lightcraft-boots).  They'll make you a little lighter on your feet, when you're in dim or bright light.<br/>
 > If you'd like to know more about the Order, I'd be happy to answer what questions I can.
 
 Brother Gromag tries the boots on, trying to jump on Dazoluk, assuming the boots helped with jump height.  Instead, he was shrugged off and told to sprint the length of the chamber, which he did a little faster than normal.  Dazoluk then takes him outside and has him sprint the same distance in the sunlight, which he does much faster than normal.
 
-The party asked about local weapon and armor merchants, and headed out, purchasing studded leathers for Caltrop and Gluteus.  Brother Gromag tried on the ring they found, revealing it to be a Ring of Protection.
+The party asked about local weapon and armor merchants, and headed out, purchasing studded leathers for Caltrop and Gluteus.  Brother Gromag tried on the ring they found, revealing it to be a [Ring of Protection](https://www.dndbeyond.com/magic-items/ring-of-protection).
