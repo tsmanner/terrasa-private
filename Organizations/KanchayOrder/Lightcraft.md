@@ -16,8 +16,8 @@ Enchantment can be transferred to another item for 1/2 the cost, minus any uniqu
 
 ## Item Name Ideas:
 - Auroral
-- Dawn
-- Day
+- Dawn*
+- Day*
 - Daybreak
 - Diurnal
 - Illuminated
@@ -26,11 +26,12 @@ Enchantment can be transferred to another item for 1/2 the cost, minus any uniqu
 - Lumen
 - Luminous
 - Matins
-- Morning
+- Morning*
 - Sun
 - Twilight
-- Zenith
+- Zenith*
 
+<p>* used for weapon rarity</p>
 
 ## Weapons
 ---
@@ -47,7 +48,7 @@ Common properties:
 |-----------------------|-----------------------------|------------------------------|-----------|-------------|
 |    Dawn  (_uncommon_) |                          +0 |                          1d4 |    5 foot |      5 foot |
 | Morning      (_rare_) |                          +1 |                          1d8 |   10 foot |      5 foot |
-|     Sun (_very rare_) |                          +2 |                          2d8 |   15 foot |     10 foot |
+|     Day (_very rare_) |                          +2 |                          2d8 |   15 foot |     10 foot |
 |  Zenith (_legendary_) |                          +3 |                          3d8 |   30 foot |     15 foot |
 
 Lightcraft weapons take on different appearances, depending on their light radius.
@@ -72,12 +73,12 @@ Common properties:
 |-----------------------|-----------------------|------------|---------|----|
 |    Dawn  (_uncommon_) |                    +0 |            |       1 | 11 |
 | Morning      (_rare_) |                    +1 |   Necrotic |       2 | 13 |
-|     Sun (_very rare_) |                    +2 |   Necrotic |       3 | 15 |
+|     Day (_very rare_) |                    +2 |   Necrotic |       3 | 15 |
 |  Zenith (_legendary_) |                    +3 |   Necrotic |       4 | 17 |
 
 ### **Heavy**
 Trait ideas
-- When you are struck, the armor glows, storing the energy of the attack.  The energy is released on your first successful attack before the end of your next turn, dealing an additional (1/2/3/4) radiant damage.
+- When you are struck, the armor glows, storing the energy of the attack.  The energy is released on your first successful attack before the end of your next turn, dealing an additional (1/2/3/4) radiant damage per strike made against you.
 
 
 ### **Medium**
@@ -92,7 +93,7 @@ Trait ideas
 
 ### **Shield**
 Trait ideas
-- When a ranged weapon attack is made against a creature other than you, within 15' of you, you can use your reaction and expend one charge to cause a ray of light to intercept the missile, destroying it before it hits it's target.
+- When a ranged weapon attack is made against a creature other than you, within 15' of you, you can use your reaction and expend one charge to fire a ray of light to intercept it.  Make a ranged spell attack against the missile, if your attack roll is the same or higher than the attacker's, the ray of light destroys it before it hits it's target.
 
 
 ## Cloak

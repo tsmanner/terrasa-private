@@ -21,7 +21,7 @@ Members at monasteries focus on studying ways to channel and manipulate radiant 
 
 #### Architecture
   - Mountains: Terraced enclaves with ashlar ("dry-stone", or mortarless stonework) structures and some small square tiered pyramid temples.
-  - Desert: A complex of square tiered pyramids made of sandstone and shale, which serve as temples, dormitories, and tradehouses.
+  - Desert: A complex of square tiered pyramids made of sandstone and shale, which serve as temples, dormitories, and trade houses.
 
 #### Classes and Archetypes
   - Cleric
@@ -103,6 +103,8 @@ Monasteries are connected to the region immediately surrounding Tradegate.  The 
 
 ### Chapels
 
+The chaplain's chambers exist in both planes, simultaneously, allowing them quick access to both realms.  Chaplains act, in many ways, as the K'anchay Order's public ambassadors and recruiters in most cities.  Chapels are the most numerous of locations in the cities and towns of Sherago, and it is often important for the chaplains to meet with people from the Prime Material Plane, the Outlands, Elysium, The Beastlands, and Bytopia at once or in rapid succession.  To avoid confusion, their chambers typically have two doors, placed side by side, one leading to each plane.
+
 ### Churches
 
 ### Gardens
@@ -172,8 +174,18 @@ There is a small semicircular building next to the pool in the center of the oas
 
 [Inspiration](https://www.reddit.com/r/worldbuilding/comments/45n7p3/in_need_of_ranking_systemstitles/)
 
+Affiliate
 Novice
 Initiate
 Apprentice
 Fellow
+
+
+| Rank |   Chapel | Temple | Church | Monastery | Oasis | Garden |
+|------|----------|--------|--------|-----------|-------|--------|
+|    1 | Chaplain | Priest | Pastor |     Abbot |       |        |
+|    2 | 
+|    3 | 
+|    4 | 
+|    5 | 
 

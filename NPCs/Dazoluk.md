@@ -1,4 +1,6 @@
-# [Dalozuk Forgemaker](https://www.dndbeyond.com/profile/UngodlySalmon/characters/40740308)
+# [Dazoluk Forgemaker](https://www.dndbeyond.com/profile/UngodlySalmon/characters/40740308)
+
+"DAH zuh luck"
 
 Score Rolls:
 
