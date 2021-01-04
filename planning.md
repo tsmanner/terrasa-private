@@ -105,16 +105,15 @@ There's going to be a target shooting contest, if they'd like to test their skil
 3. javelin:  +5, 2x1d6+3
 4. crossbow: +6, 1x1d6+5
 
-Each target has an AC of 15, and they get points for each hit they score within one minute.  Double points for a bullseye (crit).
+Each target has an AC of 15, and they get one point per target they knock down.
 
-| Range | Points |
-|-------|--------|
-|   20' |      1 |
-|   50' |      3 |
-|  100' |      4 |
-|  150' |      8 |
-|  300' |     13 |
-|  500' |     20 |
+| Range | AC | HP | GM | CB | BG | SG | LG | JG | CB |
+|-------|----|----|----|----|----|----|----|----|----|
+|   20' | 13 | 25 |  3 |  3 |  8 |  6 |  
+|   50' | 14 | 20 |  2 |  3 |  8 |  6 |  
+|  150' | 15 | 15 |  2 |  3 |  - |  5 |  
+|  300' | 16 | 10 |  2 |  2 |  - |  4 |  
+|  500' | 17 |  5 |  1 |  - |  - |  - |  2 |  - |  - |
 
 The contestants will be lead into the lower level, to the chaplain's office at the end of the hall.  They will enter, and immediately be ushered to a door just to the left, placed such that it should lead into the bedchamber through that wall.  Instead, through the open door, they see what looks like a storage room that opens into a pavilion in the middle of a meadow.  Walking through, it is a calm, sunny day in this field of green grass and wildflowers.  In the distance, herds of deer and buffalo like creatures are grazing near a stand of trees.  In the other direction, the pavilion is backed up against the outskirts of a large city made up mostly of short wooden houses, many with large porches around them, and larger barn-like buildings with signs for various wares, vocations, and inns.  Two sets of scarecrow-like targets have been erected on the side opposite the city, each with a rope line set in front of it.  Contestants get 10 shots, alternating between pairs.  The winner advances to the next round, and the final winner receives a pair of Bracers of Archery.  If the players lose the contest, they'll be able to try and buy the bracers from the winner for 300gp, with potential to haggle down to 250gp with high enough Charisma checks (persuasion or intimidation, depending).
 

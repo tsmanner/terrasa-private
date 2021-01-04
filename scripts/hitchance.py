@@ -211,10 +211,11 @@ def attack(attacker, target):
         roll + attacker.attack_bonus: Roll(conditional, attacker.attack_roll >= target.ac, attacker.damage, 0)
         for roll in range(2, 20)
     })
-    return Roll(switch,
+    attacks = [Roll(switch,
         hit(attacker, target),
         attack_rolls
-    )
+    ) for _ in range(attacker.attacks)]
+    return sum(attacks)
 
 
 def damages(rounds, attacker, target):
@@ -225,11 +226,19 @@ def damage_per_round(rounds, attacker, target):
     return statistics.mean(damages(rounds, attacker, target))
 
 
+def rounds_to_kill(damage, hp):
+    if damage:
+        return int(hp // damage + (1 if hp % damage != 0 else 0))
+    return "--"
+
+
 class Entity:
-    def __init__(self, name, position, ac, attack_bonus, short_range, long_range, damage):
+    def __init__(self, name, *, position=None, ac=None, hp=None, attacks=1, attack_bonus=None, short_range=None, long_range=None, damage=None):
         self.name = name
         self.position = position
         self.ac = ac
+        self.hp = hp
+        self.attacks = attacks
         self.attack_bonus = attack_bonus
         self.attack_roll = d20 + attack_bonus
         self.short_range = short_range
@@ -244,32 +253,30 @@ class Entity:
 
 
 contestants = [
-  Entity("Gluteus Maximus",   (0, 0), 15, 7, 150, 600, 2*d8 + d6 + 3),
-  Entity("Caltrop Bloodless", (0, 0),  1 , 4, 80, 320, d8 + 2*d6 + 2),
-  Entity("Brother Gromag",    (0, 0),  1 , 4, 20,  60, d4 + 3),
-  Entity("Shortbow Guy",      (0, 0), 13, 4,  80, 320, d6 + 3),
-  Entity("Longbow Guy",       (0, 0), 13, 4, 150, 600, d8 + 3),
-  Entity("Javelin Guy",       (0, 0), 13, 4,  30, 120, d6 + 3),
-  Entity("Crossbow Guy",      (0, 0), 13, 4,  80, 320, d8 + 3),
+  Entity("Gluteus Maximus",   position=(0, 0), ac=15, hp=25, attack_bonus=7, short_range=150, long_range=600, damage=2*d8 + d6 + 3),
+  Entity("Caltrop Bloodless", position=(0, 0), ac=13, hp=18, attack_bonus=4, short_range= 80, long_range=320, damage=d8 + 2*d6 + 2),
+  Entity("Brother Gromag",    position=(0, 0), ac=15, hp=28, attack_bonus=5, short_range= 20, long_range= 60, damage=d4 + 3),
+  Entity("Shortbow Guy",      position=(0, 0), ac=13, hp=15, attack_bonus=4, short_range= 80, long_range=320, damage=3*d6 + 3),  # Rogue
+  Entity("Longbow Guy",       position=(0, 0), ac=13, hp=15, attack_bonus=6, short_range=150, long_range=600, damage=d8 + d6 + 3),  # Hunter Ranger
+  Entity("Javelin Guy",       position=(0, 0), ac=13, hp=15, attack_bonus=7, short_range= 30, long_range=120, damage=d6 + 3, attacks=2),  # Fighter
+  Entity("Crossbow Guy",      position=(0, 0), ac=13, hp=15, attack_bonus=4, short_range= 80, long_range=320, damage=d8 + d4 + 3),  # Way of the Kensei Monk
 ]
 
 targets = {
-    Entity("target1", (0,  20), 15, 0, 0, 0, 0): 1,
-    Entity("target2", (0,  50), 15, 0, 0, 0, 0): 3,
-    Entity("target3", (0, 150), 15, 0, 0, 0, 0): 8,
-    Entity("target4", (0, 300), 15, 0, 0, 0, 0): 13,
-    Entity("target5", (0, 500), 17, 0, 0, 0, 0): 20,
+    Entity("target1", position=(0,  20), ac=13, hp=25):  1,
+    Entity("target2", position=(0,  50), ac=14, hp=20):  3,
+    Entity("target3", position=(0, 100), ac=15, hp=15):  8,
+    Entity("target4", position=(0, 250), ac=16, hp=10): 13,
+    Entity("target5", position=(0, 500), ac=17, hp= 5): 20,
 }
 
+simulated_rounds = 10000
+average_damage_per_round = {
+    contestant: {target: damage_per_round(simulated_rounds, contestant, target) for target in targets}
+    for contestant in contestants
+}
 
-class Tournament:
-    def __init__(self, rounds, contestants, targets):
-        self.rounds = rounds
-        self.contestants = contestants
-        self.targets = targets
-
-
-simulated_rounds = 10
-for contestant in contestants:
-    dprs = {target: damage_per_round(simulated_rounds, contestant, target) for target in targets}
-    [print(f"{str(contestant):>34} -> {distance(contestant, target):>3} : {dprs[target]:>6.2f}") for target in targets if dprs[target] > 0]
+row_format = "| {:>5} | {:>2} | {:>2} ||" + (" {:>2} |" * len(contestants))
+print(row_format.format("range", "AC", "HP", "GM", "CB", "BG", "SG", "LG", "JG", "CB"))
+for target in targets:
+    print(row_format.format(target.position[1], target.ac, target.hp, *[rounds_to_kill(average_damage_per_round[contestant][target], target.hp) for contestant in contestants]))

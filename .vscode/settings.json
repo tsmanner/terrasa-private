@@ -133,5 +133,6 @@
         "streambuf": "cpp",
         "typeinfo": "cpp"
     },
-    "svg.preview.background": "black"
+    "svg.preview.background": "black",
+    "python.pythonPath": "/home/tsmanner/terrasa/venv/bin/python3.7"
 }
