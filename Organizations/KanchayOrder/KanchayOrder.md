@@ -68,6 +68,9 @@ Found in many cities, though most keep their ties to the K'anchay Order a secret
   - Warlock
     - The Celestial (Homebrew Wall of Fire to Wall of Light?)
 
+| Temple | Chapel | Church |
+|--------|--------|--------|
+| <img src="" alt="Temple" style="background: tan" width=200/> | <img src="../../docs/assets/KanchayOrderChapel.png" alt="Chapel" style="background: tan" width=200/> | <img src="" alt="Temple" style="background: tan" width=200/> |
 
 ### Gardens and Oases
 ---
