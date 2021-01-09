@@ -1,5 +1,5 @@
 ---
-Players
+title: Players
 ---
 
 - [Caltrop Bloodless](CaltropBloodless.md)
