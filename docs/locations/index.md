@@ -1,4 +1,6 @@
-# Locations
+---
+title: Locations
+---
 
 ## Terrasa
 The world
