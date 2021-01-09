@@ -3,24 +3,23 @@ remote_theme: daattali/beautiful-jekyll@5.0.0
 navbar-links:
   Players: players
   Locations: locations
-  Resources:
-    - Campaign: https://www.dndbeyond.com/campaigns/994863
-    - Player's Handbook: https://www.dndbeyond.com/sources/phb
-    - Classes:
-      - Artificer: https://www.dndbeyond.com/classes/artificer
-      - Barbarian: https://www.dndbeyond.com/classes/barbarian
-      - Blood Hunter: https://www.dndbeyond.com/classes/blood-hunter
-      - Bard: https://www.dndbeyond.com/classes/bard
-      - Cleric: https://www.dndbeyond.com/classes/cleric
-      - Druid: https://www.dndbeyond.com/classes/druid
-      - Fighter: https://www.dndbeyond.com/classes/fighter
-      - Monk: https://www.dndbeyond.com/classes/monk
-      - Paladin: https://www.dndbeyond.com/classes/paladin
-      - Ranger: https://www.dndbeyond.com/classes/ranger
-      - Rogue: https://www.dndbeyond.com/classes/rogue
-      - Sorcerer: https://www.dndbeyond.com/classes/sorcerer
-      - Warlock: https://www.dndbeyond.com/classes/warlock
-      - Wizard: https://www.dndbeyond.com/classes/wizard
+  Campaign: https://www.dndbeyond.com/campaigns/994863
+  Player's Handbook: https://www.dndbeyond.com/sources/phb
+  Classes:
+    - Artificer: https://www.dndbeyond.com/classes/artificer
+    - Barbarian: https://www.dndbeyond.com/classes/barbarian
+    - Blood Hunter: https://www.dndbeyond.com/classes/blood-hunter
+    - Bard: https://www.dndbeyond.com/classes/bard
+    - Cleric: https://www.dndbeyond.com/classes/cleric
+    - Druid: https://www.dndbeyond.com/classes/druid
+    - Fighter: https://www.dndbeyond.com/classes/fighter
+    - Monk: https://www.dndbeyond.com/classes/monk
+    - Paladin: https://www.dndbeyond.com/classes/paladin
+    - Ranger: https://www.dndbeyond.com/classes/ranger
+    - Rogue: https://www.dndbeyond.com/classes/rogue
+    - Sorcerer: https://www.dndbeyond.com/classes/sorcerer
+    - Warlock: https://www.dndbeyond.com/classes/warlock
+    - Wizard: https://www.dndbeyond.com/classes/wizard
 
 author: Tom Manner
 
