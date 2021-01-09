@@ -1,9 +1,16 @@
 remote_theme: daattali/beautiful-jekyll@5.0.0
 
 navbar-links:
-  Players: players
+  Players:
+    - Brother Gromag: players/BrotherGromag
+    - Caltrop Bloodless: players/CaltropBloodless
+    - Gluteus Maximus: players/GluteusMaximus
   Locations: locations
   Campaign: https://www.dndbeyond.com/campaigns/994863
+  Character Sheets:
+    - Brother Gromag: https://www.dndbeyond.com/profile/Sirnik/characters/27153228
+    - Caltrop Bloodless: https://www.dndbeyond.com/profile/Rycosso/characters/27153025
+    - Gluteus Maximus: https://www.dndbeyond.com/profile/lilvin/characters/29239078
   Player's Handbook: https://www.dndbeyond.com/sources/phb
   Classes:
     - Artificer: https://www.dndbeyond.com/classes/artificer
