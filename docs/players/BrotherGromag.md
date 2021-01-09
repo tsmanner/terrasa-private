@@ -1,1 +1,4 @@
-# Brother Gromag (Nick)
+---
+title: Brother Gromag
+subtitle: Nick
+---
