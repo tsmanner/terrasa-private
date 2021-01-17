@@ -1,4 +1,6 @@
 # [Izhi](https://www.dndbeyond.com/profile/UngodlySalmon/characters/40583913)
+Izhi is a pirate captain and warlock in the service of Myrkul.  He has always been ambitious and bloodthirsty, perpetrating a successful mutiny against the former captain of his pirate vessel.
+
 
 Score Rolls:
 

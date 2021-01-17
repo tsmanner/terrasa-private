@@ -1,7 +1,9 @@
 # The K'anchay (Light) Order
 An organization that spans all of terrasa, working in the service of (Inti)[https://en.wikipedia.org/wiki/Inti], or Lathander, sun god of birth and renewal.
 
-There are several types of K'anchay chapter:
+## Goals
+
+The K'anchay Order stands in opposition to the Cult of Myrkul, constantly thwarting their attempts at destruction.  They are growing concerned about the recent uptick in violent activity in the west, and are trying to find the people responsible.  They suspected the Cult of Myrkul was involved, but don't know about Izhi or the faction he's leading within the Cult of Myrkul.  The party's actions, taking down both Sayre and Wayra, have confirmed their suspicions.  They're now starting to discuss why it might be happening, and why the actions were so brazen.  The party was effective at tracking down Sayre, so the Order would like them to help figure out what is going on around Yalaqta.
 
 ## Locations
 ---
@@ -186,9 +188,9 @@ Fellow
 
 | Rank |   Chapel | Temple | Church | Monastery | Oasis | Garden |
 |------|----------|--------|--------|-----------|-------|--------|
-|    1 | Chaplain | Priest | Pastor |     Abbot |       |        |
-|    2 | 
-|    3 | 
-|    4 | 
-|    5 | 
+|    1 | Chaplain | Priest | Pastor |     Abbot |       | Keeper |
+|    2 |
+|    3 |
+|    4 |
+|    5 |
 

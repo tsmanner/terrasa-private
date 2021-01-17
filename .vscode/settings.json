@@ -131,8 +131,10 @@
         "sstream": "cpp",
         "stdexcept": "cpp",
         "streambuf": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "cerrno": "cpp",
+        "ios": "cpp",
+        "queue": "cpp"
     },
-    "svg.preview.background": "black",
-    "python.pythonPath": "/home/tsmanner/terrasa/venv/bin/python3.7"
+    "svg.preview.background": "black"
 }

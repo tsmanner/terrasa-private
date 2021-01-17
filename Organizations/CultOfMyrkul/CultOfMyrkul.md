@@ -5,7 +5,20 @@ A cult of the death god Myrkul, which has recently begun to stir.  They were a r
 
 Founded 100 years earlier, in the aftermath of the Gray War.
 
-Presence in Yallaqta to find
+Izhi's recent gain in power has led to a more aggressive faction within the Cult of Myrkul gaining traction.  This faction wants to make bold moves against the K'anchay Order, striking at them more directly.  Izhi wants to seige Yalaqta because he believes it is the heart of the K'anchay Order, and his first attempts to probe at it's defenses were Sayre and Wayra.  He wants to figure out a way to destroy the city's supply caches and prevent them from replenishing them.  His plan is to use the existing criminal elements in the city to destroy the grain, whittle away at the farming population in the surrounding area, and eventually blockade the port with a pirate fleet.
+
+The old guard in the Cult of Myrkul wants to use subversion and misdirection to erode support for the K'anchay Order and their temples and churches.  In some places in the east, they have been successful, there are a few towns there that frown upon or outlaw the worship of Lathander, making it much harder for the K'anchay Order to operate there.
+
+Manco leads the established cult, and is staunchly opposed to Izhi's brash plans.  There is a sort of civil war happening within the cult, Izhi leading the rebellion in the west.  They haven't come to blows, except the occasional fight or squabble between members, but it's only a matter of time before Izhi threatens the security of Manco's operations and he's forced to take action.  For now, Manco views Izhi like a child throwing a tantrum; Izhi has been violent and destructive, but it's been contained to piracy and smaller coastal settlements, so it's not concerning yet.
+
+### Izhi's Machinations
+
+Forcible covert (i.e. not explicitly the Cult in control, just some "boss" figure) takeover of Yalaqta criminals, to attempt to organize them well enough they can weaken the city from the inside in the case of a seige.
+
+Weaken the population of farmers and tradespeople in the region to put the city's food supplies at risk and increase the load of sick or injured.
+
+Some sort of sabotage of the naval presence in the port to allow the pirate fleet to blockade it if they need to.  Orchestrating a war seems too far (and too CritRole), and too indirect.  Izhi would either directly cripple the ships there, or would draw them out somehow through more direct action.  Maybe a feint attack on Chimaylla through the ice floes in winter could get the navy from Yalaqta to move, and risk being iced in.
+
 
 ## Locations
 ---

@@ -1,0 +1,235 @@
+#include <functional>
+#include <iostream>
+#include <limits>
+#include <random>
+#include <type_traits>
+
+
+template <typename Operation, typename Source>
+struct UnaryAtom;
+
+
+template <typename Operation, typename SourceL, typename SourceR>
+struct BinaryAtom;
+
+
+template <typename Operation, typename Source>
+struct UnaryAtom {
+  UnaryAtom(Source& source): mSource(source) {}
+
+  auto operator-() { return UnaryAtom<std::negate<int>, UnaryAtom<Operation, Source>>(*this); }
+
+  template <typename T2> typename std::enable_if<(!std::is_same<T2, int>::value), BinaryAtom<std::plus<int>,       UnaryAtom<Operation, Source>, T2>>::type operator+(T2& t2) { return BinaryAtom<std::plus<int>,       UnaryAtom<Operation, Source>, T2>(*this, t2); }
+  template <typename T2> typename std::enable_if<(!std::is_same<T2, int>::value), BinaryAtom<std::minus<int>,      UnaryAtom<Operation, Source>, T2>>::type operator-(T2& t2) { return BinaryAtom<std::minus<int>,      UnaryAtom<Operation, Source>, T2>(*this, t2); }
+  template <typename T2> typename std::enable_if<(!std::is_same<T2, int>::value), BinaryAtom<std::multiplies<int>, UnaryAtom<Operation, Source>, T2>>::type operator*(T2& t2) { return BinaryAtom<std::multiplies<int>, UnaryAtom<Operation, Source>, T2>(*this, t2); }
+  template <typename T2> typename std::enable_if<(!std::is_same<T2, int>::value), BinaryAtom<std::divides<int>,    UnaryAtom<Operation, Source>, T2>>::type operator/(T2& t2) { return BinaryAtom<std::divides<int>,    UnaryAtom<Operation, Source>, T2>(*this, t2); }
+
+  int operator()() { return mOperation(mSource()); }
+
+private:
+  const Operation mOperation {};
+  Source& mSource;
+
+};
+
+
+template <typename Operation, typename SourceL, typename SourceR>
+struct BinaryAtom {
+  BinaryAtom(SourceL& sourcel, SourceR& sourcer): mSourceL(sourcel), mSourceR(sourcer) {}
+
+  auto operator-() { return UnaryAtom<std::negate<int>, BinaryAtom<Operation, SourceL, SourceR>>(*this); }
+
+  template <typename T2> auto operator+(T2& t2) { return BinaryAtom<std::plus<int>,       BinaryAtom<Operation, SourceL, SourceR>, T2>(*this, t2); }
+  template <typename T2> auto operator-(T2& t2) { return BinaryAtom<std::minus<int>,      BinaryAtom<Operation, SourceL, SourceR>, T2>(*this, t2); }
+  template <typename T2> auto operator*(T2& t2) { return BinaryAtom<std::multiplies<int>, BinaryAtom<Operation, SourceL, SourceR>, T2>(*this, t2); }
+  template <typename T2> auto operator/(T2& t2) { return BinaryAtom<std::divides<int>,    BinaryAtom<Operation, SourceL, SourceR>, T2>(*this, t2); }
+
+
+  int operator()() { return mOperation(mSourceL(), mSourceR()); }
+
+private:
+  const Operation mOperation {};
+  SourceL& mSourceL;
+  SourceR& mSourceR;
+
+};
+
+
+template <typename Operation, typename SourceL>
+struct BinaryAtom<Operation, SourceL, int> {
+  BinaryAtom(SourceL& sourcel, const int& sourcer): mSourceL(sourcel), mSourceR(sourcer) {}
+
+  auto operator-() { return UnaryAtom<std::negate<int>, BinaryAtom<Operation, SourceL, int>>(*this); }
+
+  template <typename T2> auto operator+(T2& t2) { return BinaryAtom<std::plus<int>,       BinaryAtom<Operation, SourceL, int>, T2>(*this, t2); }
+  template <typename T2> auto operator-(T2& t2) { return BinaryAtom<std::minus<int>,      BinaryAtom<Operation, SourceL, int>, T2>(*this, t2); }
+  template <typename T2> auto operator*(T2& t2) { return BinaryAtom<std::multiplies<int>, BinaryAtom<Operation, SourceL, int>, T2>(*this, t2); }
+  template <typename T2> auto operator/(T2& t2) { return BinaryAtom<std::divides<int>,    BinaryAtom<Operation, SourceL, int>, T2>(*this, t2); }
+
+  int operator()() { return mOperation(mSourceL(), mSourceR); }
+
+private:
+  const Operation mOperation {};
+  SourceL& mSourceL;
+  const int mSourceR;
+
+};
+
+
+template <typename Operation, typename SourceR>
+struct BinaryAtom<Operation, int, SourceR> {
+  BinaryAtom(const int& sourcel, SourceR& sourcer): mSourceL(sourcel), mSourceR(sourcer) {}
+
+  auto operator-() { return UnaryAtom<std::negate<int>, BinaryAtom<Operation, int, SourceR>>(*this); }
+
+  template <typename T2> auto operator+(T2& t2) { return BinaryAtom<std::plus<int>,       BinaryAtom<Operation, int, SourceR>, T2>(*this, t2); }
+  template <typename T2> auto operator-(T2& t2) { return BinaryAtom<std::minus<int>,      BinaryAtom<Operation, int, SourceR>, T2>(*this, t2); }
+  template <typename T2> auto operator*(T2& t2) { return BinaryAtom<std::multiplies<int>, BinaryAtom<Operation, int, SourceR>, T2>(*this, t2); }
+  template <typename T2> auto operator/(T2& t2) { return BinaryAtom<std::divides<int>,    BinaryAtom<Operation, int, SourceR>, T2>(*this, t2); }
+
+  int operator()() { return mOperation(mSourceL, mSourceR()); }
+
+private:
+  const Operation mOperation {};
+  const int mSourceL;
+  SourceR& mSourceR;
+
+};
+
+
+template <int MIN, int MAX>
+class Roll {
+public:
+  Roll(const Roll<MIN, MAX>&) {}
+  Roll() {}
+
+  auto operator-() { return UnaryAtom<std::negate<int>, Roll<MIN, MAX>>(*this); }
+
+  template <typename T2> auto operator+(T2& t2) { return BinaryAtom<std::plus<int>,       Roll<MIN, MAX>, T2>(*this, t2); }
+  template <typename T2> auto operator-(T2& t2) { return BinaryAtom<std::minus<int>,      Roll<MIN, MAX>, T2>(*this, t2); }
+  template <typename T2> auto operator*(T2& t2) { return BinaryAtom<std::multiplies<int>, Roll<MIN, MAX>, T2>(*this, t2); }
+  template <typename T2> auto operator/(T2& t2) { return BinaryAtom<std::divides<int>,    Roll<MIN, MAX>, T2>(*this, t2); }
+
+  auto operator+(int&& value) { return BinaryAtom<std::plus<int>,       Roll<MIN, MAX>, int>(*this, value); }
+  auto operator-(int&& value) { return BinaryAtom<std::minus<int>,      Roll<MIN, MAX>, int>(*this, value); }
+  auto operator*(int&& value) { return BinaryAtom<std::multiplies<int>, Roll<MIN, MAX>, int>(*this, value); }
+  auto operator/(int&& value) { return BinaryAtom<std::divides<int>,    Roll<MIN, MAX>, int>(*this, value); }
+
+  int operator()() { return uniform_distribution(engine); }
+
+private:
+  std::random_device rand;
+  std::default_random_engine engine { rand() };
+  std::uniform_int_distribution<int> uniform_distribution { MIN, MAX };
+
+};
+
+
+template <int VALUE>
+class Roll<VALUE, VALUE> {
+public:
+  Roll(const Roll<VALUE, VALUE>&) {}
+  Roll() {}
+
+  auto operator-() { return UnaryAtom<std::negate<int>, Roll<VALUE, VALUE>>(*this); }
+
+  template <typename T2> auto operator+(T2& t2) { return BinaryAtom<std::plus<int>,       Roll<VALUE, VALUE>, T2>(*this, t2); }
+  template <typename T2> auto operator-(T2& t2) { return BinaryAtom<std::minus<int>,      Roll<VALUE, VALUE>, T2>(*this, t2); }
+  template <typename T2> auto operator*(T2& t2) { return BinaryAtom<std::multiplies<int>, Roll<VALUE, VALUE>, T2>(*this, t2); }
+  template <typename T2> auto operator/(T2& t2) { return BinaryAtom<std::divides<int>,    Roll<VALUE, VALUE>, T2>(*this, t2); }
+
+  auto operator+(int&& value) { return BinaryAtom<std::plus<int>,       Roll<VALUE, VALUE>, int>(*this, value); }
+  auto operator-(int&& value) { return BinaryAtom<std::minus<int>,      Roll<VALUE, VALUE>, int>(*this, value); }
+  auto operator*(int&& value) { return BinaryAtom<std::multiplies<int>, Roll<VALUE, VALUE>, int>(*this, value); }
+  auto operator/(int&& value) { return BinaryAtom<std::divides<int>,    Roll<VALUE, VALUE>, int>(*this, value); }
+
+  int operator()() { return VALUE; }
+
+};
+
+
+template <typename Operation, typename Source> auto operator+(UnaryAtom<Operation, Source>&& atom, int&& value) { return BinaryAtom<std::plus<int>,       UnaryAtom<Operation, Source>, int>(atom, value); }
+template <typename Operation, typename Source> auto operator+(int&& value, UnaryAtom<Operation, Source>&& atom) { return BinaryAtom<std::plus<int>,       int, UnaryAtom<Operation, Source>>(value, atom); }
+
+template <typename Operation, typename Source> auto operator-(UnaryAtom<Operation, Source>&& atom, int&& value) { return BinaryAtom<std::minus<int>,      UnaryAtom<Operation, Source>, int>(atom, value); }
+template <typename Operation, typename Source> auto operator-(int&& value, UnaryAtom<Operation, Source>&& atom) { return BinaryAtom<std::minus<int>,      int, UnaryAtom<Operation, Source>>(value, atom); }
+
+template <typename Operation, typename Source> auto operator*(UnaryAtom<Operation, Source>&& atom, int&& value) { return BinaryAtom<std::multiplies<int>, UnaryAtom<Operation, Source>, int>(atom, value); }
+template <typename Operation, typename Source> auto operator*(int&& value, UnaryAtom<Operation, Source>&& atom) { return BinaryAtom<std::multiplies<int>, int, UnaryAtom<Operation, Source>>(value, atom); }
+
+template <typename Operation, typename Source> auto operator/(UnaryAtom<Operation, Source>&& atom, int&& value) { return BinaryAtom<std::divides<int>,    UnaryAtom<Operation, Source>, int>(atom, value); }
+template <typename Operation, typename Source> auto operator/(int&& value, UnaryAtom<Operation, Source>&& atom) { return BinaryAtom<std::divides<int>,    int, UnaryAtom<Operation, Source>>(value, atom); }
+
+
+template <typename Operation, typename SourceL, typename SourceR> auto operator+(BinaryAtom<Operation, SourceL, SourceR>&& atom, int&& value) { return BinaryAtom<std::plus<int>,       BinaryAtom<Operation, SourceL, SourceR>, int>(atom, value); }
+template <typename Operation, typename SourceL, typename SourceR> auto operator+(int&& value, BinaryAtom<Operation, SourceL, SourceR>&& atom) { return BinaryAtom<std::plus<int>,       int, BinaryAtom<Operation, SourceL, SourceR>>(value, atom); }
+
+template <typename Operation, typename SourceL, typename SourceR> auto operator-(BinaryAtom<Operation, SourceL, SourceR>&& atom, int&& value) { return BinaryAtom<std::minus<int>,      BinaryAtom<Operation, SourceL, SourceR>, int>(atom, value); }
+template <typename Operation, typename SourceL, typename SourceR> auto operator-(int&& value, BinaryAtom<Operation, SourceL, SourceR>&& atom) { return BinaryAtom<std::minus<int>,      int, BinaryAtom<Operation, SourceL, SourceR>>(value, atom); }
+
+template <typename Operation, typename SourceL, typename SourceR> auto operator*(BinaryAtom<Operation, SourceL, SourceR>&& atom, int&& value) { return BinaryAtom<std::multiplies<int>, BinaryAtom<Operation, SourceL, SourceR>, int>(atom, value); }
+template <typename Operation, typename SourceL, typename SourceR> auto operator*(int&& value, BinaryAtom<Operation, SourceL, SourceR>&& atom) { return BinaryAtom<std::multiplies<int>, int, BinaryAtom<Operation, SourceL, SourceR>>(value, atom); }
+
+template <typename Operation, typename SourceL, typename SourceR> auto operator/(BinaryAtom<Operation, SourceL, SourceR>&& atom, int&& value) { return BinaryAtom<std::divides<int>,    BinaryAtom<Operation, SourceL, SourceR>, int>(atom, value); }
+template <typename Operation, typename SourceL, typename SourceR> auto operator/(int&& value, BinaryAtom<Operation, SourceL, SourceR>&& atom) { return BinaryAtom<std::divides<int>,    int, BinaryAtom<Operation, SourceL, SourceR>>(value, atom); }
+
+
+template <int MIN, int MAX> auto operator+(Roll<MIN, MAX>&& roll, int&& value) { return BinaryAtom<std::plus<int>,       Roll<MIN, MAX>, int>(roll, value); }
+template <int MIN, int MAX> auto operator+(int&& value, Roll<MIN, MAX>&  roll) { return BinaryAtom<std::plus<int>,       int, Roll<MIN, MAX>>(value, roll); }
+template <int MIN, int MAX> auto operator+(int&& value, Roll<MIN, MAX>&& roll) { return BinaryAtom<std::plus<int>,       int, Roll<MIN, MAX>>(value, roll); }
+
+template <int MIN, int MAX> auto operator-(Roll<MIN, MAX>&& roll, int&& value) { return BinaryAtom<std::minus<int>,      Roll<MIN, MAX>, int>(roll, value); }
+template <int MIN, int MAX> auto operator-(int&& value, Roll<MIN, MAX>&  roll) { return BinaryAtom<std::minus<int>,      int, Roll<MIN, MAX>>(value, roll); }
+template <int MIN, int MAX> auto operator-(int&& value, Roll<MIN, MAX>&& roll) { return BinaryAtom<std::minus<int>,      int, Roll<MIN, MAX>>(value, roll); }
+
+template <int MIN, int MAX> auto operator*(Roll<MIN, MAX>&& roll, int&& value) { return BinaryAtom<std::multiplies<int>, Roll<MIN, MAX>, int>(roll, value); }
+template <int MIN, int MAX> auto operator*(int&& value, Roll<MIN, MAX>&  roll) { return BinaryAtom<std::multiplies<int>, int, Roll<MIN, MAX>>(value, roll); }
+template <int MIN, int MAX> auto operator*(int&& value, Roll<MIN, MAX>&& roll) { return BinaryAtom<std::multiplies<int>, int, Roll<MIN, MAX>>(value, roll); }
+
+template <int MIN, int MAX> auto operator/(Roll<MIN, MAX>&& roll, int&& value) { return BinaryAtom<std::divides<int>,    Roll<MIN, MAX>, int>(roll, value); }
+template <int MIN, int MAX> auto operator/(int&& value, Roll<MIN, MAX>&  roll) { return BinaryAtom<std::divides<int>,    int, Roll<MIN, MAX>>(value, roll); }
+template <int MIN, int MAX> auto operator/(int&& value, Roll<MIN, MAX>&& roll) { return BinaryAtom<std::divides<int>,    int, Roll<MIN, MAX>>(value, roll); }
+
+
+using D4   = Roll<1,   4>;
+using D6   = Roll<1,   6>;
+using D8   = Roll<1,   8>;
+using D10  = Roll<1,  10>;
+using D12  = Roll<1,  12>;
+using D20  = Roll<1,  20>;
+using D100 = Roll<1, 100>;
+
+
+static D4   d4;
+static D6   d6;
+static D8   d8;
+static D10  d10;
+static D12  d12;
+static D20  d20;
+static D100 d100;
+
+
+// TODO: I need this to return an Atom type so that it can be composed into larger rolls
+//       without requiring that it take a concrete value right away.
+auto attack_roll(int&& attack_bonus) {
+  auto value = d20();
+  switch (value) {
+    case  1: return std::numeric_limits<int>::lowest();
+    case 20: return std::numeric_limits<int>::max();
+    default: return value + attack_bonus;
+  }
+}
+
+
+auto advantage(int&& attack_bonus) {
+  return BinaryAtom<std::max, typename std::result_of<attack_roll, int&&>::type, typename std::result_of<attack_roll, int&&>::type>(attack)
+}
+
+
+int main() {
+  for (int i = 0; i < 20; ++i) {
+    // std::cout << ((-d20 + 50) * d4)() << " " << (50 + d20)() << std::endl;
+    std::cout << attack_roll(7) << std::endl;
+  }
+  return 0;
+}

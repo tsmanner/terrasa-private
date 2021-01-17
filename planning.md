@@ -1,125 +1,73 @@
 # Planning
 
-Kilvin presses Dazoluk for information about why he left and what he's been doing.
+The farther targets are smaller than the closer ones; contestants get one point per target they knock down.
 
-Dazoluk
-> I got word that I was needed to help with a disturbance in the north, I had intended to be gone for a few days at most.
+| Range | AC | HP |
+|-------|----|----|
+|   20' | 13 | 25 |
+|   50' | 14 | 20 |
+|  100' | 15 | 15 |
+|  250' | 16 | 10 |
+|  500' | 17 |  5 |
 
-Kilvin
-> Master, it's been nearly half a year!
+Contestants get one minute to attack from behind the line, and are awarded one point for each target they knock down.  In the event of a tie, a shoot-off is held: a small target is set up at 50', and the contestants each get one shot at it.  This is done until one hits and the other misses.  The winner advances to the next round, and the final winner receives a pair of Bracers of Archery.  In the final round of the contest, the targets are actual scarecrow monsters, which come to life as they are hit, and when commotion starts, all will begin to act.  The party should do more here than the NPCs (except maybe Dazoluk), and as a reward for defeating them, will be given the prize: a pair of Bracers of Archery.
 
-Dazoluk
-> I know, I know, I am sorry Kilvin.
+Bracket:
+| Kurt     |
+| Javelin  | winner |
+|                   |
+| Shortbow | winner | winner |
+| Longbow  |                 |
+|                            | champion
+| Ryan     |                 |
+| Crossbow | winner | winner |
+|                   |
+| Nick     | winner |
+| Crossbow |
 
-Kilvin
-> Rumors about those _cultists_ reached the village right after you disappeared, some in Dhagdarom thought you had been taken or killed by them.  Others thought you had abandoned us, but no one could explain why you would do that.  I was _sure_ they were wrong.  I was _sure_ that you would come back.  Two weeks with no word, and I realized it wasn't true, but I had to believe that you hadn't simply left us, so I went after you.
-
-Dazoluk
-> Kilvin, that village needs you, they will need a smith to make it through the season.  And what about your family, what did they have to say about this?
-
-Kilvin
-> Don't worry, they sent to Deleduhr for a smith, my uncle lived there for a while and knows some people that could help.  A Go'Val caravan came through a few days later, headed west toward Chimaylla and I figured it was my best chance at finding out what happened to you, so I went with them.  I left a note for the rest of my family, only my uncle knew I was leaving.  The caravan leader says they should be back in the north in a few months, I though it would be best to stay with them, they always need help on the road, and they're good people.
-
-Dazoluk
-> I'm sure you could have made the trip back from Chimaylla yourself.  That said, I am glad to see you, and impressed by what you and your companions have accomplished in your short time here!
-
-Dazoluk turns toward the others of the party, saying
-> I am Dazoluk Forgemaker, Paladin of Lathander, and Fellow of the K'anchay Order.  And you are?
-
-
----
-
-Introductions ensue?
-
----
+Options:
+- Nick doesn't enter - replace with shortbow
+- Ryan doesn't enter - replace with javelin
 
 
-Dazoluk
-> We should head back to report what happened here today.  It would be much easier to explain if you were to join us.
-
-If they are apprehensive about it:
-> I'm sure we could arrange payment of some kind.
-
-If they demand some sort of payment or reward: stern/threatening
-> That will depend on how you handle yourselves at the chapel.
-
-
-
----
-
-Dazoluk introduces them to Chaplain Mayua, the head of this chapel.
-
-Dazoluk
-> Chaplain, we were successful in tracking down the necromancer known as Wayra, though she had been dealt with by the time we arrived.
-
-Mayua
-> That is good to hear Forgemaker.  She had been... dealt with?
-
-Dazoluk - gesturing behind him at the party
-> After bringing in the Sending Stone, Llaska... proactively... enlisted the help of these four, to get to Wayra's lair before our planned assault.  They dispatched Wayra just as we arrived.
-
-Mayua - thinks for a second, holding up a hand to stop Llaska as he starts to speak
-> Llaska, that was reckless of you to do without consulting with us first.  It worked out this time, thank Lathander there were no casualties.
-
-Llaska
-> Listen, these guys are the real deal, we had no trouble at all, unless you count the fact that I'm still a little stiff.
-
-Llaska chuckles
-
-Mayua
-> Regardless, you went without backup and without a plan.  We can't have people doing that, Llaska.
-
-Dazoluk
-> If I may, his actions, and the actions of all five of them, were bold, but effective.  They demonstrated courage and righteousness, not to mention skill, today.  While I agree we can't encourage reckless behavior, I think we should be rewarding the _good_ that was done here today by these people.  This man, Kilvin Greyjaw, was my apprentice in Dhagdarom.  He left home to search for me, and I found him here, having traveled Ciann for months helping those in need.
-
-Mayua
-> I see your point, we'll discuss it more later.  For now, I thank you for your help, and I hope that we can continue to work together.  Take this as a token of thanks, and a promise of future cooperation.
-
-Mayua hands each member of the party a quipu and a small journal with some partially completed designs.
-
--- At this point, I should make some number puzzles and a few quipu with numbers in them as hints.  When a player completes their puzzle correctly, they are granted the opportunity to craft a single piece of Dawn equipment.
-
-Mayua
-> Dazoluk, see to them as our guests for the time being, and grant them what you think is fair for their defeat of Wayra.
-
-Dazoluk
-> Of course, Chaplain.  Thank you.
-
----
-
-Dazoluk - back in the common area
-> This is a K'anchay Chapel, one of our smaller establishments in this part of the world.  We have enough space to do some limited training, crafting, and research here.  As thanks for defeating Wayra, I'd like to offer you our services and access to our training space, where you can spar to hone your skills or blow off some steam.  People sometimes make friendly wagers on those fights as well, which is fine as long as they're not excessive.<br/>
-> As for a tangible reward, I don't have too much I can offer at the moment, other than some coin and this pair of Lightcraft Boots.<br/>
-> If you'd like to know more about the Order, I'd be happy to answer what questions I can.
-
-Rewards:
-- 200gp each
-- Lightcraft Boots: Increases walking speed by 5' in dim light and 10' in bright light.
-
-
-Quick build some people for them to spar if they want to spar other K'anchay people and not each other.
-
-There's going to be a target shooting contest, if they'd like to test their skills.  Pit them against four initiates with combat initiative.
-1. shortbow: +5, 1x1d6+2
-2. longbow:  +6, 1x1d8+4
-3. javelin:  +5, 2x1d6+3
-4. crossbow: +6, 1x1d6+5
-
-Each target has an AC of 15, and they get one point per target they knock down.
-
-| Range | AC | HP | GM | CB | BG | SG | LG | JG | CB |
-|-------|----|----|----|----|----|----|----|----|----|
-|   20' | 13 | 25 |  3 |  3 |  8 |  6 |  
-|   50' | 14 | 20 |  2 |  3 |  8 |  6 |  
-|  150' | 15 | 15 |  2 |  3 |  - |  5 |  
-|  300' | 16 | 10 |  2 |  2 |  - |  4 |  
-|  500' | 17 |  5 |  1 |  - |  - |  - |  2 |  - |  - |
-
-The contestants will be lead into the lower level, to the chaplain's office at the end of the hall.  They will enter, and immediately be ushered to a door just to the left, placed such that it should lead into the bedchamber through that wall.  Instead, through the open door, they see what looks like a storage room that opens into a pavilion in the middle of a meadow.  Walking through, it is a calm, sunny day in this field of green grass and wildflowers.  In the distance, herds of deer and buffalo like creatures are grazing near a stand of trees.  In the other direction, the pavilion is backed up against the outskirts of a large city made up mostly of short wooden houses, many with large porches around them, and larger barn-like buildings with signs for various wares, vocations, and inns.  Two sets of scarecrow-like targets have been erected on the side opposite the city, each with a rope line set in front of it.  Contestants get 10 shots, alternating between pairs.  The winner advances to the next round, and the final winner receives a pair of Bracers of Archery.  If the players lose the contest, they'll be able to try and buy the bracers from the winner for 300gp, with potential to haggle down to 250gp with high enough Charisma checks (persuasion or intimidation, depending).
+Background for me: the scarecrows were planted by agents of Myrkul in the Outlands at the pavilion before the contest.  The Cult of Myrkul on Terrasa wasn't directly involved in it, though it was an act of their sinister masters against the K'anchay Order.
 
 
 ## Quipu Puzzles
-Series of partially complete equations.  Color of the term or digit in the equation corresponds to the string the value can be found on.  Letter used to represent the digits are 
+Fairly easy sudoku with extra hints/checks encoded on the quipu which correspond in color to the puzzle.  They're the digits on the string, in order from left to right, top to bottom of the sudoku.
+
+Brother Gromag:
+  Orange - 7 9 1
+  Green  - 2 1 8
+  Blue   - 1 8 5
+Numbers: 721, 918, 185
+
+![Sudoku](assets/gromag-sudoku.png)
+
+![Solution](assets/gromag-sudoku-solution.png)
+
+
+Caltrop Bloodless:
+  Green  - 2 4 3
+  Blue   - 1 7 4
+  Orange - 3 6 2
+Numbers: 213, 476, 342
+
+![Sudoku](assets/caltrop-sudoku.png)
+
+![Solution](assets/caltrop-sudoku-solution.png)
+
+
+Gluteus Maximus:
+  Blue   - 5 1 4
+  Orange - 2 4 7
+  Green  - 2 3 1
+Numbers: 522, 143, 471
+
+![Sudoku](assets/gluteus-sudoku.png)
+
+![Solution](assets/gluteus-sudoku-solution.png)
+
 
 
 ### Combined Puzzle
