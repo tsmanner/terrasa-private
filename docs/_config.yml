@@ -4,17 +4,19 @@ remote_theme: daattali/beautiful-jekyll@5.0.0
 # Header
 #
 navbar-links:
+  Locations: locations
+  Characters:
+    - Izhi: npcs/Izhi
+  Organizations:
+    - K'anchay Order: organizations/KanchayOrder
   Players:
     - Brother Gromag: players/BrotherGromag
     - Caltrop Bloodless: players/CaltropBloodless
     - Gluteus Maximus: players/GluteusMaximus
-  Locations: locations
-  Campaign: https://www.dndbeyond.com/campaigns/994863
   Character Sheets:
     - Brother Gromag: https://www.dndbeyond.com/profile/Sirnik/characters/27153228
     - Caltrop Bloodless: https://www.dndbeyond.com/profile/Rycosso/characters/27153025
     - Gluteus Maximus: https://www.dndbeyond.com/profile/lilvin/characters/29239078
-  Player's Handbook: https://www.dndbeyond.com/sources/phb
   Classes:
     - Artificer: https://www.dndbeyond.com/classes/artificer
     - Barbarian: https://www.dndbeyond.com/classes/barbarian
@@ -31,6 +33,9 @@ navbar-links:
     - Warlock: https://www.dndbeyond.com/classes/warlock
     - Wizard: https://www.dndbeyond.com/classes/wizard
   Resources:
+    - Campaign: https://www.dndbeyond.com/campaigns/994863
+    - Player's Handbook: https://www.dndbeyond.com/sources/phb
+    - Feats: https://www.dndbeyond.com/feats
     - Sword Types: http://myarmoury.com/feature_oakeshott2.html
 
 #
