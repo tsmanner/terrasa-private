@@ -20,11 +20,8 @@ While wielding both weapons and they are activated, when you hit with the bonus 
 |     Day (_very rare_) |                          +2 |                                       |           2d8 |
 |  Zenith (_legendary_) |                          +3 |                                       |           3d8 |
 
-***Radiant Blade.*** While the blade is active, attacks with this weapon deal extra radiant damage on hit to undead creatures.
-
+***Radiant Blade.*** While the blade is active, attacks with this weapon deal extra radiant damage on hit to undead creatures.<br/>
 ***Deceptive Precision.*** When you hit a second target with the bonus action attack as part of Two-Weapon Fighting, you can make a Charisma (Deception) check contested by the target's Wisdom (Insight) check.  If you succeed on the check, you may roll your sneak dice and add half the total, rounded down, to the damage.
-
-******
 
 
 ## Gluteus (Kurt)
@@ -41,10 +38,8 @@ While wielding both weapons and they are activated, when you hit with the bonus 
 |     Day (_very rare_) |                          +2 |                                      |          2d8 |
 |  Zenith (_legendary_) |                          +3 |                                      |          3d8 |
 
-***Radiant Shot.*** While holding it, you can use a bonus action to speak the command word and make a punching motion while grasping to middle of the staff to cause a radiant bowstring to appear connecting the tips together, transforming it into a longbow.  If you can make multiple attacks as part of the Attack action, this bonus action can be taken between these attacks.  When you grab the bowstring to begin drawing it, an arrow made of radiant energy appears nocked between your fingers.  While the bowstring is active, ranged attacks with this weapon deal extra radiant damage on hit to undead creatures.
-
-***Hunter's Fervor.*** When a favored enemy under the affect of your Hunter's Mark drops to 0 hit points, the additional damage done by Hunter's Mark increases by 1 for the remainder of the spell.
-
+***Radiant Shot.*** While holding it, you can use a bonus action to speak the command word and make a punching motion while grasping to middle of the staff to cause a radiant bowstring to appear connecting the tips together, transforming it into a longbow.  If you can make multiple attacks as part of the Attack action, this bonus action can be taken between these attacks.  When you grab the bowstring to begin drawing it, an arrow made of radiant energy appears nocked between your fingers.  While the bowstring is active, ranged attacks with this weapon deal extra radiant damage on hit to undead creatures.<br/>
+***Hunter's Fervor.*** When a favored enemy under the affect of your Hunter's Mark drops to 0 hit points, the additional damage done by Hunter's Mark increases by 1 for the remainder of the spell.<br/>
 ***Favored Radiance.*** When you take the Attack action, in addition to your normal attacks, you may make one ranged weapon attack against each of your favored enemies that you can see, within your short range.  Once you use this feature, you can't use it again until you finish a short or long rest.
 
 
@@ -63,12 +58,9 @@ While wielding both weapons and they are activated, when you hit with the bonus 
 |     Day (_very rare_) |                          +2 |                                                |            2d8 |       6 | Color added to the rays of sunlight.  Each charge causes the sun, then the road and river, then the rays of sunlight, to light up, shedding bright light for 10' and dim light for an additional 10'.
 |  Zenith (_legendary_) |                          +3 |                                                |            3d8 |      10 | Fingers are covered with rays of sunlight fading into intricate depictions of Lightcraft melee weapons.  Each charge causes the entire palm to glow a little brighter as the weapon on one finger lights up, shedding bright light for 15' and dim light for an additional 15'.<br/>Thumb - A Scimitar<br/>Index Finger - A Shortsword<br/>Middle Finger - An arm and balled fist<br/>Ring Finger - A Warhammer<br/>Pinky - A Rapier
 
-***Radiant Strike.*** While the tattoo is on your skin, your melee attacks deal extra radiant damage on hit to undead creatures.
-
-***Charging.*** Whenever you strike an enemy with your Martial Arts bonus action or Flurry of Blows, you gain one charge, to a maximum of 2/4/6/10.  You lose all charges at the end of a long rest.
-
-***Radiant Flurry.*** When you take the Attack action and make an attack with a monk weapon or unarmed strike, you can use a Bonus Action and expend any number or charges to cause radiant images of your weapon or fist to appear mimicking your strike against additional creatures within 15 feet of your target, one per charge expended.  Each creature targeted in this way must succeed on a Dexterity saving throw against your Ki save DC (8 + your proficiency bonus + your Wisdom modifier) or take radiant damage equal to half the attacks damage, rounded down (minimum 1).  This damage cannot be applied to the same creature multiple times in one attack.
-
+***Radiant Strike.*** While the tattoo is on your skin, your melee attacks deal extra radiant damage on hit to undead creatures.<br/>
+***Charging.*** Whenever you strike an enemy with your Martial Arts bonus action or Flurry of Blows, you gain one charge, to a maximum of 2/4/6/10.  You lose all charges at the end of a long rest.<br/>
+***Radiant Flurry.*** When you take the Attack action and make an attack with a monk weapon or unarmed strike, you can use a Bonus Action and expend any number or charges to cause radiant images of your weapon or fist to appear mimicking your strike against additional creatures within 15 feet of your target, one per charge expended.  Each creature targeted in this way must succeed on a Dexterity saving throw against your Ki save DC (8 + your proficiency bonus + your Wisdom modifier) or take radiant damage equal to half the attacks damage, rounded down (minimum 1).  This damage cannot be applied to the same creature multiple times in one attack.<br/>
 ***Deflect Blade.*** You can use your reaction and expend two charges to deflect or grab the weapon or wrist when you are hit by a melee weapon attack or unarmed strike. When you do so, the damage you take from the attack is reduced by 1d10 + your Dexterity modifier + your monk level.  The light radiating from the tattoo coalesces in the palm of your hand as a barrier
 
 

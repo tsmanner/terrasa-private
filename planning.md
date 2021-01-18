@@ -23,9 +23,7 @@ Fairly easy sudoku with extra hints/checks encoded on the quipu which correspond
 
 Numbers: 721, 918, 185
 
-![Sudoku](assets/gromag-sudoku.png)
-
-![Solution](assets/gromag-sudoku-solution.png)
+![Sudoku](assets/gromag-sudoku.png)![Solution](assets/gromag-sudoku-solution.png)
 
 
 ### Caltrop Bloodless
@@ -38,9 +36,7 @@ Numbers: 721, 918, 185
 
 Numbers: 213, 476, 342
 
-![Sudoku](assets/caltrop-sudoku.png)
-
-![Solution](assets/caltrop-sudoku-solution.png)
+![Sudoku](assets/caltrop-sudoku.png)![Solution](assets/caltrop-sudoku-solution.png)
 
 
 ### Gluteus Maximus
@@ -53,9 +49,7 @@ Numbers: 213, 476, 342
 
 Numbers: 522, 143, 471
 
-![Sudoku](assets/gluteus-sudoku.png)
-
-![Solution](assets/gluteus-sudoku-solution.png)
+![Sudoku](assets/gluteus-sudoku.png)![Solution](assets/gluteus-sudoku-solution.png)
 
 
 
@@ -77,7 +71,7 @@ Murals:
 
 #### Chamber 2
 
-You enter a large chamber with a low ceiling, about 40' wide and 70' long.  The center is dominated by an 8 by 8 grid of 5' by 5' tiles.  Written left to right on the floor in front of you, spaced 5' apart, are the letters a through h written in green.  On the left wall, also spaced 5' apart, are the numbers 1 through 8, written in blue.  If Gluteus tries to fly across, DC 15 DEX to make it (low ceiling) or to fall on a random square, triggering an effect.  If he makes it across, the door is locked
+You enter a large chamber with a low ceiling, about 40' wide and 70' long.  The center is dominated by an 8 by 8 grid of 5' by 5' tiles, that alternate black and white.  Written left to right on the floor in front of you, spaced 5' apart, are the letters a through h written in green.  On the left wall, also spaced 5' apart, are the numbers 1 through 8, written in blue.  If Gluteus tries to fly across, DC 15 DEX to make it (low ceiling) or to fall on a random square, triggering an effect.  If he makes it across, the door is locked.
 
 Chessboard addressing with the numbers to indicate the safe squares.  Blue for Y axis, Green for X axis.
 
