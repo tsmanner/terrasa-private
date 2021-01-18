@@ -1,6 +1,7 @@
 ---
 title: Items Workshop
 subtitle: Theorycrafting and iterating on item ideas for the party
+full-width: true
 ---
 
 ## Caltrop (Ryan)
