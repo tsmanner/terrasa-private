@@ -1,45 +1,23 @@
 # Planning
 
-The farther targets are smaller than the closer ones; contestants get one point per target they knock down.
+## K'anchay Order Investigations
 
-| Range | AC | HP |
-|-------|----|----|
-|   20' | 13 | 25 |
-|   50' | 14 | 20 |
-|  100' | 15 | 15 |
-|  250' | 16 | 10 |
-|  500' | 17 |  5 |
+Wayra must have had contacts in the city other than Sayre.  Sayre was able to win a turf war too quickly to have done it on her own, even with the help of a necromancer.  Her takeover was brutal, efficient, and quiet; it wasn't clear it was happening until it was almost complete, and even then, it wasn't obvious that the takeover was backed by an outside power.
 
-Contestants get one minute to attack from behind the line, and are awarded one point for each target they knock down.  In the event of a tie, a shoot-off is held: a small target is set up at 50', and the contestants each get one shot at it.  This is done until one hits and the other misses.  The winner advances to the next round, and the final winner receives a pair of Bracers of Archery.  In the final round of the contest, the targets are actual scarecrow monsters, which come to life as they are hit, and when commotion starts, all will begin to act.  The party should do more here than the NPCs (except maybe Dazoluk), and as a reward for defeating them, will be given the prize: a pair of Bracers of Archery.
-
-Bracket:
-| Kurt     |
-| Javelin  | winner |
-|                   |
-| Shortbow | winner | winner |
-| Longbow  |                 |
-|                            | champion
-| Ryan     |                 |
-| Crossbow | winner | winner |
-|                   |
-| Nick     | winner |
-| Crossbow |
-
-Options:
-- Nick doesn't enter - replace with shortbow
-- Ryan doesn't enter - replace with javelin
-
-
-Background for me: the scarecrows were planted by agents of Myrkul in the Outlands at the pavilion before the contest.  The Cult of Myrkul on Terrasa wasn't directly involved in it, though it was an act of their sinister masters against the K'anchay Order.
+**Mayua:** Llaska, despite his impetuousness, is an extremely talented scout and investigator
 
 
 ## Quipu Puzzles
 Fairly easy sudoku with extra hints/checks encoded on the quipu which correspond in color to the puzzle.  They're the digits on the string, in order from left to right, top to bottom of the sudoku.
 
-Brother Gromag:
-  Orange - 7 9 1
-  Green  - 2 1 8
-  Blue   - 1 8 5
+### Brother Gromag
+
+| Orange | Green | Blue |
+|--------|-------|------|
+|    7   |   2   |   1  |
+|    9   |   1   |   8  |
+|    1   |   8   |   5  |
+
 Numbers: 721, 918, 185
 
 ![Sudoku](assets/gromag-sudoku.png)
@@ -47,10 +25,14 @@ Numbers: 721, 918, 185
 ![Solution](assets/gromag-sudoku-solution.png)
 
 
-Caltrop Bloodless:
-  Green  - 2 4 3
-  Blue   - 1 7 4
-  Orange - 3 6 2
+### Caltrop Bloodless
+
+| Green | Blue | Orange |
+|-------|------|--------|
+|   2   |   1  |    3   |
+|   4   |   7  |    6   |
+|   3   |   4  |    2   |
+
 Numbers: 213, 476, 342
 
 ![Sudoku](assets/caltrop-sudoku.png)
@@ -58,10 +40,14 @@ Numbers: 213, 476, 342
 ![Solution](assets/caltrop-sudoku-solution.png)
 
 
-Gluteus Maximus:
-  Blue   - 5 1 4
-  Orange - 2 4 7
-  Green  - 2 3 1
+### Gluteus Maximus
+
+| Blue | Orange | Green |
+|------|--------|-------|
+|   5  |    2   |   2   |
+|   1  |    4   |   3   |
+|   4  |    7   |   1   |
+
 Numbers: 522, 143, 471
 
 ![Sudoku](assets/gluteus-sudoku.png)
@@ -72,28 +58,42 @@ Numbers: 522, 143, 471
 
 ### Combined Puzzle
 
-Each has 3 strings, one of each of 3 colors.  They do individual puzzles which yield an answer, per color.  Once they all have it done, they are dropped into some catacombs below the chapel through a trap door, which is shut behind them.
+Once they all have completed their individual puzzles (plans), they are dropped into some catacombs below the chapel through a trap door, which is shut behind them, disappearing.  After a moment, of darkness, some braziers on the wall spring to life.
 
 #### Color 1
-This chamber has a simple (color1) door on one wall, and the other three have a mural on them, covered in numbers.  Touching the right number on each wall will open the door.  Touching the wrong number causes a random negative effect.
+
+The chamber has a simple orange door on one wall, and the other three have a mural on them, covered in numbers.
+
+Touching the right number on each wall will open the door.  Touching the wrong number causes a random negative effect.
+
 Murals:
-1. The interior of a tavern or mess hall.  Succeed on a DC 15 investigation or DC 18 perception check, to notice that the mugs are not simply painted, but appear to be sculpted out of the stone of the wall.
-2. A dense treeline across a meadow, backed by snow-peaked mountains.  Succeed on a DC 15 investigation or DC 18 perception check, to see that perched on a branch near the center is a large bird of prey.
-3. The aftermath of a battle, the ground littered with bodies and equipment.  In the foreground, set to one side, is a group of people wearing robes with a figure in shining plate armor leaning on their longsword.  The figure is looking pensively toward a group of wounded on the other side.  Succeed on a DC 15 investigation to determine that they're trying to reach wounded on the other side of a no-man's-land littered with tetrahedral spikes.  Succeed on a DC 18 perception check to notice the region littered with tetrahedral spikes.
+1. (791) The interior of a tavern or mess hall.  Succeed on a DC 15 investigation or DC 18 perception check, to notice that the mugs are not simply painted, but appear to be sculpted out of the stone of the wall.
+2. (362) The aftermath of a battle, the ground littered with bodies and equipment.  In the foreground, set to one side, is a group of people wearing robes with a figure in shining plate armor leaning on their longsword.  The figure is looking pensively toward a group of wounded on the other side.  Succeed on a DC 15 investigation to determine that they're trying to reach wounded on the other side of a no-man's-land littered with tetrahedral spikes.  Succeed on a DC 18 perception check to notice the region littered with tetrahedral spikes.
+3. (247) A dense treeline across a meadow, backed by snow-peaked mountains.  Succeed on a DC 15 investigation or DC 18 perception check, to see that perched on a branch near the center is a large bird of prey.
+
 
 #### Color2
-Eight Queens problem, indiana jones style?  Chessboard addressing with the numbers to indicate the safe squares?
 
-|   | a | b | c | d | e | f | g | h |
+You enter a large chamber with a low ceiling, about 40' wide and 70' long.  The center is dominated by an 8 by 8 grid of 5' by 5' tiles.  Written left to right on the floor in front of you, spaced 5' apart, are the letters a through h written in green.  On the left wall, also spaced 5' apart, are the numbers 1 through 8, written in blue.  If Gluteus tries to fly across, DC 15 DEX to make it (low ceiling) or to fall on a random square, triggering an effect.  If he makes it across, the door is locked
+
+Chessboard addressing with the numbers to indicate the safe squares.  Blue for Y axis, Green for X axis.
+|         Character |  1  |  2  |  3  | Round
+|-------------------|-----|-----|-----|
+|    Brother Gromag | 1 b | 8 a | 5 h |
+| Caltrop Bloodless | 1 b | 7 d | 4 c |
+|   Gluteus Maximus | 5 b | 1 c | 4 a |
+
+|   |   |   |   |   |   |   |   |   |
 |---|---|---|---|---|---|---|---|---|
-| 1 |   |   |   |   |   |   |   |   |
-| 2 |   | x |   |   |   |   |   |   |
+| 8 | b |   |   |   |   |   |   |   |
+| 7 |   |   |   | c |   |   |   |   |
+| 6 |   |   |   |   |   |   |   |   |
+| 5 |   | g |   |   |   |   |   | b |
+| 4 | g |   | c |   |   |   |   |   |
 | 3 |   |   |   |   |   |   |   |   |
-| 4 | x |   |   | x |   |   |   |   |
-| 5 |   |   |   |   |   |   |   |   |
-| 6 |   |   |   | x |   |   |   |   |
-| 7 |   |   |   |   |   |   |   |   |
-| 8 |   |   | x |   |   |   |   |   |
+| 2 |   |   |   |   |   |   |   |   |
+| 1 |   | bc| g |   |   |   |   |   |
+|   | a | b | c | d | e | f | g | h |
 
 
 #### Color3
@@ -101,17 +101,17 @@ Combat followed by a combination lock?
 
 
 #### Final Chamber
-Chaplain is there to offer the basis of their equipment and to guide them through the process of imbuing it with power.
+Taruka Asto
+Yori Olaya
+Ilin Huaman
+Hawka Chipana
+Yuraq Cacha
+
+
+The chaplain and <name>, the quartermaster, are there to offer the basis of their equipment and to guide them through the process of imbuing it with power.
 
 
 ## Other Puzzles
 
 Eight Queens puzzle in person like in Indiana Jones
-
-## Notes
-
-Tattoo builds charges on hit:
-For 3 charges (or so) you can use a reaction to deflect missiles on a melee strike.  If reduced to 0, you can spend 1 ki to cast heat metal on the weapon or something.
-Release reaction could blind an enemy for X rounds when they miss with an attack (during patient defense?).
-Release to deal level in damage to enemies in 5' radius per charge
 

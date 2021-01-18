@@ -13,7 +13,7 @@ Manco leads the established cult, and is staunchly opposed to Izhi's brash plans
 
 ### Izhi's Machinations
 
-Forcible covert (i.e. not explicitly the Cult in control, just some "boss" figure) takeover of Yalaqta criminals, to attempt to organize them well enough they can weaken the city from the inside in the case of a seige.
+Forcible covert (i.e. not explicitly the Cult in control, just some "boss" figure) takeover of Yalaqta criminals, to attempt to organize them well enough they can weaken the city from the inside in the case of a seige.  Izhi is in league with one or more (politician|aristocrat|mogul)(s) in Yalaqta, smuggling good for them in exchange for convenient distribution of guard patrols, "randomly" never being chosen for searches, maps of catacombs and sewers, etc.  Izhi has slowly been reinforcing their relationship, with the goal of luring them into Myrkul's service, by bolstering them with small bits of necromantic magic (temp HP, that sort of thing, via tonics, scrolls, and wonderous items).
 
 Weaken the population of farmers and tradespeople in the region to put the city's food supplies at risk and increase the load of sick or injured.
 
