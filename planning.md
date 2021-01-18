@@ -80,8 +80,9 @@ Murals:
 You enter a large chamber with a low ceiling, about 40' wide and 70' long.  The center is dominated by an 8 by 8 grid of 5' by 5' tiles.  Written left to right on the floor in front of you, spaced 5' apart, are the letters a through h written in green.  On the left wall, also spaced 5' apart, are the numbers 1 through 8, written in blue.  If Gluteus tries to fly across, DC 15 DEX to make it (low ceiling) or to fall on a random square, triggering an effect.  If he makes it across, the door is locked
 
 Chessboard addressing with the numbers to indicate the safe squares.  Blue for Y axis, Green for X axis.
+
 |         Character |  1  |  2  |  3  | Round
-|-------------------|-----|-----|-----|
+|-------------------|-----|-----|-----|-------
 |    Brother Gromag | 1 b | 8 a | 5 h |
 | Caltrop Bloodless | 1 b | 7 d | 4 c |
 |   Gluteus Maximus | 5 b | 1 c | 4 a |
