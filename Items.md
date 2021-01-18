@@ -1,3 +1,8 @@
+---
+title: Items Workshop
+subtitle: Theorycrafting and iterating on item ideas for the party
+---
+
 ## Caltrop (Ryan)
 ---
 [Gloves of Thievery](https://www.dndbeyond.com/magic-items/gloves-of-thievery)<br/>

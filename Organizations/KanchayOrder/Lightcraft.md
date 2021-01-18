@@ -1,4 +1,5 @@
-# Lightcraft
+---
+title: Lightcraft
 ---
 
 ## Obtaining and Improving:

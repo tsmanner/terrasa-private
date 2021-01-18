@@ -1,0 +1,36 @@
+remote_theme: daattali/beautiful-jekyll@5.0.0
+
+#
+# Header
+#
+navbar-links:
+  Public Page: https://tsmanner.github.io/terrasa/
+  Organizations:
+    - K'anchay Order: /Organizations/KanchayOrder
+    - Cult of Myrkul: /Organizations/CultOfMyrkul
+  Characters:
+    - Dazoluk:   NPCs/Dazoluk
+    - Izhi:      NPCs/Izhi
+    - Kilvin:    NPCs/Kilvin
+    - Llaska:    NPCs/Llaska
+    - Manco:     NPCs/Manco
+    - MinorNPCs: NPCs/MinorNPCs
+  Character Sheets:
+    - Llaska:             https://www.dndbeyond.com/profile/UngodlySalmon/characters/40935718
+    - Dazoluk Forgemaker: https://www.dndbeyond.com/profile/UngodlySalmon/characters/40740308
+    - Kilvin Greyjaw:     https://www.dndbeyond.com/profile/UngodlySalmon/characters/27153043
+  Workshop:
+    - Items: /items
+    - Lightcraft: /Organizations/KanchayOrder/Lightcraft
+    - Planning: /planning
+  Resources:
+    - Sword Types: http://myarmoury.com/feature_oakeshott2.html
+
+#
+# Footer
+#
+author: Tom Manner
+social-network-links:
+  email: tom.s.manner@gmail.com
+  github: tsmanner
+

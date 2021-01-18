@@ -1,4 +1,7 @@
-# Planning
+---
+title: Planning
+subtitle: Planning notes for ongoing themes and with excerpts etc for upcoming sessions
+---
 
 ## K'anchay Order Investigations
 

@@ -1,6 +1,6 @@
-# [Llaska](https://www.dndbeyond.com/profile/UngodlySalmon/characters/40935718)
-
-
+---
+title: [Llaska](https://www.dndbeyond.com/profile/UngodlySalmon/characters/40935718)
+---
 
 Score Rolls:
 
@@ -10,3 +10,8 @@ Score Rolls:
 16 | 6 6 4 | 4 2 2
 13 | 5 5 3 | 1 1 1
 12 | 6 4 2 | 2 2 2
+
+A brash, impetuous, *initiate* in the [K'anchay Order][1]
+
+
+[1]: /Organizations/KanchayOrder

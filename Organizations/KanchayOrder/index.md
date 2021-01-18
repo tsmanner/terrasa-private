@@ -1,4 +1,7 @@
-# The K'anchay (Light) Order
+---
+title: The K'anchay (Light) Order
+---
+
 An organization that spans all of terrasa, working in the service of (Inti)[https://en.wikipedia.org/wiki/Inti], or Lathander, sun god of birth and renewal.
 
 ## Goals

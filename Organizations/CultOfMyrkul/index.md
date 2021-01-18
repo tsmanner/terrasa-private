@@ -1,4 +1,7 @@
-# The Cult of Myrkul
+---
+title: The Cult of Myrkul
+---
+
 A cult of the death god Myrkul, which has recently begun to stir.  They were a relatively small cult, isolated to the region around the Oqemarsh, that has started to rapidly grow in size and influence.
 
 ## Goals
