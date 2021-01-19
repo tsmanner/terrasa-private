@@ -11,17 +11,15 @@ full-width: true
 ### Lightcraft Scimitar and Karambit
 
 
-While wielding both weapons and they are activated, when you hit with the bonus action attack as part of two-weapon fighting, you can make a Charisma (Deception) check contested by the target's Wisdom (Insight) check.  If you succeed on the check, you may roll your sneak dice and add half the total, rounded down, to the damage of your strike.  Additionally, the karambit blade can be thrown by swiping toward a target without releasing the handle.  The blade springs back into existence on the hilt immediately after the thrown blade comes to rest.
-
 |    Name      (rarity) | Attack and<br/>Damage Bonus |                                Traits | Radiant Blade | Description
 |-----------------------|-----------------------------|---------------------------------------|---------------|-------------
-|    Dawn  (_uncommon_) |                          +0 | Radiant Blade<br/>Deceptive Precision |           1d4 | A simple, leather wrapped grip with a slight forward curve at the bottom, ending with a two inch long barb-like pommel, and a semicircular rainguard with no crossguard, engraved with the outline of a road and river leading to a sunrise.
+|    Dawn  (_uncommon_) |                          +0 | Radiant Blade<br/>Deceptive Precision |           1d4 | This scimitar is a leather wrapped grip with a slight forward curve at the bottom, ending with a two inch long barb-like pommel, and a semicircular rainguard with no crossguard, engraved with the outline of a road and river leading to a sunrise.<br/>This karambit has a roughly two inch long wooden handle with three curved channels running across one side and a metal ring on one end.  On the opposite end is a metal hilt with no blade that has an engraving of a road and river leading to a sunrise.
 | Morning      (_rare_) |                          +1 |                                       |           1d8 |
 |     Day (_very rare_) |                          +2 |                                       |           2d8 |
 |  Zenith (_legendary_) |                          +3 |                                       |           3d8 |
 
-***Radiant Blade.*** While the blade is active, attacks with this weapon deal extra radiant damage on hit to undead creatures.<br/>
-***Deceptive Precision.*** When you hit a second target with the bonus action attack as part of Two-Weapon Fighting, you can make a Charisma (Deception) check contested by the target's Wisdom (Insight) check.  If you succeed on the check, you may roll your sneak dice and add half the total, rounded down, to the damage.
+***Radiant Blade.*** While holding both the scimitar and karambit, you may use a bonus action to cause curved blades of pure radiance to spring into existence by tapping the sunrise symbols together, or to make the blades disappear.  The karambit blade can be thrown by swiping toward a target without releasing the handle.  The blade springs back into existence on the hilt immediately after the thrown blade comes to rest.  Attacks with these weapons deal extra radiant damage on hit to undead creatures.<br/>
+***Deceptive Precision.*** When you hit a second target with the bonus action attack as part of Two-Weapon Fighting using the karambit, you can make a Charisma (Deception) check contested by the target's Wisdom (Insight) check.  If you succeed on the check, you may roll your sneak dice and add half the total, rounded down, to the damage.
 
 
 ## Gluteus (Kurt)
@@ -38,7 +36,7 @@ While wielding both weapons and they are activated, when you hit with the bonus 
 |     Day (_very rare_) |                          +2 |                                      |          2d8 |
 |  Zenith (_legendary_) |                          +3 |                                      |          3d8 |
 
-***Radiant Shot.*** While holding it, you can use a bonus action to speak the command word and make a punching motion while grasping to middle of the staff to cause a radiant bowstring to appear connecting the tips together, transforming it into a longbow.  If you can make multiple attacks as part of the Attack action, this bonus action can be taken between these attacks.  When you grab the bowstring to begin drawing it, an arrow made of radiant energy appears nocked between your fingers.  While the bowstring is active, ranged attacks with this weapon deal extra radiant damage on hit to undead creatures.<br/>
+***Radiant Shot.*** While holding it, you may use a bonus action to speak the command word and make a punching motion while grasping to middle of the staff to cause a radiant bowstring to appear connecting the tips together, transforming it into a longbow.  The bowstring dissipates if you let got of the weapon or if you use a bonus action to dismiss it.  If you can make multiple attacks as part of the Attack action, these bonus actions can be taken between them.  When you grab the bowstring to begin drawing it, an arrow made of radiant energy appears nocked between your fingers.  While the bowstring is active, ranged attacks with this weapon deal an extra 1d4 radiant damage on hit to undead creatures.<br/>
 ***Hunter's Fervor.*** When a favored enemy you have damaged drops to 0 hit points while you are concentrating on Hunter's Mark, the additional damage done by Hunter's Mark increases by 1 for the remainder of the spell.<br/>
 ***Favored Radiance.*** When you take the Attack action, in addition to your normal attacks, you may make one ranged weapon attack against each of your favored enemies that you can see, within your short range.  Once you use this feature, you can't use it again until you finish a short or long rest.
 
