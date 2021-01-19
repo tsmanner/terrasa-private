@@ -39,7 +39,7 @@ While wielding both weapons and they are activated, when you hit with the bonus 
 |  Zenith (_legendary_) |                          +3 |                                      |          3d8 |
 
 ***Radiant Shot.*** While holding it, you can use a bonus action to speak the command word and make a punching motion while grasping to middle of the staff to cause a radiant bowstring to appear connecting the tips together, transforming it into a longbow.  If you can make multiple attacks as part of the Attack action, this bonus action can be taken between these attacks.  When you grab the bowstring to begin drawing it, an arrow made of radiant energy appears nocked between your fingers.  While the bowstring is active, ranged attacks with this weapon deal extra radiant damage on hit to undead creatures.<br/>
-***Hunter's Fervor.*** When a favored enemy under the affect of your Hunter's Mark drops to 0 hit points, the additional damage done by Hunter's Mark increases by 1 for the remainder of the spell.<br/>
+***Hunter's Fervor.*** When a favored enemy you have damaged drops to 0 hit points while you are concentrating on Hunter's Mark, the additional damage done by Hunter's Mark increases by 1 for the remainder of the spell.<br/>
 ***Favored Radiance.*** When you take the Attack action, in addition to your normal attacks, you may make one ranged weapon attack against each of your favored enemies that you can see, within your short range.  Once you use this feature, you can't use it again until you finish a short or long rest.
 
 
