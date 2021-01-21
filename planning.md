@@ -3,11 +3,29 @@ title: Planning
 subtitle: Planning notes for ongoing themes and with excerpts etc for upcoming sessions
 ---
 
+Down time, if they want it.  Nothing _pressing_ is going on, the order is investigating the recent events in the area.
+
+### Yalaqta Random Events
+
+- People from a nearby village flee to Yalaqta
+  - being harried by some fast undead something
+  - telling a story of their village being overrun by undead
+- Accident in a necromancer's lab somewhere in the city, and an abomination gets out
+- A servant or worker for some mid-level noble discovers
+  - they're dabbling in necromancy
+  - their masters have a teleportation circle
+  - is "defecting" because their masters went too far
+- Theft in the marketplace
+- Fight or attack on a ship on the docks
+- Pandora's box style encounter in or near a magic shop, the market, or docks
+
+
 ## K'anchay Order Investigations
 
 Wayra must have had contacts in the city other than Sayre.  Sayre was able to win a turf war too quickly to have done it on her own, even with the help of a necromancer.  Her takeover was brutal, efficient, and quiet; it wasn't clear it was happening until it was almost complete, and even then, it wasn't obvious that the takeover was backed by an outside power.
 
-**Mayua:** Llaska, despite his impetuousness, is an extremely talented scout and investigator
+**Mayua:** Llaska, despite his impetuousness, is a talented scout and investigator
+
 
 
 ## Quipu Puzzles
