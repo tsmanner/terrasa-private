@@ -6,6 +6,6 @@ function map_entities(f) {
     var entities = document.getElementsByClassName("entity");
     for (let index = 0; index < entities.length; index++) {
         const entity = entities[index];
-        f(entity.elementId);
+        f(entity.id);
     }
 }
