@@ -3,9 +3,9 @@
 <div id="{{ page.title }}">
   {% for entity in page.entities %}
 
-  <div class="entity" bonus="{{ entity.bonus }}" id="{{ entity.name | replace: ' ', '_' }}">
+  <div class="entity" bonus="{{ entity.bonus }}" id="{{ include.name | replace: ' ', '_' }}.{{ entity.name | replace: ' ', '_' }}">
     <h2>{{ entity.name }}</h2>
-    <a id="{{ entity.name | replace: ' ', '_' }}.initiative">-initiative-</a>
+    <a id="{{ include.name | replace: ' ', '_' }}.{{ entity.name | replace: ' ', '_' }}.initiative">-initiative-</a>
   </div>
 
   {% endfor %}

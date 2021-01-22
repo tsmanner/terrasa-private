@@ -10,10 +10,10 @@ js:
 
 <details>
   <summary>Test Encounter 1</summary>
-  {% include encounter.html %}
+  {% include encounter.html name="Encounter 1" %}
 </details>
 
 <details>
   <summary>Test Encounter 2</summary>
-  {% include encounter.html %}
+  {% include encounter.html name="Encounter 2" %}
 </details>
