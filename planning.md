@@ -41,7 +41,7 @@ Fairly easy sudoku with extra hints/checks encoded on the quipu which correspond
 
 Numbers: 721, 918, 185
 
-![Sudoku](assets/gromag-sudoku.png)![Solution](assets/gromag-sudoku-solution.png)
+![Sudoku](assets/img/gromag-sudoku.png)![Solution](assets/img/gromag-sudoku-solution.png)
 
 
 ### Caltrop Bloodless
@@ -54,7 +54,7 @@ Numbers: 721, 918, 185
 
 Numbers: 213, 476, 342
 
-![Sudoku](assets/caltrop-sudoku.png)![Solution](assets/caltrop-sudoku-solution.png)
+![Sudoku](assets/img/caltrop-sudoku.png)![Solution](assets/img/caltrop-sudoku-solution.png)
 
 
 ### Gluteus Maximus
@@ -67,7 +67,7 @@ Numbers: 213, 476, 342
 
 Numbers: 522, 143, 471
 
-![Sudoku](assets/gluteus-sudoku.png)![Solution](assets/gluteus-sudoku-solution.png)
+![Sudoku](assets/img/gluteus-sudoku.png)![Solution](assets/img/gluteus-sudoku-solution.png)
 
 
 
