@@ -7,9 +7,9 @@ layout: default
 
 {% for entity in page.entities %}
 
-<div class="entity" bonus="{{ entity.bonus }}">
+<div class="entity" bonus="{{ entity.bonus }}" id="{{ entity.name }}">
   <h2>{{ entity.name }}</h2>
-  <a id="initiative">-initiative-</a>
+  <a id="{{ entity.name }}: initiative">-initiative-</a>
 </div>
 
 {% endfor %}

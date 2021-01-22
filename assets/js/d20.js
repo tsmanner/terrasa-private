@@ -4,7 +4,7 @@ function roll(max, bonus) {
 
 
 function roll_initiative(element) {
-    return element.getElementById("initiative").textContent = roll(20, element.bonus);
+    return document.getElementById(element.id + ": initiative").textContent = roll(20, element.bonus);
 }
 
 function map_entities(f) {
