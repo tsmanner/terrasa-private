@@ -1,3 +1,11 @@
 *.out
 grid.svg
 venv/
+
+# ruby
+Gemfile
+Gemfile.lock
+
+# Jekyll
+.jekyll-cache/
+_site/
