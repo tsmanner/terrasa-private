@@ -16,4 +16,5 @@ function map_entities(f) {
         console.log(element);
         f(element);
     }
+    // Sort the elements
 }

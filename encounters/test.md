@@ -8,3 +8,5 @@ entities:
 js:
   - /assets/js/d20.js
 ---
+
+{% include encounter.html %}

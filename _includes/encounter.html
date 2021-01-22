@@ -1,0 +1,13 @@
+<button onclick="map_entities(roll_initiative)" >Roll Initiative</button>
+
+
+<div id="{{ page.title }}">
+  {% for entity in page.entities %}
+
+  <div class="entity" bonus="{{ entity.bonus }}" id="{{ entity.name | replace: ' ', '_' }}">
+    <h2>{{ entity.name }}</h2>
+    <a id="{{ entity.name | replace: ' ', '_' }}.initiative">-initiative-</a>
+  </div>
+
+  {% endfor %}
+</div>
