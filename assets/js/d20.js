@@ -11,8 +11,8 @@ function roll_initiative(element) {
 function map_entities(f) {
     var entities = document.getElementsByClassName("entity");
     for (let index = 0; index < entities.length; index++) {
-        const entity = entities[index];
-        console.log(entity);
-        f(entity);
+        const element = entities[index];
+        console.log(element);
+        f(element);
     }
 }
