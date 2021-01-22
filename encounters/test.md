@@ -8,4 +8,12 @@ js:
   - /assets/js/d20.js
 ---
 
-{% include encounter.html %}
+<details>
+  <summary>Test Encounter 1</summary>
+  {% include encounter.html %}
+</details>
+
+<details>
+  <summary>Test Encounter 2</summary>
+  {% include encounter.html %}
+</details>
