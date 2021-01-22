@@ -1,11 +1,16 @@
-function roll(elementId) {
-    return document.getElementById(elementId).textContent = elementId + ": " + Math.floor(Math.random() * 20 + 1);
+function roll(max, bonus) {
+    return Math.floor(Math.random() * max + 1 + bonus)
+}
+
+
+function roll_initiative(element) {
+    return element.getElementById("initiative").textContent = roll(20, element.bonus);
 }
 
 function map_entities(f) {
     var entities = document.getElementsByClassName("entity");
     for (let index = 0; index < entities.length; index++) {
         const entity = entities[index];
-        f(entity.id);
+        f(entity);
     }
 }

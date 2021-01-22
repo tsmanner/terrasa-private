@@ -6,7 +6,10 @@ layout: default
 <button onclick="map_entities(roll)" >Roll Initiative</button>
 
 {% for entity in page.entities %}
-    <div>
-        <p style="float: left" class="entity" id="{{entity}}">{{entity}}</p>
-    </div>
+
+<div class="entity" bonus="{{ entity.bonus }}">
+  <h2>{{ entity.name }}</h2>
+  <a id="initiative">-initiative-</a>
+</div>
+
 {% endfor %}
