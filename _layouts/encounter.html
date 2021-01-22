@@ -4,6 +4,6 @@ layout: default
 
 
 {% for entity in page.entities %}
-    <button onclick="roll('{{entity}}')" >Roll Initiative</button>
-    <p id="{{entity}}">{{entity}}</p>
+    <button style="float: left" onclick="roll('{{entity}}')" >Roll Initiative</button>
+    <p style="float: left" id="{{entity}}">{{entity}}</p>
 {% endfor %}
