@@ -1,0 +1,9 @@
+---
+layout: default
+---
+
+
+{% for entity in page.entities %}
+    <button onclick="roll('{{entity}}')" >Roll Initiative</button>
+    <p id="{{entity}}">{{entity}}</p>
+{% endfor %}

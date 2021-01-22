@@ -1,8 +1,8 @@
 ---
+layout: encounter
+entities:
+  - Caltrop Bloodless
+  - Gluteus Maximus
 js:
   - /assets/js/d20.js
 ---
-
-<button onclick="roll('test')" >Roll A D20</button>
-
-<p id="test">blah</p>
