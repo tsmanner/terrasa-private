@@ -3,7 +3,9 @@ function roll(elementId) {
 }
 
 function map_entities(f) {
-    document.getElementsByClassName("entity").forEach(element => {
-        f(element.elementId);
-    });;
+    var entities = document.getElementsByClassName("entity");
+    for (let index = 0; index < entities.length; index++) {
+        const entity = entities[index];
+        f(entity.elementId);
+    }
 }
