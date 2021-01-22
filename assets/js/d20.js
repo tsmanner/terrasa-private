@@ -4,6 +4,6 @@ function roll(elementId) {
 
 function map_entities(f) {
     document.getElementsByClassName("entity").forEach(element => {
-        roll(element.elementId);
+        f(element.elementId);
     });;
 }
