@@ -1,5 +1,4 @@
 ---
-layout: encounter
 entities:
   - name: Caltrop Bloodless
     bonus: 4
