@@ -1,4 +1,5 @@
 function roll(max, bonus) {
+    console.log("roll(" + max + ", " + bonus + ")")
     return Math.floor(Math.random() * max + 1 + bonus)
 }
 
