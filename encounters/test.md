@@ -10,10 +10,13 @@ css:
   - /assets/css/encounter.css
 ---
 
+Some stuff happens and then if they do a particular thing, Encounter 1 occurs!
 <details>
   <summary>Test Encounter 1</summary>
   {% include encounter.html name="Encounter 1" %}
 </details>
+
+They do some other stuff, or take some other branch and end up at Encounter 2!
 
 <details>
   <summary>Test Encounter 2</summary>
