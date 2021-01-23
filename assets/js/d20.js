@@ -25,7 +25,7 @@ function updateValue(button, value) {
 }
 
 
-function resetValue(event, encounter, buttonId) {
+function resetValue(event, buttonId) {
     event.preventDefault();
     var button = document.getElementById(buttonId);
     var initialValue = button.getAttribute("initialValue");
@@ -81,3 +81,11 @@ function sortEntityTable(encounter) {
         row.innerHTML = rows[i].innerHTML;
     }
 }
+
+function onLoad() {
+    var interactives = document.getElementsByClassName("interactive");
+    for (let i = 0; i < interactives.length; i++) {
+        interactives[i].addEventListener("onload", function(){ resetValue(event, interactives[i].id); })
+    }
+}
+onLoad();
