@@ -20,14 +20,14 @@ function rollInitiative(element) {
 }
 
 
-function clearInitiative(encounter, initiativeButtonId) {
+function clearInitiative(event, encounter, initiativeButtonId) {
+    event.preventDefault();
     var initiative = document.getElementById(initiativeButtonId);
     var defaultValue = initiative.getAttribute("default")
     initiative.value = 0;
     initiative.innerText = ((defaultValue >= 0) ? "+" : "") + defaultValue;
     initiative.classList.add("initiative-random");
     sortEntityTable(encounter);
-    return false;
 }
 
 
