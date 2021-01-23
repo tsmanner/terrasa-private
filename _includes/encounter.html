@@ -5,17 +5,19 @@
     <div>
       <button onclick="map_entities(this.parentElement.parentElement, roll_initiative)" >Roll Initiative</button>
     </div>
-    {% assign encounter = page.encounters | where: "name", include.name | first %}
-    {% for entity in encounter.entities %}
-      {% assign character = site.data.pcs | where: "name", entity | first %}
-      {% assign character_id = character.name | replace: ' ', '_' %}
-      <div class="entity" initiative="{{ character.initiative }}" id="{{ encounter_id }}.{{ character_id }}">
-        <div class="row">
-          <div><strong>{{ character.name }} ({{ character.player }})</strong></div>
-          Initiative:&nbsp;
-          <a id="{{ encounter_id }}.{{ character_id }}.initiative">+{{ character.initiative }}</a>
-        </div>
-      </div>
-    {% endfor %}
+    <table>
+      <tr>
+        <th>Character</th><th>Initiative</th>
+      </tr>
+      {% assign encounter = page.encounters | where: "name", include.name | first %}
+      {% for entity in encounter.entities %}
+        {% assign character = site.data.pcs | where: "name", entity | first %}
+        {% assign character_id = character.name | replace: ' ', '_' %}
+        <tr>
+          <td>{{ character.name }}</td>
+          <td id="{{ encounter_id }}.{{ character_id }}.initiative">+{{ character.initiative }}</td>
+        </tr>
+      {% endfor %}
+    </table>
   </div>
 </details>
