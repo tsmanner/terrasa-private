@@ -21,7 +21,25 @@ function rollInitiative(element) {
 
 
 function updateValue(button, value) {
+    var minimumValue = parseInt(button.getAttribute("minimumValue"));
+    var maximumValue = parseInt(button.getAttribute("maximumValue"));
+    if (minimumValue <= value && value <= maximumValue) {
+        button.value = value;
+        button.innerText = value;
+        return true;
+    }
+    else {
+        return false;
+    }
+}
 
+
+function incrementValue(event, buttonId) {
+    event.preventDefault();
+    var button = document.getElementById(buttonId);
+    var initialValue = button.getAttribute("initialValue");
+    button.value = parseInt(initialValue);
+    button.innerText = initialValue;
 }
 
 
@@ -35,16 +53,9 @@ function resetValue(event, buttonId) {
 
 
 function inputValue(encounter, buttonId) {
-    var initiative = document.getElementById(buttonId);
-    var initiativeBonus = parseInt(initiative.getAttribute("initialValue"));
-    var minimumValue = 1 + initiativeBonus;
-    var maximumValue = 20 + initiativeBonus;
+    var button = document.getElementById(buttonId);
     var value = prompt("Initiative (range " + minimumValue + " to " + maximumValue + ")");
-    if (minimumValue <= value && value <= maximumValue) {
-        initiative.value = value;
-        initiative.innerText = value;
-    }
-    else if (value != null) {
+    if (value != null && !updateValue(button, value)) {
         inputValue(encounter, buttonId);
     }
 }
