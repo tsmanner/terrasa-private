@@ -13,6 +13,7 @@
         <th>INT</th>
         <th>WIS</th>
         <th>CHA</th>
+        <th>AC</th>
         <th>HP</th>
       </tr>
 
@@ -43,6 +44,7 @@
           <td id="{{ character_id }}.int">{{ character.abilities.int | divided_by: 2 | minus: 5 }}</td>
           <td id="{{ character_id }}.wis">{{ character.abilities.wis | divided_by: 2 | minus: 5 }}</td>
           <td id="{{ character_id }}.cha">{{ character.abilities.cha | divided_by: 2 | minus: 5 }}</td>
+          <td id="{{ character_id }}.ac">{{ character.ac }}</td>
           <td><button
             class="interactive"
             id="{{ character_id }}.hp"
