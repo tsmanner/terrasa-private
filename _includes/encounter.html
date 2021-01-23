@@ -3,7 +3,7 @@
   <div>
     <button onclick="map_entities(this.parentElement.parentElement, roll_initiative)" >Roll Initiative</button>
   </div>
-  {% assign encounter page.encounters | where: "name", include.name | first %}
+  <!-- {% assign encounter page.encounters | where: "name", include.name | first %}
   {% for entity in encounter.entities %}
     {% assign character = site.data.pcs | where: "name", entity | first %}
     {% assign character_id = character.name | replace: ' ', '_' %}
@@ -13,5 +13,5 @@
         Initiative:&nbsp; <a id="{{ encounter_id }}.{{ character_id }}.initiative">+{{ character.initiative }}</a>
       </div>
     </div>
-  {% endfor %}
+  {% endfor %} -->
 </div>
