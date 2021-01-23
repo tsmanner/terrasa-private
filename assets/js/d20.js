@@ -9,8 +9,8 @@ function roll_initiative(element) {
 }
 
 
-function map_entities(encounterId, f) {
-    var children = document.getElementById(encounterId).children;
+function map_entities(encounter, f) {
+    var children = encounter.children;
     for (let index = 0; index < children.length; index++) {
         const element = children[index];
         if (element.classList.contains("initiative")) {
