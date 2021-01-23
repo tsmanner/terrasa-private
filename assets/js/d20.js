@@ -21,7 +21,7 @@ function map_entities(parent, f) {
     var entities = parent.children;
     for (let index = 0; index < entities.length; index++) {
         const element = entities[index];
-        if (element.getAttribute("class") == "entity") {
+        if (element.classList.contains("entity")) {
             console.log(element);
             f(element);
         }
