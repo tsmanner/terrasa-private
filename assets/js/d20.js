@@ -3,32 +3,48 @@ function roll(max, bonus) {
 }
 
 
-function roll_initiative(e) {
-    var children = e.children;
+function rollInitiative(element) {
+    var children = element.children;
     for (let index = 0; index < children.length; index++) {
-        const element = children[index];
-        if (element.classList.contains("initiative")) {
-            console.log(element);
-            element.innerHTML = roll(20, element.innerHTML);
-            element.classList.remove("initiative");
+        var child = children[index];
+        if (child.classList.contains("initiative-random")) {
+            console.log(child);
+            child.value = roll(20, child.innerHTML);
+            child.classList.remove("initiative-random");
         }
         else {
-            roll_initiative(element, f)
+            rollInitiative(child)
         }
     }
 }
 
 
-function map_entities(e, func) {
-    func(e);
+function inputInitiative(encounter, characterId) {
+    var value = prompt("Initiative:");
+    if (value != null && value != "") {
+        var initiative = document.getElementById(characterId + ".initiative");
+        initiative.value = value;
+        initiative.classList.remove("initiative-random");
+        sortEntityTable(encounter)
+    }
+}
+
+
+function mapEntities(encounter, func) {
+    func(encounter);
+    sortEntityTable(encounter);
+}
+
+
+function sortEntityTable(encounter) {
     // Sort the elements
-    var table = document.getElementById(e.id + ".table");
+    var table = document.getElementById(encounter.id + ".table");
     var rows = []
     for (let i = 1; i < table.rows.length; i++) {
         rows.push(table.rows[i]);
     }
     rows.sort(function(lhs, rhs) {
-        var d_init = parseInt(rhs.cells[1].innerHTML) - parseInt(lhs.cells[1].innerHTML);
+        var d_init = parseInt(rhs.cells[1].children[0].value) - parseInt(lhs.cells[1].children[0].value);
         if (d_init == 0) {
             return parseInt(rhs.cells[3].innerHTML) - parseInt(lhs.cells[3].innerHTML);
         }
@@ -42,6 +58,6 @@ function map_entities(e, func) {
     // Insert the sorted rows
     for (let i = 0; i < rows.length; i++) {
         row = table.insertRow(-1);
-        row.innerHTML = rows[i].innerHTML;
+        row = rows[i];
     }
 }

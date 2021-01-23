@@ -2,7 +2,7 @@
 <details>
   <summary>{{ include.name }}</summary>
   <div class="encounter" id="{{ encounter_id }}">
-    <div><button onclick="map_entities({{ encounter_id }}, roll_initiative)" >Auto Roll Initiative</button></div>
+    <div><button onclick="mapEntities({{ encounter_id }}, roll_initiative)" >Auto Roll Initiative</button></div>
     <table id="{{ encounter_id }}.table">
       <tr>
         <th>Character</th>
@@ -21,7 +21,12 @@
         {% assign character_id = character.name | replace: ' ', '_' %}
         <tr>
           <td>{{ character.name }}</td>
-          <td><input class="initiative" type="number" id="{{ character_id }}.initiative">+{{ character.initiative }}</input></td>
+          <td><button
+            class="initiative initiative-random"
+            id="{{ character_id }}.initiative"
+            onclick="inputInitiative({{ encounter_id }}, {{ character_id }})"
+            value="+{{ character.initiative }}">
+          </button></td>
           <td>{{ character.abilities.str | divided_by: 2 | minus: 5 }}</td>
           <td>{{ character.abilities.dex | divided_by: 2 | minus: 5 }}</td>
           <td>{{ character.abilities.con | divided_by: 2 | minus: 5 }}</td>
