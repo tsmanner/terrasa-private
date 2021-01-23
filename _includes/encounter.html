@@ -51,7 +51,8 @@
             maximumValue="{{ character.hp }}"
             minimumValue="0"
             initialValue="{{ character.hp }}"
-            value="{{ character.hp }}">
+            value="{{ character.hp }}"
+            formatter="function(value){ return value + '/' {{ character.hp }}">
               {{ character.hp }} / {{ character.hp }}
           </button></td>        </tr>
       {% endfor %}
