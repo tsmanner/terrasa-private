@@ -2,7 +2,7 @@
 <details>
   <summary>{{ include.name }}</summary>
   <div class="encounter" id="{{ encounter_id }}">
-    <div><button onclick="mapEntities({{ encounter_id }}, rollInitiative)" >Auto Roll Initiative</button></div>
+    <div><button onclick="mapEntities({{ encounter_id }}, rollInitiative);" >Auto Roll Initiative</button></div>
     <table id="{{ encounter_id }}.table">
       <tr>
         <th>Character</th>
@@ -13,6 +13,7 @@
         <th>INT</th>
         <th>WIS</th>
         <th>CHA</th>
+        <th>HP</th>
       </tr>
 
       {% assign encounter = page.encounters | where: "name", include.name | first %}
@@ -22,17 +23,15 @@
         <tr class="entity">
           <td>{{ character.name }}</td>
           <td><button
-            class="initiative initiative-random"
+            class="initiative randomize"
             id="{{ character_id }}.initiative"
-            onclick="inputInitiative({{ encounter_id }}, this.id)"
-            oncontextmenu="clearInitiative(event, {{ encounter_id }}, this.id)"
-            initiativeBonus="{{ character.initiative }}"
-            value="0">
-            {% if character.initiative >= 0 %}
-              +{{ character.initiative }}
-            {% else %}
-              {{ character.initiative }}
-            {% endif %}
+            onclick="inputValue({{ encounter_id }}, this.id); this.classList.remove('randomize'); sortEntityTable({{ encounter_id }});"
+            oncontextmenu="resetValue(event, {{ encounter_id }}, this.id); this.classList.add('randomize'); sortEntityTable({{ encounter_id }});"
+            onload="resetValue(event, {{ encounter_id }}, this.id);"
+            bonus="{{ character.initiative }}"
+            maximumValue="{{ character.initiative + 20 }}"
+            maximumValue="{{ character.initiative + 1 }}"
+            initialValue="+{{ character.initiative }}">
           </button></td>
           <td id="{{ character_id }}.str">{{ character.abilities.str | divided_by: 2 | minus: 5 }}</td>
           <td id="{{ character_id }}.dex">{{ character.abilities.dex | divided_by: 2 | minus: 5 }}</td>
@@ -40,7 +39,16 @@
           <td id="{{ character_id }}.int">{{ character.abilities.int | divided_by: 2 | minus: 5 }}</td>
           <td id="{{ character_id }}.wis">{{ character.abilities.wis | divided_by: 2 | minus: 5 }}</td>
           <td id="{{ character_id }}.cha">{{ character.abilities.cha | divided_by: 2 | minus: 5 }}</td>
-        </tr>
+          <td><button
+            id="{{ character_id }}.hp"
+            onclick="incrementValue({{ encounter_id }}, this.id);"
+            oncontextmenu="decrementValue(event, {{ encounter_id }}, this.id);"
+            onload="resetValue(event, {{ encounter_id }}, this.id);"
+            maximumValue="{{ character.hp }}"
+            minimumValue="0"
+            initialValue="{{ character.hp }}">
+              {{ character.hp }} / {{ character.hp }}
+          </button></td>        </tr>
       {% endfor %}
 
     </table>

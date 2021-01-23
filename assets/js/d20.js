@@ -7,11 +7,11 @@ function rollInitiative(element) {
     var children = element.children;
     for (let index = 0; index < children.length; index++) {
         var child = children[index];
-        if (child.classList.contains("initiative-random")) {
+        if (child.classList.contains("initiative") && child.classList.contains("randomize")) {
             console.log(child);
-            child.value = roll(20, child.innerHTML);
+            child.value = roll(20, child.getAttribute("bonus"));
             child.innerText = child.value;
-            child.classList.remove("initiative-random");
+            child.classList.remove("randomize");
         }
         else {
             rollInitiative(child);
@@ -20,31 +20,32 @@ function rollInitiative(element) {
 }
 
 
-function clearInitiative(event, encounter, initiativeButtonId) {
-    event.preventDefault();
-    var initiative = document.getElementById(initiativeButtonId);
-    var initiativeBonus = initiative.getAttribute("initiativeBonus");
-    initiative.value = 0;
-    initiative.innerText = ((initiativeBonus >= 0) ? "+" : "") + initiativeBonus;
-    initiative.classList.add("initiative-random");
-    sortEntityTable(encounter);
+function updateValue(button, value) {
+
 }
 
 
-function inputInitiative(encounter, initiativeButtonId) {
-    var initiative = document.getElementById(initiativeButtonId);
-    var initiativeBonus = initiative.getAttribute("initiativeBonus");
-    var minimumInitiative = 1 + initiativeBonus;
-    var maximumInitiative = 20 + initiativeBonus;
-    var value = prompt("Initiative (" + minimumInitiative + ":" + maximumInitiative + ")");
-    if (minimumInitiative <= value && value <= maximumInitiative) {
+function resetValue(event, encounter, buttonId) {
+    event.preventDefault();
+    var button = document.getElementById(buttonId);
+    var initialValue = button.getAttribute("initialValue");
+    button.value = parseInt(initialValue);
+    button.innerText = initialValue;
+}
+
+
+function inputValue(encounter, buttonId) {
+    var initiative = document.getElementById(buttonId);
+    var initiativeBonus = parseInt(initiative.getAttribute("initialValue"));
+    var minimumValue = 1 + initiativeBonus;
+    var maximumValue = 20 + initiativeBonus;
+    var value = prompt("Initiative (range " + minimumValue + " to " + maximumValue + ")");
+    if (minimumValue <= value && value <= maximumValue) {
         initiative.value = value;
         initiative.innerText = value;
-        initiative.classList.remove("initiative-random");
-        sortEntityTable(encounter);
     }
     else if (value != null) {
-        inputInitiative(encounter, initiativeButtonId);
+        inputValue(encounter, buttonId);
     }
 }
 
