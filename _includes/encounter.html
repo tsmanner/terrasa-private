@@ -1,5 +1,7 @@
 <div class="flex-container" id="{{ include.name | replace: ' ', '_' }}">
-  <div><button onclick="map_entities(this.parentElement, roll_initiative)" >Roll Initiative</button></div>
+  <div>
+    <button onclick="map_entities(this.parentElement.parentElement, roll_initiative)" >Roll Initiative</button>
+  </div>
   {% for entity in page.entities %}
     <div class="entity" bonus="{{ entity.bonus }}" id="{{ include.name | replace: ' ', '_' }}.{{ entity.name | replace: ' ', '_' }}">
       <h4>{{ entity.name }}</h4>
