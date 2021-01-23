@@ -31,6 +31,11 @@
             maximumValue="{{ character.initiative | plus: 20 }}"
             maximumValue="{{ character.initiative | plus: 1 }}"
             initialValue="+{{ character.initiative }}">
+            {% if character.initiative >= 0 %}
+              +{{ character.initiative }}
+            {% else %}
+              {{ character.initiative }}
+            {% endif %}
           </button></td>
           <td id="{{ character_id }}.str">{{ character.abilities.str | divided_by: 2 | minus: 5 }}</td>
           <td id="{{ character_id }}.dex">{{ character.abilities.dex | divided_by: 2 | minus: 5 }}</td>
