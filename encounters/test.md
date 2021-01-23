@@ -2,8 +2,13 @@
 encounters:
   - name: Encounter 1
     entities:
+      - Brother Gromag
       - Caltrop Bloodless
       - Gluteus Maximus
+  - name: Encounter 2
+    entities:
+      - Brother Gromag
+      - Caltrop Bloodless
 js:
   - /assets/js/d20.js
 css:
