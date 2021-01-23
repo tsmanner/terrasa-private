@@ -4,7 +4,7 @@ function roll(max, bonus) {
 
 
 function roll_initiative(element) {
-    element.textContent = roll(20, element.textContent);
+    element.innerHTML = roll(20, element.innerHTML);
     element.classList.remove("initiative");
 }
 
@@ -28,11 +28,20 @@ function map_entities(e, f) {
     map_rec(e, f);
     // Sort the elements
     var table = document.getElementById(e.id + ".table");
-    table.rows.sort(
+    var rows = table.getElementsByTagName("TR");
+    rows.sort(
         function(lhs, rhs) {
             if (lhs.getElementsByTagName("TD")[1] == "Initiative") { return -1; }
-            return parseInt(lhs.getElementsByTagName("TD")[1].textContent)
-                 - parseInt(rhs.getElementsByTagName("TD")[1].textContent);
+            return parseInt(lhs.getElementsByTagName("TD")[1].innerHTML)
+                 - parseInt(rhs.getElementsByTagName("TD")[1].innerHTML);
         }
     );
+    // Clear the table rows
+    for (let i = 0; i < table.rows.length; i++) {
+        table.rows.deleteRow(i);
+    }
+    // Insert the sorted rows
+    for (let i = 0; i < rows.length; i++) {
+        table.rows.insertRow(i);
+    }
 }
