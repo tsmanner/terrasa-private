@@ -9,8 +9,7 @@
     <div class="entity" initiative="{{ character.initiative }}" id="{{ encounter_id }}.{{ character_id }}">
       <h4>{{ character.name }} ({{ character.player }})</h4>
       <div class="row">
-        <a>Initiative: </a>
-        <a id="{{ encounter_id }}.{{ character_id }}.initiative">+{{ character.initiative }}</a>
+        Initiative:&nbsp; <a id="{{ encounter_id }}.{{ character_id }}.initiative">+{{ character.initiative }}</a>
       </div>
     </div>
   {% endfor %}
