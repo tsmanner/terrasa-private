@@ -4,25 +4,21 @@ function roll(max, bonus) {
 
 
 function roll_initiative(element) {
-    console.log(element.id + ".initiative = " + document.getElementById(element.id + ".initiative"));
-    return document.getElementById(element.id + ".initiative").textContent = roll(20, element.getAttribute("initiative"));
+    element.textContent = roll(20, element.textContent);
+    element.classList.remove("initiative");
 }
 
 
-function descendantOf(ancestorId, element) {
-    if (element.parentElement == null) { return false; }
-    else if (element.parentElement.id == ancestorId) { return true; }
-    else { return descendantOf(ancestorId, element.parentElement); }
-}
-
-
-function map_entities(parent, f) {
-    var entities = parent.children;
-    for (let index = 0; index < entities.length; index++) {
-        const element = entities[index];
-        if (element.classList.contains("entity")) {
+function map_entities(encounterId, f) {
+    var children = document.getElementById(encounterId).children;
+    for (let index = 0; index < children.length; index++) {
+        const element = children[index];
+        if (element.classList.contains("initiative")) {
             console.log(element);
             f(element);
+        }
+        else {
+            map_entities(element, f)
         }
     }
     // Sort the elements
