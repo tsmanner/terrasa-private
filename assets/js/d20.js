@@ -34,11 +34,13 @@ function map_entities(e, f) {
     }
     rows.sort(function(lhs, rhs) { return parseInt(lhs.cells[1].innerHTML) - parseInt(rhs.cells[1].innerHTML); });
     // Clear the table rows
-    for (let i = 1; i < table.rows.length; i++) {
-        table.deleteRow(i);
+    var length = table.rows.length;
+    for (let i = 1; i < length; i++) {
+        table.deleteRow(1);
     }
     // Insert the sorted rows
     for (let i = 0; i < rows.length; i++) {
-        table.insertRow(-1);
+        row = table.insertRow(-1);
+        row.innerHTML = rows[i].innerHTML;
     }
 }
