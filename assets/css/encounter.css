@@ -2,6 +2,6 @@
   flex-wrap: nowrap;
 }
 
-.entity {
+.entity > flex-container {
   flex-direction: row;
 }
