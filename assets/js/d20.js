@@ -60,6 +60,6 @@ function sortEntityTable(encounter) {
     // Insert the sorted rows
     for (let i = 0; i < rows.length; i++) {
         row = table.insertRow(-1);
-        row = rows[i];
+        row.innerHTML = rows[i].innerHTML;
     }
 }
