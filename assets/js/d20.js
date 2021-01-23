@@ -36,7 +36,7 @@ function inputInitiative(encounter, initiativeButtonId) {
     var initiativeBonus = initiative.getAttribute("initiativeBonus");
     var minimumInitiative = 1 + initiativeBonus;
     var maximumInitiative = 20 + initiativeBonus;
-    var value = prompt("Initiative:");
+    var value = prompt("Initiative (" + minimumInitiative + ":" + maximumInitiative + ")");
     if (minimumInitiative <= value && value <= maximumInitiative) {
         initiative.value = value;
         initiative.innerText = value;
@@ -44,7 +44,7 @@ function inputInitiative(encounter, initiativeButtonId) {
         sortEntityTable(encounter);
     }
     else {
-        postMessage("Initiative out of range: [" + minimumInitiative + ":" + maximumInitiative + "]");
+        inputInitiative(encounter, initiativeButtonId);
     }
 }
 
