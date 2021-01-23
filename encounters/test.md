@@ -6,6 +6,8 @@ entities:
     bonus: 3
 js:
   - /assets/js/d20.js
+css:
+  - /assets/css/encounter.css
 ---
 
 <details>
