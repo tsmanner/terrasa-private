@@ -27,6 +27,7 @@ function clearInitiative(encounter, initiativeButtonId) {
     initiative.innerText = ((defaultValue >= 0) ? "+" : "") + defaultValue;
     initiative.classList.add("initiative-random");
     sortEntityTable(encounter);
+    return false;
 }
 
 
