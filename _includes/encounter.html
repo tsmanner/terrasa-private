@@ -19,7 +19,7 @@
 
       {% assign encounter = page.encounters | where: "name", include.name | first %}
       {% for entity in encounter.entities %}
-        {% assign character = site.data.pcs | where: "name", entity | first %}
+        {% assign character = site.data.entities | where: "name", entity | first %}
         {% assign character_id = character.name | replace: ' ', '_' | prepend: "." | prepend: encounter_id %}
         <tr class="entity">
           <td>{{ character.name }}</td>

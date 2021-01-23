@@ -5,10 +5,14 @@ encounters:
       - Brother Gromag
       - Caltrop Bloodless
       - Gluteus Maximus
+      - Skeleton
+      - Skeleton
   - name: Encounter 2
     entities:
       - Brother Gromag
       - Caltrop Bloodless
+      - Skeleton
+      - Skeleton
 full-width: true
 js:
   - /assets/js/d20.js

@@ -39,3 +39,15 @@
   ac: 15
   hp: 25
   initiative: 3
+
+- name: Skeleton
+  abilities:
+    str: 10
+    dex: 14
+    con: 15
+    int: 6
+    wis: 8
+    cha: 5
+  ac: 13
+  hp: 13
+  initiative: 2
