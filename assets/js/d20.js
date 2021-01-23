@@ -1,8 +1,6 @@
 function roll(max, bonus) {
-    var r = Math.random() * max + 1;
-    console.log("roll(" + max + ", " + bonus + ") = " + r + " + " + bonus + " = " + Math.floor(r + bonus));
-    return Math.floor(r + bonus);
-    return Math.floor(Math.random() * max + 1 + bonus);
+    console.log("roll(" + max + ", " + bonus + ")");
+    return Math.floor(Math.random() * (max + 1)) + bonus;
 }
 
 
