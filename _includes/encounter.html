@@ -48,8 +48,8 @@
           <td><button
             class="interactive"
             id="{{ character_id }}.hp"
-            onclick="incrementValue(event, this.id);"
-            oncontextmenu="decrementValue(event, this.id);"
+            onclick="decrementValue(event, this.id);"
+            oncontextmenu="incrementValue(event, this.id);"
             showMax="true"
             maximumValue="{{ character.hp }}"
             minimumValue="0"
