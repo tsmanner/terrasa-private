@@ -1,9 +1,9 @@
 ---
-encounters:
-  - name: Encounter 1
-    entities:
-      - Caltrop Bloodless
-      - Gluteus Maximus
+# encounters:
+#   - name: Encounter 1
+#     entities:
+#       - Caltrop Bloodless
+#       - Gluteus Maximus
 js:
   - /assets/js/d20.js
 css:
