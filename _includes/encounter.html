@@ -1,13 +1,11 @@
-<div class="flex-container" id="{{ include.name | replace: ' ', '_' }}">
+<div class="encounter" id="{{ include.name | replace: ' ', '_' }}">
   <div>
     <button onclick="map_entities(this.parentElement.parentElement, roll_initiative)" >Roll Initiative</button>
   </div>
   {% for entity in page.entities %}
     <div class="entity" bonus="{{ entity.bonus }}" id="{{ include.name | replace: ' ', '_' }}.{{ entity.name | replace: ' ', '_' }}">
-      <div class="flex-container">
-        <h4>{{ entity.name }}</h4>
-        <a id="{{ include.name | replace: ' ', '_' }}.{{ entity.name | replace: ' ', '_' }}.initiative">--</a>
-      </div>
+      <h4>{{ entity.name }}</h4>
+      <a id="{{ include.name | replace: ' ', '_' }}.{{ entity.name | replace: ' ', '_' }}.initiative">--</a>
     </div>
   {% endfor %}
 </div>

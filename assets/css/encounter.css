@@ -1,7 +1,3 @@
-.flex-container {
-  flex-wrap: nowrap;
-}
-
-.entity > flex-container {
+.entity .row {
   flex-direction: row;
 }
