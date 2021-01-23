@@ -1,5 +1,6 @@
 {% assign encounter_id = include.name | replace: ' ', '_' %}
-<div class="encounter" id="{{ encounter_id }}">
+<details class="encounter" id="{{ encounter_id }}">
+  <summary>{{ encounter.name }}</summary>
   <div>
     <button onclick="map_entities(this.parentElement.parentElement, roll_initiative)" >Roll Initiative</button>
   </div>
@@ -14,4 +15,4 @@
       </div>
     </div>
   {% endfor %} -->
-</div>
+  </details>
