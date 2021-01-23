@@ -1,5 +1,5 @@
 ---
-entities:
+Encounter 1:
   - Caltrop Bloodless
   - Gluteus Maximus
 js:
