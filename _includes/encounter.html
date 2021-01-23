@@ -3,9 +3,10 @@
     <button onclick="map_entities(this.parentElement.parentElement, roll_initiative)" >Roll Initiative</button>
   </div>
   {% for entity in page.entities %}
-    <div class="entity" bonus="{{ entity.bonus }}" id="{{ include.name | replace: ' ', '_' }}.{{ entity.name | replace: ' ', '_' }}">
-      <h4>{{ entity.name }}</h4>
-      <a id="{{ include.name | replace: ' ', '_' }}.{{ entity.name | replace: ' ', '_' }}.initiative">--</a>
+    {% assign character = site.pcs | where: "name", entity | first %}
+    <div class="entity" initiative="{{ character.initiative }}" id="{{ include.name | replace: ' ', '_' }}.{{ character.name | replace: ' ', '_' }}">
+      <h4>{{ character.name }}</h4>
+      <a id="{{ include.name | replace: ' ', '_' }}.{{ character.name | replace: ' ', '_' }}.initiative">--</a>
     </div>
   {% endfor %}
 </div>
