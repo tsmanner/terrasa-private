@@ -4,7 +4,16 @@
   <div class="encounter" id="{{ encounter_id }}">
     <div><button onclick="map_entities({{ encounter_id }}, roll_initiative)" >Roll Initiative</button></div>
     <table>
-      <tr><th>Character</th><th>Initiative</th></tr>
+      <tr>
+        <th>Character</th>
+        <th>Initiative</th>
+        <th>STR</th>
+        <th>DEX</th>
+        <th>CON</th>
+        <th>INT</th>
+        <th>WIS</th>
+        <th>CHA</th>
+      </tr>
 
       {% assign encounter = page.encounters | where: "name", include.name | first %}
       {% for entity in encounter.entities %}
@@ -13,6 +22,12 @@
         <tr>
           <td>{{ character.name }}</td>
           <td class="initiative">+{{ character.initiative }}</td>
+          <td>{{ character.abilities.str }}</td>
+          <td>{{ character.abilities.dex }}</td>
+          <td>{{ character.abilities.con }}</td>
+          <td>{{ character.abilities.int }}</td>
+          <td>{{ character.abilities.wis }}</td>
+          <td>{{ character.abilities.cha }}</td>
         </tr>
       {% endfor %}
 
