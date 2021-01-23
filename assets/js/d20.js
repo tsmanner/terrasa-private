@@ -43,7 +43,7 @@ function inputInitiative(encounter, initiativeButtonId) {
         initiative.classList.remove("initiative-random");
         sortEntityTable(encounter);
     }
-    else {
+    else if (value != null) {
         inputInitiative(encounter, initiativeButtonId);
     }
 }
