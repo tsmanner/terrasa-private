@@ -11,7 +11,7 @@
       {% assign character_id = character.name | replace: ' ', '_' %}
       <div class="entity" initiative="{{ character.initiative }}" id="{{ encounter_id }}.{{ character_id }}">
         <div class="row">
-          <strong>{{ character.name }} ({{ character.player }})</strong>
+          <div><strong>{{ character.name }} ({{ character.player }})</strong></div>
           Initiative:&nbsp;
           <a id="{{ encounter_id }}.{{ character_id }}.initiative">+{{ character.initiative }}</a>
         </div>

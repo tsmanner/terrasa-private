@@ -1,3 +1,7 @@
 .entity .row {
   flex-direction: row;
 }
+
+.entity .row .div {
+  padding: 5px;
+}
