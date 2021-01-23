@@ -11,6 +11,7 @@ encounters:
       - Caltrop Bloodless
 js:
   - /assets/js/d20.js
+  - https://raw.githubusercontent.com/stationer/SortTable/master/sort-table.min.js
 css:
   - /assets/css/encounter.css
 ---
