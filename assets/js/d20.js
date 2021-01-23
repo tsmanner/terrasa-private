@@ -10,6 +10,7 @@ function rollInitiative(element) {
         if (child.classList.contains("initiative-random")) {
             console.log(child);
             child.value = roll(20, child.innerHTML);
+            child.innerText = child.value;
             child.classList.remove("initiative-random");
         }
         else {
@@ -24,6 +25,7 @@ function inputInitiative(encounter, characterId) {
     if (value != null && value != "") {
         var initiative = document.getElementById(characterId + ".initiative");
         initiative.value = value;
+        initiative.innerText = value;
         initiative.classList.remove("initiative-random");
         sortEntityTable(encounter)
     }
