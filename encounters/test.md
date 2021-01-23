@@ -9,6 +9,7 @@ encounters:
     entities:
       - Brother Gromag
       - Caltrop Bloodless
+full-width: true
 js:
   - /assets/js/d20.js
 css:
