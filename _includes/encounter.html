@@ -1,10 +1,10 @@
 {% assign encounter_id = include.name | replace: ' ', '_' %}
-<details class="encounter" id="{{ encounter_id }}">
+<details><div class="encounter" id="{{ encounter_id }}">
   <summary>{{ encounter.name }}</summary>
   <div>
     <button onclick="map_entities(this.parentElement.parentElement, roll_initiative)" >Roll Initiative</button>
   </div>
-  <!-- {% assign encounter page.encounters | where: "name", include.name | first %}
+  {% assign encounter page.encounters | where: "name", include.name | first %}
   {% for entity in encounter.entities %}
     {% assign character = site.data.pcs | where: "name", entity | first %}
     {% assign character_id = character.name | replace: ' ', '_' %}
@@ -14,5 +14,5 @@
         Initiative:&nbsp; <a id="{{ encounter_id }}.{{ character_id }}.initiative">+{{ character.initiative }}</a>
       </div>
     </div>
-  {% endfor %} -->
-</details>
+  {% endfor %}
+</div></details>
