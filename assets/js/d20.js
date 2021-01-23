@@ -14,9 +14,19 @@ function rollInitiative(element) {
             child.classList.remove("initiative-random");
         }
         else {
-            rollInitiative(child)
+            rollInitiative(child);
         }
     }
+}
+
+
+function clearInitiative(encounter, initiativeButtonId) {
+    var initiative = document.getElementById(initiativeButtonId);
+    var defaultValue = initiative.getAttribute("default")
+    initiative.value = 0;
+    initiative.innerText = ((defaultValue >= 0) ? "+" : "") + defaultValue;
+    initiative.classList.add("initiative-random");
+    sortEntityTable(encounter);
 }
 
 
@@ -27,7 +37,7 @@ function inputInitiative(encounter, initiativeButtonId) {
         initiative.value = value;
         initiative.innerText = value;
         initiative.classList.remove("initiative-random");
-        sortEntityTable(encounter)
+        sortEntityTable(encounter);
     }
 }
 
