@@ -48,11 +48,11 @@
             id="{{ character_id }}.hp"
             onclick="incrementValue(event, this.id);"
             oncontextmenu="decrementValue(event, this.id);"
+            showMax="true"
             maximumValue="{{ character.hp }}"
             minimumValue="0"
             initialValue="{{ character.hp }}"
-            value="{{ character.hp }}"
-            formatter="function(value){ return value + '/' {{ character.hp }}">
+            value="{{ character.hp }}">
               {{ character.hp }} / {{ character.hp }}
           </button></td>        </tr>
       {% endfor %}

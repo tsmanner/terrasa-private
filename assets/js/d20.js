@@ -25,7 +25,12 @@ function updateValue(button, value) {
     var maximumValue = parseInt(button.getAttribute("maximumValue"));
     if (minimumValue <= value && value <= maximumValue) {
         button.value = value;
-        button.innerText = button.getAttribute("formatter")(value);
+        if (button.getAttribute("showMax") == true) {
+            button.innerText = value + "/" + maximumValue;
+        }
+        else {
+            button.innerText = value;
+        }
         return true;
     }
     else {
