@@ -22,12 +22,12 @@
         <tr>
           <td>{{ character.name }}</td>
           <td class="initiative">+{{ character.initiative }}</td>
-          <td>{{ character.abilities.str }}</td>
-          <td>{{ character.abilities.dex }}</td>
-          <td>{{ character.abilities.con }}</td>
-          <td>{{ character.abilities.int }}</td>
-          <td>{{ character.abilities.wis }}</td>
-          <td>{{ character.abilities.cha }}</td>
+          <td>{{ character.abilities.str | divided_by: 2 | minus: 5 }}</td>
+          <td>{{ character.abilities.dex | divided_by: 2 | minus: 5 }}</td>
+          <td>{{ character.abilities.con | divided_by: 2 | minus: 5 }}</td>
+          <td>{{ character.abilities.int | divided_by: 2 | minus: 5 }}</td>
+          <td>{{ character.abilities.wis | divided_by: 2 | minus: 5 }}</td>
+          <td>{{ character.abilities.cha | divided_by: 2 | minus: 5 }}</td>
         </tr>
       {% endfor %}
 
