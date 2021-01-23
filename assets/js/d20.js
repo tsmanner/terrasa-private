@@ -32,17 +32,13 @@ function map_entities(e, f) {
     for (let i = 1; i < table.rows.length; i++) {
         rows.push(table.rows[i]);
     }
-    rows.sort(
-        function(lhs, rhs) {
-            return parseInt(lhs.cells[1].innerHTML) - parseInt(rhs.cells[1].innerHTML);
-        }
-    );
+    rows.sort(function(lhs, rhs) { return parseInt(lhs.cells[1].innerHTML) - parseInt(rhs.cells[1].innerHTML); });
     // Clear the table rows
     for (let i = 1; i < table.rows.length; i++) {
-        table.rows.deleteRow(i);
+        table.deleteRow(i);
     }
     // Insert the sorted rows
     for (let i = 0; i < rows.length; i++) {
-        table.rows.insertRow(i+1);
+        table.insertRow(i+1);
     }
 }
