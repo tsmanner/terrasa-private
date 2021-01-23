@@ -3,29 +3,24 @@ function roll(max, bonus) {
 }
 
 
-function roll_initiative(element) {
-    element.innerHTML = roll(20, element.innerHTML);
-    element.classList.remove("initiative");
-}
-
-
-function map_rec(e, f) {
+function roll_initiative(e) {
     var children = e.children;
     for (let index = 0; index < children.length; index++) {
         const element = children[index];
         if (element.classList.contains("initiative")) {
             console.log(element);
-            f(element);
+            element.innerHTML = roll(20, element.innerHTML);
+            element.classList.remove("initiative");
         }
         else {
-            map_rec(element, f)
+            roll_initiative(element, f)
         }
     }
 }
 
 
-function map_entities(e, f) {
-    map_rec(e, f);
+function map_entities(e, func) {
+    func(e);
     // Sort the elements
     var table = document.getElementById(e.id + ".table");
     var rows = []
