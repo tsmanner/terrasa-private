@@ -20,10 +20,10 @@ function rollInitiative(element) {
 }
 
 
-function inputInitiative(encounter, characterId) {
+function inputInitiative(encounter, initiativeButtonId) {
     var value = prompt("Initiative:");
     if (value != null && value != "") {
-        var initiative = document.getElementById(characterId + ".initiative");
+        var initiative = document.getElementById(initiativeButtonId);
         initiative.value = value;
         initiative.innerText = value;
         initiative.classList.remove("initiative-random");
