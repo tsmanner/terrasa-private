@@ -22,4 +22,12 @@ function map_entities(encounter, f) {
         }
     }
     // Sort the elements
+    var table = document.getElementById(encounter.id + ".table");
+    table.rows.sort(
+        function(lhs, rhs) {
+            if (lhs.getElementsByTagName("TD")[1] == "Initiative") { return -1; }
+            return parseInt(lhs.getElementsByTagName("TD")[1].textContent)
+                 - parseInt(rhs.getElementsByTagName("TD")[1].textContent);
+        }
+    );
 }
