@@ -37,9 +37,14 @@ function updateValue(button, value) {
 function incrementValue(event, buttonId) {
     event.preventDefault();
     var button = document.getElementById(buttonId);
-    var initialValue = button.getAttribute("initialValue");
-    button.value = parseInt(initialValue);
-    button.innerText = initialValue;
+    updateValue(button, button.value + 1);
+}
+
+
+function decrementValue(event, buttonId) {
+    event.preventDefault();
+    var button = document.getElementById(buttonId);
+    updateValue(button, button.value + 1);
 }
 
 
@@ -47,7 +52,7 @@ function resetValue(event, buttonId) {
     event.preventDefault();
     var button = document.getElementById(buttonId);
     var initialValue = button.getAttribute("initialValue");
-    button.value = parseInt(initialValue);
+    button.value = null;
     button.innerText = initialValue;
 }
 
