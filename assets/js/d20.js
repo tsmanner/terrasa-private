@@ -23,22 +23,28 @@ function rollInitiative(element) {
 function clearInitiative(event, encounter, initiativeButtonId) {
     event.preventDefault();
     var initiative = document.getElementById(initiativeButtonId);
-    var defaultValue = initiative.getAttribute("default")
+    var initiativeBonus = initiative.getAttribute("initiativeBonus");
     initiative.value = 0;
-    initiative.innerText = ((defaultValue >= 0) ? "+" : "") + defaultValue;
+    initiative.innerText = ((initiativeBonus >= 0) ? "+" : "") + initiativeBonus;
     initiative.classList.add("initiative-random");
     sortEntityTable(encounter);
 }
 
 
 function inputInitiative(encounter, initiativeButtonId) {
+    var initiative = document.getElementById(initiativeButtonId);
+    var initiativeBonus = initiative.getAttribute("initiativeBonus");
+    var minimumInitiative = 1 + initiativeBonus;
+    var maximumInitiative = 20 + initiativeBonus;
     var value = prompt("Initiative:");
-    if (value != null && value != "") {
-        var initiative = document.getElementById(initiativeButtonId);
+    if (minimumInitiative <= value && value <= maximumInitiative) {
         initiative.value = value;
         initiative.innerText = value;
         initiative.classList.remove("initiative-random");
         sortEntityTable(encounter);
+    }
+    else {
+        postMessage("Initiative out of range: [" + minimumInitiative + ":" + maximumInitiative + "]");
     }
 }
 
