@@ -1,4 +1,4 @@
-- name: Brother Gromag:
+- name: Brother Gromag
   player: Nick
   level: 3
   abilities:
@@ -12,7 +12,7 @@
   hp: 28
   initiative: 3
 
-- name: Caltrop Bloodless:
+- name: Caltrop Bloodless
   player: Ryan
   level: 3
   abilities:
@@ -26,7 +26,7 @@
   hp: 18
   initiative: 5
 
-- name: Gluteus Maximus:
+- name: Gluteus Maximus
   player: Kurt
   level: 3
   abilities:
