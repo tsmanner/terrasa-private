@@ -37,14 +37,14 @@ function updateValue(button, value) {
 function incrementValue(event, buttonId) {
     event.preventDefault();
     var button = document.getElementById(buttonId);
-    updateValue(button, button.value + 1);
+    updateValue(button, parseInt(button.value) + 1);
 }
 
 
 function decrementValue(event, buttonId) {
     event.preventDefault();
     var button = document.getElementById(buttonId);
-    updateValue(button, button.value + 1);
+    updateValue(button, parseInt(button.value) - 1);
 }
 
 
