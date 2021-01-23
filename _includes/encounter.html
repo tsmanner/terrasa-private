@@ -29,8 +29,8 @@
             oncontextmenu="resetValue(event, {{ encounter_id }}, this.id); this.classList.add('randomize'); sortEntityTable({{ encounter_id }});"
             onload="resetValue(event, {{ encounter_id }}, this.id);"
             bonus="{{ character.initiative }}"
-            maximumValue="{{ character.initiative + 20 }}"
-            maximumValue="{{ character.initiative + 1 }}"
+            maximumValue="{{ character.initiative | plus: 20 }}"
+            maximumValue="{{ character.initiative | plus: 1 }}"
             initialValue="+{{ character.initiative }}">
           </button></td>
           <td id="{{ character_id }}.str">{{ character.abilities.str | divided_by: 2 | minus: 5 }}</td>
