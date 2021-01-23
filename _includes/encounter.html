@@ -3,7 +3,7 @@
     <button onclick="map_entities(this.parentElement.parentElement, roll_initiative)" >Roll Initiative</button>
   </div>
   {% for entity in page.entities %}
-    {% assign character = site.pcs | where: "name", entity | first %}
+    {% assign character = site.pcs | where: "name", "Brother Gromag" | first %}
     <div class="entity" initiative="{{ character.initiative }}" id="{{ include.name | replace: ' ', '_' }}.{{ character.name | replace: ' ', '_' }}">
       <h4>{{ character.name }}({{ character.player }})</h4>
       <a id="{{ include.name | replace: ' ', '_' }}.{{ character.name | replace: ' ', '_' }}.initiative">--</a>
