@@ -29,7 +29,7 @@
             oncontextmenu="resetValue(event, this.id); this.classList.add('randomize'); sortEntityTable({{ encounter_id }});"
             bonus="{{ character.initiative }}"
             maximumValue="{{ character.initiative | plus: 20 }}"
-            maximumValue="{{ character.initiative | plus: 1 }}"
+            minimumValue="{{ character.initiative | plus: 1 }}"
             initialValue="+{{ character.initiative }}">
             {% if character.initiative >= 0 %}
               +{{ character.initiative }}
