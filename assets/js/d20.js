@@ -9,12 +9,22 @@ function roll_initiative(element) {
     return document.getElementById(element.id + ".initiative").textContent = roll(20, element.getAttribute("bonus"));
 }
 
-function map_entities(f) {
+
+function descendantOf(ancestorId, element) {
+    if (element.parentElement == null) { return false; }
+    else if (element.parentElement.id == ancestorId) { return true; }
+    else { return descendantOf(ancestorId, element.parentElement); }
+}
+
+
+function map_entities(ancestorId, f) {
     var entities = document.getElementsByClassName("entity");
     for (let index = 0; index < entities.length; index++) {
         const element = entities[index];
-        console.log(element);
-        f(element);
+        if (descendantOf(ancestorId, element)) {
+            console.log(element);
+            f(element);
+        }
     }
     // Sort the elements
 }
