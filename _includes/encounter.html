@@ -50,7 +50,8 @@
             oncontextmenu="decrementValue(event, this.id);"
             maximumValue="{{ character.hp }}"
             minimumValue="0"
-            initialValue="{{ character.hp }}">
+            initialValue="{{ character.hp }}"
+            value="{{ character.hp }}">
               {{ character.hp }} / {{ character.hp }}
           </button></td>        </tr>
       {% endfor %}
