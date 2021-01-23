@@ -17,11 +17,11 @@ function descendantOf(ancestorId, element) {
 }
 
 
-function map_entities(ancestorId, f) {
-    var entities = document.getElementsByClassName("entity");
+function map_entities(parent, f) {
+    var entities = parent.children;
     for (let index = 0; index < entities.length; index++) {
         const element = entities[index];
-        if (descendantOf(ancestorId, element)) {
+        if (element.getAttribute("class") == "entity") {
             console.log(element);
             f(element);
         }

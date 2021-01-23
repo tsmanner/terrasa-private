@@ -1,9 +1,9 @@
 <div id="{{ include.name | replace: ' ', '_' }}">
-  <button onclick="map_entities({{ include.name | replace: ' ', '_' }}, roll_initiative)" >Roll Initiative</button>
+  <button onclick="map_entities(this.parentElement, roll_initiative)" >Roll Initiative</button>
   {% for entity in page.entities %}
     <div class="entity" bonus="{{ entity.bonus }}" id="{{ include.name | replace: ' ', '_' }}.{{ entity.name | replace: ' ', '_' }}">
       <h2>{{ entity.name }}</h2>
-      <a id="{{ include.name | replace: ' ', '_' }}.{{ entity.name | replace: ' ', '_' }}.initiative">-initiative-</a>
+      <a id="{{ include.name | replace: ' ', '_' }}.{{ entity.name | replace: ' ', '_' }}.initiative">--</a>
     </div>
   {% endfor %}
 </div>
