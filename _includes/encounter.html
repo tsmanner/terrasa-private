@@ -26,7 +26,7 @@
             id="{{ character_id }}.initiative"
             onclick="inputInitiative({{ encounter_id }}, this.id)"
             oncontextmenu="clearInitiative(event, {{ encounter_id }}, this.id)"
-            default="{{ character.initiative }}"
+            initiativeBonus="{{ character.initiative }}"
             value="0">
             {% if character.initiative >= 0 %}
               +{{ character.initiative }}
