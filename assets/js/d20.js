@@ -9,8 +9,8 @@ function roll_initiative(element) {
 }
 
 
-function map_entities(encounter, f) {
-    var children = encounter.children;
+function map_rec(e, f) {
+    var children = e.children;
     for (let index = 0; index < children.length; index++) {
         const element = children[index];
         if (element.classList.contains("initiative")) {
@@ -18,11 +18,16 @@ function map_entities(encounter, f) {
             f(element);
         }
         else {
-            map_entities(element, f)
+            map_rec(element, f)
         }
     }
+}
+
+
+function map_entities(e, f) {
+    map_rec(e, f);
     // Sort the elements
-    var table = document.getElementById(encounter.id + ".table");
+    var table = document.getElementById(e.id + ".table");
     table.rows.sort(
         function(lhs, rhs) {
             if (lhs.getElementsByTagName("TD")[1] == "Initiative") { return -1; }
