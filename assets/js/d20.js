@@ -39,6 +39,6 @@ function map_entities(e, f) {
     }
     // Insert the sorted rows
     for (let i = 0; i < rows.length; i++) {
-        table.insertRow(i+1);
+        table.insertRow(-1);
     }
 }
