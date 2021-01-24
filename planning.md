@@ -9,6 +9,7 @@ encounters:
       - Brother Gromag
       - Caltrop Bloodless
       - Gluteus Maximus
+      - Kilvin Greyjaw
       - Skeleton
       - Skeleton
       - Skeleton
@@ -19,6 +20,7 @@ encounters:
       - Brother Gromag
       - Caltrop Bloodless
       - Gluteus Maximus
+      - Kilvin Greyjaw
       - Helmed Horror
 ---
 
