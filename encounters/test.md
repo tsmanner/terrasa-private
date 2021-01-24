@@ -11,6 +11,8 @@ encounters:
     entities:
       - Brother Gromag
       - Caltrop Bloodless
+      - Llaska
+      - Dazoluk Forgemaker
       - Skeleton
       - Skeleton
 full-width: true
