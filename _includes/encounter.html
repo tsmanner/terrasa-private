@@ -7,22 +7,28 @@
       <tr>
         <th>Character</th>
         <th>Init</th>
+        <th>AC</th>
+        <th>HP</th>
         <th>STR</th>
         <th>DEX</th>
         <th>CON</th>
         <th>INT</th>
         <th>WIS</th>
         <th>CHA</th>
-        <th>AC</th>
-        <th>HP</th>
       </tr>
 
       {% assign encounter = page.encounters | where: "name", include.name | first %}
       {% for entity in encounter.entities %}
-        {% assign character = site.data.entities | where: "name", entity | first %}
+        {% assign character = site.data.players | concat: site.data.npcs | concat: site.data.monsters | where: "name", entity | first %}
         {% assign character_id = character.name | replace: ' ', '_' | prepend: "." | prepend: encounter_id %}
         <tr class="entity">
-          <td>{{ character.name }}</td>
+          <td>
+            {% if character.link == nil %}
+              <a>{{ character.name }}</a>
+            {% else %}
+              <a target="_blank" rel="noopener noreferrer" href="{{ character.link }}">{{ character.name }}</a>
+            {% endif %}
+          </td>
           <td><button
             class="interactive initiative randomize"
             id="{{ character_id }}.initiative"
@@ -38,12 +44,6 @@
               {{ character.initiative }}
             {% endif %}
           </button></td>
-          <td id="{{ character_id }}.str">{{ character.abilities.str | divided_by: 2 | minus: 5 }}</td>
-          <td id="{{ character_id }}.dex">{{ character.abilities.dex | divided_by: 2 | minus: 5 }}</td>
-          <td id="{{ character_id }}.con">{{ character.abilities.con | divided_by: 2 | minus: 5 }}</td>
-          <td id="{{ character_id }}.int">{{ character.abilities.int | divided_by: 2 | minus: 5 }}</td>
-          <td id="{{ character_id }}.wis">{{ character.abilities.wis | divided_by: 2 | minus: 5 }}</td>
-          <td id="{{ character_id }}.cha">{{ character.abilities.cha | divided_by: 2 | minus: 5 }}</td>
           <td id="{{ character_id }}.ac">{{ character.ac }}</td>
           <td><button
             class="interactive"
@@ -56,7 +56,14 @@
             initialValue="{{ character.hp }}"
             value="{{ character.hp }}">
               {{ character.hp }} / {{ character.hp }}
-          </button></td>        </tr>
+          </button></td>
+          <td id="{{ character_id }}.str">{{ character.abilities.str | divided_by: 2 | minus: 5 }}</td>
+          <td id="{{ character_id }}.dex">{{ character.abilities.dex | divided_by: 2 | minus: 5 }}</td>
+          <td id="{{ character_id }}.con">{{ character.abilities.con | divided_by: 2 | minus: 5 }}</td>
+          <td id="{{ character_id }}.int">{{ character.abilities.int | divided_by: 2 | minus: 5 }}</td>
+          <td id="{{ character_id }}.wis">{{ character.abilities.wis | divided_by: 2 | minus: 5 }}</td>
+          <td id="{{ character_id }}.cha">{{ character.abilities.cha | divided_by: 2 | minus: 5 }}</td>
+        </tr>
       {% endfor %}
 
     </table>

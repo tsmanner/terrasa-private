@@ -1,5 +1,6 @@
 - name: Brother Gromag
   player: Nick
+  link: https://www.dndbeyond.com/profile/Sirnik/characters/27153228
   level: 3
   abilities:
     str: 10
@@ -14,6 +15,7 @@
 
 - name: Caltrop Bloodless
   player: Ryan
+  link: https://www.dndbeyond.com/profile/Rycosso/characters/27153025
   level: 3
   abilities:
     str: 8
@@ -28,6 +30,7 @@
 
 - name: Gluteus Maximus
   player: Kurt
+  link: https://www.dndbeyond.com/profile/lilvin/characters/29239078
   level: 3
   abilities:
     str: 8
@@ -39,15 +42,3 @@
   ac: 15
   hp: 25
   initiative: 3
-
-- name: Skeleton
-  abilities:
-    str: 10
-    dex: 14
-    con: 15
-    int: 6
-    wis: 8
-    cha: 5
-  ac: 13
-  hp: 13
-  initiative: 2
