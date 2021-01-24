@@ -38,10 +38,12 @@ The party is hailed by a member of a group of refugees from a nearby village, wh
 A muffled BOOM emanates from a building just ahead.  DC 15 Wisdom (perception) to catch the shutters on a building shake, dust falling from them, and a small trickle of smoke to begin rising from them.  On a failure, as the party walks past, BANG, the door is smashed off the front and a monster burst out, engaging them.  On a success, if they investigate, they can peer through (Dexterity (stealth) 14) to see a Helmed Horror emerging from a basement, from which smoke is pouring.  It will start destroying some containers in the building before heading toward the door, which it will smash open, step into the street, and attack the nearest people it sees, unless the party intervenes first.
 {% include encounter.html name="Helmed Horror" %}
 
-- A servant or worker for some mid-level noble discovers
-  - they're dabbling in necromancy
-  - their masters have a teleportation circle
-  - is "defecting" because their masters went too far
+### 4. Servant for a mid-level noble discovers their necromancy
+
+### 5. Servant for a mid-level noble finds a teleportation circle
+
+### 6. Servant for a mid-level noble defects because they went too far
+
 - Theft in the marketplace
 - Fight or attack on a ship on the docks
 - Pandora's box style encounter in or near a magic shop, the market, or docks
