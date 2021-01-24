@@ -8,7 +8,6 @@ function rollInitiative(element) {
     for (let index = 0; index < children.length; index++) {
         var child = children[index];
         if (child.classList.contains("initiative") && child.classList.contains("randomize")) {
-            console.log(child);
             child.value = roll(20, child.getAttribute("bonus"));
             child.innerText = child.value;
             child.classList.remove("randomize");
