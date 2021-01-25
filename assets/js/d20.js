@@ -172,7 +172,7 @@ function doRoll(element) {
 
 function renderRoll(element) {
     let body = "";
-    if (element.getAttribute("value") == null) {
+    if (element.getAttribute("value") == null || element.getAttribute("value") == "null") {
         if (element.classList.contains("modified-roll")) {
             let mod = modifier(element);
             body = (mod >= 0 ? "+" : "") + mod;
