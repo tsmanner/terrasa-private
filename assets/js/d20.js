@@ -170,13 +170,17 @@ function doRoll(element) {
 //
 
 function increment(element) {
-    element.dataset.value = parseInt(element.dataset.value) + 1;
-    render(element);
+    if (!"maximumValue" in element.dataset || element.dataset.value < element.dataset.maximumValue) {
+        element.dataset.value = parseInt(element.dataset.value) + 1;
+        render(element);
+    }
 }
 
 function decrement(element) {
-    element.dataset.value = parseInt(element.dataset.value) - 1;
-    render(element);
+    if (!"minimumValue" in element.dataset || element.dataset.value > element.dataset.minimumValue) {
+        element.dataset.value = parseInt(element.dataset.value) - 1;
+        render(element);
+    }
 }
 
 
