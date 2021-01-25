@@ -314,6 +314,7 @@ function init() {
     elements = document.getElementsByClassName("reset-contextmenu");
     for (let i = 0; i < elements.length; i++) { let element = elements[i];
         element.addEventListener("contextmenu", function (event) { event.preventDefault(); reset(element); });
+        element.setAttribute("initialValue", element.innerHTML);
     }
 
 
