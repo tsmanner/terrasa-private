@@ -116,6 +116,21 @@ function doRoll(element) {
 // Value
 //
 
+
+function inputValue(element) {
+    let value = prompt(element.id + " (range " + minimum(element) + " to " + maximum(element) + ")");
+    if (value != null) {
+        value = parseInt(value);
+        if (minimum(element) <= value && value <= maximum(element)) {
+            element.dataset.value = value;
+        }
+        else {
+            inputValue(encounter, element);
+        }
+    }
+}
+
+
 function increment(element) {
     if (!("maximumValue" in element.dataset) || parseInt(element.dataset.value) < parseInt(element.dataset.maximumValue)) {
         element.dataset.value = parseInt(element.dataset.value) + 1;
