@@ -29,6 +29,13 @@
 
 
 function sortEncounter(encounter) {
+    function key(element) {
+        let value = element.cells[1].children[0].dataset.value;
+        if (value == "null") {
+            return element.cells[1].children[0].dataset.modifier;
+        }
+        return value;
+    }
     // Sort the elements
     let table = document.getElementById(encounter.id + ".table");
     let rows = []
@@ -36,8 +43,10 @@ function sortEncounter(encounter) {
         rows.push(table.rows[i]);
     }
     rows.sort(function(lhs, rhs) {
-        let initiativeDiff = parseInt(rhs.cells[1].children[0].dataset.value)
-                           - parseInt(lhs.cells[1].children[0].dataset.value);
+        let lhsValue = key(lhs);
+        let rhsValue = key(rhs);
+        console.log("RHS:", rhsValue, "LHS:", lhsValue);
+        let initiativeDiff = parseInt(rhsValue) - parseInt(lhsValue);
         if (initiativeDiff == 0) {
             return parseInt(rhs.cells[5].innerHTML) - parseInt(lhs.cells[5].innerHTML);
         }
@@ -46,6 +55,7 @@ function sortEncounter(encounter) {
     // Replace the table rows with the sorted ones
     let length = table.rows.length;
     for (let i = 1; i < length; i++) {
+        console.log("Replacing", table.rows[i], "with", rows[i-1]);
         table.rows[i].replaceWith(rows[i-1]);
     }
 }
