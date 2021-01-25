@@ -45,12 +45,11 @@
           <td><button
             class="value decrement-click increment-contextmenu"
             id="{{ character_id }}.hp"
-            format="{value}/{maximumValue}"
-            maximumValue="{{ character.hp }}"
-            minimumValue="0"
-            initialValue="{{ character.hp }}">
-              {{ character.hp }} / {{ character.hp }}
-          </button></td>
+            data-format="{value}/{maximumValue}"
+            data-maximum-value="{{ character.hp }}"
+            data-minimum-value="0"
+            data-initial-value="{{ character.hp }}"/>
+          </td>
           <td class="ability modifier" id="{{ character_id }}.str">{{ character.abilities.str | divided_by: 2 | minus: 5 }}</td>
           <td class="ability modifier" id="{{ character_id }}.dex">{{ character.abilities.dex | divided_by: 2 | minus: 5 }}</td>
           <td class="ability modifier" id="{{ character_id }}.con">{{ character.abilities.con | divided_by: 2 | minus: 5 }}</td>
