@@ -264,6 +264,7 @@ function init() {
     //
 
     elements = document.getElementsByClassName("roll");
+    console.log("Rolls:", elements);
     for (let i = 0; i < elements.length; i++) { let element = elements[i];
         element.addEventListener("onload", function () { resetRoll(element); });
     }
@@ -286,6 +287,7 @@ function init() {
     }
 
     elements = document.getElementsByClassName("roll-click");
+    console.log("Roll-Clicks:", elements);
     for (let i = 0; i < elements.length; i++) { let element = elements[i];
         element.addEventListener("onclick", function () { doRoll(element); });
     }
