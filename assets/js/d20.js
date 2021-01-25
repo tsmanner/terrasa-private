@@ -171,10 +171,12 @@ function doRoll(element) {
 
 function increment(element) {
     element.dataset.value = parseInt(element.dataset.value) + 1;
+    render(element);
 }
 
 function decrement(element) {
     element.dataset.value = parseInt(element.dataset.value) - 1;
+    render(element);
 }
 
 
@@ -310,12 +312,12 @@ function init() {
 
     elements = document.getElementsByClassName("increment-contextmenu");
     for (let i = 0; i < elements.length; i++) { let element = elements[i];
-        element.addEventListener("contextmenu", function () { increment(element); });
+        element.addEventListener("contextmenu", function (event) { event.preventDefault(); increment(element); });
     }
 
     elements = document.getElementsByClassName("decrement-contextmenu");
     for (let i = 0; i < elements.length; i++) { let element = elements[i];
-        element.addEventListener("contextmenu", function () { decrement(element); });
+        element.addEventListener("contextmenu", function (event) { event.preventDefault(); decrement(element); });
     }
 
 
