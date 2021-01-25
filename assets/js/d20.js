@@ -160,29 +160,31 @@ function maximumRoll(element) {
 
 
 function resetRoll(element) {
-    element.setAttribute("value", element.getAttribute("initialValue"));
-    renderRoll(element);
+    element.setAttribute("value", null);
 }
 
 
 function doRoll(element) {
-    element.innerHTML = roll(element.getAttribute("die"), modifier(element));
+    element.setAttribute("value", roll(element.getAttribute("die"), modifier(element)));
+    render(element);
 }
 
 
 function renderRoll(element) {
+    let body = "";
     if (element.getAttribute("value") == null) {
         if (element.classList.contains("modified-roll")) {
             let mod = modifier(element);
-            element.innerHTML = (mod >= 0 ? "+" : "") + mod;
+            body = (mod >= 0 ? "+" : "") + mod;
         }
         else {
-            element.innerHTML = "d" + element.getAttribute("die");
+            body = "d" + element.getAttribute("die");
         }
     }
     else {
-        element.innerHTML = element.getAttribute("value");
+        body = element.getAttribute("value");
     }
+    return body;
 }
 
 
@@ -208,21 +210,35 @@ function minimumValue(element) {
 
 function resetValue(element) {
     element.setAttribute("value", element.getAttribute("initialValue"));
-    renderValue(element);
 }
 
 
 function renderValue(element) {
-    let s = element.getAttribute("value");
+    let body = element.getAttribute("value");
     if (element.getAttribute("showTotal")) {
-        s += "/" + maximumValue(element);
+        body += "/" + maximumValue(element);
     }
-    return s;
+    return body;
 }
 
 //
 // API Functions
 //
+
+
+function render(element) {
+    let prefix = element.hasAttribute("prefix") ? element.getAttribute("prefix") : "";
+    let suffix = element.hasAttribute("suffix") ? element.getAttribute("suffix") : "";
+    let renderer = null;
+    if (element.classList.contains("roll") || element.classList.contains("modified-roll")) {
+        renderer = renderRoll;
+    }
+    else if (element.classList.contains("value")) {
+        renderer = renderValue;
+    }
+    element.innerHTML = prefix + renderer(element) + suffix;
+}
+
 
 function maximum(element) {
     if (element.classList.contains("roll") || element.classList.contains("modified-roll")) {
@@ -236,11 +252,12 @@ function maximum(element) {
 
 function reset(element) {
     if (element.classList.contains("roll") || element.classList.contains("modified-roll")) {
-        return resetRoll(element);
+        resetRoll(element);
     }
     else if (element.classList.contains("value")) {
-        return resetValue(element);
+        resetValue(element);
     }
+    render(element);
 }
 
 
@@ -276,15 +293,15 @@ function init() {
     elements = document.getElementsByClassName("roll");
     console.log("Rolls:", elements);
     for (let i = 0; i < elements.length; i++) { let element = elements[i];
-        element.addEventListener("load", function () { resetRoll(element); });
+        element.addEventListener("load", function () { reset(element); });
     }
     elements = document.getElementsByClassName("modified-roll");
     for (let i = 0; i < elements.length; i++) { let element = elements[i];
-        element.addEventListener("load", function () { resetModifiedRoll(element); });
+        element.addEventListener("load", function () { reset(element); });
     }
     elements = document.getElementsByClassName("value");
     for (let i = 0; i < elements.length; i++) { let element = elements[i];
-        element.addEventListener("load", function () { resetValue(element); });
+        element.addEventListener("load", function () { reset(element); });
     }
 
     //
