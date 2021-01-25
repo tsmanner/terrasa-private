@@ -14,59 +14,6 @@
 // }
 
 
-// function doRoll(element, value) {
-//     if (minimumRoll <= value && value <= maximumRoll) {
-//         element.value = value;
-//         if (element.getAttribute("showMax")) {
-//             element.innerText = value + "/" + maximumRoll;
-//         }
-//         else {
-//             element.innerText = value;
-//         }
-//         return true;
-//     }
-//     else {
-//         return false;
-//     }
-// }
-
-
-// function updateValue(element, value) {
-//     let minimumRoll = parseInt(element.getAttribute("minimumRoll"));
-//     let maximumRoll = parseInt(element.getAttribute("maximumRoll"));
-//     if (minimumRoll <= value && value <= maximumRoll) {
-//     }
-// }
-
-
-// function incrementValue(element) {
-//     updateValue(element, parseInt(element.value) + 1);
-// }
-
-
-// function decrementValue(element) {
-//     updateValue(element, parseInt(element.value) - 1);
-// }
-
-
-// function resetModifiedRoll(element) {
-//     let mod = modifier(element);
-//     element.setAttribute("value", null);
-//     element.innerText = (mod >= 0 ? "+" : "") + mod;
-// }
-
-
-// function resetValue(element) {
-//     element.setAttribute("value", element.getAttribute("initialValue"));
-//     element.innerHTML = element.getAttribute("initialValue");
-// }
-
-
-// function minimum(element) {
-//     if (element.classList.contains("roll"))
-// }
-
-
 // function inputValue(encounter, element) {
 //     let value = prompt(element.getAttribute("prompt") + " (range " + minimum(element) + " to " + maximum(element) + ")");
 //     if (value != null && !updateValue(element, value)) {
