@@ -294,14 +294,17 @@ function init() {
     console.log("Rolls:", elements);
     for (let i = 0; i < elements.length; i++) { let element = elements[i];
         element.addEventListener("load", function () { reset(element); });
+        reset(element);
     }
     elements = document.getElementsByClassName("modified-roll");
     for (let i = 0; i < elements.length; i++) { let element = elements[i];
         element.addEventListener("load", function () { reset(element); });
+        reset(element);
     }
     elements = document.getElementsByClassName("value");
     for (let i = 0; i < elements.length; i++) { let element = elements[i];
         element.addEventListener("load", function () { reset(element); });
+        reset(element);
     }
 
     //
