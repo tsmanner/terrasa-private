@@ -160,7 +160,7 @@ function maximumRoll(element) {
 
 
 function resetRoll(element) {
-    element.setAttribute("value", null);
+    element.setAttribute("value", element.getAttribute("initialValue"));
     renderRoll(element);
 }
 
