@@ -4,7 +4,7 @@
   <div class="encounter" id="{{ encounter_id }}">
     <div><button onclick="mapEntities({{ encounter_id }}, rollInitiative);" >Auto Roll Initiative</button></div>
     <table id="{{ encounter_id }}.table">
-      <tr>
+      <tr class="encounter-table-header">
         <th>Character</th>
         <th>Init</th>
         <th>AC</th>
@@ -30,14 +30,12 @@
             {% endif %}
           </td>
           <td><button
-            class="interactive initiative randomize"
+            class="reset-contextmenu reset-modifier input-click initiative randomize"
             id="{{ character_id }}.initiative"
-            onclick="inputValue({{ encounter_id }}, this.id); this.classList.remove('randomize'); sortEntityTable({{ encounter_id }});"
-            oncontextmenu="resetValue(event, this.id); this.classList.add('randomize'); sortEntityTable({{ encounter_id }});"
-            bonus="{{ character.initiative }}"
-            maximumValue="{{ character.initiative | plus: 20 }}"
-            minimumValue="{{ character.initiative | plus: 1 }}"
-            initialValue="+{{ character.initiative }}">
+            modifier="{{ character.initiative }}"
+            die="20"
+            prompt="Initiative"
+          >
             {% if character.initiative >= 0 %}
               +{{ character.initiative }}
             {% else %}
@@ -46,23 +44,22 @@
           </button></td>
           <td id="{{ character_id }}.ac">{{ character.ac }}</td>
           <td><button
-            class="interactive"
+            class="resettable counter down"
             id="{{ character_id }}.hp"
-            onclick="decrementValue(event, this.id);"
-            oncontextmenu="incrementValue(event, this.id);"
             showMax="true"
+            modifier="0"
             maximumValue="{{ character.hp }}"
             minimumValue="0"
             initialValue="{{ character.hp }}"
             value="{{ character.hp }}">
               {{ character.hp }} / {{ character.hp }}
           </button></td>
-          <td id="{{ character_id }}.str">{{ character.abilities.str | divided_by: 2 | minus: 5 }}</td>
-          <td id="{{ character_id }}.dex">{{ character.abilities.dex | divided_by: 2 | minus: 5 }}</td>
-          <td id="{{ character_id }}.con">{{ character.abilities.con | divided_by: 2 | minus: 5 }}</td>
-          <td id="{{ character_id }}.int">{{ character.abilities.int | divided_by: 2 | minus: 5 }}</td>
-          <td id="{{ character_id }}.wis">{{ character.abilities.wis | divided_by: 2 | minus: 5 }}</td>
-          <td id="{{ character_id }}.cha">{{ character.abilities.cha | divided_by: 2 | minus: 5 }}</td>
+          <td class="ability modifier" id="{{ character_id }}.str">{{ character.abilities.str | divided_by: 2 | minus: 5 }}</td>
+          <td class="ability modifier" id="{{ character_id }}.dex">{{ character.abilities.dex | divided_by: 2 | minus: 5 }}</td>
+          <td class="ability modifier" id="{{ character_id }}.con">{{ character.abilities.con | divided_by: 2 | minus: 5 }}</td>
+          <td class="ability modifier" id="{{ character_id }}.int">{{ character.abilities.int | divided_by: 2 | minus: 5 }}</td>
+          <td class="ability modifier" id="{{ character_id }}.wis">{{ character.abilities.wis | divided_by: 2 | minus: 5 }}</td>
+          <td class="ability modifier" id="{{ character_id }}.cha">{{ character.abilities.cha | divided_by: 2 | minus: 5 }}</td>
         </tr>
       {% endfor %}
 

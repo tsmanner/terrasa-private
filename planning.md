@@ -27,18 +27,21 @@ encounters:
 Down time, if they want it.  Nothing _pressing_ is going on, the order is investigating the recent events in the area.
 
 ## Yalaqta Random Events
-<button id="YalaqtaRandomEvents" onclick="this.innerHTML = 'Event ' + roll(10, 0);">Roll Event</button>
+<button
+  id="YalaqtaRandomEvents"
+  class="roll roll-click reset-contextmenu"
+>Roll Event</button>
 
 ### 1. People from a nearby village are fleeing to Yalaqta
 DC 12 Wisdom (perception) check to see or hear the villagers running toward the gate.  Some people are in the distance on the road, they don't appear to be organized the way a caravan or militia would be, but it does appear to be a fairly large group.
-{% include encounter.html name="Refugees Being Followed" %}
+<!-- {% include encounter.html name="Refugees Being Followed" %} -->
 
 ### 2. People from a nearby village have fled to Yalaqta
 The party is hailed by a member of a group of refugees from a nearby village, who is begging for help.  Their village was overrun by undead and they fled to Yalaqta.  One cannot find his daughter, he last saw her after they entered the city and is worried that she was kidnapped or is lost in Yalaqta.  Another's siblings refused to leave the village, insisting that they could take it back (breadcrumb to go to the village and find them planning their assault, along with a couple other tradespeople from the village).
 
 ### 3. An accident in a necromancer's lab releases an abomination
 A muffled BOOM emanates from a building just ahead.  DC 15 Wisdom (perception) to catch the shutters on a building shake, dust falling from them, and a small trickle of smoke to begin rising from them.  On a failure, as the party walks past, BANG, the door is smashed off the front and a monster burst out, engaging them.  On a success, if they investigate, they can peer through (Dexterity (stealth) 14) to see a Helmed Horror emerging from a basement, from which smoke is pouring.  It will start destroying some containers in the building before heading toward the door, which it will smash open, step into the street, and attack the nearest people it sees, unless the party intervenes first.
-{% include encounter.html name="Helmed Horror" %}
+<!-- {% include encounter.html name="Helmed Horror" %} -->
 
 ### 4. Servant for a mid-level noble discovers their necromancy
 
@@ -53,7 +56,7 @@ A muffled BOOM emanates from a building just ahead.  DC 15 Wisdom (perception) t
 
 ## K'anchay Order Investigations
 
-Wayra must have had contacts in the city other than Sayre.  Sayre was able to win a turf war too quickly to have done it on her own, even with the help of a necromancer.  Her takeover was brutal, efficient, and quiet; it wasn't clear it was happening until it was almost complete, and even then, it wasn't obvious that the takeover was backed by an outside power.
+Wayra must have had contacts in the city other than Sayre.  She was able to win a turf war too quickly to have done it on her own, even with the help of a necromancer.  Her takeover was brutal, efficient, and quiet; it wasn't clear it was happening until it was almost complete, and even then, it wasn't obvious that the takeover was backed by an outside power.
 
 **Mayua:** Llaska, despite his impetuousness, is a talented scout and investigator
 

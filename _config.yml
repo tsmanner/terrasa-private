@@ -31,6 +31,9 @@ defaults:
       path: ""
     values:
       js:
+        - /assets/js/roll.js
+        - /assets/js/modified-roll.js
+        - /assets/js/value.js
         - /assets/js/d20.js
       css:
         - /assets/css/encounter.css
