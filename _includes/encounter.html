@@ -24,23 +24,23 @@
         {% assign character = site.data.players | concat: site.data.npcs | concat: site.data.monsters | where: "name", entity | first %}
         {% assign character_id = character.name | replace: ' ', '_' | prepend: "." | prepend: encounter_id %}
         <tr class="entity" id="{{ character_id }}">
-          <td>
+          <td id="{{ character_id }}.name">
             {% if character.link == nil %}
               <a>{{ character.name }}</a>
             {% else %}
               <a target="_blank" rel="noopener noreferrer" href="{{ character.link }}">{{ character.name }}</a>
             {% endif %}
           </td>
-          <td><button
+          <td id="{{ character_id }}.initiative"><button
             class="roll roll-click reset-contextmenu input-dblclick"
-            id="{{ character_id }}.initiative"
+            id="{{ character_id }}.initiative.button"
             data-null-format="+{modifier}"
             data-modifier="{{ character.initiative }}"
             data-die="20"/></td>
           <td id="{{ character_id }}.ac">{{ character.ac }}</td>
-          <td><button
+          <td id="{{ character_id }}.hp"><button
             class="value decrement-click increment-contextmenu"
-            id="{{ character_id }}.hp"
+            id="{{ character_id }}.hp.button"
             data-format="{value}/{maximumValue}"
             data-maximum-value="{{ character.hp }}"
             data-minimum-value="0"
