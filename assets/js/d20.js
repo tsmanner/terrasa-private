@@ -166,6 +166,19 @@ function doRoll(element) {
 
 
 //
+// Value
+//
+
+function increment(element) {
+    element.dataset.value = parseInt(element.dataset.value) + 1;
+}
+
+function decrement(element) {
+    element.dataset.value = parseInt(element.dataset.value) - 1;
+}
+
+
+//
 // API Functions
 //
 
@@ -264,9 +277,18 @@ function init() {
     }
 
     elements = document.getElementsByClassName("roll-click");
-    console.log("Roll-Clicks:", elements);
     for (let i = 0; i < elements.length; i++) { let element = elements[i];
         element.addEventListener("click", function () { doRoll(element); });
+    }
+
+    elements = document.getElementsByClassName("increment-click");
+    for (let i = 0; i < elements.length; i++) { let element = elements[i];
+        element.addEventListener("click", function () { increment(element); });
+    }
+
+    elements = document.getElementsByClassName("decrement-click");
+    for (let i = 0; i < elements.length; i++) { let element = elements[i];
+        element.addEventListener("click", function () { decrement(element); });
     }
 
     //
@@ -285,6 +307,17 @@ function init() {
             element.dataset.initialValue = null;
         }
     }
+
+    elements = document.getElementsByClassName("increment-contextmenu");
+    for (let i = 0; i < elements.length; i++) { let element = elements[i];
+        element.addEventListener("contextmenu", function () { increment(element); });
+    }
+
+    elements = document.getElementsByClassName("decrement-contextmenu");
+    for (let i = 0; i < elements.length; i++) { let element = elements[i];
+        element.addEventListener("contextmenu", function () { decrement(element); });
+    }
+
 
 
 

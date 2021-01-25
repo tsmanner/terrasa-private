@@ -28,6 +28,8 @@ Down time, if they want it.  Nothing _pressing_ is going on, the order is invest
 
 ## Yalaqta Random Events
 <button id="YalaqtaRandomEvents" data-die="10" data-null-format="Roll Event (d{die})" data-format="Rolled Event {value}" class="roll roll-click reset-contextmenu"/>
+<button id="YalaqtaCounter" data-format="{value}/{maximumValue}" data-value="15" data-maximum-value="28" class="value decrement-click increment-contextmenu"/>
+
 
 ### 1. People from a nearby village are fleeing to Yalaqta
 DC 12 Wisdom (perception) check to see or hear the villagers running toward the gate.  Some people are in the distance on the road, they don't appear to be organized the way a caravan or militia would be, but it does appear to be a fairly large group.
