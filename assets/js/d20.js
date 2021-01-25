@@ -266,15 +266,15 @@ function init() {
     elements = document.getElementsByClassName("roll");
     console.log("Rolls:", elements);
     for (let i = 0; i < elements.length; i++) { let element = elements[i];
-        element.addEventListener("onload", function () { resetRoll(element); });
+        element.addEventListener("load", function () { resetRoll(element); });
     }
     elements = document.getElementsByClassName("modified-roll");
     for (let i = 0; i < elements.length; i++) { let element = elements[i];
-        element.addEventListener("onload", function () { resetModifiedRoll(element); });
+        element.addEventListener("load", function () { resetModifiedRoll(element); });
     }
     elements = document.getElementsByClassName("value");
     for (let i = 0; i < elements.length; i++) { let element = elements[i];
-        element.addEventListener("onload", function () { resetValue(element); });
+        element.addEventListener("load", function () { resetValue(element); });
     }
 
     //
@@ -283,13 +283,13 @@ function init() {
 
     elements = document.getElementsByClassName("input-click");
     for (let i = 0; i < elements.length; i++) { let element = elements[i];
-        element.addEventListener("onclick", function () { inputValue(element); });
+        element.addEventListener("click", function () { inputValue(element); });
     }
 
     elements = document.getElementsByClassName("roll-click");
     console.log("Roll-Clicks:", elements);
     for (let i = 0; i < elements.length; i++) { let element = elements[i];
-        element.addEventListener("onclick", function () { doRoll(element); });
+        element.addEventListener("click", function () { doRoll(element); });
     }
 
     //
@@ -298,7 +298,7 @@ function init() {
 
     elements = document.getElementsByClassName("roll-contextmenu");
     for (let i = 0; i < elements.length; i++) { let element = elements[i];
-        element.addEventListener("oncontextmenu", function (event) { event.preventDefault(); doRoll(element); });
+        element.addEventListener("contextmenu", function (event) { event.preventDefault(); doRoll(element); });
     }
 
 
@@ -311,36 +311,36 @@ function init() {
 
     // let elements = document.getElementsByClassName("resettable modifier");
     // for (let i = 0; i < elements.length; i++) { let element = elements[i];
-    //     element.addEventListener("onload",        function (event) { resetModifiedRoll(element); });
-    //     element.addEventListener("oncontextmenu", function (event) { event.preventDefault(); resetModifiedRoll(element); });
+    //     element.addEventListener("load",        function (event) { resetModifiedRoll(element); });
+    //     element.addEventListener("contextmenu", function (event) { event.preventDefault(); resetModifiedRoll(element); });
     // }
 
     // let elements = [...document.getElementsByClassName("roll")].filter(function (element) { !element.classList.contains("modifier") });
     // for (let i = 0; i < elements.length; i++) { let element = elements[i];
-    //     element.addEventListener("onload",        function (event) { resetRoll(element); });
-    //     element.addEventListener("oncontextmenu", function (event) { event.preventDefault(); resetRoll(element); });
+    //     element.addEventListener("load",        function (event) { resetRoll(element); });
+    //     element.addEventListener("contextmenu", function (event) { event.preventDefault(); resetRoll(element); });
     // }
 
     // let elements = document.getElementsByClassName("user-input");
     // for (let i = 0; i < elements.length; i++) { let element = elements[i];
-    //     element.addEventListener("onclick", function (event) { inputValue(element); });
+    //     element.addEventListener("click", function (event) { inputValue(element); });
     // }
 
     // let elements = document.getElementsByClassName("counter");
     // for (let i = 0; i < elements.length; i++) { let element = elements[i];
-    //     element.addEventListener("onload",       function (event) { resetCounter(element); });
+    //     element.addEventListener("load",       function (event) { resetCounter(element); });
     // }
 
     // let elements = document.getElementsByClassName("counter up");
     // for (let i = 0; i < elements.length; i++) { let element = elements[i];
-    //     element.addEventListener("onclick",       function (event) { incrementValue(element); });
-    //     element.addEventListener("oncontextmenu", function (event) { event.preventDefault(); decrementValue(element); });
+    //     element.addEventListener("click",       function (event) { incrementValue(element); });
+    //     element.addEventListener("contextmenu", function (event) { event.preventDefault(); decrementValue(element); });
     // }
 
     // let elements = document.getElementsByClassName("counter down");
     // for (let i = 0; i < elements.length; i++) { let element = elements[i];
-    //     element.addEventListener("onclick",       function (event) { decrementValue(element); });
-    //     element.addEventListener("oncontextmenu", function (event) { event.preventDefault(); incrementValue(element); });
+    //     element.addEventListener("click",       function (event) { decrementValue(element); });
+    //     element.addEventListener("contextmenu", function (event) { event.preventDefault(); incrementValue(element); });
     // }
 
 }
