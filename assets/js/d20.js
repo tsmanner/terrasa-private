@@ -145,7 +145,7 @@ function roll(max, mod) {
 
 
 function modifier(element) {
-    return element.hasAttribute("modifier") ? parseInt(element.getAttribute("modifier")) : 0;
+    return "modifier" in element.dataset ? parseInt(element.dataset.modifier) : 0;
 }
 
 
@@ -155,71 +155,15 @@ function minimumRoll(element) {
 
 
 function maximumRoll(element) {
-    return parseInt(button.getAttribute("die")) + modifier(element);
-}
-
-
-function resetRoll(element) {
-    element.setAttribute("value", null);
+    return parseInt(element.dataset.die) + modifier(element);
 }
 
 
 function doRoll(element) {
-    element.setAttribute("value", roll(element.getAttribute("die"), modifier(element)));
+    element.dataset.value = roll(element.dataset.die, modifier(element));
     render(element);
 }
 
-
-function renderRoll(element) {
-    let body = "";
-    if (element.getAttribute("value") == null || element.getAttribute("value") == "null") {
-        if (element.classList.contains("modified-roll")) {
-            let mod = modifier(element);
-            body = (mod >= 0 ? "+" : "") + mod;
-        }
-        else {
-            body = "d" + element.getAttribute("die");
-        }
-    }
-    else {
-        body = element.getAttribute("value");
-    }
-    return body;
-}
-
-
-//
-// Modified Roll
-//
-
-
-//
-// Value
-//
-
-
-function maximumValue(element) {
-    return element.getAttribute("maximumValue");
-}
-
-
-function minimumValue(element) {
-    return element.getAttribute("minimumValue");
-}
-
-
-function resetValue(element) {
-    element.setAttribute("value", element.getAttribute("initialValue"));
-}
-
-
-function renderValue(element) {
-    let body = element.getAttribute("value");
-    if (element.getAttribute("showTotal")) {
-        body += "/" + maximumValue(element);
-    }
-    return body;
-}
 
 //
 // API Functions
@@ -227,32 +171,44 @@ function renderValue(element) {
 
 
 function render(element) {
-    let result = element.hasAttribute("format") ? element.getAttribute("format") : "";
-    for (let k in element.dataset) {
-        console.log(k);
-        // result = result.replace(new RegExp("{"+k+"}", "g"), element.dataset.getAttribute(k));
+    let result = "{value}";
+    if (element.dataset.value in [null, "null"]) {
+        if ("nullFormat" in element.dataset) {
+            result = element.dataset.nullFormat;
+        }
     }
-    // element.innerHTML = result;
+    else if ("format" in element.dataset) {
+        result = element.dataset.format;
+    }
+    for (let k in element.dataset) {
+        result = result.replace(new RegExp("{"+k+"}", "g"), element.dataset[k]);
+    }
+    element.innerHTML = result;
 }
 
 
 function maximum(element) {
-    if (element.classList.contains("roll") || element.classList.contains("modified-roll")) {
+    if (element.classList.contains("roll")) {
         return maximumRoll(element);
     }
     else if (element.classList.contains("value")) {
-        return maximumValue(element);
+        return element.dataset.maximumValue;
+    }
+}
+
+
+function minimum(element) {
+    if (element.classList.contains("roll")) {
+        return minimumRoll(element);
+    }
+    else if (element.classList.contains("value")) {
+        return element.dataset.minimumValue
     }
 }
 
 
 function reset(element) {
-    if (element.classList.contains("roll") || element.classList.contains("modified-roll")) {
-        resetRoll(element);
-    }
-    else if (element.classList.contains("value")) {
-        resetValue(element);
-    }
+    element.dataset.value = element.dataset.initialValue;
     render(element);
 }
 
@@ -266,7 +222,6 @@ function init() {
     // Classes
     //   Value Types
     //     - roll
-    //     - modified-roll
     //     - value
     //   Value Modifiers
     //     - roll-button
@@ -290,11 +245,7 @@ function init() {
     console.log("Rolls:", elements);
     for (let i = 0; i < elements.length; i++) { let element = elements[i];
         element.addEventListener("load", function () { reset(element); });
-        reset(element);
-    }
-    elements = document.getElementsByClassName("modified-roll");
-    for (let i = 0; i < elements.length; i++) { let element = elements[i];
-        element.addEventListener("load", function () { reset(element); });
+        element.dataset.initialValue = null;
         reset(element);
     }
     elements = document.getElementsByClassName("value");
@@ -330,7 +281,9 @@ function init() {
     elements = document.getElementsByClassName("reset-contextmenu");
     for (let i = 0; i < elements.length; i++) { let element = elements[i];
         element.addEventListener("contextmenu", function (event) { event.preventDefault(); reset(element); });
-        element.setAttribute("initialValue", element.innerHTML);
+        if (!"initialValue" in element.dataset) {
+            element.dataset.initialValue = null;
+        }
     }
 
 
