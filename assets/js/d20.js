@@ -239,6 +239,7 @@ function maximum(element) {
 //
 
 function init() {
+    let elements = [];
     // Classes
     //   Value Types
     //     - roll
@@ -262,15 +263,15 @@ function init() {
     // Initialization (onload)
     //
 
-    let elements = document.getElementsByClassName("roll");
+    elements = document.getElementsByClassName("roll");
     for (let i = 0; i < elements.length; i++) { let element = elements[i];
         element.addEventListener("onload", function () { resetRoll(element); });
     }
-    let elements = document.getElementsByClassName("modified-roll");
+    elements = document.getElementsByClassName("modified-roll");
     for (let i = 0; i < elements.length; i++) { let element = elements[i];
         element.addEventListener("onload", function () { resetModifiedRoll(element); });
     }
-    let elements = document.getElementsByClassName("value");
+    elements = document.getElementsByClassName("value");
     for (let i = 0; i < elements.length; i++) { let element = elements[i];
         element.addEventListener("onload", function () { resetValue(element); });
     }
@@ -279,12 +280,12 @@ function init() {
     // Left Click (onclick)
     //
 
-    let elements = document.getElementsByClassName("input-click");
+    elements = document.getElementsByClassName("input-click");
     for (let i = 0; i < elements.length; i++) { let element = elements[i];
         element.addEventListener("onclick", function () { inputValue(element); });
     }
 
-    let elements = document.getElementsByClassName("roll-click");
+    elements = document.getElementsByClassName("roll-click");
     for (let i = 0; i < elements.length; i++) { let element = elements[i];
         element.addEventListener("onclick", function () { doRoll(element); });
     }
@@ -293,7 +294,7 @@ function init() {
     // Right Click (contextmenu)
     //
 
-    let elements = document.getElementsByClassName("roll-contextmenu");
+    elements = document.getElementsByClassName("roll-contextmenu");
     for (let i = 0; i < elements.length; i++) { let element = elements[i];
         element.addEventListener("oncontextmenu", function (event) { event.preventDefault(); doRoll(element); });
     }
