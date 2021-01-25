@@ -229,9 +229,10 @@ function renderValue(element) {
 function render(element) {
     let result = element.hasAttribute("format") ? element.getAttribute("format") : "";
     for (let k in element.dataset) {
-        result = result.replace(new RegExp("{"+k+"}", "g"), element.dataset.getAttribute(k));
+        console.log(k);
+        // result = result.replace(new RegExp("{"+k+"}", "g"), element.dataset.getAttribute(k));
     }
-    element.innerHTML = result;
+    // element.innerHTML = result;
 }
 
 
