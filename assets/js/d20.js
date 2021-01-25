@@ -229,7 +229,7 @@ function renderValue(element) {
 function render(element) {
     let result = element.hasAttribute("format") ? element.getAttribute("format") : "";
     for (let k in element) {
-        result = result.match(new RegExp("{"+k+"}", "g"))
+        result = result.replace(new RegExp("{"+k+"}", "g"), element.getAttribute(k));
     }
     element.innerHTML = result;
 }
