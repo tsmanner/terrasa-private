@@ -27,7 +27,7 @@ encounters:
 Down time, if they want it.  Nothing _pressing_ is going on, the order is investigating the recent events in the area.
 
 ## Yalaqta Random Events
-<button id="YalaqtaRandomEvents" die="10" format="Roll Event (d{die}: {value})" class="roll roll-click reset-contextmenu"/>
+<button id="YalaqtaRandomEvents" data-die="10" data-format="Roll Event (d{die}: {value})" class="roll roll-click reset-contextmenu"/>
 
 ### 1. People from a nearby village are fleeing to Yalaqta
 DC 12 Wisdom (perception) check to see or hear the villagers running toward the gate.  Some people are in the distance on the road, they don't appear to be organized the way a caravan or militia would be, but it does appear to be a fairly large group.
