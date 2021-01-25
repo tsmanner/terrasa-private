@@ -45,18 +45,21 @@ function sortEncounter(encounter) {
     rows.sort(function(lhs, rhs) {
         let lhsValue = key(lhs);
         let rhsValue = key(rhs);
-        console.log("RHS:", rhsValue, "LHS:", lhsValue);
         let initiativeDiff = parseInt(rhsValue) - parseInt(lhsValue);
         if (initiativeDiff == 0) {
             return parseInt(rhs.cells[5].innerHTML) - parseInt(lhs.cells[5].innerHTML);
         }
         return initiativeDiff;
     });
-    // Replace the table rows with the sorted ones
+    // Delete the existing rows
     let length = table.rows.length;
     for (let i = 1; i < length; i++) {
-        console.log("Replacing", table.rows[i], "with", rows[i-1]);
-        table.rows[i].replaceWith(rows[i-1]);
+        table.deleteRow(i);
+    }
+    // Insert the sorted rows
+    length = rows.length;
+    for (let i = 0; i < length; i++) {
+        table.childNodes[1].appendChild(rows[i]);
     }
 }
 
