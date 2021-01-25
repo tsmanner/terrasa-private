@@ -54,7 +54,7 @@ function sortEncounter(encounter) {
     // Delete the existing rows
     let length = table.rows.length;
     for (let i = 1; i < length; i++) {
-        table.deleteRow(i);
+        table.deleteRow(-1);
     }
     // Insert the sorted rows
     length = rows.length;
