@@ -123,9 +123,10 @@ function inputValue(element) {
         value = parseInt(value);
         if (minimum(element) <= value && value <= maximum(element)) {
             element.dataset.value = value;
+            render(element);
         }
         else {
-            inputValue(encounter, element);
+            inputValue(element);
         }
     }
 }
