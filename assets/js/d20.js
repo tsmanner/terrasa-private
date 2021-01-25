@@ -43,15 +43,10 @@ function sortEncounter(encounter) {
         }
         return initiativeDiff;
     });
-    // Clear the table rows
+    // Replace the table rows with the sorted ones
     let length = table.rows.length;
     for (let i = 1; i < length; i++) {
-        table.deleteRow(1);
-    }
-    // Insert the sorted rows
-    for (let i = 0; i < rows.length; i++) {
-        row = table.insertRow(-1);
-        row.innerHTML = rows[i].innerHTML;
+        table.rows[i].replaceWith(rows[i-1]);
     }
 }
 
