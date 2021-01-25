@@ -191,7 +191,7 @@ function decrement(element) {
 
 function render(element) {
     let result = "{value}";
-    if (element.dataset.value in [null, "null"]) {
+    if (element.dataset.value == null || element.dataset.value == "null") {
         if ("nullFormat" in element.dataset) {
             result = element.dataset.nullFormat;
         }
