@@ -234,6 +234,16 @@ function maximum(element) {
 }
 
 
+function reset(element) {
+    if (element.classList.contains("roll") || element.classList.contains("modified-roll")) {
+        return resetRoll(element);
+    }
+    else if (element.classList.contains("value")) {
+        return resetValue(element);
+    }
+}
+
+
 //
 // Initialization
 //
@@ -299,6 +309,11 @@ function init() {
     elements = document.getElementsByClassName("roll-contextmenu");
     for (let i = 0; i < elements.length; i++) { let element = elements[i];
         element.addEventListener("contextmenu", function (event) { event.preventDefault(); doRoll(element); });
+    }
+
+    elements = document.getElementsByClassName("reset-contextmenu");
+    for (let i = 0; i < elements.length; i++) { let element = elements[i];
+        element.addEventListener("contextmenu", function (event) { event.preventDefault(); reset(element); });
     }
 
 
