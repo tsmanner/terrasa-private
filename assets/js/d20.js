@@ -170,14 +170,14 @@ function doRoll(element) {
 //
 
 function increment(element) {
-    if (!"maximumValue" in element.dataset || element.dataset.value < element.dataset.maximumValue) {
+    if (!"maximumValue" in element.dataset || parseInt(element.dataset.value) < parseInt(element.dataset.maximumValue)) {
         element.dataset.value = parseInt(element.dataset.value) + 1;
         render(element);
     }
 }
 
 function decrement(element) {
-    if (!"minimumValue" in element.dataset || element.dataset.value > element.dataset.minimumValue) {
+    if (!"minimumValue" in element.dataset || parseInt(element.dataset.value) > parseInt(element.dataset.minimumValue)) {
         element.dataset.value = parseInt(element.dataset.value) - 1;
         render(element);
     }
