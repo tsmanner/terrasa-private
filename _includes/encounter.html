@@ -2,7 +2,9 @@
 <details>
   <summary>{{ include.name }}</summary>
   <div class="encounter" id="{{ encounter_id }}">
-    <div><button onclick="mapEntities({{ encounter_id }}, rollInitiative);" >Auto Roll Initiative</button></div>
+    <div>
+      <button onclick="sortEncounter({{ encounter_id }})" >Sort Encounter Table</button>
+    </div>
     <table id="{{ encounter_id }}.table">
       <tr class="encounter-table-header">
         <th>Character</th>
@@ -21,7 +23,7 @@
       {% for entity in encounter.entities %}
         {% assign character = site.data.players | concat: site.data.npcs | concat: site.data.monsters | where: "name", entity | first %}
         {% assign character_id = character.name | replace: ' ', '_' | prepend: "." | prepend: encounter_id %}
-        <tr class="entity">
+        <tr class="entity" id="{{ character_id }}">
           <td>
             {% if character.link == nil %}
               <a>{{ character.name }}</a>

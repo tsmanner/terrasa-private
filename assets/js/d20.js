@@ -28,57 +28,32 @@
 // }
 
 
-// function sortEntityTable(encounter) {
-//     // Sort the elements
-//     let table = document.getElementById(encounter.id + ".table");
-//     let rows = []
-//     for (let i = 1; i < table.rows.length; i++) {
-//         rows.push(table.rows[i]);
-//     }
-//     rows.sort(function(lhs, rhs) {
-//         let d_init = parseInt(rhs.cells[1].children[0].value) - parseInt(lhs.cells[1].children[0].value);
-//         if (d_init == 0) {
-//             return parseInt(rhs.cells[3].innerHTML) - parseInt(lhs.cells[3].innerHTML);
-//         }
-//         return d_init;
-//     });
-//     // Clear the table rows
-//     let length = table.rows.length;
-//     for (let i = 1; i < length; i++) {
-//         table.deleteRow(1);
-//     }
-//     // Insert the sorted rows
-//     for (let i = 0; i < rows.length; i++) {
-//         row = table.insertRow(-1);
-//         row.innerHTML = rows[i].innerHTML;
-//     }
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function sortEncounter(encounter) {
+    // Sort the elements
+    let table = document.getElementById(encounter.id + ".table");
+    let rows = []
+    for (let i = 1; i < table.rows.length; i++) {
+        rows.push(table.rows[i]);
+    }
+    rows.sort(function(lhs, rhs) {
+        let initiativeDiff = parseInt(rhs.cells[1].children[0].dataset.value)
+                           - parseInt(lhs.cells[1].children[0].dataset.value);
+        if (initiativeDiff == 0) {
+            return parseInt(rhs.cells[5].innerHTML) - parseInt(lhs.cells[5].innerHTML);
+        }
+        return initiativeDiff;
+    });
+    // Clear the table rows
+    let length = table.rows.length;
+    for (let i = 1; i < length; i++) {
+        table.deleteRow(1);
+    }
+    // Insert the sorted rows
+    for (let i = 0; i < rows.length; i++) {
+        row = table.insertRow(-1);
+        row.innerHTML = rows[i].innerHTML;
+    }
+}
 
 
 //
