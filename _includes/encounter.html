@@ -30,11 +30,10 @@
             {% endif %}
           </td>
           <td><button
-            class="reset-contextmenu reset-modifier input-click initiative randomize"
+            class="roll roll-click"
             id="{{ character_id }}.initiative"
-            modifier="{{ character.initiative }}"
-            die="20"
-            prompt="Initiative"
+            data-modifier="{{ character.initiative }}"
+            data-die="20"
           >
             {% if character.initiative >= 0 %}
               +{{ character.initiative }}

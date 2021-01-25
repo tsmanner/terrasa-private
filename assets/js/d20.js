@@ -236,134 +236,53 @@ function reset(element) {
 // Initialization
 //
 
+
+function registerEventListeners(eventName) {
+    elements = document.getElementsByClassName("input-" + eventName);
+    for (let i = 0; i < elements.length; i++) { let element = elements[i];
+        element.addEventListener(eventName, function (event) { event.preventDefault(); inputValue(element); });
+    }
+
+    elements = document.getElementsByClassName("roll roll-" + eventName);
+    for (let i = 0; i < elements.length; i++) { let element = elements[i];
+        element.addEventListener(eventName, function (event) { event.preventDefault(); doRoll(element); });
+    }
+
+    elements = document.getElementsByClassName("reset-" + eventName);
+    for (let i = 0; i < elements.length; i++) { let element = elements[i];
+        element.addEventListener(eventName, function (event) { event.preventDefault(); reset(element); });
+        if (!"initialValue" in element.dataset) { element.dataset.initialValue = null; }
+    }
+
+    elements = document.getElementsByClassName("increment-" + eventName);
+    for (let i = 0; i < elements.length; i++) { let element = elements[i];
+        element.addEventListener(eventName, function (event) { event.preventDefault(); increment(element); });
+    }
+
+    elements = document.getElementsByClassName("decrement-" + eventName);
+    for (let i = 0; i < elements.length; i++) { let element = elements[i];
+        element.addEventListener(eventName, function (event) { event.preventDefault(); decrement(element); });
+    }
+
+}
+
+
 function init() {
     let elements = [];
-    // Classes
-    //   Value Types
-    //     - roll
-    //     - value
-    //   Value Modifiers
-    //     - roll-button
-    //     - roll-remaining-button
-    //     - input-click
-    //     - increment-click
-    //     - decrement-click
-    //     - reset-click
-    //     - roll-click
-    //     - input-contextmenu
-    //     - roll-contextmenu
-    //     - increment-contextmenu
-    //     - decrement-contextmenu
-    //     - reset-contextmenu
-
-    //
-    // Initialization (onload)
-    //
-
+    // Initialize 'roll' and 'value' instances
     elements = document.getElementsByClassName("roll");
-    console.log("Rolls:", elements);
     for (let i = 0; i < elements.length; i++) { let element = elements[i];
-        element.addEventListener("load", function () { reset(element); });
         element.dataset.initialValue = null;
         reset(element);
     }
     elements = document.getElementsByClassName("value");
     for (let i = 0; i < elements.length; i++) { let element = elements[i];
-        element.addEventListener("load", function () { reset(element); });
         reset(element);
     }
-
-    //
-    // Left Click (onclick)
-    //
-
-    elements = document.getElementsByClassName("input-click");
-    for (let i = 0; i < elements.length; i++) { let element = elements[i];
-        element.addEventListener("click", function () { inputValue(element); });
-    }
-
-    elements = document.getElementsByClassName("roll-click");
-    for (let i = 0; i < elements.length; i++) { let element = elements[i];
-        element.addEventListener("click", function () { doRoll(element); });
-    }
-
-    elements = document.getElementsByClassName("increment-click");
-    for (let i = 0; i < elements.length; i++) { let element = elements[i];
-        element.addEventListener("click", function () { increment(element); });
-    }
-
-    elements = document.getElementsByClassName("decrement-click");
-    for (let i = 0; i < elements.length; i++) { let element = elements[i];
-        element.addEventListener("click", function () { decrement(element); });
-    }
-
-    //
-    // Right Click (contextmenu)
-    //
-
-    elements = document.getElementsByClassName("roll-contextmenu");
-    for (let i = 0; i < elements.length; i++) { let element = elements[i];
-        element.addEventListener("contextmenu", function (event) { event.preventDefault(); doRoll(element); });
-    }
-
-    elements = document.getElementsByClassName("reset-contextmenu");
-    for (let i = 0; i < elements.length; i++) { let element = elements[i];
-        element.addEventListener("contextmenu", function (event) { event.preventDefault(); reset(element); });
-        if (!"initialValue" in element.dataset) { element.dataset.initialValue = null; }
-    }
-
-    elements = document.getElementsByClassName("increment-contextmenu");
-    for (let i = 0; i < elements.length; i++) { let element = elements[i];
-        element.addEventListener("contextmenu", function (event) { event.preventDefault(); increment(element); });
-    }
-
-    elements = document.getElementsByClassName("decrement-contextmenu");
-    for (let i = 0; i < elements.length; i++) { let element = elements[i];
-        element.addEventListener("contextmenu", function (event) { event.preventDefault(); decrement(element); });
-    }
-
-
-
-
-
-
-
-
-
-
-    // let elements = document.getElementsByClassName("resettable modifier");
-    // for (let i = 0; i < elements.length; i++) { let element = elements[i];
-    //     element.addEventListener("load",        function (event) { resetModifiedRoll(element); });
-    //     element.addEventListener("contextmenu", function (event) { event.preventDefault(); resetModifiedRoll(element); });
-    // }
-
-    // let elements = [...document.getElementsByClassName("roll")].filter(function (element) { !element.classList.contains("modifier") });
-    // for (let i = 0; i < elements.length; i++) { let element = elements[i];
-    //     element.addEventListener("load",        function (event) { resetRoll(element); });
-    //     element.addEventListener("contextmenu", function (event) { event.preventDefault(); resetRoll(element); });
-    // }
-
-    // let elements = document.getElementsByClassName("user-input");
-    // for (let i = 0; i < elements.length; i++) { let element = elements[i];
-    //     element.addEventListener("click", function (event) { inputValue(element); });
-    // }
-
-    // let elements = document.getElementsByClassName("counter");
-    // for (let i = 0; i < elements.length; i++) { let element = elements[i];
-    //     element.addEventListener("load",       function (event) { resetCounter(element); });
-    // }
-
-    // let elements = document.getElementsByClassName("counter up");
-    // for (let i = 0; i < elements.length; i++) { let element = elements[i];
-    //     element.addEventListener("click",       function (event) { incrementValue(element); });
-    //     element.addEventListener("contextmenu", function (event) { event.preventDefault(); decrementValue(element); });
-    // }
-
-    // let elements = document.getElementsByClassName("counter down");
-    // for (let i = 0; i < elements.length; i++) { let element = elements[i];
-    //     element.addEventListener("click",       function (event) { decrementValue(element); });
-    //     element.addEventListener("contextmenu", function (event) { event.preventDefault(); incrementValue(element); });
-    // }
+    // Register Event Listeners
+    registerEventListeners("click");
+    registerEventListeners("dblclick");
+    registerEventListeners("contextmenu");
 
 }
 
