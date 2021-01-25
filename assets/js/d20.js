@@ -227,16 +227,11 @@ function renderValue(element) {
 
 
 function render(element) {
-    let prefix = element.hasAttribute("prefix") ? element.getAttribute("prefix") : "";
-    let suffix = element.hasAttribute("suffix") ? element.getAttribute("suffix") : "";
-    let renderer = null;
-    if (element.classList.contains("roll") || element.classList.contains("modified-roll")) {
-        renderer = renderRoll;
+    let result = element.hasAttribute("format") ? element.getAttribute("format") : "";
+    for (let k in element) {
+        result = result.match(new RegExp("{"+k+"}", "g"))
     }
-    else if (element.classList.contains("value")) {
-        renderer = renderValue;
-    }
-    element.innerHTML = prefix + renderer(element) + suffix;
+    element.innerHTML = result;
 }
 
 
