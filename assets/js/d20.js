@@ -230,6 +230,7 @@ function registerEventListeners(eventName) {
         contextmenu: preventDefaultWrapper
     };
     let predicates = {
+        nomod: function (f) { return function (event) { if (!(event.shiftKey || event.ctrlKey || event.altKey)) { f(event) } }; },
         shift: function (f) { return function (event) { if (event.shiftKey) { f(event); } }; },
         ctrl: function (f) { return function (event) { if (event.ctrlKey) { f(event); } }; },
         alt: function (f) { return function (event) { if (event.altKey) { f(event); } }; }
@@ -241,7 +242,7 @@ function registerEventListeners(eventName) {
         let action = actions[actionName];
         let elements = document.getElementsByClassName(className);
         for (let i = 0; i < elements.length; i++) { let element = elements[i];
-            element.addEventListener(eventName, wrappers[eventName](action, element));
+            element.addEventListener(eventName, predicates.nomod(wrappers[eventName](action, element)));
         }
         // Predicated Events
         for (let key in predicates) {
