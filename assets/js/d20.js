@@ -105,6 +105,16 @@ function autoRollInitiative(encounter) {
 }
 
 
+function resetEncounter(encounter) {
+    let table = document.getElementById(encounter.id + ".table");
+    for (let i = 1; i < table.rows.length; ++i) {
+        let row = table.rows[i];
+        reset(row.cells[1].children[0]);  // Initiative
+        reset(row.cells[3].children[0]);  // HP
+    }
+}
+
+
 //
 // Roll
 //
