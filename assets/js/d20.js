@@ -413,18 +413,18 @@ function init() {
 
     elements = document.getElementsByClassName("entity");
     for (let i = 0; i < elements.length; ++i) { let element = elements[i];
-        element.strMod = modifier(parseInt(element.dataset.str));
-        element.dexMod = modifier(parseInt(element.dataset.dex));
-        element.conMod = modifier(parseInt(element.dataset.con));
-        element.intMod = modifier(parseInt(element.dataset.int));
-        element.wisMod = modifier(parseInt(element.dataset.wis));
-        element.chaMod = modifier(parseInt(element.dataset.cha));
-        element.strSave = parseInt(element.dataset.strMod) + parseInt(element.dataset.proficiency);
-        element.dexSave = parseInt(element.dataset.dexMod) + parseInt(element.dataset.proficiency);
-        element.conSave = parseInt(element.dataset.conMod) + parseInt(element.dataset.proficiency);
-        element.intSave = parseInt(element.dataset.intMod) + parseInt(element.dataset.proficiency);
-        element.wisSave = parseInt(element.dataset.wisMod) + parseInt(element.dataset.proficiency);
-        element.chaSave = parseInt(element.dataset.chaMod) + parseInt(element.dataset.proficiency);
+        element.dataset.strMod = modifier(parseInt(element.dataset.str));
+        element.dataset.dexMod = modifier(parseInt(element.dataset.dex));
+        element.dataset.conMod = modifier(parseInt(element.dataset.con));
+        element.dataset.intMod = modifier(parseInt(element.dataset.int));
+        element.dataset.wisMod = modifier(parseInt(element.dataset.wis));
+        element.dataset.chaMod = modifier(parseInt(element.dataset.cha));
+        element.dataset.strSave = parseInt(element.dataset.strMod) + parseInt(element.dataset.proficiency);
+        element.dataset.dexSave = parseInt(element.dataset.dexMod) + parseInt(element.dataset.proficiency);
+        element.dataset.conSave = parseInt(element.dataset.conMod) + parseInt(element.dataset.proficiency);
+        element.dataset.intSave = parseInt(element.dataset.intMod) + parseInt(element.dataset.proficiency);
+        element.dataset.wisSave = parseInt(element.dataset.wisMod) + parseInt(element.dataset.proficiency);
+        element.dataset.chaSave = parseInt(element.dataset.chaMod) + parseInt(element.dataset.proficiency);
     }
 
     elements = document.getElementsByClassName("ability");
