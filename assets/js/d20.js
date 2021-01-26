@@ -411,11 +411,38 @@ function init() {
     registerEventListeners("dblclick");     // Double Click
     registerEventListeners("contextmenu");  // Right Click
 
+    elements = document.getElementsByClassName("entity");
+    for (let i = 0; i < elements.length; ++i) { let element = elements[i];
+        element.strMod = modifier(parseInt(element.dataset.str));
+        element.dexMod = modifier(parseInt(element.dataset.dex));
+        element.conMod = modifier(parseInt(element.dataset.con));
+        element.intMod = modifier(parseInt(element.dataset.int));
+        element.wisMod = modifier(parseInt(element.dataset.wis));
+        element.chaMod = modifier(parseInt(element.dataset.cha));
+        element.strSave = parseInt(element.dataset.strMod) + parseInt(element.dataset.proficiency);
+        element.dexSave = parseInt(element.dataset.dexMod) + parseInt(element.dataset.proficiency);
+        element.conSave = parseInt(element.dataset.conMod) + parseInt(element.dataset.proficiency);
+        element.intSave = parseInt(element.dataset.intMod) + parseInt(element.dataset.proficiency);
+        element.wisSave = parseInt(element.dataset.wisMod) + parseInt(element.dataset.proficiency);
+        element.chaSave = parseInt(element.dataset.chaMod) + parseInt(element.dataset.proficiency);
+    }
+
     elements = document.getElementsByClassName("ability");
     for (let i = 0; i < elements.length; ++i) { let element = elements[i];
         let entity = document.getElementById(element.dataset.entityId);
         element.dataset.value = entity.dataset[element.dataset.ability];
         element.dataset.check = modifier(parseInt(entity.dataset[element.dataset.ability]));
+        element.dataset.save = parseInt(element.dataset.check) + parseInt(entity.dataset.proficiency);
+        element.dataset.nullFormat = "???";
+        element.dataset.format = "{value} | {check} | {save}";
+        render(element);
+    }
+
+    elements = document.getElementsByClassName("initiative");
+    for (let i = 0; i < elements.length; ++i) { let element = elements[i];
+        let entity = document.getElementById(element.dataset.entityId);
+        element.dataset.value = null;
+        element.dataset.modifier = modifier(parseInt(entity.dataset.dex));
         element.dataset.save = parseInt(element.dataset.check) + parseInt(entity.dataset.proficiency);
         element.dataset.nullFormat = "???";
         element.dataset.format = "{value} | {check} | {save}";

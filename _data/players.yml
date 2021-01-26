@@ -34,8 +34,8 @@
       int: proficiency
       dex: proficiency
     initiative:
-      - abilities.dex
-      - abilities.cha
+      - dexMod
+      - chaMod
 
 - name: Gluteus Maximus
   player: Kurt

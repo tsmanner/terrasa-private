@@ -34,12 +34,15 @@
           id="{{ entity_id }}"
           data-encounter-id="{{ encounter_id }}"
           data-proficiency="{{ entity.proficiency }}"
-          data-str="{{ entity.abilities.str }}"
-          data-dex="{{ entity.abilities.dex }}"
-          data-con="{{ entity.abilities.con }}"
-          data-int="{{ entity.abilities.int }}"
-          data-wis="{{ entity.abilities.wis }}"
-          data-cha="{{ entity.abilities.cha }}"
+          data-str-score="{{ entity.abilities.str }}"
+          data-dex-score="{{ entity.abilities.dex }}"
+          data-con-score="{{ entity.abilities.con }}"
+          data-int-score="{{ entity.abilities.int }}"
+          data-wis-score="{{ entity.abilities.wis }}"
+          data-cha-score="{{ entity.abilities.cha }}"
+          {% for bonus_name in entity.bonuses %}
+            data-{{ bonus_name }}-bonuses="{{ entity.bonuses.{{ bonus_name }} | join: ' ' }}"
+          {% endfor %}
         >
           <td id="{{ entity_id }}.name">
             {% if entity.link == nil %}
@@ -49,8 +52,9 @@
             {% endif %}
           </td>
           <td id="{{ entity_id }}.initiative"><button
-            class="roll roll-click input-ctrl-click reset-contextmenu"
+            class="initiative roll roll-click input-ctrl-click reset-contextmenu"
             id="{{ entity_id }}.initiative.button"
+            data-entity-id="{{ entity_id }}"
             data-null-format="+{modifier}"
             data-modifier="{{ entity.initiative }}"
             data-die="20"/></td>
