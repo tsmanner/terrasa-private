@@ -431,7 +431,7 @@ function init() {
     for (let i = 0; i < elements.length; ++i) { let element = elements[i];
         let entity = document.getElementById(element.dataset.entityId);
         element.dataset.value = entity.dataset[element.dataset.ability + "Score"];
-        element.dataset.check = modifier(parseInt(entity.dataset[element.dataset.ability]));
+        element.dataset.check = modifier(parseInt(element.dataset.value));
         element.dataset.save = parseInt(element.dataset.check) + parseInt(entity.dataset.proficiency);
         element.dataset.nullFormat = "???";
         element.dataset.format = "{value} | {check} | {save}";
