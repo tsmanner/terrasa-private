@@ -26,11 +26,9 @@
       </tr>
 
       {% assign encounter = page.encounters | where: "name", include.name | first %}
-      {% assign entity_number = 1 %}
       {% for entity_name in encounter.entities %}
         {% assign entity = site.data.players | concat: site.data.npcs | concat: site.data.monsters | where: "name", entity_name | first %}
-        {% assign entity_id = entity.name | replace: ' ', '_' | prepend: "." | prepend: encounter_id | append: "." | append: entity_number %}
-        {% assign entity_number = entity_number | plus: 1 %}
+        {% assign entity_id = encounter_id | append: "." | append: entity.name | append: "." | append: forloop.index | replace: ' ', '_' %}
         <tr
           class="entity"
           id="{{ entity_id }}"
