@@ -6,3 +6,7 @@
   outline-style: double;
   outline-color: darkgreen;
 }
+
+.encounter .hidden {
+    display: none;
+}

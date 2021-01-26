@@ -66,30 +66,54 @@ function sortEncounter(encounter) {
 }
 
 
-function nextTurn(encounter) {
-    let table = document.getElementById(encounter.id + ".table");
+function findSelectedRow(table) {
     for (let i = 1; i < table.rows.length; ++i) {
         if (table.rows[i].classList.contains("selected")) {
-            table.rows[i].classList.remove("selected");
-            let nextI = i + 1;
-            if (nextI >= table.rows.length) { nextI = 1; }
-            table.rows[nextI].classList.add("selected");
-            break;
+            return i;
         }
+    }
+    return 0;
+}
+
+
+function findNextRow(table, i) {
+    for (let offset = 1; offset < table.rows.length - 1; ++offset) {
+        let next = ((i + offset) % (table.rows.length - 1)) + 1;
+        if (!table.rows[next].classList.contains("hidden")) {
+            return next;
+        }
+    }
+    return i;
+}
+
+
+function findPreviousRow(table, i) {
+    for (let offset = 1; offset < table.rows.length - 1; ++offset) {
+        let next = ((i - offset) % (table.rows.length - 1)) + 1;
+        if (!table.rows[next].classList.contains("hidden")) {
+            return next;
+        }
+    }
+    return i;
+}
+
+
+function nextTurn(encounter) {
+    let table = document.getElementById(encounter.id + ".table");
+    let i = findSelectedRow(table);
+    if (i > 0) {
+        table.rows[i].classList.remove("selected");
+        table.rows[findNextRow(i)].classList.add("selected");
     }
 }
 
 
 function previousTurn(encounter) {
     let table = document.getElementById(encounter.id + ".table");
-    for (let i = 1; i < table.rows.length; ++i) {
-        if (table.rows[i].classList.contains("selected")) {
-            table.rows[i].classList.remove("selected");
-            let previousI = i - 1;
-            if (previousI <= 0) { previousI = table.rows.length - 1; }
-            table.rows[previousI].classList.add("selected");
-            break;
-        }
+    let i = findSelectedRow(table);
+    if (i > 0) {
+        table.rows[i].classList.remove("selected");
+        table.rows[findPreviousRow(i)].classList.add("selected");
     }
 }
 
@@ -114,6 +138,11 @@ function resetEncounter(encounter) {
         reset(row.cells[3].children[0]);  // HP
     }
     sortEncounter(encounter);
+}
+
+
+function showHideRow(row) {
+    row.classList.toggle("hidden");
 }
 
 
