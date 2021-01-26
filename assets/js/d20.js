@@ -413,12 +413,12 @@ function init() {
 
     elements = document.getElementsByClassName("entity");
     for (let i = 0; i < elements.length; ++i) { let element = elements[i];
-        element.dataset.strMod = modifier(parseInt(element.dataset.str));
-        element.dataset.dexMod = modifier(parseInt(element.dataset.dex));
-        element.dataset.conMod = modifier(parseInt(element.dataset.con));
-        element.dataset.intMod = modifier(parseInt(element.dataset.int));
-        element.dataset.wisMod = modifier(parseInt(element.dataset.wis));
-        element.dataset.chaMod = modifier(parseInt(element.dataset.cha));
+        element.dataset.strMod = modifier(parseInt(element.dataset.strScore));
+        element.dataset.dexMod = modifier(parseInt(element.dataset.dexScore));
+        element.dataset.conMod = modifier(parseInt(element.dataset.conScore));
+        element.dataset.intMod = modifier(parseInt(element.dataset.intScore));
+        element.dataset.wisMod = modifier(parseInt(element.dataset.wisScore));
+        element.dataset.chaMod = modifier(parseInt(element.dataset.chaScore));
         element.dataset.strSave = parseInt(element.dataset.strMod) + parseInt(element.dataset.proficiency);
         element.dataset.dexSave = parseInt(element.dataset.dexMod) + parseInt(element.dataset.proficiency);
         element.dataset.conSave = parseInt(element.dataset.conMod) + parseInt(element.dataset.proficiency);
