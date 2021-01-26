@@ -214,32 +214,29 @@ function reset(element) {
 
 
 function registerEventListeners(eventName) {
-    elements = document.getElementsByClassName("input-" + eventName);
-    for (let i = 0; i < elements.length; i++) { let element = elements[i];
-        element.addEventListener(eventName, function (event) { event.preventDefault(); inputValue(element); });
-    }
+    let identityWrapper = function (action, element) { return function () { action(element); } };
+    let preventDefaultWrapper = function (action, element) { return function (event) { event.preventDefault(); action(element); } };
+    let actions = {
+        input: inputValue,
+        roll: doRoll,
+        reset: reset,
+        increment: increment,
+        decrement: decrement
+    };
+    let wrappers = {
+        click: identityWrapper,
+        auxclick: preventDefaultWrapper,
+        contextmenu: preventDefaultWrapper
+    };
 
-    elements = document.getElementsByClassName("roll roll-" + eventName);
-    for (let i = 0; i < elements.length; i++) { let element = elements[i];
-        element.addEventListener(eventName, function (event) { event.preventDefault(); doRoll(element); });
+    for (let actionName in actions) {
+        let className = actionName + "-" + eventName;
+        let action = actions[actionName];
+        let elements = document.getElementsByClassName(className);
+        for (let i = 0; i < elements.length; i++) { let element = elements[i];
+            element.addEventListener(eventName, wrappers[eventName](action, element));
+        }
     }
-
-    elements = document.getElementsByClassName("reset-" + eventName);
-    for (let i = 0; i < elements.length; i++) { let element = elements[i];
-        element.addEventListener(eventName, function (event) { event.preventDefault(); reset(element); });
-        if (!"initialValue" in element.dataset) { element.dataset.initialValue = null; }
-    }
-
-    elements = document.getElementsByClassName("increment-" + eventName);
-    for (let i = 0; i < elements.length; i++) { let element = elements[i];
-        element.addEventListener(eventName, function (event) { event.preventDefault(); increment(element); });
-    }
-
-    elements = document.getElementsByClassName("decrement-" + eventName);
-    for (let i = 0; i < elements.length; i++) { let element = elements[i];
-        element.addEventListener(eventName, function (event) { event.preventDefault(); decrement(element); });
-    }
-
 }
 
 
