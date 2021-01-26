@@ -74,6 +74,7 @@ function nextTurn(encounter) {
             let nextI = i + 1;
             if (nextI >= table.rows.length) { nextI = 1; }
             table.rows[nextI].classList.add("selected");
+            break;
         }
     }
 }
@@ -87,6 +88,7 @@ function previousTurn(encounter) {
             let previousI = i - 1;
             if (previousI <= 0) { previousI = table.rows.length - 1; }
             table.rows[previousI].classList.add("selected");
+            break;
         }
     }
 }
