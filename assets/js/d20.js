@@ -103,7 +103,7 @@ function nextTurn(encounter) {
     let i = findSelectedRow(table);
     if (i > 0) {
         table.rows[i].classList.remove("selected");
-        table.rows[findNextRow(i)].classList.add("selected");
+        table.rows[findNextRow(table, i)].classList.add("selected");
     }
 }
 
@@ -113,7 +113,7 @@ function previousTurn(encounter) {
     let i = findSelectedRow(table);
     if (i > 0) {
         table.rows[i].classList.remove("selected");
-        table.rows[findPreviousRow(i)].classList.add("selected");
+        table.rows[findPreviousRow(table, i)].classList.add("selected");
     }
 }
 
