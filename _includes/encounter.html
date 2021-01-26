@@ -30,7 +30,7 @@
         {% assign entity = site.data.players | concat: site.data.npcs | concat: site.data.monsters | where: "name", entity_name | first %}
         {% assign entity_id = encounter_id | append: "." | append: entity.name | append: "." | append: forloop.index | replace: ' ', '_' %}
 
-        {% for bonus in entity.bonuses %}
+        {% for bonus in entity.bonuses.abilities %}
         data-{{ bonus[0] }}-bonuses="{{ bonus[1] | join: ' ' }}"
         {% endfor %}
 
