@@ -30,7 +30,7 @@
       {% for entity_name in encounter.entities %}
         {% assign entity = site.data.players | concat: site.data.npcs | concat: site.data.monsters | where: "name", entity_name | first %}
         {% assign entity_id = entity.name | replace: ' ', '_' | prepend: "." | prepend: encounter_id | append: "." | append: entity_number %}
-        {% assign entity_number = entity_name | plus: 1 %}
+        {% assign entity_number = entity_number | plus: 1 %}
         <tr
           class="entity"
           id="{{ entity_id }}"
