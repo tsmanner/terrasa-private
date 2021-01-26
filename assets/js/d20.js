@@ -303,7 +303,8 @@ function render(element) {
     element.innerHTML = result;
     if ("cascadeUpdate" in element.dataset) {
         let cascades = element.dataset.cascadeUpdate.split(" ");
-        for (let cascade in cascades) {
+        for (let i in cascades) {
+            let cascade = cascades[i];
             update(document.getElementById(cascade));
         }
     }
