@@ -138,6 +138,7 @@ function resetEncounter(encounter) {
         row.classList.remove("hidden");
         reset(row.cells[1].children[0]);  // Initiative
         reset(row.cells[3].children[0]);  // HP
+        row.cells[10].children[0].innerHTML = "Hide";
     }
     sortEncounter(encounter);
 }
