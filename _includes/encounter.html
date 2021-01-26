@@ -4,6 +4,8 @@
   <div class="encounter" id="{{ encounter_id }}">
     <div>
       <button onclick="sortEncounter({{ encounter_id }})" >Sort Encounter Table</button>
+      <button onclick="nextTurn({{ encounter_id }})">Next Turn</button>
+      <button onclick="previousTurn({{ encounter_id }})">Previous Turn</button>
     </div>
     <table id="{{ encounter_id }}.table">
       <tr class="encounter-table-header">

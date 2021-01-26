@@ -1,33 +1,3 @@
-// function rollInitiative(element) {
-//     let children = element.children;
-//     for (let index = 0; index < children.length; index++) {
-//         let child = children[index];
-//         if (child.classList.contains("initiative") && child.classList.contains("randomize")) {
-//             child.value = roll(20, child.getAttribute("bonus"));
-//             child.innerText = child.value;
-//             child.classList.remove("randomize");
-//         }
-//         else {
-//             rollInitiative(child);
-//         }
-//     }
-// }
-
-
-// function inputValue(encounter, element) {
-//     let value = prompt(element.getAttribute("prompt") + " (range " + minimum(element) + " to " + maximum(element) + ")");
-//     if (value != null && !updateValue(element, value)) {
-//         inputValue(encounter, element);
-//     }
-// }
-
-
-// function mapEntities(encounter, func) {
-//     func(encounter);
-//     sortEntityTable(encounter);
-// }
-
-
 function entityTableRowHasInitiativeValue(row) {
     let value = row.cells[1].children[0].dataset.value;
     return value != "null" && value != null;
@@ -77,19 +47,32 @@ function sortEncounter(encounter) {
     // Sort the elements
     let table = document.getElementById(encounter.id + ".table");
     let rows = []
-    for (let i = 1; i < table.rows.length; i++) {
+    for (let i = 1; i < table.rows.length; ++i) {
         rows.push(table.rows[i]);
     }
     rows.sort(entityTableRowCompare);
     // Delete the existing rows
     let length = table.rows.length;
-    for (let i = 1; i < length; i++) {
+    for (let i = 1; i < length; ++i) {
         table.deleteRow(-1);
     }
     // Insert the sorted rows
     length = rows.length;
-    for (let i = 0; i < length; i++) {
+    for (let i = 0; i < length; ++i) {
         table.childNodes[1].appendChild(rows[i]);
+    }
+}
+
+
+function nextTurn(encounter) {
+    let table = document.getElementsByName(encounter.id + ".table");
+    for (let i = 1; i < table.rows.length; ++i) {
+        if (table.rows[i].classList.contains("selected")) {
+            table.rows[i].classList.remove("selected");
+            let nextI = i + 1;
+            if (nextI >= table.rows.length) { nextI = 1; }
+            table.rows[nextI].classList.add("selected");
+        }
     }
 }
 
@@ -230,7 +213,7 @@ function registerEventListeners(eventName) {
         contextmenu: preventDefaultWrapper
     };
     let predicates = {
-        nomod: function (f) { return function (event) { if (!(event.shiftKey || event.ctrlKey || event.altKey)) { f(event) } }; },
+        noMod: function (f) { return function (event) { if (!(event.shiftKey || event.ctrlKey || event.altKey)) { f(event) } }; },
         shift: function (f) { return function (event) { if (event.shiftKey) { f(event); } }; },
         ctrl: function (f) { return function (event) { if (event.ctrlKey) { f(event); } }; },
         alt: function (f) { return function (event) { if (event.altKey) { f(event); } }; }
@@ -241,15 +224,15 @@ function registerEventListeners(eventName) {
         let className = actionName + "-" + eventName;
         let action = actions[actionName];
         let elements = document.getElementsByClassName(className);
-        for (let i = 0; i < elements.length; i++) { let element = elements[i];
-            element.addEventListener(eventName, predicates.nomod(wrappers[eventName](action, element)));
+        for (let i = 0; i < elements.length; ++i) { let element = elements[i];
+            element.addEventListener(eventName, predicates.noMod(wrappers[eventName](action, element)));
         }
         // Predicated Events
         for (let key in predicates) {
             className = actionName + "-" + key + "-" + eventName;
             action = actions[actionName];
             elements = document.getElementsByClassName(className);
-            for (let i = 0; i < elements.length; i++) { let element = elements[i];
+            for (let i = 0; i < elements.length; ++i) { let element = elements[i];
                 let listener = predicates[key](wrappers[eventName](action, element));
                 element.addEventListener(eventName, listener);
             }
@@ -262,12 +245,12 @@ function init() {
     let elements = [];
     // Initialize 'roll' and 'value' instances
     elements = document.getElementsByClassName("roll");
-    for (let i = 0; i < elements.length; i++) { let element = elements[i];
+    for (let i = 0; i < elements.length; ++i) { let element = elements[i];
         element.dataset.initialValue = null;
         reset(element);
     }
     elements = document.getElementsByClassName("value");
-    for (let i = 0; i < elements.length; i++) { let element = elements[i];
+    for (let i = 0; i < elements.length; ++i) { let element = elements[i];
         reset(element);
     }
     // Register Event Listeners
@@ -277,7 +260,7 @@ function init() {
 
     // Sort all the encounter tables by initiative
     elements = document.getElementsByClassName("encounter");
-    for (let i = 0; i < elements.length; i++) { let element = elements[i];
+    for (let i = 0; i < elements.length; ++i) { let element = elements[i];
         sortEncounter(element);
     }
 
