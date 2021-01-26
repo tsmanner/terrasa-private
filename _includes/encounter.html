@@ -26,8 +26,9 @@
 
       {% assign encounter = page.encounters | where: "name", include.name | first %}
       {% for entity in encounter.entities %}
+        {% increment entity_number %}
         {% assign character = site.data.players | concat: site.data.npcs | concat: site.data.monsters | where: "name", entity | first %}
-        {% assign character_id = character.name | replace: ' ', '_' | prepend: "." | prepend: encounter_id %}
+        {% assign character_id = character.name | replace: ' ', '_' | prepend: "." | prepend: encounter_id | append: "." | append: entity_number %}
         <tr class="entity" id="{{ character_id }}" data-encounter-id="{{ encounter_id }}">
           <td id="{{ character_id }}.name">
             {% if character.link == nil %}
