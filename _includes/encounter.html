@@ -21,6 +21,7 @@
         <th>INT</th>
         <th>WIS</th>
         <th>CHA</th>
+        <th>vis</th>
       </tr>
 
       {% assign encounter = page.encounters | where: "name", include.name | first %}
@@ -55,8 +56,8 @@
           <td class="ability modifier" id="{{ character_id }}.int">{{ character.abilities.int | divided_by: 2 | minus: 5 }}</td>
           <td class="ability modifier" id="{{ character_id }}.wis">{{ character.abilities.wis | divided_by: 2 | minus: 5 }}</td>
           <td class="ability modifier" id="{{ character_id }}.cha">{{ character.abilities.cha | divided_by: 2 | minus: 5 }}</td>
-          <td id="{{ character_id }}.hp"><button onclick="showHideRow(this)"/></td>
-          </tr>
+          <td id="{{ character_id }}.hp"><button onclick="showHideRow({{ character_id }})"/>Hide</td>
+        </tr>
       {% endfor %}
 
     </table>

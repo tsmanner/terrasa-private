@@ -143,6 +143,12 @@ function resetEncounter(encounter) {
 
 function showHideRow(row) {
     row.classList.toggle("hidden");
+    if (row.classList.contains("hidden")) {
+        row.cells[10].children[0].innerHTML = "Show";
+    }
+    else {
+        row.cells[10].children[0].innerHTML = "Hide";
+    }
 }
 
 
