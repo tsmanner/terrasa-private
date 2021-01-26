@@ -67,7 +67,7 @@ function sortEncounter(encounter) {
 
 
 function nextTurn(encounter) {
-    let table = document.getElementsByName(encounter.id + ".table");
+    let table = document.getElementById(encounter.id + ".table");
     for (let i = 1; i < table.rows.length; ++i) {
         if (table.rows[i].classList.contains("selected")) {
             table.rows[i].classList.remove("selected");
@@ -80,7 +80,7 @@ function nextTurn(encounter) {
 
 
 function previousTurn(encounter) {
-    let table = document.getElementsByName(encounter.id + ".table");
+    let table = document.getElementById(encounter.id + ".table");
     for (let i = 1; i < table.rows.length; ++i) {
         if (table.rows[i].classList.contains("selected")) {
             table.rows[i].classList.remove("selected");
