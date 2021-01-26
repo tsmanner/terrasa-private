@@ -141,8 +141,8 @@ function resetEncounter(encounter) {
 }
 
 
-function showHideRow(row) {
-    row.classList.toggle("hidden");
+function showHideRow(rowId) {
+    row = document.getElementById(rowId);
     if (row.classList.contains("hidden")) {
         row.cells[10].children[0].innerHTML = "Show";
     }
