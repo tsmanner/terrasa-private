@@ -256,9 +256,10 @@ function init() {
         reset(element);
     }
     // Register Event Listeners
-    registerEventListeners("click");
-    registerEventListeners("dblclick");
-    registerEventListeners("contextmenu");
+    registerEventListeners("click");        // Left Click
+    registerEventListeners("dblclick");     // Double Click
+    registerEventListeners("auxclick");     // Middle Click
+    registerEventListeners("contextmenu");  // Right Click
 
     // Sort all the encounter tables by initiative
     elements = document.getElementsByClassName("encounter");
