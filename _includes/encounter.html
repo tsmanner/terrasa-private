@@ -3,11 +3,12 @@
   <summary>{{ include.name }}</summary>
   <div class="encounter" id="{{ encounter_id }}">
     <div>
-      <button onclick="sortEncounter({{ encounter_id }})" >Sort</button>
-      <button onclick="nextTurn({{ encounter_id }})">Next</button>
-      <button onclick="previousTurn({{ encounter_id }})">Previous</button>
-      <button onclick="autoRollInitiative({{ encounter_id }})" >Auto Roll Initiative</button>
-      <button onclick="resetEncounter({{ encounter_id }})" >Reset</button>
+      <button onclick="sortEncounter('{{ encounter_id }}.table')" >Sort</button>
+      <button onclick="nextTurn('{{ encounter_id }}.table')">Next</button>
+      <button onclick="previousTurn('{{ encounter_id }}.table')">Previous</button>
+      <button onclick="autoRollInitiative('{{ encounter_id }}.table')" >Auto Roll Initiative</button>
+      <button onclick="resetEncounter('{{ encounter_id }}.table')" >Reset</button>
+      <button onclick="showAll('{{ encounter_id }}.table')" >Show All</button>
     </div>
     <table id="{{ encounter_id }}.table">
       <tr class="encounter-table-header">
@@ -21,7 +22,7 @@
         <th>INT</th>
         <th>WIS</th>
         <th>CHA</th>
-        <th>vis</th>
+        <th>Show<br/>Hide</th>
       </tr>
 
       {% assign encounter = page.encounters | where: "name", include.name | first %}

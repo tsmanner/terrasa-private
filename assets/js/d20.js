@@ -44,8 +44,8 @@ function entityTableRowCompare(lRow, rRow) {
 
 
 function sortEncounter(encounter) {
-    // Sort the elements
-    let table = document.getElementById(encounter.id + ".table");
+    // Sort the tableIdnts
+    let table = document.getElementById(tableId);
     let rows = []
     for (let i = 1; i < table.rows.length; ++i) {
         table.rows[i].classList.remove("selected");
@@ -98,8 +98,8 @@ function findPreviousRow(table, i) {
 }
 
 
-function nextTurn(encounter) {
-    let table = document.getElementById(encounter.id + ".table");
+function nextTurn(tableId) {
+    let table = document.getElementById(tableId);
     let i = findSelectedRow(table);
     if (i > 0) {
         table.rows[i].classList.remove("selected");
@@ -108,8 +108,8 @@ function nextTurn(encounter) {
 }
 
 
-function previousTurn(encounter) {
-    let table = document.getElementById(encounter.id + ".table");
+function previousTurn(tableId) {
+    let table = document.getElementById(tableId);
     let i = findSelectedRow(table);
     if (i > 0) {
         table.rows[i].classList.remove("selected");
@@ -118,8 +118,8 @@ function previousTurn(encounter) {
 }
 
 
-function autoRollInitiative(encounter) {
-    let table = document.getElementById(encounter.id + ".table");
+function autoRollInitiative(tableId) {
+    let table = document.getElementById(tableId);
     for (let i = 1; i < table.rows.length; ++i) {
         let row = table.rows[i];
         if (!entityTableRowHasInitiativeValue(row)) {
@@ -130,17 +130,28 @@ function autoRollInitiative(encounter) {
 }
 
 
-function resetEncounter(encounter) {
-    let table = document.getElementById(encounter.id + ".table");
+function resetEncounter(tableId) {
+    showAll(tableId);
+    let table = document.getElementById(tableId);
     table.rows[0].classList.remove("selected");
     for (let i = 1; i < table.rows.length; ++i) {
         let row = table.rows[i];
-        row.classList.remove("hidden");
         reset(row.cells[1].children[0]);  // Initiative
         reset(row.cells[3].children[0]);  // HP
-        row.cells[10].children[0].innerHTML = "Hide";
     }
     sortEncounter(encounter);
+}
+
+
+function showAll(tableId) {
+    let table = document.getElementById(tableId);
+    for (let i = 1; i < table.rows.length; ++i) {
+        let row = table.rows[i];
+        row.classList.remove("hidden");
+        if (row.classList.contains("entity")) {
+            row.cells[10].children[0].innerHTML = "Hide";
+        }
+    }
 }
 
 
