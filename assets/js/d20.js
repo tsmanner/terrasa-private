@@ -306,6 +306,7 @@ function render(element) {
         let cascades = element.dataset.cascadeUpdate.split(" ");
         for (let i in cascades) {
             let cascade = cascades[i];
+            console.log(element, element.dataset, cascade);
             update(document.getElementById(cascade));
         }
     }
