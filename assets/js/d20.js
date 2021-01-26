@@ -43,8 +43,7 @@ function entityTableRowCompare(lRow, rRow) {
 }
 
 
-function sortEncounter(encounter) {
-    // Sort the tableIdnts
+function sortEncounter(tableId) {
     let table = document.getElementById(tableId);
     let rows = []
     for (let i = 1; i < table.rows.length; ++i) {
@@ -126,7 +125,7 @@ function autoRollInitiative(tableId) {
             doRoll(row.cells[1].children[0]);
         }
     }
-    sortEncounter(encounter);
+    sortEncounter(tableId);
 }
 
 
@@ -139,7 +138,7 @@ function resetEncounter(tableId) {
         reset(row.cells[1].children[0]);  // Initiative
         reset(row.cells[3].children[0]);  // HP
     }
-    sortEncounter(encounter);
+    sortEncounter(tableId);
 }
 
 
@@ -381,7 +380,8 @@ function init() {
     // Sort all the encounter tables by initiative
     elements = document.getElementsByClassName("encounter");
     for (let i = 0; i < elements.length; ++i) { let element = elements[i];
-        sortEncounter(element);
+        let tableId = element.id + ".table";
+        sortEncounter(tableId);
     }
 
 }
