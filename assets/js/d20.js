@@ -48,6 +48,7 @@ function sortEncounter(encounter) {
     let table = document.getElementById(encounter.id + ".table");
     let rows = []
     for (let i = 1; i < table.rows.length; ++i) {
+        table.rows[i].classList.remove("selected");
         rows.push(table.rows[i]);
     }
     rows.sort(entityTableRowCompare);
@@ -61,6 +62,7 @@ function sortEncounter(encounter) {
     for (let i = 0; i < length; ++i) {
         table.childNodes[1].appendChild(rows[i]);
     }
+    table.rows[1].classList.add("selected");
 }
 
 
@@ -72,6 +74,19 @@ function nextTurn(encounter) {
             let nextI = i + 1;
             if (nextI >= table.rows.length) { nextI = 1; }
             table.rows[nextI].classList.add("selected");
+        }
+    }
+}
+
+
+function previousTurn(encounter) {
+    let table = document.getElementsByName(encounter.id + ".table");
+    for (let i = 1; i < table.rows.length; ++i) {
+        if (table.rows[i].classList.contains("selected")) {
+            table.rows[i].classList.remove("selected");
+            let previousI = i - 1;
+            if (previousI <= 0) { previousI = table.rows.length - 1; }
+            table.rows[previousI].classList.add("selected");
         }
     }
 }
