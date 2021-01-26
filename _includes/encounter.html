@@ -6,7 +6,7 @@
       <button onclick="sortEncounter({{ encounter_id }})" >Sort</button>
       <button onclick="nextTurn({{ encounter_id }})">Next</button>
       <button onclick="previousTurn({{ encounter_id }})">Previous</button>
-      <button onclick="autoRollInitiative({{ encounter_id }})" >Auto Roll Initiative</button>
+      <button onclick="autoRollInitiative({{ encounter_id | append: '.table' }})" >Auto Roll Initiative</button>
     </div>
     <table id="{{ encounter_id }}.table">
       <tr class="encounter-table-header">
