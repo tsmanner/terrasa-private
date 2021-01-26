@@ -260,6 +260,12 @@ function init() {
     registerEventListeners("dblclick");
     registerEventListeners("contextmenu");
 
+    // Sort all the encounter tables by initiative
+    elements = document.getElementsByClassName("encounter");
+    for (let i = 0; i < elements.length; i++) { let element = elements[i];
+        sortEncounter(element);
+    }
+
 }
 
 
