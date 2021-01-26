@@ -175,11 +175,36 @@ function increment(element) {
     }
 }
 
+
+function increment5(element) {
+    let newValue = parseInt(element.dataset.value) + 5;
+    if ("maximumValue" in element.dataset && newValue < parseInt(element.dataset.maximumValue)) {
+        element.dataset.value = parseInt(element.dataset.maximumValue);
+    }
+    else {
+        element.dataset.value = newValue;
+    }
+    render(element);
+}
+
+
 function decrement(element) {
     if (!("minimumValue" in element.dataset) || parseInt(element.dataset.value) > parseInt(element.dataset.minimumValue)) {
         element.dataset.value = parseInt(element.dataset.value) - 1;
         render(element);
     }
+}
+
+
+function decrement5(element) {
+    let newValue = parseInt(element.dataset.value) - 5;
+    if ("minimumValue" in element.dataset && newValue < parseInt(element.dataset.minimumValue)) {
+        element.dataset.value = parseInt(element.dataset.minimumValue);
+    }
+    else {
+        element.dataset.value = newValue;
+    }
+    render(element);
 }
 
 
@@ -245,7 +270,9 @@ function registerEventListeners(eventName) {
         roll: doRoll,
         reset: reset,
         increment: increment,
-        decrement: decrement
+        increment5: increment5,
+        decrement: decrement,
+        decrement5: decrement5
     };
     let wrappers = {
         click: identityWrapper,
