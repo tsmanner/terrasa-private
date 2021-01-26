@@ -157,7 +157,8 @@ function showAll(tableId) {
 function showHideRow(rowId) {
     row = document.getElementById(rowId);
     if (row.classList.contains("selected")) {
-        nextTurn(document.getElementById(row.dataset.encounterId));
+        let tableId = row.dataset.encounterId + ".table";
+        nextTurn(tableId);
     }
     row.classList.toggle("hidden");
     if (row.classList.contains("hidden")) {
