@@ -178,7 +178,7 @@ function increment(element) {
 
 function increment5(element) {
     let newValue = parseInt(element.dataset.value) + 5;
-    if ("maximumValue" in element.dataset && newValue < parseInt(element.dataset.maximumValue)) {
+    if ("maximumValue" in element.dataset && newValue > parseInt(element.dataset.maximumValue)) {
         element.dataset.value = parseInt(element.dataset.maximumValue);
     }
     else {
