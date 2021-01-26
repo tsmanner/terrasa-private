@@ -411,7 +411,7 @@ function init() {
     registerEventListeners("dblclick");     // Double Click
     registerEventListeners("contextmenu");  // Right Click
 
-    elements = document.getElementsByClassName("ability-check");
+    elements = document.getElementsByClassName("ability");
     for (let i = 0; i < elements.length; ++i) { let element = elements[i];
         let entity = document.getElementById(element.dataset.entityId);
         element.dataset.value = entity.dataset[element.ability];
