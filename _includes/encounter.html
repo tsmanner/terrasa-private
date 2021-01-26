@@ -55,7 +55,7 @@
             data-null-format="+{modifier}"
             data-modifier="{{ entity.initiative }}"
             data-die="20"/></td>
-          <td id="{{ entity_id }}.ac">{{ entity.ac }} {% for bonus in entity.bonuses %}data-{{ bonus[0] }}-bonuses="{{ bonus[1] | join: ' ' }}"{% endfor %}</td>
+          <td id="{{ entity_id }}.ac">{{ entity.ac }} {% for bonus in entity.bonuses %}data-{{ bonus[0] }}-bonuses="{{ bonus[1] | join: ' ' }}" {% endfor %}</td>
           <td id="{{ entity_id }}.hp"><button
             class="value decrement-click decrement5-ctrl-click increment-contextmenu increment5-ctrl-contextmenu"
             id="{{ entity_id }}.hp.button"
