@@ -266,6 +266,27 @@ function decrement5(element) {
 //
 
 
+function update(element) {
+    if (element.classList.contains("entity")){
+        let hpElement = row.cells[3].children[0];
+        let currentHp = parseInt(hpElement.dataset.value);
+        let maxHp = parseInt(hpElement.dataset.maximumValue);
+        if (currentHp == 0) {
+            element.classList.remove("healthy", "bloodied");
+            element.classList.add("unconscious");
+        }
+        else if (currentHp <= (maxHp / 2)) {
+            element.classList.remove("unconscious", "bloodied");
+            element.classList.add("bloodied");
+        }
+        else {
+            element.classList.remove("unconscious", "bloodied");
+            element.classList.add("healthy");
+        }
+    }
+}
+
+
 function render(element) {
     let result = "{value}";
     if (element.dataset.value == null || element.dataset.value == "null") {
@@ -280,6 +301,12 @@ function render(element) {
         result = result.replace(new RegExp("{"+k+"}", "g"), element.dataset[k]);
     }
     element.innerHTML = result;
+    if ("cascadeUpdate" in element.dataset) {
+        let cascades = element.dataset.cascadeUpdate.split(" ");
+        for (let cascade in cascades) {
+            update(document.getElementById(cascade));
+        }
+    }
 }
 
 

@@ -10,3 +10,15 @@
 .encounter .hidden {
     display: none;
 }
+
+.encounter .entity.healthy {
+    background-color: darkgreen;
+}
+
+.encounter .entity.bloodied {
+    background-color: darkred;
+}
+
+.encounter .entity.unconscious {
+    background-color: gray;
+}
