@@ -1,6 +1,7 @@
 - name: Dazoluk Forgemaker
   link: https://www.dndbeyond.com/profile/UngodlySalmon/characters/40740308
   level: 8
+  proficiency: 2
   abilities:
     str: 20
     dex: 10
@@ -15,6 +16,7 @@
 - name: Llaska
   link: https://www.dndbeyond.com/profile/UngodlySalmon/characters/40935718
   level: 3
+  proficiency: 2
   abilities:
     str: 12
     dex: 18
@@ -29,6 +31,7 @@
 - name: Kilvin Greyjaw
   link: https://www.dndbeyond.com/profile/UngodlySalmon/characters/27153043
   level: 3
+  proficiency: 2
   abilities:
     str: 13
     dex: 8

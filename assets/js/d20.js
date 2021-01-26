@@ -419,7 +419,7 @@ function init() {
         element.dataset.check = modifier(parseInt(entity.dataset[element.dataset.ability]));
         element.dataset.save = element.dataset.check + parseInt(entity.dataset.proficiency);
         element.dataset.nullFormat = "???";
-        element.dataset.format = "{value}|{check}|{save}";
+        element.dataset.format = "{value} | {check} | {save}";
         render(element);
     }
 
