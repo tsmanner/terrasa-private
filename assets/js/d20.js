@@ -28,29 +28,59 @@
 // }
 
 
-function sortEncounter(encounter) {
-    function key(element) {
-        let value = element.cells[1].children[0].dataset.value;
-        if (value == "null") {
-            return element.cells[1].children[0].dataset.modifier;
+function entityTableRowHasInitiativeValue(row) {
+    let value = row.cells[1].children[0].dataset.value;
+    return value != "null" && value != null;
+}
+
+
+function entityTableRowInitiativeValue(row) {
+    return parseInt(row.cells[1].children[0].dataset.value);
+}
+
+
+function entityTableRowInitiativeModifier(row) {
+    return parseInt(row.cells[1].children[0].dataset.modifier);
+}
+
+
+function entityTableRowDexModifier(row) {
+    return parseInt(row.cells[5].innerHTML)
+}
+
+
+function entityTableRowCompare(lRow, rRow) {
+    // Compare Priority
+    //   Value
+    //   if (values are equal) DEX Modifier
+    //   if (no values) Initiative Bonus
+    if (entityTableRowHasInitiativeValue(lRow) && entityTableRowHasInitiativeValue(rRow)) {
+        let initiativeDiff = entityTableRowInitiativeValue(rRow) - entityTableRowInitiativeValue(lRow);
+        if (initiativeDiff == 0) {
+            return entityTableRowDexModifier(rRow) - entityTableRowDexModifier(lRow);
         }
-        return value;
+        return initiativeDiff;
     }
+    else if (entityTableRowHasInitiativeValue(lRow)) {
+        return -1;  // Value vs No Value, -1 to put lRow first
+    }
+    else if (entityTableRowHasInitiativeValue(rRow)) {
+        return 1;  // No Value vs Value, 1 to put rRow first
+    }
+    else {
+        return entityTableRowInitiativeModifier(rRow) - entityTableRowInitiativeModifier(lRow);
+    }
+}
+
+
+function sortEncounter(encounter) {
     // Sort the elements
     let table = document.getElementById(encounter.id + ".table");
     let rows = []
     for (let i = 1; i < table.rows.length; i++) {
         rows.push(table.rows[i]);
     }
-    rows.sort(function(lhs, rhs) {
-        let lhsValue = key(lhs);
-        let rhsValue = key(rhs);
-        let initiativeDiff = parseInt(rhsValue) - parseInt(lhsValue);
-        if (initiativeDiff == 0) {
-            return parseInt(rhs.cells[5].innerHTML) - parseInt(lhs.cells[5].innerHTML);
-        }
-        return initiativeDiff;
-    });
+    rows.sort(entityTableRowCompare);
     // Delete the existing rows
     let length = table.rows.length;
     for (let i = 1; i < length; i++) {
