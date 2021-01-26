@@ -276,7 +276,7 @@ function update(element) {
             element.classList.add("unconscious");
         }
         else if (currentHp <= (maxHp / 2)) {
-            element.classList.remove("unconscious", "bloodied");
+            element.classList.remove("unconscious", "healthy");
             element.classList.add("bloodied");
         }
         else {
