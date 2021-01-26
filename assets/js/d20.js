@@ -94,6 +94,17 @@ function previousTurn(encounter) {
 }
 
 
+function autoRollInitiative(table) {
+    // let table = document.getElementById(encounter.id + ".table");
+    for (let i = 1; i < table.rows.length; ++i) {
+        let row = table.rows[i];
+        if (!entityTableRowHasInitiativeValue(row)) {
+            doRoll(row.cells[1].children[0]);
+        }
+    }
+}
+
+
 //
 // Roll
 //
