@@ -337,6 +337,11 @@ function reset(element) {
 }
 
 
+function modifier(score) {
+    return Math.floor((score - 10) / 2);
+};
+
+
 //
 // Initialization
 //
@@ -405,6 +410,17 @@ function init() {
     registerEventListeners("click");        // Left Click
     registerEventListeners("dblclick");     // Double Click
     registerEventListeners("contextmenu");  // Right Click
+
+    elements = document.getElementsByClassName("ability-check");
+    for (let i = 0; i < elements.length; ++i) { let element = elements[i];
+        let entity = document.getElementById(element.dataset.entityId);
+        element.dataset.value = entity.dataset[element.ability];
+        element.dataset.check = modifier(parseInt(entity.dataset[element.ability]));
+        element.dataset.save = element.dataset.check + parseInt(entity.dataset.proficiency);
+        element.dataset.nullFormat = "???";
+        element.dataset.format = "{value}|{check}|{save}";
+        render(element);
+    }
 
     // Sort all the encounter tables by initiative
     elements = document.getElementsByClassName("encounter");

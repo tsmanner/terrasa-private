@@ -2,6 +2,7 @@
   player: Nick
   link: https://www.dndbeyond.com/profile/Sirnik/characters/27153228
   level: 3
+  proficiency: 2
   abilities:
     str: 10
     dex: 17
@@ -17,6 +18,7 @@
   player: Ryan
   link: https://www.dndbeyond.com/profile/Rycosso/characters/27153025
   level: 3
+  proficiency: 2
   abilities:
     str: 8
     dex: 15
@@ -27,11 +29,19 @@
   ac: 13
   hp: 18
   initiative: 5
+  bonuses:
+    abilities:
+      int: proficiency
+      dex: proficiency
+    initiative:
+      - abilities.dex
+      - abilities.cha
 
 - name: Gluteus Maximus
   player: Kurt
   link: https://www.dndbeyond.com/profile/lilvin/characters/29239078
   level: 3
+  proficiency: 2
   abilities:
     str: 8
     dex: 17

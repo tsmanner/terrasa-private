@@ -28,38 +28,49 @@
       {% assign encounter = page.encounters | where: "name", include.name | first %}
       {% for entity in encounter.entities %}
         {% increment entity_number %}
-        {% assign character = site.data.players | concat: site.data.npcs | concat: site.data.monsters | where: "name", entity | first %}
-        {% assign character_id = character.name | replace: ' ', '_' | prepend: "." | prepend: encounter_id | append: "." | append: entity_number %}
-        <tr class="entity" id="{{ character_id }}" data-encounter-id="{{ encounter_id }}">
-          <td id="{{ character_id }}.name">
-            {% if character.link == nil %}
-              <a>{{ character.name }}</a>
+        {% assign entity = site.data.players | concat: site.data.npcs | concat: site.data.monsters | where: "name", entity | first %}
+        {% assign entity_id = entity.name | replace: ' ', '_' | prepend: "." | prepend: encounter_id | append: "." | append: entity_number %}
+        <tr
+          class="entity"
+          id="{{ entity_id }}"
+          data-encounter-id="{{ encounter_id }}"
+          data-proficiency="{{ entity.proficiency }}"
+          data-str="{{ entity.abilities.str }}"
+          data-dex="{{ entity.abilities.dex }}"
+          data-con="{{ entity.abilities.con }}"
+          data-int="{{ entity.abilities.int }}"
+          data-wis="{{ entity.abilities.wis }}"
+          data-cha="{{ entity.abilities.cha }}"
+        >
+          <td id="{{ entity_id }}.name">
+            {% if entity.link == nil %}
+              <a>{{ entity.name }}</a>
             {% else %}
-              <a target="_blank" rel="noopener noreferrer" href="{{ character.link }}">{{ character.name }}</a>
+              <a target="_blank" rel="noopener noreferrer" href="{{ entity.link }}">{{ entity.name }}</a>
             {% endif %}
           </td>
-          <td id="{{ character_id }}.initiative"><button
+          <td id="{{ entity_id }}.initiative"><button
             class="roll roll-click input-ctrl-click reset-contextmenu"
-            id="{{ character_id }}.initiative.button"
+            id="{{ entity_id }}.initiative.button"
             data-null-format="+{modifier}"
-            data-modifier="{{ character.initiative }}"
+            data-modifier="{{ entity.initiative }}"
             data-die="20"/></td>
-          <td id="{{ character_id }}.ac">{{ character.ac }}</td>
-          <td id="{{ character_id }}.hp"><button
+          <td id="{{ entity_id }}.ac">{{ entity.ac }}</td>
+          <td id="{{ entity_id }}.hp"><button
             class="value decrement-click decrement5-ctrl-click increment-contextmenu increment5-ctrl-contextmenu"
-            id="{{ character_id }}.hp.button"
-            data-cascade-update="{{ character_id }}"
+            id="{{ entity_id }}.hp.button"
+            data-cascade-update="{{ entity_id }}"
             data-format="{value}/{maximumValue}"
-            data-maximum-value="{{ character.hp }}"
+            data-maximum-value="{{ entity.hp }}"
             data-minimum-value="0"
-            data-initial-value="{{ character.hp }}"/></td>
-          <td class="ability modifier" id="{{ character_id }}.str">{{ character.abilities.str | divided_by: 2 | minus: 5 }}</td>
-          <td class="ability modifier" id="{{ character_id }}.dex">{{ character.abilities.dex | divided_by: 2 | minus: 5 }}</td>
-          <td class="ability modifier" id="{{ character_id }}.con">{{ character.abilities.con | divided_by: 2 | minus: 5 }}</td>
-          <td class="ability modifier" id="{{ character_id }}.int">{{ character.abilities.int | divided_by: 2 | minus: 5 }}</td>
-          <td class="ability modifier" id="{{ character_id }}.wis">{{ character.abilities.wis | divided_by: 2 | minus: 5 }}</td>
-          <td class="ability modifier" id="{{ character_id }}.cha">{{ character.abilities.cha | divided_by: 2 | minus: 5 }}</td>
-          <td id="{{ character_id }}.hp"><button onclick="showHideRow('{{ character_id }}')"/>Hide</td>
+            data-initial-value="{{ entity.hp }}"/></td>
+          <td class="ability" data-ability="str" data-entity-id="{{ entity_id }}"/>
+          <td class="ability" data-ability="dex" data-entity-id="{{ entity_id }}"/>
+          <td class="ability" data-ability="con" data-entity-id="{{ entity_id }}"/>
+          <td class="ability" data-ability="int" data-entity-id="{{ entity_id }}"/>
+          <td class="ability" data-ability="wis" data-entity-id="{{ entity_id }}"/>
+          <td class="ability" data-ability="cha" data-entity-id="{{ entity_id }}"/>
+          <td id="{{ entity_id }}.hp"><button onclick="showHideRow('{{ entity_id }}')"/>Hide</td>
         </tr>
       {% endfor %}
 
