@@ -13,12 +13,15 @@
 
 .encounter .entity.healthy {
     background-color: darkgreen;
+    opacity: 0.25;
 }
 
 .encounter .entity.bloodied {
     background-color: darkred;
+    opacity: 0.25;
 }
 
 .encounter .entity.unconscious {
     background-color: gray;
+    opacity: 0.25;
 }
