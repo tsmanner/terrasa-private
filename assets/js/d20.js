@@ -438,16 +438,16 @@ function init() {
         render(element);
     }
 
-    elements = document.getElementsByClassName("initiative");
-    for (let i = 0; i < elements.length; ++i) { let element = elements[i];
-        let entity = document.getElementById(element.dataset.entityId);
-        element.dataset.value = null;
-        element.dataset.modifier = modifier(parseInt(entity.dataset.dex));
-        element.dataset.save = parseInt(element.dataset.check) + parseInt(entity.dataset.proficiency);
-        element.dataset.nullFormat = "???";
-        element.dataset.format = "{value} | {check} | {save}";
-        render(element);
-    }
+    // elements = document.getElementsByClassName("initiative");
+    // for (let i = 0; i < elements.length; ++i) { let element = elements[i];
+    //     let entity = document.getElementById(element.dataset.entityId);
+    //     element.dataset.value = null;
+    //     let initiativeModifier = 0;
+    //     for (let i in )
+    //     element.dataset.nullFormat = "???";
+    //     element.dataset.format = "{value} | {check} | {save}";
+    //     render(element);
+    // }
 
     // Sort all the encounter tables by initiative
     elements = document.getElementsByClassName("encounter");
