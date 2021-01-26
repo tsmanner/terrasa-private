@@ -40,8 +40,8 @@
           data-int-score="{{ entity.abilities.int }}"
           data-wis-score="{{ entity.abilities.wis }}"
           data-cha-score="{{ entity.abilities.cha }}"
-          {% for bonus_name in entity.bonuses %}
-            data-{{ bonus_name }}-bonuses="{{ entity.bonuses[bonus_name] | join: ' ' }}"
+          {% for bonus in entity.bonuses %}
+            data-{{ bonus[0] }}-bonuses="{{ bonus[1] | join: ' ' }}"
           {% endfor %}
         >
           <td id="{{ entity_id }}.name">
