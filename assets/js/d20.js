@@ -430,12 +430,11 @@ function init() {
     elements = document.getElementsByClassName("ability");
     for (let i = 0; i < elements.length; ++i) { let element = elements[i];
         let entity = document.getElementById(element.dataset.entityId);
-        element.dataset.value = entity.dataset[element.dataset.ability + "Score"];
-        element.dataset.check = modifier(parseInt(element.dataset.value));
-        element.dataset.save = parseInt(element.dataset.check) + parseInt(entity.dataset.proficiency);
-        element.dataset.nullFormat = "???";
-        element.dataset.format = "{value} | {check} | {save}";
-        render(element);
+        element.innerHTML = [
+            entity.dataset[element.dataset.ability + "Score"],
+            entity.dataset[element.dataset.ability + "Mod"],
+            entity.dataset[element.dataset.ability + "Save"]
+        ].join(" | ");
     }
 
     elements = document.getElementsByClassName("initiative");
