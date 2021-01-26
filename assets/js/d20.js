@@ -267,7 +267,6 @@ function decrement5(element) {
 
 
 function update(element) {
-    console.log(element);
     if (element.classList.contains("entity")) {
         let hpElement = element.cells[3].children[0];
         let currentHp = parseInt(hpElement.dataset.value);
@@ -306,7 +305,6 @@ function render(element) {
         let cascades = element.dataset.cascadeUpdate.split(" ");
         for (let i in cascades) {
             let cascade = cascades[i];
-            console.log(element, element.dataset, cascade);
             update(document.getElementById(cascade));
         }
     }

@@ -2,13 +2,12 @@
   link: https://www.dndbeyond.com/profile/UngodlySalmon/characters/40740308
   level: 8
   proficiency: 3
-  abilities:
-    str: 20
-    dex: 10
-    con: 18
-    int: 8
-    wis: 14
-    cha: 16
+  str: 20
+  dex: 10
+  con: 18
+  int: 8
+  wis: 14
+  cha: 16
   ac: 21
   hp: 84
   initiative: 0
@@ -17,13 +16,12 @@
   link: https://www.dndbeyond.com/profile/UngodlySalmon/characters/40935718
   level: 3
   proficiency: 2
-  abilities:
-    str: 12
-    dex: 18
-    con: 16
-    int: 13
-    wis: 19
-    cha: 16
+  str: 12
+  dex: 18
+  con: 16
+  int: 13
+  wis: 19
+  cha: 16
   ac: 16
   hp: 27
   initiative: 4
@@ -32,13 +30,12 @@
   link: https://www.dndbeyond.com/profile/UngodlySalmon/characters/27153043
   level: 3
   proficiency: 2
-  abilities:
-    str: 13
-    dex: 8
-    con: 16
-    int: 12
-    wis: 16
-    cha: 10
+  str: 13
+  dex: 8
+  con: 16
+  int: 12
+  wis: 16
+  cha: 10
   ac: 19
   hp: 30
   initiative: -1

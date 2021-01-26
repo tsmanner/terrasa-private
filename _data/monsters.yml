@@ -1,13 +1,12 @@
 - name: Skeleton
   link: https://www.dndbeyond.com/monsters/skeleton
   proficiency: 2
-  abilities:
-    str: 10
-    dex: 14
-    con: 15
-    int: 6
-    wis: 8
-    cha: 5
+  str: 10
+  dex: 14
+  con: 15
+  int: 6
+  wis: 8
+  cha: 5
   ac: 13
   hp: 13
   initiative: 2
@@ -15,12 +14,11 @@
 - name: Zombie
   link: https://www.dndbeyond.com/monsters/zombie
   proficiency: 2
-  abilities:
-    str: 13
-    dex: 6
-    con: 16
-    int: 3
-    wis: 6
+  str: 13
+  dex: 6
+  con: 16
+  int: 3
+  wis: 6
     cha: 5
   ac: 8
   hp: 22
@@ -32,24 +30,22 @@
   ac: 14
   hp: 45
   initiative: 2
-  abilities:
-    str: 15
-    dex: 14
-    con: 16
-    int: 10
-    wis: 13
-    cha: 15
+  str: 15
+  dex: 14
+  con: 16
+  int: 10
+  wis: 13
+  cha: 15
 
 - name: Helmed Horror
   link: https://www.dndbeyond.com/monsters/helmed-horror
   proficiency: 2
-  abilities:
-    str: 18
-    dex: 13
-    con: 16
-    int: 10
-    wis: 10
-    cha: 10
+  str: 18
+  dex: 13
+  con: 16
+  int: 10
+  wis: 10
+  cha: 10
   ac: 20
   hp: 60
   initiative: 1

@@ -30,22 +30,21 @@
         {% assign entity = site.data.players | concat: site.data.npcs | concat: site.data.monsters | where: "name", entity_name | first %}
         {% assign entity_id = encounter_id | append: "." | append: entity.name | append: "." | append: forloop.index | replace: ' ', '_' %}
 
-        {% for bonus in entity.bonuses.abilities %}
-        data-{{ bonus[0] }}-bonuses="{{ bonus[1] | join: ' ' }}"
-        {% endfor %}
-
         <tr
           class="entity"
           id="{{ entity_id }}"
           data-encounter-id="{{ encounter_id }}"
           data-proficiency="{{ entity.proficiency }}"
-          data-str-score="{{ entity.abilities.str }}"
-          data-dex-score="{{ entity.abilities.dex }}"
-          data-con-score="{{ entity.abilities.con }}"
-          data-int-score="{{ entity.abilities.int }}"
-          data-wis-score="{{ entity.abilities.wis }}"
-          data-cha-score="{{ entity.abilities.cha }}"
-        >
+          data-str-score="{{ entity.str }}"
+          data-dex-score="{{ entity.dex }}"
+          data-con-score="{{ entity.con }}"
+          data-int-score="{{ entity.int }}"
+          data-wis-score="{{ entity.wis }}"
+          data-cha-score="{{ entity.cha }}"
+          {% for bonus in entity.bonuses %}
+            data-{{ bonus[0] }}-bonuses="{{ bonus[1] | join: ' ' }}"
+          {% endfor %}
+          >
           <td id="{{ entity_id }}.name">
             {% if entity.link == nil %}
               <a>{{ entity.name }}</a>
