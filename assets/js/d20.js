@@ -214,7 +214,7 @@ function reset(element) {
 
 
 function registerEventListeners(eventName) {
-    let identityWrapper = function (action, element) { return function () { action(element); } };
+    let identityWrapper = function (action, element) { return function (event) { console.log(event); action(element); } };
     let preventDefaultWrapper = function (action, element) { return function (event) { console.log(event); event.preventDefault(); action(element); } };
     let actions = {
         input: inputValue,
