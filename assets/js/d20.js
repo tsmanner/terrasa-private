@@ -102,6 +102,7 @@ function autoRollInitiative(encounter) {
             doRoll(row.cells[1].children[0]);
         }
     }
+    sortEncounter(encounter);
 }
 
 
@@ -112,6 +113,7 @@ function resetEncounter(encounter) {
         reset(row.cells[1].children[0]);  // Initiative
         reset(row.cells[3].children[0]);  // HP
     }
+    sortEncounter(encounter);
 }
 
 
