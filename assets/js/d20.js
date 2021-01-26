@@ -214,8 +214,9 @@ function reset(element) {
 
 
 function registerEventListeners(eventName) {
-    let identityWrapper = function (action, element) { return function (event) { console.log(event); action(element); } };
-    let preventDefaultWrapper = function (action, element) { return function (event) { console.log(event); event.preventDefault(); action(element); } };
+    let identityWrapper = function (action, element) { return function () { action(element); } };
+    let preventDefaultWrapper = function (action, element) { return function (event) { event.preventDefault(); action(element); } };
+
     let actions = {
         input: inputValue,
         roll: doRoll,
@@ -225,16 +226,32 @@ function registerEventListeners(eventName) {
     };
     let wrappers = {
         click: identityWrapper,
-        auxclick: preventDefaultWrapper,
+        dblclick: identityWrapper,
         contextmenu: preventDefaultWrapper
     };
+    let predicates = {
+        shift: function (f) { return function (event) { if (event.shiftKey) { f(event); } }; },
+        ctrl: function (f) { return function (event) { if (event.ctrlKey) { f(event); } }; },
+        alt: function (f) { return function (event) { if (event.altKey) { f(event); } }; }
+    }
 
     for (let actionName in actions) {
+        // Unpredicated Events
         let className = actionName + "-" + eventName;
         let action = actions[actionName];
         let elements = document.getElementsByClassName(className);
         for (let i = 0; i < elements.length; i++) { let element = elements[i];
             element.addEventListener(eventName, wrappers[eventName](action, element));
+        }
+        // Predicated Events
+        for (let key in predicates) {
+            className = actionName + "-" + key + "-" + eventName;
+            action = actions[actionName];
+            elements = document.getElementsByClassName(className);
+            for (let i = 0; i < elements.length; i++) { let element = elements[i];
+                let listener = predicates[key](wrappers[eventName](action, element));
+                element.addEventListener(eventName, listener);
+            }
         }
     }
 }
@@ -255,7 +272,6 @@ function init() {
     // Register Event Listeners
     registerEventListeners("click");        // Left Click
     registerEventListeners("dblclick");     // Double Click
-    registerEventListeners("auxclick");     // Middle Click
     registerEventListeners("contextmenu");  // Right Click
 
     // Sort all the encounter tables by initiative
