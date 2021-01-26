@@ -4,17 +4,19 @@ subtitle: Planning notes for ongoing themes and with excerpts etc for upcoming s
 full-width: true
 
 encounters:
-  - name: Refugees Being Followed
+  - name: Refugees Being Chased
     entities:
       - Brother Gromag
       - Caltrop Bloodless
       - Gluteus Maximus
       - Kilvin Greyjaw
-      - Skeleton
-      - Skeleton
-      - Skeleton
-      - Skeleton
-      - Skeleton
+      - Wight
+      - Zombie
+      - Zombie
+      - Zombie
+      - Zombie
+      - Zombie
+      - Zombie
   - name: Helmed Horror
     entities:
       - Brother Gromag
@@ -28,12 +30,11 @@ Down time, if they want it.  Nothing _pressing_ is going on, the order is invest
 
 ## Yalaqta Random Events
 <button id="YalaqtaRandomEvents" data-die="10" data-null-format="Roll Event (d{die})" data-format="Rolled Event {value}" class="roll roll-click reset-contextmenu"/>
-<button id="YalaqtaCounter" data-format="{value}/{maximumValue}" data-initial-value="1" data-maximum-value="3" class="value decrement-click increment-contextmenu"/>
 
 
 ### 1. People from a nearby village are fleeing to Yalaqta
-DC 12 Wisdom (perception) check to see or hear the villagers running toward the gate.  Some people are in the distance on the road, they don't appear to be organized the way a caravan or militia would be, but it does appear to be a fairly large group.
-{% include encounter.html name="Refugees Being Followed" %}
+A heavy storm blows in in the night,  DC 12 Wisdom (perception) check to see or hear the villagers running toward the gate.  Some people are in the distance on the road, they don't appear to be organized the way a caravan or militia would be, but it does appear to be a fairly large group.
+{% include encounter.html name="Refugees Being Chased" %}
 
 ### 2. People from a nearby village have fled to Yalaqta
 The party is hailed by a member of a group of refugees from a nearby village, who is begging for help.  Their village was overrun by undead and they fled to Yalaqta.  One cannot find his daughter, he last saw her after they entered the city and is worried that she was kidnapped or is lost in Yalaqta.  Another's siblings refused to leave the village, insisting that they could take it back (breadcrumb to go to the village and find them planning their assault, along with a couple other tradespeople from the village).
@@ -48,9 +49,14 @@ A muffled BOOM emanates from a building just ahead.  DC 15 Wisdom (perception) t
 
 ### 6. Servant for a mid-level noble defects because they went too far
 
-- Theft in the marketplace
-- Fight or attack on a ship on the docks
-- Pandora's box style encounter in or near a magic shop, the market, or docks
+### 7. Theft in the marketplace
+
+### 8. Fight or attack on a ship on the docks
+
+### 9. Pandora's box style encounter in or near a magic shop, the market, or docks
+
+### 10. Heavy storm
+A heavy storm comes through at night, waking the party.  Skill carousel to minimize damage to the structure, followed by some repair mini-games?
 
 
 ## K'anchay Order Investigations
