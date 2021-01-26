@@ -444,6 +444,8 @@ function init() {
         element.dataset.value = null;
         let initiativeModifier = 0;
         if ("initiativeBonuses" in entity.dataset) {
+            console.log(entity.dataset.initiativeBonuses);
+            console.log(entity.dataset.initiativeBonuses.split(" "));
             let bonuses = entity.dataset.initiativeBonuses.split(" ");
             for (let i in bonuses) {
                 initiativeModifier += parseInt(bonuses[i]);
