@@ -134,6 +134,7 @@ function resetEncounter(encounter) {
     let table = document.getElementById(encounter.id + ".table");
     for (let i = 1; i < table.rows.length; ++i) {
         let row = table.rows[i];
+        row.classList.remove("hidden");
         reset(row.cells[1].children[0]);  // Initiative
         reset(row.cells[3].children[0]);  // HP
     }
@@ -143,6 +144,10 @@ function resetEncounter(encounter) {
 
 function showHideRow(rowId) {
     row = document.getElementById(rowId);
+    if (row.classList.contains("selected")) {
+        nextTurn(document.getElementById(row.dataset.encounterId));
+    }
+    row.classList.toggle("hidden");
     if (row.classList.contains("hidden")) {
         row.cells[10].children[0].innerHTML = "Show";
     }
