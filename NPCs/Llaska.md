@@ -1,5 +1,6 @@
 ---
-title: [Llaska](https://www.dndbeyond.com/profile/UngodlySalmon/characters/40935718)
+title: Llaska
+character_sheet: https://www.dndbeyond.com/profile/UngodlySalmon/characters/40935718
 ---
 
 Score Rolls:

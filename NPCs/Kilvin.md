@@ -1,5 +1,6 @@
 ---
-title: [Kilvin Greyjaw](https://www.dndbeyond.com/profile/UngodlySalmon/characters/27153043)
+title: Kilvin Greyjaw
+character_sheet: https://www.dndbeyond.com/profile/UngodlySalmon/characters/27153043
 ---
 
 Hill Dwarf

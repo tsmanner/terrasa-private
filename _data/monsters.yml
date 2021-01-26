@@ -19,7 +19,7 @@
   con: 16
   int: 3
   wis: 6
-    cha: 5
+  cha: 5
   ac: 8
   hp: 22
   initiative: -2

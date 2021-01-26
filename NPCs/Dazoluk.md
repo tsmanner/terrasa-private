@@ -1,5 +1,6 @@
 ---
-title: [Dazoluk Forgemaker](https://www.dndbeyond.com/profile/UngodlySalmon/characters/40740308)
+title: Dazoluk Forgemaker
+character_sheet: https://www.dndbeyond.com/profile/UngodlySalmon/characters/40740308
 ---
 
 "DAH zuh luck"
