@@ -268,7 +268,7 @@ function decrement5(element) {
 
 function update(element) {
     if (element.classList.contains("entity")){
-        let hpElement = row.cells[3].children[0];
+        let hpElement = element.cells[3].children[0];
         let currentHp = parseInt(hpElement.dataset.value);
         let maxHp = parseInt(hpElement.dataset.maximumValue);
         if (currentHp == 0) {
