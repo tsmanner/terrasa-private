@@ -443,9 +443,11 @@ function init() {
         let entity = document.getElementById(element.dataset.entityId);
         element.dataset.value = null;
         let initiativeModifier = 0;
-        let bonuses = entity.dataset.initiativeBonuses.split(" ");
-        for (let i in bonuses) {
-            initiativeModifier += parseInt(bonuses[i]);
+        if ("initiativeBonuses" in entity.dataset) {
+            let bonuses = entity.dataset.initiativeBonuses.split(" ");
+            for (let i in bonuses) {
+                initiativeModifier += parseInt(bonuses[i]);
+            }
         }
         element.dataset.modifier = initiativeModifier;
         element.dataset.nullFormat = "+{modifier}";
