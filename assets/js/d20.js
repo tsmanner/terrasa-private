@@ -78,7 +78,7 @@ function findSelectedRow(table) {
 
 function findNextRow(table, i) {
     for (let offset = 1; offset < table.rows.length - 1; ++offset) {
-        let next = ((i + offset) % (table.rows.length - 1)) + 1;
+        let next = ((i - 1 + offset) % (table.rows.length - 1)) + 1;
         if (!table.rows[next].classList.contains("hidden")) {
             return next;
         }
@@ -89,7 +89,7 @@ function findNextRow(table, i) {
 
 function findPreviousRow(table, i) {
     for (let offset = 1; offset < table.rows.length - 1; ++offset) {
-        let next = ((i - offset) % (table.rows.length - 1)) + 1;
+        let next = (i - 1 - offset + table.rows.length - 1) % (table.rows.length - 1) + 1;
         if (!table.rows[next].classList.contains("hidden")) {
             return next;
         }
@@ -132,6 +132,7 @@ function autoRollInitiative(encounter) {
 
 function resetEncounter(encounter) {
     let table = document.getElementById(encounter.id + ".table");
+    table.rows[0].classList.remove("selected");
     for (let i = 1; i < table.rows.length; ++i) {
         let row = table.rows[i];
         row.classList.remove("hidden");
