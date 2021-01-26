@@ -414,9 +414,9 @@ function init() {
     elements = document.getElementsByClassName("ability");
     for (let i = 0; i < elements.length; ++i) { let element = elements[i];
         let entity = document.getElementById(element.dataset.entityId);
-        console.log(entity.dataset);
-        element.dataset.value = entity.dataset[element.ability];
-        element.dataset.check = modifier(parseInt(entity.dataset[element.ability]));
+        console.log(entity.dataset, element.dataset.ability);
+        element.dataset.value = entity.dataset[element.dataset.ability];
+        element.dataset.check = modifier(parseInt(entity.dataset[element.dataset.ability]));
         element.dataset.save = element.dataset.check + parseInt(entity.dataset.proficiency);
         element.dataset.nullFormat = "???";
         element.dataset.format = "{value}|{check}|{save}";
