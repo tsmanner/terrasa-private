@@ -180,23 +180,23 @@ function roll(max, mod) {
 }
 
 
-function modifier(element) {
+function getModifier(element) {
     return "modifier" in element.dataset ? parseInt(element.dataset.modifier) : 0;
 }
 
 
 function minimumRoll(element) {
-    return 1 + modifier(element);
+    return 1 + getModifier(element);
 }
 
 
 function maximumRoll(element) {
-    return parseInt(element.dataset.die) + modifier(element);
+    return parseInt(element.dataset.die) + getModifier(element);
 }
 
 
 function doRoll(element) {
-    element.dataset.value = roll(element.dataset.die, modifier(element));
+    element.dataset.value = roll(element.dataset.die, getModifier(element));
     render(element);
 }
 
