@@ -481,7 +481,7 @@ function init() {
     for (let i = 0; i < elements.length; ++i) { let element = elements[i];
         let entity = document.getElementById(element.dataset.entityId);
         element.dataset.value = null;
-        let initiativeModifier = parseInt(entity.dataset["dexMod"]));
+        let initiativeModifier = parseInt(entity.dataset["dexMod"]);
         if ("initiativeBonuses" in entity.dataset) {
             let bonuses = entity.dataset.initiativeBonuses.split(" ");
             for (let i in bonuses) {
