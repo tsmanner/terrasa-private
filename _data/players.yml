@@ -11,7 +11,9 @@
   cha: 8
   ac: 16
   hp: 28
-  initiative: 3
+  bonuses:
+    str: proficiency
+    dex: proficiency
 
 - name: Caltrop Bloodless
   player: Ryan
@@ -26,13 +28,10 @@
   cha: 16
   ac: 13
   hp: 18
-  initiative: 5
   bonuses:
     int: proficiency
     dex: proficiency
-    initiative:
-      - dexMod
-      - chaMod
+    initiative: chaMod
 
 - name: Gluteus Maximus
   player: Kurt
@@ -47,4 +46,6 @@
   cha: 10
   ac: 15
   hp: 25
-  initiative: 3
+  bonuses:
+    str: proficiency
+    dex: proficiency

@@ -483,7 +483,7 @@ function init() {
         element.dataset.value = null;
         let initiativeModifier = 0;
         if ("initiativeBonuses" in entity.dataset) {
-            let bonuses = entity.dataset.initiativeBonuses.split(" ");
+            let bonuses = ["dexMod"].concat(entity.dataset.initiativeBonuses.split(" "));
             for (let i in bonuses) {
                 initiativeModifier += parseInt(entity.dataset[bonuses[i]]);
             }

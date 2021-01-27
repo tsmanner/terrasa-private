@@ -9,7 +9,6 @@
   cha: 5
   ac: 13
   hp: 13
-  initiative: 2
 
 - name: Zombie
   link: https://www.dndbeyond.com/monsters/zombie
@@ -22,14 +21,12 @@
   cha: 5
   ac: 8
   hp: 22
-  initiative: -2
 
 - name: Wight
   link: https://www.dndbeyond.com/monsters/wight
   proficiency: 2
   ac: 14
   hp: 45
-  initiative: 2
   str: 15
   dex: 14
   con: 16
@@ -48,4 +45,3 @@
   cha: 10
   ac: 20
   hp: 60
-  initiative: 1

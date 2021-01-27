@@ -10,7 +10,6 @@
   cha: 16
   ac: 21
   hp: 84
-  initiative: 0
 
 - name: Llaska
   link: https://www.dndbeyond.com/profile/UngodlySalmon/characters/40935718
@@ -24,7 +23,6 @@
   cha: 16
   ac: 16
   hp: 27
-  initiative: 4
 
 - name: Kilvin Greyjaw
   link: https://www.dndbeyond.com/profile/UngodlySalmon/characters/27153043
@@ -38,4 +36,3 @@
   cha: 10
   ac: 19
   hp: 30
-  initiative: -1
