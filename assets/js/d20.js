@@ -340,7 +340,7 @@ function renderValue(element) {
 
 
 function renderFunction(element) {
-    let result =
+    return element.dataset.format(element);
 }
 
 
