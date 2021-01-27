@@ -481,12 +481,10 @@ function init() {
     for (let i = 0; i < elements.length; ++i) { let element = elements[i];
         let entity = document.getElementById(element.dataset.entityId);
         element.dataset.value = null;
-        let initiativeModifier = 0;
+        let initiativeModifier = parseInt(entity.dataset["dexMod"]));
         if ("initiativeBonuses" in entity.dataset) {
-            let bonuses = ["dexMod"].concat(entity.dataset.initiativeBonuses.split(" "));
-            console.log(bonuses, entity.dataset);
+            let bonuses = entity.dataset.initiativeBonuses.split(" ");
             for (let i in bonuses) {
-                console.log(bonuses[i], parseInt(entity.dataset[bonuses[i]]));
                 initiativeModifier += parseInt(entity.dataset[bonuses[i]]);
             }
         }
