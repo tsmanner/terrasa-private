@@ -350,6 +350,11 @@ function printWithSign(value) {
 }
 
 
+function setAbilityFormat(encounter, abilityFormat) {
+
+}
+
+
 //
 // Initialization
 //
@@ -438,10 +443,13 @@ function init() {
     elements = document.getElementsByClassName("ability");
     for (let i = 0; i < elements.length; ++i) { let element = elements[i];
         let entity = document.getElementById(element.dataset.entityId);
+        element.dataset.score = element.dataset.ability + "Score";
+        element.dataset.mod = element.dataset.ability + "Mod";
+        element.dataset.save = element.dataset.ability + "Save";
         element.innerHTML = [
-            entity.dataset[element.dataset.ability + "Score"],
-            entity.dataset[element.dataset.ability + "Mod"],
-            entity.dataset[element.dataset.ability + "Save"]
+            element.dataset.score,
+            element.dataset.mod,
+            element.dataset.save
         ].map(printWithSign).join(" | ");
     }
 

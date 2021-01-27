@@ -9,6 +9,12 @@
       <button onclick="autoRollInitiative('{{ encounter_id }}.table')" >Auto Roll Initiative</button>
       <button onclick="resetEncounter('{{ encounter_id }}.table')" >Reset</button>
       <button onclick="showAll('{{ encounter_id }}.table')" >Show All</button>
+      <button onclick="toggleAbilityDisplayMenu({{ encounter_id }})" >Abilities</button>
+    </div>
+    <div>
+      <button onclick="setAbilityFormat({{ encounter_id }}, '{score}')">Score</button>
+      <button onclick="setAbilityFormat({{ encounter_id }}, '{mod}')">Modifier</button>
+      <button onclick="setAbilityFormat({{ encounter_id }}, '{save}')">Save</button>
     </div>
     <table id="{{ encounter_id }}.table">
       <tr class="encounter-table-header">
