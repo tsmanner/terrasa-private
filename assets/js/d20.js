@@ -475,7 +475,7 @@ function init() {
         element.dataset.chaSave = parseInt(element.dataset.chaMod) + parseInt(element.dataset.proficiency);
     }
 
-    setAbilityFormat("renderAbilityScore");
+    setAbilityFormat("renderAbilityMod");
 
     elements = document.getElementsByClassName("initiative");
     for (let i = 0; i < elements.length; ++i) { let element = elements[i];
