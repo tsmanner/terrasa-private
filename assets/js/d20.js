@@ -342,6 +342,14 @@ function modifier(score) {
 };
 
 
+function printWithSign(value) {
+    if (parseInt(value) >= 0) {
+        return "+" + value;
+    }
+    return value;
+}
+
+
 //
 // Initialization
 //
@@ -434,7 +442,7 @@ function init() {
             entity.dataset[element.dataset.ability + "Score"],
             entity.dataset[element.dataset.ability + "Mod"],
             entity.dataset[element.dataset.ability + "Save"]
-        ].join(" | ");
+        ].map(printWithSign).join(" | ");
     }
 
     elements = document.getElementsByClassName("initiative");
