@@ -266,26 +266,24 @@ function decrement5(element) {
 //
 
 
-function renderAbilityScore(element) {
-    return document.getElementById(element.dataset.entityId).dataset[element.dataset.ability + "Score"];
-}
-
-
-function renderAbilityMod(element) {
-    return stringWithSign(modifier(document.getElementById(element.dataset.entityId).dataset[element.dataset.ability + "Score"]));
-}
-
-
-function renderAbilitySave(element) {
-    let entity = document.getElementById(element.dataset.entityId);
-    let save = modifier(entity.dataset[element.dataset.ability + "Score"]);
-    if ((element.dataset.ability + "Bonuses") in entity.dataset) {
-        let bonuses = entity.dataset[element.dataset.ability + "Bonuses"].split(" ");
-        for (let i in bonuses) {
-            save += parseInt(entity.dataset[bonuses[i]]);
+let RenderFunctions = {
+    renderAbilityScore: function (element) {
+        return document.getElementById(element.dataset.entityId).dataset[element.dataset.ability + "Score"];
+    },
+    renderAbilityMod: function (element) {
+        return stringWithSign(modifier(document.getElementById(element.dataset.entityId).dataset[element.dataset.ability + "Score"]));
+    },
+    renderAbilitySave: function (element) {
+        let entity = document.getElementById(element.dataset.entityId);
+        let save = modifier(entity.dataset[element.dataset.ability + "Score"]);
+        if ((element.dataset.ability + "Bonuses") in entity.dataset) {
+            let bonuses = entity.dataset[element.dataset.ability + "Bonuses"].split(" ");
+            for (let i in bonuses) {
+                save += parseInt(entity.dataset[bonuses[i]]);
+            }
         }
+        return stringWithSign(save);
     }
-    return stringWithSign(save);
 }
 
 
@@ -340,7 +338,7 @@ function renderValue(element) {
 
 
 function renderFunction(element) {
-    return element.dataset.format(element);
+    return RenderFunctions[element.dataset.format](element);
 }
 
 
