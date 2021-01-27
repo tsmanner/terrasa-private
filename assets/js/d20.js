@@ -457,7 +457,7 @@ function init() {
     // Initialize Entity mod and save data
     elements = document.getElementsByClassName("entity");
     for (let i = 0; i < elements.length; ++i) { let element = elements[i];
-        abilityNames.map(function (abilityName) { initEntityAbilityData(entity, abilityName); });
+        abilityNames.map(function (abilityName) { initEntityAbilityData(element, abilityName); });
     }
 
     // Initialize 'roll' and 'value-range' instances
