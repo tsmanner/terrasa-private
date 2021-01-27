@@ -12,9 +12,9 @@
       <button onclick="toggleAbilityDisplayMenu({{ encounter_id }})" >Abilities</button>
     </div>
     <div>
-      <button onclick="setAbilityFormat({{ encounter_id }}, '{value}')">Score</button>
-      <button onclick="setAbilityFormat({{ encounter_id }}, '{mod}')">Modifier</button>
-      <button onclick="setAbilityFormat({{ encounter_id }}, '{save}')">Save</button>
+      <button onclick="setAbilityFormat({{ encounter_id }}, renderAbilityScore)">Score</button>
+      <button onclick="setAbilityFormat({{ encounter_id }}, renderAbilityMod)">Modifier</button>
+      <button onclick="setAbilityFormat({{ encounter_id }}, renderAbilitySave)">Save</button>
     </div>
     <table id="{{ encounter_id }}.table">
       <tr class="encounter-table-header">

@@ -197,7 +197,7 @@ function maximumRoll(element) {
 
 function doRoll(element) {
     element.dataset.value = roll(element.dataset.die, getModifier(element));
-    render(element);
+    renderValue(element);
 }
 
 
@@ -212,7 +212,7 @@ function inputValue(element) {
         value = parseInt(value);
         if (minimum(element) <= value && value <= maximum(element)) {
             element.dataset.value = value;
-            render(element);
+            renderValue(element);
         }
         else {
             inputValue(element);
@@ -224,7 +224,7 @@ function inputValue(element) {
 function increment(element) {
     if (!("maximumValue" in element.dataset) || parseInt(element.dataset.value) < parseInt(element.dataset.maximumValue)) {
         element.dataset.value = parseInt(element.dataset.value) + 1;
-        render(element);
+        renderValue(element);
     }
 }
 
@@ -237,14 +237,14 @@ function increment5(element) {
     else {
         element.dataset.value = newValue;
     }
-    render(element);
+    renderValue(element);
 }
 
 
 function decrement(element) {
     if (!("minimumValue" in element.dataset) || parseInt(element.dataset.value) > parseInt(element.dataset.minimumValue)) {
         element.dataset.value = parseInt(element.dataset.value) - 1;
-        render(element);
+        renderValue(element);
     }
 }
 
@@ -257,7 +257,35 @@ function decrement5(element) {
     else {
         element.dataset.value = newValue;
     }
-    render(element);
+    renderValue(element);
+}
+
+
+//
+// Ability
+//
+
+
+function renderAbilityScore(element) {
+    return document.getElementById(element.dataset.entityId).dataset[element.dataset.ability + "Score"];
+}
+
+
+function renderAbilityMod(element) {
+    return stringWithSign(modifier(document.getElementById(element.dataset.entityId).dataset[element.dataset.ability + "Score"]));
+}
+
+
+function renderAbilitySave(element) {
+    let entity = document.getElementById(element.dataset.entityId);
+    let save = modifier(entity.dataset[element.dataset.ability + "Score"]);
+    if ((element.dataset.ability + "Bonuses") in entity.dataset) {
+        let bonuses = entity.dataset[element.dataset.ability + "Bonuses"].split(" ");
+        for (let i in bonuses) {
+            save += parseInt(entity.dataset[bonuses[i]]);
+        }
+    }
+    return stringWithSign(save);
 }
 
 
@@ -287,7 +315,7 @@ function update(element) {
 }
 
 
-function render(element) {
+function renderValue(element) {
     let result = "{value}";
     if (element.dataset.value == null || element.dataset.value == "null") {
         if ("nullFormat" in element.dataset) {
@@ -308,6 +336,11 @@ function render(element) {
             update(document.getElementById(cascade));
         }
     }
+}
+
+
+function renderFunction(element) {
+    let result =
 }
 
 
@@ -333,7 +366,7 @@ function minimum(element) {
 
 function reset(element) {
     element.dataset.value = element.dataset.initialValue;
-    render(element);
+    renderValue(element);
 }
 
 
@@ -342,7 +375,7 @@ function modifier(score) {
 };
 
 
-function printWithSign(value) {
+function stringWithSign(value) {
     if (parseInt(value) >= 0) {
         return "+" + value;
     }
@@ -350,8 +383,12 @@ function printWithSign(value) {
 }
 
 
-function setAbilityFormat(encounter, abilityFormat) {
-
+function setAbilityFormat(abilityFormat) {
+    elements = document.getElementsByClassName("ability");
+    for (let i = 0; i < elements.length; ++i) { let element = elements[i];
+        element.dataset.format = abilityFormat;
+        renderFunction(element);
+    }
 }
 
 
@@ -440,15 +477,7 @@ function init() {
         element.dataset.chaSave = parseInt(element.dataset.chaMod) + parseInt(element.dataset.proficiency);
     }
 
-    elements = document.getElementsByClassName("ability");
-    for (let i = 0; i < elements.length; ++i) { let element = elements[i];
-        let entity = document.getElementById(element.dataset.entityId);
-        element.dataset.value = entity.dataset[element.dataset.ability + "Score"];
-        element.dataset.mod = entity.dataset[element.dataset.ability + "Mod"];
-        element.dataset.save = entity.dataset[element.dataset.ability + "Save"];
-        element.dataset.format = "{value} | {mod} | {save}";
-        render(element);
-    }
+    setAbilityFormat(renderAbilityScore);
 
     elements = document.getElementsByClassName("initiative");
     for (let i = 0; i < elements.length; ++i) { let element = elements[i];
@@ -464,7 +493,7 @@ function init() {
         element.dataset.modifier = initiativeModifier;
         element.dataset.nullFormat = "+{modifier}";
         element.dataset.format = "{value}";
-        render(element);
+        renderValue(element);
     }
 
     // Sort all the encounter tables by initiative
