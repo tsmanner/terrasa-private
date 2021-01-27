@@ -443,10 +443,10 @@ function init() {
     elements = document.getElementsByClassName("ability");
     for (let i = 0; i < elements.length; ++i) { let element = elements[i];
         let entity = document.getElementById(element.dataset.entityId);
-        element.dataset.score = entity.dataset[element.dataset.ability + "Score"];
+        element.dataset.value = entity.dataset[element.dataset.ability + "Score"];
         element.dataset.mod = entity.dataset[element.dataset.ability + "Mod"];
         element.dataset.save = entity.dataset[element.dataset.ability + "Save"];
-        element.dataset.format = "{score} | {mod} | {save}";
+        element.dataset.format = "{value} | {mod} | {save}";
         render(element);
     }
 
