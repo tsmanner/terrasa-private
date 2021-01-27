@@ -338,6 +338,7 @@ function renderValue(element) {
 
 
 function renderFunction(element) {
+    console.log(element.dataset, element.dataset.format);
     return RenderFunctions[element.dataset.format](element);
 }
 
