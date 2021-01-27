@@ -446,11 +446,8 @@ function init() {
         element.dataset.score = element.dataset.ability + "Score";
         element.dataset.mod = element.dataset.ability + "Mod";
         element.dataset.save = element.dataset.ability + "Save";
-        element.innerHTML = [
-            element.dataset.score,
-            element.dataset.mod,
-            element.dataset.save
-        ].map(printWithSign).join(" | ");
+        element.dataset.format = "{score} | {mod} | {save}";
+        render(element);
     }
 
     elements = document.getElementsByClassName("initiative");
