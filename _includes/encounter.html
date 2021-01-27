@@ -3,18 +3,17 @@
   <summary>{{ include.name }}</summary>
   <div class="encounter" id="{{ encounter_id }}">
     <div>
-      <button onclick="sortEncounter('{{ encounter_id }}.table')" >Sort</button>
-      <button onclick="previousTurn('{{ encounter_id }}.table')">Previous</button>
-      <button onclick="nextTurn('{{ encounter_id }}.table')">Next</button>
-      <button onclick="autoRollInitiative('{{ encounter_id }}.table')" >Auto Roll Initiative</button>
-      <button onclick="resetEncounter('{{ encounter_id }}.table')" >Reset</button>
-      <button onclick="showAll('{{ encounter_id }}.table')" >Show All</button>
-      <button onclick="toggleAbilityDisplayMenu({{ encounter_id }})" >Abilities</button>
-    </div>
-    <div>
       <button onclick="setAbilityFormat('renderAbilityScore')">Score</button>
       <button onclick="setAbilityFormat('renderAbilityMod')">Modifier</button>
       <button onclick="setAbilityFormat('renderAbilitySave')">Save</button>
+      <button onclick="showAll('{{ encounter_id }}.table')" >Show All</button>
+      <button onclick="resetEncounter('{{ encounter_id }}.table')" >Reset</button>
+    </div>
+    <div>
+      <button onclick="autoRollInitiative('{{ encounter_id }}.table')" >Auto Roll Initiative</button>
+      <button onclick="sortEncounter('{{ encounter_id }}.table')" >Sort</button>
+      <button onclick="previousTurn('{{ encounter_id }}.table')">Previous</button>
+      <button onclick="nextTurn('{{ encounter_id }}.table')">Next</button>
     </div>
     <table id="{{ encounter_id }}.table">
       <tr class="encounter-table-header">
