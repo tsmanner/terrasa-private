@@ -1,3 +1,6 @@
+var abilityNames = ["str", "dex", "con", "int", "wis", "cha"];
+
+
 function entityTableRowHasInitiativeValue(row) {
     let value = row.cells[1].children[0].dataset.value;
     return value != "null" && value != null;
@@ -268,21 +271,21 @@ function decrement5(element) {
 
 let RenderFunctions = {
     renderAbilityScore: function (element) {
-        return document.getElementById(element.dataset.entityId).dataset[element.dataset.ability + "Score"];
+        return document.getElementById(element.dataset.entityId).dataset[element.dataset.ability];
     },
     renderAbilityMod: function (element) {
-        return stringWithSign(modifier(document.getElementById(element.dataset.entityId).dataset[element.dataset.ability + "Score"]));
+        return toStringWithSign(modifier(document.getElementById(element.dataset.entityId).dataset[element.dataset.ability]));
     },
     renderAbilitySave: function (element) {
         let entity = document.getElementById(element.dataset.entityId);
-        let save = modifier(entity.dataset[element.dataset.ability + "Score"]);
+        let save = modifier(entity.dataset[element.dataset.ability]);
         if ((element.dataset.ability + "Bonuses") in entity.dataset) {
             let bonuses = entity.dataset[element.dataset.ability + "Bonuses"].split(" ");
             for (let i in bonuses) {
                 save += parseInt(entity.dataset[bonuses[i]]);
             }
         }
-        return stringWithSign(save);
+        return toStringWithSign(save);
     }
 }
 
@@ -346,7 +349,7 @@ function maximum(element) {
     if (element.classList.contains("roll")) {
         return maximumRoll(element);
     }
-    else if (element.classList.contains("value")) {
+    else if (element.classList.contains("value-range")) {
         return element.dataset.maximumValue;
     }
 }
@@ -356,7 +359,7 @@ function minimum(element) {
     if (element.classList.contains("roll")) {
         return minimumRoll(element);
     }
-    else if (element.classList.contains("value")) {
+    else if (element.classList.contains("value-range")) {
         return element.dataset.minimumValue
     }
 }
@@ -373,7 +376,7 @@ function modifier(score) {
 };
 
 
-function stringWithSign(value) {
+function toStringWithSign(value) {
     if (parseInt(value) >= 0) {
         return "+" + value;
     }
@@ -442,15 +445,28 @@ function registerEventListeners(eventName) {
 }
 
 
+function initEntityAbilityData(entity, abilityName) {
+    entity.dataset[abilityName + "Mod"] = modifier(parseInt(entity.dataset[abilityName]));
+    entity.dataset[abilityName + "Save"] = parseInt(entity.dataset[abilityName + "Mod"]) + parseInt(entity.dataset.proficiency);
+}
+
+
 function init() {
     let elements = [];
-    // Initialize 'roll' and 'value' instances
+
+    // Initialize Entity mod and save data
+    elements = document.getElementsByClassName("entity");
+    for (let i = 0; i < elements.length; ++i) { let element = elements[i];
+        abilityNames.map(function (abilityName) { initEntityAbilityData(entity, abilityName); });
+    }
+
+    // Initialize 'roll' and 'value-range' instances
     elements = document.getElementsByClassName("roll");
     for (let i = 0; i < elements.length; ++i) { let element = elements[i];
         element.dataset.initialValue = null;
         reset(element);
     }
-    elements = document.getElementsByClassName("value");
+    elements = document.getElementsByClassName("value-range");
     for (let i = 0; i < elements.length; ++i) { let element = elements[i];
         reset(element);
     }
@@ -458,22 +474,6 @@ function init() {
     registerEventListeners("click");        // Left Click
     registerEventListeners("dblclick");     // Double Click
     registerEventListeners("contextmenu");  // Right Click
-
-    elements = document.getElementsByClassName("entity");
-    for (let i = 0; i < elements.length; ++i) { let element = elements[i];
-        element.dataset.strMod = modifier(parseInt(element.dataset.strScore));
-        element.dataset.dexMod = modifier(parseInt(element.dataset.dexScore));
-        element.dataset.conMod = modifier(parseInt(element.dataset.conScore));
-        element.dataset.intMod = modifier(parseInt(element.dataset.intScore));
-        element.dataset.wisMod = modifier(parseInt(element.dataset.wisScore));
-        element.dataset.chaMod = modifier(parseInt(element.dataset.chaScore));
-        element.dataset.strSave = parseInt(element.dataset.strMod) + parseInt(element.dataset.proficiency);
-        element.dataset.dexSave = parseInt(element.dataset.dexMod) + parseInt(element.dataset.proficiency);
-        element.dataset.conSave = parseInt(element.dataset.conMod) + parseInt(element.dataset.proficiency);
-        element.dataset.intSave = parseInt(element.dataset.intMod) + parseInt(element.dataset.proficiency);
-        element.dataset.wisSave = parseInt(element.dataset.wisMod) + parseInt(element.dataset.proficiency);
-        element.dataset.chaSave = parseInt(element.dataset.chaMod) + parseInt(element.dataset.proficiency);
-    }
 
     setAbilityFormat("renderAbilityMod");
 

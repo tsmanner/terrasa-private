@@ -40,12 +40,12 @@
           id="{{ entity_id }}"
           data-encounter-id="{{ encounter_id }}"
           data-proficiency="{{ entity.proficiency }}"
-          data-str-score="{{ entity.str }}"
-          data-dex-score="{{ entity.dex }}"
-          data-con-score="{{ entity.con }}"
-          data-int-score="{{ entity.int }}"
-          data-wis-score="{{ entity.wis }}"
-          data-cha-score="{{ entity.cha }}"
+          data-str="{{ entity.str }}"
+          data-dex="{{ entity.dex }}"
+          data-con="{{ entity.con }}"
+          data-int="{{ entity.int }}"
+          data-wis="{{ entity.wis }}"
+          data-cha="{{ entity.cha }}"
           {% for bonus in entity.bonuses %}data-{{ bonus[0] }}-bonuses="{{ bonus[1] | join: ' ' }}" {% endfor %}>
           <td id="{{ entity_id }}.name">
             {% if entity.link == nil %}
@@ -63,19 +63,19 @@
             data-die="20"/></td>
           <td id="{{ entity_id }}.ac">{{ entity.ac }}</td>
           <td id="{{ entity_id }}.hp"><button
-            class="value decrement-click decrement5-ctrl-click increment-contextmenu increment5-ctrl-contextmenu"
+            class="value-range decrement-click decrement5-ctrl-click increment-contextmenu increment5-ctrl-contextmenu"
             id="{{ entity_id }}.hp.button"
             data-cascade-update="{{ entity_id }}"
             data-format="{value}/{maximumValue}"
             data-maximum-value="{{ entity.hp }}"
             data-minimum-value="0"
             data-initial-value="{{ entity.hp }}"/></td>
-          <td class="ability" data-ability="str" data-entity-id="{{ entity_id }}"/>
-          <td class="ability" data-ability="dex" data-entity-id="{{ entity_id }}"/>
-          <td class="ability" data-ability="con" data-entity-id="{{ entity_id }}"/>
-          <td class="ability" data-ability="int" data-entity-id="{{ entity_id }}"/>
-          <td class="ability" data-ability="wis" data-entity-id="{{ entity_id }}"/>
-          <td class="ability" data-ability="cha" data-entity-id="{{ entity_id }}"/>
+          <td class="ability value" data-source-attribute="str" data-source-id="{{ entity_id }}"/>
+          <td class="ability value" data-source-attribute="dex" data-source-id="{{ entity_id }}"/>
+          <td class="ability value" data-source-attribute="con" data-source-id="{{ entity_id }}"/>
+          <td class="ability value" data-source-attribute="int" data-source-id="{{ entity_id }}"/>
+          <td class="ability value" data-source-attribute="wis" data-source-id="{{ entity_id }}"/>
+          <td class="ability value" data-source-attribute="cha" data-source-id="{{ entity_id }}"/>
           <td id="{{ entity_id }}.hp"><button onclick="showHideRow('{{ entity_id }}')"/>Hide</td>
         </tr>
       {% endfor %}
