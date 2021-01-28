@@ -271,14 +271,14 @@ function decrement5(element) {
 
 let RenderFunctions = {
     renderAbilityScore: function (element) {
-        return document.getElementById(element.dataset.entityId).dataset[element.dataset.ability];
+        return document.getElementById(element.dataset.sourceId).dataset[element.dataset.sourceAttribute];
     },
     renderAbilityMod: function (element) {
-        return toStringWithSign(modifier(document.getElementById(element.dataset.entityId).dataset[element.dataset.ability]));
+        return toStringWithSign(modifier(document.getElementById(element.dataset.sourceId).dataset[element.dataset.sourceAttribute]));
     },
     renderAbilitySave: function (element) {
-        let entity = document.getElementById(element.dataset.entityId);
-        let save = modifier(entity.dataset[element.dataset.ability]);
+        let entity = document.getElementById(element.dataset.sourceId);
+        let save = modifier(entity.dataset[element.dataset.sourceAttribute]);
         if ((element.dataset.ability + "Bonuses") in entity.dataset) {
             let bonuses = entity.dataset[element.dataset.ability + "Bonuses"].split(" ");
             for (let i in bonuses) {
