@@ -3,7 +3,6 @@
 ## Female
 
 - Canchon
-- Illapha
 - Inti
 - Mayu
 - Uchu
@@ -17,19 +16,20 @@
 
 ## Male
 
-- Kayara
 - Khuyana
-- Nayarak
 - Oqllo
 - Shulla
 - Sumat'Ika
 - Suyana
 
 - Achiq: town clerk
+- Illapha: Head of the town watch
 - Izhi: Ryan's former pirate captain
+- Kayara: Corrupt member of City Council, lives in Hanaska District
 - Llaska and Michik: Pair of former petty criminals, edged out by the new "king" in town.  Met the party at The Rusty Nail
 - Manco: Necromancer and current leader of the Cult of Myrkul (God of Death)
 - Myrkul: God of Death
+- Nayarak: Jewelry Mogul in Yalaqta, working with the Cult of Myrkul out of greed.  Lives in Hanaska District, and helps the cult launder materiel.
 - Ttika: "Cart Guy" they chased and stabbed, then enlisted to tell Llaska and Michik to meet them near the hideout at 8
 - Thani: guard at silo
 - Waqar: dock guard

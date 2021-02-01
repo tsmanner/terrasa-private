@@ -16,8 +16,8 @@
       <button onclick="nextTurn('{{ encounter_id }}.table')">Next</button>
     </div>
     <table id="{{ encounter_id }}.table">
-      <tr class="encounter-table-header">
-        <th>Character</th>
+      <thead><tr>
+        <th>Name</th>
         <th>Init</th>
         <th>AC</th>
         <th>HP</th>
@@ -27,57 +27,11 @@
         <th>INT</th>
         <th>WIS</th>
         <th>CHA</th>
-        <th>Show<br/>Hide</th>
-      </tr>
+      </tr></thead>
 
       {% assign encounter = page.encounters | where: "name", include.name | first %}
       {% for entity_name in encounter.entities %}
-        {% assign entity = site.data.players | concat: site.data.npcs | concat: site.data.monsters | where: "name", entity_name | first %}
-        {% assign entity_id = encounter_id | append: "." | append: entity.name | append: "." | append: forloop.index | replace: ' ', '_' %}
-
-        <tr
-          class="entity"
-          id="{{ entity_id }}"
-          data-encounter-id="{{ encounter_id }}"
-          data-proficiency="{{ entity.proficiency }}"
-          data-str="{{ entity.str }}"
-          data-dex="{{ entity.dex }}"
-          data-con="{{ entity.con }}"
-          data-int="{{ entity.int }}"
-          data-wis="{{ entity.wis }}"
-          data-cha="{{ entity.cha }}"
-          {% for bonus in entity.bonuses %}data-{{ bonus[0] }}-bonuses="{{ bonus[1] | join: ' ' }}" {% endfor %}>
-          <td id="{{ entity_id }}.name">
-            {% if entity.link == nil %}
-              <a>{{ entity.name }}</a>
-            {% else %}
-              <a target="_blank" rel="noopener noreferrer" href="{{ entity.link }}">{{ entity.name }}</a>
-            {% endif %}
-          </td>
-          <td id="{{ entity_id }}.initiative"><button
-            class="initiative roll roll-click input-ctrl-click reset-contextmenu"
-            id="{{ entity_id }}.initiative.button"
-            data-entity-id="{{ entity_id }}"
-            data-null-format="+{modifier}"
-            data-modifier="{{ entity.initiative }}"
-            data-die="20"/></td>
-          <td id="{{ entity_id }}.ac">{{ entity.ac }}</td>
-          <td id="{{ entity_id }}.hp"><button
-            class="value-range decrement-click decrement5-ctrl-click increment-contextmenu increment5-ctrl-contextmenu"
-            id="{{ entity_id }}.hp.button"
-            data-cascade-update="{{ entity_id }}"
-            data-format="{value}/{maximumValue}"
-            data-maximum-value="{{ entity.hp }}"
-            data-minimum-value="0"
-            data-initial-value="{{ entity.hp }}"/></td>
-          <td class="ability value" data-source-attribute="str" data-source-id="{{ entity_id }}"/>
-          <td class="ability value" data-source-attribute="dex" data-source-id="{{ entity_id }}"/>
-          <td class="ability value" data-source-attribute="con" data-source-id="{{ entity_id }}"/>
-          <td class="ability value" data-source-attribute="int" data-source-id="{{ entity_id }}"/>
-          <td class="ability value" data-source-attribute="wis" data-source-id="{{ entity_id }}"/>
-          <td class="ability value" data-source-attribute="cha" data-source-id="{{ entity_id }}"/>
-          <td id="{{ entity_id }}.hp"><button onclick="showHideRow('{{ entity_id }}')"/>Hide</td>
-        </tr>
+        {% include common/entity.html name=entity_name entity_prefix=forloop.index %}
       {% endfor %}
 
     </table>

@@ -16,7 +16,26 @@ Manco leads the established cult, and is staunchly opposed to Izhi's brash plans
 
 ### Izhi's Machinations
 
-Forcible covert (i.e. not explicitly the Cult in control, just some "boss" figure) takeover of Yalaqta criminals, to attempt to organize them well enough they can weaken the city from the inside in the case of a seige.  Izhi is in league with one or more (politician|aristocrat|mogul)(s) in Yalaqta, smuggling good for them in exchange for convenient distribution of guard patrols, "randomly" never being chosen for searches, maps of catacombs and sewers, etc.  Izhi has slowly been reinforcing their relationship, with the goal of luring them into Myrkul's service, by bolstering them with small bits of necromantic magic (temp HP, that sort of thing, via tonics, scrolls, and wonderous items).
+Forcible covert (i.e. not explicitly the Cult in control, just some "boss" figure) takeover of Yalaqta criminals, to attempt to organize them well enough they can weaken the city from the inside in the case of a seige.  Izhi is in league with one or more (politician|aristocrat|mogul)(s) in Yalaqta, smuggling goods for them in exchange for convenient distribution of guard patrols, "randomly" never being chosen for searches, maps of catacombs and sewers, etc.  Izhi has slowly been reinforcing their relationship, with the goal of luring them into Myrkul's service, by bolstering them with small bits of necromantic magic (temp HP, that sort of thing, via tonics, scrolls, and wonderous items).
+  - A handful of small private docks in the upper class part of town are being used to ferry information and small loads of goods between Izhi's ships and the mainland.
+    1. Night time perception near the water as a skiff breaks off from an approaching ship and travels east toward the Hanaska District.
+    2. Night time perception near the water as a skiff launches from the Hanaska District and travels west toward the docks, or southwest away from the city toward a departing ship.
+      - DC 13 from the mouth of the river or from the Hanaska beach
+      - DC 18 from the docks
+    3. Evidence of repeated loading/unloading of cargo at a couple of private docks in the Hanaska District
+      - DC 15 perception from the waterfront that something is up
+      - DC 11 investigation from one of the private docks
+    4. Notice a boat at a private dock that doesn't fit in: it appears to be a dinghy designed for shuttling to and from a tall ship, not a recreational skiff like the rest.  It's in worse shape than the other boats, and has no ornamentation, including no name or other markings.
+      - DC 13 perception from the Hanaska District waterfront
+      - DC 16 perception from the docks
+      - Leads to (3.)
+      - Staking it out will result in (2.)
+  - City Council member Kayara, a resident of the Hanaska District that doesn't have waterfront, but has an easement to a small private dock.  He has been taking payments in the form of gold and a supply of tonics that grant 10 temporary HP, to arrange for gaps in the town watch patrols in the Hanaska District waterfront.  He doesn't know who Izhi is, though he has his suspicions.  He is looking the other way for money, and wants to keep it that way, trying to learn as little as possible about his benefactors.
+  - Jewelry Mogul Nayarak runs a very successful set of jewelry stores, and is the head of the Yalaqta market merchant's association.
+    - He is straight up in league with the cult, though he does not subscribe to their beliefs or goals necessarily.  A middle aged man, he seeks power and youth, being drawn to the power of necromancy anyway, a relationship with the cult was symbiotic.
+    - He has learned a couple of necromantic secrets and is able to imbue them into jewelry, saving the most powerful for himself.
+    - He came across a supply of grain from "an old family friend" but had no means to sell it himself, so he used his status as chair of the market merchant's association to find some people willing to buy it to resell in the market.
+    - He owns property all over the city, several pieces under a pseudonym.  One of these is the building used in the "Helmed Horror" event.
 
 Weaken the population of farmers and tradespeople in the region to put the city's food supplies at risk and increase the load of sick or injured.
 

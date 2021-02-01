@@ -30,10 +30,11 @@ defaults:
   - scope:
       path: ""
     values:
+      layout: post
       js:
-        - /assets/js/d20.js
+        - /assets/common/js/encounter.js
       css:
-        - /assets/css/encounter.css
+        - /assets/common/css/encounter.css
 
 #
 # Footer

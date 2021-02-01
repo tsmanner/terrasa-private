@@ -295,7 +295,7 @@ let RenderFunctions = {
 //
 
 
-function update(element) {
+function render(element) {
     if (element.classList.contains("entity")) {
         let hpElement = element.cells[3].children[0];
         let currentHp = parseInt(hpElement.dataset.value);
@@ -305,7 +305,7 @@ function update(element) {
             element.classList.add("unconscious");
         }
         else if (currentHp <= (maxHp / 2)) {
-            element.classList.remove("unconscious", "healthy");
+            element.classList.remove("healthy", "unconscious");
             element.classList.add("bloodied");
         }
         else {
@@ -334,7 +334,7 @@ function renderValue(element) {
         let cascades = element.dataset.cascadeUpdate.split(" ");
         for (let i in cascades) {
             let cascade = cascades[i];
-            update(document.getElementById(cascade));
+            render(document.getElementById(cascade));
         }
     }
 }
@@ -419,8 +419,8 @@ function registerEventListeners(eventName) {
     let predicates = {
         noMod: function (f) { return function (event) { if (!(event.shiftKey || event.ctrlKey || event.altKey)) { f(event) } }; },
         shift: function (f) { return function (event) { if (event.shiftKey) { f(event); } }; },
-        ctrl: function (f) { return function (event) { if (event.ctrlKey) { f(event); } }; },
-        alt: function (f) { return function (event) { if (event.altKey) { f(event); } }; }
+        ctrl:  function (f) { return function (event) { if (event.ctrlKey)  { f(event); } }; },
+        alt:   function (f) { return function (event) { if (event.altKey)   { f(event); } }; }
     }
 
     for (let actionName in actions) {
@@ -468,7 +468,11 @@ function init() {
     }
     elements = document.getElementsByClassName("value-range");
     for (let i = 0; i < elements.length; ++i) { let element = elements[i];
-        reset(element);
+        element.dataset.value = element.dataset.initialValue;
+    }
+    elements = document.getElementsByClassName("value");
+    for (let i = 0; i < elements.length; ++i) { let element = elements[i];
+        ;
     }
     // Register Event Listeners
     registerEventListeners("click");        // Left Click
