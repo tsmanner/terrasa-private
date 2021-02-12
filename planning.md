@@ -77,6 +77,7 @@ A heavy storm comes through at night, waking the party.  Skill carousel to minim
 
 If they wait a bit and then talk to him
 
+
 **Llaska:** These guys are no joke, they're moving some sort of contraband through here, I'm just not sure how they're doing it yet, or what it is.  There are rumors of draughts that make you see spirits, jewels that cure disease, and something about animating runes.  Dunno what that's about, sounds bad for us though.  I keep hearing whispers about activity on the water, but I haven't been able to dredge anything concrete up at the docks yet...  Have you guys found anything?
 
 
