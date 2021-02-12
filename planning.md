@@ -32,7 +32,6 @@ Down time, if they want it.  Nothing _pressing_ is going on, the order is invest
 
 
 ## Yalaqta Random Events
-<!-- <button id="YalaqtaRandomEvents" data-die="10" data-null-format="Roll Event (d{die})" data-format="Rolled Event {value}" class="roll roll-click reset-contextmenu"/> -->
 
 
 ### 1. People from a nearby village are fleeing to Yalaqta
