@@ -6,10 +6,10 @@ full-width: true
 encounters:
   - name: Refugees Being Chased
     entities:
-      - Brother Gromag
-      - Caltrop Bloodless
-      - Gluteus Maximus
-      - Kilvin Greyjaw
+      - common.players.Brother Gromag
+      - common.players.Caltrop Bloodless
+      - common.players.Gluteus Maximus
+      - npcs.Kilvin Greyjaw
       - Wight
       - Zombie
       - Zombie
@@ -37,14 +37,14 @@ Down time, if they want it.  Nothing _pressing_ is going on, the order is invest
 
 ### 1. People from a nearby village are fleeing to Yalaqta
 A heavy storm blows in in the night,  DC 12 Wisdom (perception) check to see or hear the villagers running toward the gate.  Some people are in the distance on the road, they don't appear to be organized the way a caravan or militia would be, but it does appear to be a fairly large group.
-{% include encounter.html name="Refugees Being Chased" %}
+{% include dnd/encounter.html name="Refugees Being Chased" %}
 
 ### 2. People from a nearby village have fled to Yalaqta
 The party is hailed by a member of a group of refugees from a nearby village, who is begging for help.  Their village was overrun by undead and they fled to Yalaqta.  One cannot find his daughter, he last saw her after they entered the city and is worried that she was kidnapped or is lost in Yalaqta.  Another's siblings refused to leave the village, insisting that they could take it back (breadcrumb to go to the village and find them planning their assault, along with a couple other tradespeople from the village).
 
 ### 3. An accident in a necromancer's lab (Nayarak) releases an abomination
 A muffled BOOM emanates from a building just ahead.  DC 15 Wisdom (perception) to catch the shutters on a building shake, dust falling from them, and a small trickle of smoke to begin rising from them.  On a failure, as the party walks past, BANG, the door is smashed off the front and a monster burst out, engaging them.  On a success, if they investigate, they can peer through (Dexterity (stealth) 14) to see a Helmed Horror emerging from a basement, from which smoke is pouring.  It will start destroying some containers in the building before heading toward the door, which it will smash open, step into the street, and attack the nearest people it sees, unless the party intervenes first.
-{% include encounter.html name="Helmed Horror" %}
+{% include dnd/encounter.html name="Helmed Horror" %}
 If they enter the building afterwords, they see a door to the basement that was smashed open and some smoke trickling out.  If they enter, downstairs they find a storage cellar with a few empty crates lying around and a dirt floor.  A DC 10 investigation reveals a false wall by the fact that the trickle of smoke is emitting from what appears to be solid stone.  The illusory segment of rock hides a lab with a two work benches in it, one of which was sundered through the middle, the other tipped over.  The floor is littered with broken glass and an assortment of metal tubes, wire frames, and broken alchemical tools.  Shelves ringed the perimeter, but have been mostly torn down off the walls.  Beneath them, there are various preserved organs and unidentifiable fleshy masses, in varying states of decay.  A floor to ceiling tank in the corner, about 3' in diameter, with tubes connecting to the top and bottom, is shattered.  The smoke is rising from it's base.  (After about one minute, a gout of flame will erupt from it, DEX 15 for 2d6 fire damage and the room begins to burn).
 - Investigation check
   - DC 12 find a newly finished teak cleat near the entrance
