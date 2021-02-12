@@ -1,4 +1,5 @@
-- name: Skeleton
+"Skeleton":
+  name: Skeleton
   link: https://www.dndbeyond.com/monsters/skeleton
   proficiency: 2
   str: 10
@@ -10,7 +11,8 @@
   ac: 13
   hp: 13
 
-- name: Zombie
+"Zombie":
+  name: Zombie
   link: https://www.dndbeyond.com/monsters/zombie
   proficiency: 2
   str: 13
@@ -22,7 +24,8 @@
   ac: 8
   hp: 22
 
-- name: Wight
+"Wight":
+  name: Wight
   link: https://www.dndbeyond.com/monsters/wight
   proficiency: 2
   ac: 14
@@ -34,7 +37,8 @@
   wis: 13
   cha: 15
 
-- name: Helmed Horror
+"Helmed Horror":
+  name: Helmed Horror
   link: https://www.dndbeyond.com/monsters/helmed-horror
   proficiency: 2
   str: 18

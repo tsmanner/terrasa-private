@@ -10,20 +10,20 @@ encounters:
       - common.players.Caltrop Bloodless
       - common.players.Gluteus Maximus
       - npcs.Kilvin Greyjaw
-      - Wight
-      - Zombie
-      - Zombie
-      - Zombie
-      - Zombie
-      - Zombie
-      - Zombie
+      - monsters.Wight
+      - monsters.Zombie
+      - monsters.Zombie
+      - monsters.Zombie
+      - monsters.Zombie
+      - monsters.Zombie
+      - monsters.Zombie
   - name: Helmed Horror
     entities:
-      - Brother Gromag
-      - Caltrop Bloodless
-      - Gluteus Maximus
-      - Kilvin Greyjaw
-      - Helmed Horror
+      - common.players.Brother Gromag
+      - common.players.Caltrop Bloodless
+      - common.players.Gluteus Maximus
+      - npcs.Kilvin Greyjaw
+      - monsters.Helmed Horror
 ---
 
 Down time, if they want it.  Nothing _pressing_ is going on, the order is investigating the recent events in the area.  If they want to investigate, anything dock related can lead to the progression in [Izhi's Machinations](./Organizations/CultOfMyrkul/)

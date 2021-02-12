@@ -1,4 +1,5 @@
-- name: Dazoluk Forgemaker
+"Dazoluk Forgemaker":
+  name: Dazoluk Forgemaker
   link: https://www.dndbeyond.com/profile/UngodlySalmon/characters/40740308
   level: 8
   proficiency: 3
@@ -10,8 +11,12 @@
   cha: 16
   ac: 21
   hp: 84
+  bonuses:
+    wis-save: proficiency
+    cha-save: proficiency
 
-- name: Llaska
+"Llaska":
+  name: Llaska
   link: https://www.dndbeyond.com/profile/UngodlySalmon/characters/40935718
   level: 3
   proficiency: 2
@@ -23,8 +28,12 @@
   cha: 16
   ac: 16
   hp: 27
+  bonuses:
+    int-save: proficiency
+    dex-save: proficiency
 
-- name: Kilvin Greyjaw
+"Kilvin Greyjaw":
+  name: Kilvin Greyjaw
   link: https://www.dndbeyond.com/profile/UngodlySalmon/characters/27153043
   level: 3
   proficiency: 2
@@ -36,3 +45,6 @@
   cha: 10
   ac: 19
   hp: 30
+  bonuses:
+    wis-save: proficiency
+    cha-save: proficiency
