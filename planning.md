@@ -6,25 +6,34 @@ full-width: true
 encounters:
   - name: Refugees Being Chased
     entities:
-      - common.players.Brother Gromag
-      - common.players.Caltrop Bloodless
-      - common.players.Gluteus Maximus
-      - npcs.Kilvin Greyjaw
-      - monsters.Wight
-      - monsters.Zombie
-      - monsters.Zombie
-      - monsters.Zombie
-      - monsters.Zombie
-      - monsters.Zombie
-      - monsters.Zombie
+      - dnd.common.players.Brother Gromag
+      - dnd.common.players.Caltrop Bloodless
+      - dnd.common.players.Gluteus Maximus
+      - dnd.npcs.Kilvin Greyjaw
+      - dnd.monsters.srd.Wight
+      - dnd.monsters.srd.Zombie
+      - dnd.monsters.srd.Zombie
+      - dnd.monsters.srd.Zombie
+      - dnd.monsters.srd.Zombie
+      - dnd.monsters.srd.Zombie
+      - dnd.monsters.srd.Zombie
   - name: Helmed Horror
     entities:
-      - common.players.Brother Gromag
-      - common.players.Caltrop Bloodless
-      - common.players.Gluteus Maximus
-      - npcs.Kilvin Greyjaw
-      - monsters.Helmed Horror
+      - dnd.common.players.Brother Gromag
+      - dnd.common.players.Caltrop Bloodless
+      - dnd.common.players.Gluteus Maximus
+      - dnd.npcs.Kilvin Greyjaw
+      - dnd.monsters.nonsrd.Helmed Horror
+  - name: Return to Wayra's Temple
+    entities:
+      - dnd.common.players.Brother Gromag
+      - dnd.common.players.Caltrop Bloodless
+      - dnd.common.players.Gluteus Maximus
+      - dnd.npcs.Kilvin Greyjaw
+      - dnd.monsters.srd.Flameskull
 ---
+
+{{ site.data.ui-text.en.comments_label }}
 
 Down time, if they want it.  Nothing _pressing_ is going on, the order is investigating the recent events in the area.  If they want to investigate, anything dock related can lead to the progression in [Izhi's Machinations](./Organizations/CultOfMyrkul/)
 

@@ -1,0 +1,31 @@
+"Helmed Horror":
+  name: Helmed Horror
+  link: https://www.dndbeyond.com/monsters/helmed-horror
+  size: medium
+  type: construct
+  alignment:
+  challenge-rating:
+  proficiency: 2
+  str: 18
+  dex: 13
+  con: 16
+  int: 10
+  wis: 10
+  cha: 10
+  ac: 20
+  hp: 60
+  bonuses:
+  movement:
+    walk:
+    fly:
+    hover:
+    swim:
+    burrow:
+  damage-vulnerabilities:
+  damage-resistances:
+  damage-immunities:
+  condition-immunities:
+  senses:
+  languages:
+  traits:
+  actions:

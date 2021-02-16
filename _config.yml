@@ -32,8 +32,7 @@ defaults:
     values:
       layout: post
 
-dnd:
-  enable: true
+enable_dnd: true
 
 #
 # Footer
