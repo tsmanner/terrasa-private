@@ -10,6 +10,7 @@ encounters:
       - dnd.common.players.Caltrop Bloodless
       - dnd.common.players.Gluteus Maximus
       - dnd.npcs.Kilvin Greyjaw
+      - dnd.npcs.Dazoluk Forgemaker
       - dnd.monsters.srd.Wight
       - dnd.monsters.srd.Zombie
       - dnd.monsters.srd.Zombie

@@ -12,8 +12,27 @@
   ac: 21
   hp: 84
   bonuses:
-    wis-save: proficiency
-    cha-save: proficiency
+    str-save: 3
+    dex-save: 3
+    con-save: 3
+    int-save: 3
+    wis-save:
+      - proficiency
+      - 3
+    cha-save:
+      - proficiency
+      - 3
+    athletics: proficiency
+    intimidation: proficiency
+    investigation: proficiency
+    survival: proficiency
+  movement:
+    walk: 25
+    climb: 10
+    swim: 10
+  languages:
+    - common
+    - dwarvish
 
 "Llaska":
   name: Llaska
@@ -29,8 +48,27 @@
   ac: 16
   hp: 27
   bonuses:
-    int-save: proficiency
     dex-save: proficiency
+    int-save: proficiency
+    deception: proficiency
+    insight:
+      - proficiency
+      - proficiency
+    investigation:
+      - proficiency
+      - proficiency
+    perception: proficiency
+    persuasion: proficiency
+    sleight-of-hand: proficiency
+    stealth: proficiency
+  movement:
+    walk: 30
+    climb: 15
+    swim: 15
+  languages:
+    - celestial
+    - common
+    - thieves' cant
 
 "Kilvin Greyjaw":
   name: Kilvin Greyjaw
@@ -48,3 +86,14 @@
   bonuses:
     wis-save: proficiency
     cha-save: proficiency
+    animal-handling: proficiency
+    history: proficiency
+    medicine: proficiency
+    survival: proficiency
+  movement:
+    walk: 25
+    climb: 10
+    swim: 10
+  languages:
+    - common
+    - dwarvish
