@@ -9,12 +9,13 @@ navbar-links:
     - K'anchay Order: /Organizations/KanchayOrder
     - Cult of Myrkul: /Organizations/CultOfMyrkul
   Characters:
-    - Dazoluk:    NPCs/Dazoluk
-    - Izhi:       NPCs/Izhi
-    - Kilvin:     NPCs/Kilvin
-    - Llaska:     NPCs/Llaska
-    - Manco:      NPCs/Manco
-    - Minor NPCs: NPCs/MinorNPCs
+    - Dazoluk:    npcs/Dazoluk
+    - Izhi:       npcs/Izhi
+    - Kilvin:     npcs/Kilvin
+    - Llaska:     npcs/Llaska
+    - Manco:      npcs/Manco
+    - Nayarak:    npcs/Nayarak
+    - Minor NPCs: npcs/MinorNPCs
   Character Sheets:
     - Llaska:             https://www.dndbeyond.com/profile/UngodlySalmon/characters/40935718
     - Dazoluk Forgemaker: https://www.dndbeyond.com/profile/UngodlySalmon/characters/40740308
@@ -31,6 +32,11 @@ defaults:
       path: ""
     values:
       layout: post
+
+collections:
+  npcs:
+    output: true
+    permalink: /:collection/:path/
 
 enable_dnd: true
 

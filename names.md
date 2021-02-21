@@ -2,10 +2,14 @@
 
 ## Female
 
+- Anku
 - Canchon
 - Inti
 - Mayu
+- Nawqi
+- Tawa
 - Uchu
+- Wari
 
 - Allcca: 30 something hooker
 - Chalco: Dock master (mistress?)
@@ -16,16 +20,22 @@
 
 ## Male
 
-- Khuyana
+- Hawka Chipana
+- Ilin Huaman
+- Killari
+- Kiwa
 - Oqllo
 - Shulla
 - Sumat'Ika
 - Suyana
+- Taruka Asto
+- Yuraq Cacha
 
 - Achiq: town clerk
 - Illapha: Head of the town watch
 - Izhi: Ryan's former pirate captain
 - Kayara: Corrupt member of City Council, lives in Hanaska District
+- Khuyana: pseudonym of Nayarak
 - Llaska and Michik: Pair of former petty criminals, edged out by the new "king" in town.  Met the party at The Rusty Nail
 - Manco: Necromancer and current leader of the Cult of Myrkul (God of Death)
 - Myrkul: God of Death
@@ -33,6 +43,7 @@
 - Ttika: "Cart Guy" they chased and stabbed, then enlisted to tell Llaska and Michik to meet them near the hideout at 8
 - Thani: guard at silo
 - Waqar: dock guard
+- Yori Olaya: K'anchay Order Chapel Quartermaster (the "Bernie")
 
 
 ## Places

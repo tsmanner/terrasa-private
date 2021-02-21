@@ -30,12 +30,13 @@ Forcible covert (i.e. not explicitly the Cult in control, just some "boss" figur
       - DC 16 perception from the docks
       - Leads to (3.)
       - Staking it out will result in (2.)
-  - City Council member Kayara, a resident of the Hanaska District that doesn't have waterfront, but has an easement to a small private dock.  He has been taking payments in the form of gold and a supply of tonics that grant 10 temporary HP, to arrange for gaps in the town watch patrols in the Hanaska District waterfront.  He doesn't know who Izhi is, though he has his suspicions.  He is looking the other way for money, and wants to keep it that way, trying to learn as little as possible about his benefactors.
+  - City Council member Kayara, a resident of the Hanaska District that doesn't have waterfront, but has an easement to a small private dock.  He has been taking payments in the form of gold and a supply of tonics that grant 10 temporary HP, to arrange for gaps in the town watch patrols at the docks and in the Hanaska District waterfront, and to allow the Cult access to the private dock.  He doesn't know who Izhi is, though he has his suspicions.  He is looking the other way for money, and wants to keep it that way, trying to learn as little as possible about his benefactors.
   - Jewelry Mogul Nayarak runs a very successful set of jewelry stores, and is the head of the Yalaqta market merchant's association.
     - He is straight up in league with the cult, though he does not subscribe to their beliefs or goals necessarily.  A middle aged man, he seeks power and youth, being drawn to the power of necromancy anyway, a relationship with the cult was symbiotic.
     - He has learned a couple of necromantic secrets and is able to imbue them into jewelry, saving the most powerful for himself.
     - He came across a supply of grain from "an old family friend" but had no means to sell it himself, so he used his status as chair of the market merchant's association to find some people willing to buy it to resell in the market.
     - He owns property all over the city, several pieces under a pseudonym.  One of these is the building used in the "Helmed Horror" event.
+    - He lives on the waterfront in the Hanaska District, and has a small dock there.
 
 Weaken the population of farmers and tradespeople in the region to put the city's food supplies at risk and increase the load of sick or injured.
 

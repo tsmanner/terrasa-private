@@ -1,0 +1,93 @@
+{
+	// Place your terrasa-private workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders.
+	// Placeholders with the same ids are connected.
+	"encounter": {
+		"scope": "markdown,html",
+		"prefix": "encounter",
+		"body": [
+			"{% include dnd/encounter-head.html name=\"$1\" %}",
+			"{% include dnd/encounter-body.html name=\"$1\" %}",
+			"{% capture text %}",
+			"$0",
+			"{% endcapture %}{{ text | markdownify }}",
+			"{% include dnd/encounter-foot.html name=\"$1\" %}"
+		],
+		"description": "Insert encounter head/body/foot includes"
+	},
+	"capture": {
+		"scope": "markdown,html",
+		"prefix": "capture",
+		"body": [
+			"{% capture text %}",
+			"$0",
+			"{% endcapture %}{{ text | markdownify }}",
+		],
+		"description": "Insert encounter head/body/foot includes"
+	},
+	"item": {
+		"scope": "markdown,html",
+		"prefix": "item",
+		"body": [
+			"<a href=\"https://www.dndbeyond.com/magic-items/{{ '$1' | downcase | split: ' ' | join: '-' }}\">$1</a>"
+		],
+		"description": "Insert a link to a magic item"
+	},
+	"monster": {
+		"scope": "markdown,html",
+		"prefix": "monster",
+		"body": [
+			"<a href=\"https://www.dndbeyond.com/monsters/{{ '$1' | downcase | split: ' ' | join: '-' }}\">$1</a>"
+		],
+		"description": "Insert a link to a monster"
+	},
+	"spell": {
+		"scope": "markdown,html",
+		"prefix": "spell",
+		"body": [
+			"<a href=\"https://www.dndbeyond.com/spells/{{ '$1' | downcase | split: ' ' | join: '-' }}\">$1</a>"
+		],
+		"description": "Insert a link to a spell"
+	},
+	"entity": {
+		"scope": "yaml",
+		"prefix": "entity",
+		"description": "YAML configuration for a new entity",
+		"body": [
+			"\"$1\":",
+			"  name: $1",
+			"  link: $0",
+			"  size: $2",
+			"  type: $3",
+			"  alignment: $4",
+			"  challenge-rating: $5",
+			"  proficiency: $6",
+			"  str: $7",
+			"  dex: $8",
+			"  con: $9",
+			"  int: $10",
+			"  wis: $11",
+			"  cha: $12",
+			"  ac: $13",
+			"  hp: $14",
+			"  bonuses:$15",
+			"  movement:",
+			"    walk: $16",
+			"    fly: $17",
+			"    hover: $18",
+			"    swim: $19",
+			"    burrow: $20",
+			"  damage-vulnerabilities:$21",
+			"  damage-resistances:$22",
+			"  damage-immunities:$23",
+			"  condition-immunities:$24",
+			"  senses:$25",
+			"  languages:$26",
+			"  traits:$27",
+			"  actions:$28"
+		]
+	}
+}

@@ -4,6 +4,24 @@ subtitle: Planning notes for ongoing themes and with excerpts etc for upcoming s
 full-width: true
 
 encounters:
+  - name: Pari's Back Room
+    entities:
+      - dnd.common.players.Brother Gromag
+      - dnd.common.players.Caltrop Bloodless
+      - dnd.common.players.Gluteus Maximus
+      - dnd.npcs.Kilvin Greyjaw
+      - dnd.npcs.Llaska
+      - dnd.monsters.srd.Rug of Smothering
+  - name: Pari's Basement Lab
+    entities:
+      - dnd.common.players.Brother Gromag
+      - dnd.common.players.Caltrop Bloodless
+      - dnd.common.players.Gluteus Maximus
+      - dnd.npcs.Kilvin Greyjaw
+      - dnd.npcs.Llaska
+      - dnd.monsters.srd.Animated Armor
+      - dnd.monsters.srd.Animated Armor
+      - dnd.monsters.srd.Death Dog
   - name: Refugees Being Chased
     entities:
       - dnd.common.players.Brother Gromag
@@ -33,11 +51,168 @@ encounters:
       - dnd.monsters.srd.Flameskull
 ---
 
-{{ site.data.ui-text.en.comments_label }}
-
 Down time, if they want it.  Nothing _pressing_ is going on, the order is investigating the recent events in the area.  If they want to investigate, anything dock related can lead to the progression in [Izhi's Machinations](./Organizations/CultOfMyrkul/)
 
 ### Pick back up at the Jewelry store at like 1-2 am, scoping it out.
+
+You talked to Mayua and Llaska about the latest investigations into cult activity in Yalaqta.  Llaska mentioned some irregularities in the patrols at the docks that occur every few days, but that he hasn't been able to detect a pattern, or connect them to the cult yet.  Some shenanigans ensue that evening at the dockside as you tried to goad the guards into a confrontation, unsuccessfully.  At the end of that, you notice that a ship must have set sail from the docks a few minutes before you got there, and see what looks like a small vessel headed toward it from the east.  The two meet in the harbor about a half mile out, so Gluteus flies out to get a closer look, while the others head toward the eastern waterfront to see if they can figure out where the second vessel came from.  Gluteus narrowly avoids a fight on the ship with a man holding an ornate scimitar and another with a longbow.  You all meet back up on the eastern waterfront, Llaska and Gromag go for a nice walk, while Caltrop, Gluteus, and Kilvin find evidence of frequent loading and unloading at one of the docks.  The subtle trail of a cart or wagon leads them up from a small private dock, to a set of cellar doors. in a dark alley behind a jewelry shop.  Caltrop tried to pick the lock on them, but wasn't able to open it.  As the exhaustion of a long day traversing the city starts to set in, you have to decide what to do next.
+
+---
+
+<details><summary>Notes</summary>{% capture text %}
+Nayarak was visited by Izhi today.  Izhi is *furious* about Sayre and Wayra being found out.<br>
+He doesn't care that they were killed, only that they were found and that it set him back in Yalaqta.<br>
+Izhi met his contacts in the city:
+- Nayarak to use his business contacts to find out who thwarted them
+- Kayara to find ways for the city to make it harder for the K'anchay Order to operate.
+He gave Kayara a tonic, and put a bounty on expelling or shutting down any K'anchay Order members or locations.<br>
+He bartered with Nayarak, helping finish some enchanting and providing gold and materials in exchange for some magical jewelry:
+  - <a class="uncommon" href="https://www.dndbeyond.com/magic-items/{{ 'Ring of Mind Shielding' | downcase | split: ' ' | join: '-' }}">Ring of Mind Shielding</a>
+  - <a class="rare" href="https://www.dndbeyond.com/magic-items/{{ 'Ring of Evasion' | downcase | split: ' ' | join: '-' }}">Ring of Evasion</a>
+  - <a class="rare" href="https://www.dndbeyond.com/magic-items/{{ 'Ring of Protection' | downcase | split: ' ' | join: '-' }}">Ring of Protection</a>
+  - <a class="rare" href="https://www.dndbeyond.com/magic-items/{{ 'Ring of Resistance' | downcase | split: ' ' | join: '-' }}">Ring of Resistance</a>
+    - Jet: Necrotic
+    - Amethyst: Poison
+    - Topaz: Radiant
+
+Nayarak is working on a couple of things for Izhi:
+  - <a class="very-rare" href="https://www.dndbeyond.com/magic-items/{{ 'Ring of Regeneration' | downcase | split: ' ' | join: '-' }}">Ring of Regeneration</a>
+  - <a class="rare" href="https://www.dndbeyond.com/magic-items/{{ 'Rod of the Pact Keeper' | downcase | split: ' ' | join: '-' }}">Rod of the Pact Keeper +2</a>
+
+This work is being done at his private workshop, not one of his storefronts.  Players may come across it, but only if they find him out and get in there somehow.
+
+Nayarak has with him
+  - <a href="https://www.dndbeyond.com/magic-items/{{ 'Ring of Swimming' | downcase | split: ' ' | join: '-' }}">Ring of Swimming</a>
+  - <a href="https://www.dndbeyond.com/magic-items/{{ 'Ring of Water Walking' | downcase | split: ' ' | join: '-' }}">Ring of Water Walking</a>
+  - One-time use <a href="https://www.dndbeyond.com/magic-items/{{ 'Ring of Spell Storing' | downcase | split: ' ' | join: '-' }}">Ring of Spell Storing</a>
+
+Items that can be found in his shops:
+  - <a class="uncommon" href="https://www.dndbeyond.com/magic-items/{{ 'Ring of Jumping' | downcase | split: ' ' | join: '-' }}">Ring of Jumping</a>
+  - <a class="uncommon" href="https://www.dndbeyond.com/magic-items/{{ 'Ring of Obscuring' | downcase | split: ' ' | join: '-' }}">Ring of Obscuring</a>
+  - <a class="uncommon" href="https://www.dndbeyond.com/magic-items/{{ 'Ring of Swimming' | downcase | split: ' ' | join: '-' }}">Ring of Swimming</a>
+  - <a class="uncommon" href="https://www.dndbeyond.com/magic-items/{{ 'Ring of Water Walking' | downcase | split: ' ' | join: '-' }}">Ring of Water Walking</a>
+  - <a class="uncommon" href="https://www.dndbeyond.com/magic-items/{{ 'Amulet of Proof against Detection and Location' | downcase | split: ' ' | join: '-' }}">Amulet of Proof against Detection and Location</a>
+  - <a class="uncommon" href="https://www.dndbeyond.com/magic-items/{{ 'Periapt of Health' | downcase | split: ' ' | join: '-' }}">Periapt of Health</a>
+  - <a class="uncommon" href="https://www.dndbeyond.com/magic-items/{{ 'Periapt of Wound Closure' | downcase | split: ' ' | join: '-' }}">Periapt of Wound Closure</a>
+  - <a class="rare" href="https://www.dndbeyond.com/magic-items/{{ 'Periapt of Proof against Poison' | downcase | split: ' ' | join: '-' }}">Periapt of Proof against Poison</a>
+  - <a class="rare" href="https://www.dndbeyond.com/magic-items/{{ 'Amulet of Health' | downcase | split: ' ' | join: '-' }}">Amulet of Health</a>
+  - <a class="rare" href="https://www.dndbeyond.com/magic-items/{{ 'Ring of Spell Storing' | downcase | split: ' ' | join: '-' }}">Ring of Spell Storing</a>
+
+---
+{% endcapture %}{{ text | markdownify}}
+</details>
+
+
+DC 18 Thieves' Tools to pick the cellar door (if they leave and come back).<br>
+DC 18 STR check to break the door.
+
+DC 15 Thieves' Tools to pick the shop door.<br>
+DC 12 STR to break the shop window.
+
+<details>
+<summary>Daytime</summary>
+{% capture text %}
+This upscale, but not ostentatious, jewelry shop has a sign above the door that reads *Pari's Apt Periapts*.  Inside is a single wrap-around display counter with a few fairly simple rings and necklaces on display.  In the middle near the back, a young man is idling on a tall stool behind the counter.  Behind him is another display case with a couple of pendants and brooches in it, and a single door.  He hops up as you enter:
+
+Items in the shop:
+  - Several rings and necklaces of
+    - mithral (2 gp)  1d4 - 2
+    - gold    (1 gp)  1d4 - 1
+    - silver  (5 sp)  1d6
+    - steel   (2 sp)  1d8
+    - brass   (1 sp)  1d8
+
+**NAME:** Oh! Hello! *ahem* Well, yes, hi, welcome to uh, Pari's.  What can I do for you?
+AC 10, Perception +7
+
+DC 20 Persuasion or Intimidation to get past him, reduced if they bribe him, 1 DC per gp spent, minimum 15.
+
+In the back room is a <a href="https://www.dndbeyond.com/magic-items/{{ 'Rug of Smothering' | downcase | split: ' ' | join: '-' }}">Rug of Smothering</a> covering a trap door to the lab.
+{% endcapture %}{{ text | markdownify }}
+
+{% include dnd/encounter.html name="Pari's Back Room" %}
+
+{% capture text %}
+Trap door is DC 10 Thieves' Tools to unlock or STR to tear open.
+{% endcapture %}{{ text | markdownify }}
+</details>
+
+
+
+<details>
+<summary>Nighttime</summary>
+{% capture text %}
+The shop is closed, and totally dark inside.  DC 10 Perception to read the sign "Pari's Apt Periapts."
+
+DC 15 Thieves' Tools to pick the shop door.<br>
+DC 12 STR to break the shop window followed by DC 15 DEX to muffle it if they try to carve a hole or something.
+
+Inside is a single wrap-around display counter with a few fairly simple rings and necklaces on display.  In the middle near the back, behind the counter, is another display case with a couple of pendants and brooches in it, and a single door.
+
+Items in the shop:
+  - Several rings and necklaces of
+    - mithral (2 gp)  1d4 - 2
+    - gold    (1 gp)  1d4 - 1
+    - silver  (5 sp)  1d6
+    - steel   (2 sp)  1d8
+    - brass   (1 sp)  1d8
+
+The back door is not locked, inside, there is a rug on the floor, a workbench, and a jeweler's kit as well as some uncut gems and other materials.
+The rug is a <a href="https://www.dndbeyond.com/magic-items/{{ 'Rug of Smothering' | downcase | split: ' ' | join: '-' }}">Rug of Smothering</a> covering a trap door to the lab.
+
+{% endcapture %}{{ text | markdownify }}
+</details>
+
+
+
+{% include dnd/encounter-head.html name="Pari's Basement Lab" %}
+{% capture text %}
+*Upon entering the basement, you see a medium sized jewelry workshop meets arcane study meets laboratory.  There is a a work bench with some jeweler's tools on it, a large desk with paper scattered around it, bookshelves filled with books with arcane sigils on their covers and jars with various reagents in them.  At the base of the stairs from the alley entrance are two suits of armor, and lying in the corner is a black, medium sized, two-headed dog.*
+
+Opposed stealth/perception against the dog and armors.  If they notice the players, initiative right away, if not, they players can get a surprise round.
+{% endcapture %}{{ text | markdownify }}
+
+{% include dnd/encounter-body.html name="Pari's Basement Lab" %}
+{% capture text %}
+DC 15 to find a <a class="uncommon" href="https://www.dndbeyond.com/magic-items/{{ 'Periapt of Health' | downcase | split: ' ' | join: '-' }}">Periapt of Health</a><br>
+DC 13 to find spell notes.  (remind them that they found similar notes in Wayra's temple).
+
+Taking the notes back to the Chapel:
+
+Chaplain Mayua puts on a pair of reading glasses and begins flipping through the pages.
+
+**Mayua:** This looks like a project journal of some kind, it's full of designs for jewel settings, drawings of gem cuts, and arcane spell notes.  I think it's mostly transmutation and abjuration, though I'm far from an expert on arcane inscription.  I also see definite threads of necromancy throughout it.
+
+*She looks up from the pages*
+
+**Mayua:** Where did you find this?
+
+...
+
+**Mayua:** We need to know more about this, I'll sent it to one of our monasteries for some more information.  It is good you brought this to me, you have done us a service, and I am grateful.
+
+*Before they can protest, or if they do*
+
+**Mayua:** I understand that gratitude alone isn't enough, especially since we haven't worked together for very long.  The K'anchay Order appreciates your help, and has this for you.
+
+*She reaches into a small drawer in her desk and pulls out a pouch, handing it to them.  Inside is 1000 gp.*
+
+{% endcapture %}{{ text | markdownify }}
+{% include dnd/encounter-foot.html name="Pari's Basement Lab" %}
+
+
+**Mayua:** If I might ask, have you had a chance to look at your journals and quipu?  If you need some assistance, we might be able to give you a nudge in a helpful direction.
+
+*The journals will require a couple of in-game days to study and complete*
+
+
+*When they're complete*
+
+**Mayua:** Ah, wonderful.  I'll get everything set up, come see me in the morning and we'll be able to start the final step.
+
+**Mayua:** Good morning, and welcome to the final stage of your initiation as associates of the K'anchay Order.  This part will require that you demonstrate teamwork, cleverness, and endurance.  Please, follow me.
+
+*She leads them through a doorway that they don't recognize, that leads further into the side of the hill, and then down.  They enter an unlit chamber, and the door closes, leaving them in complete darkness.  After a moment, braziers on the walls spring to life. (Jump to the bottom for the rest)*
 
 
 ## Yalaqta Random Events
@@ -52,7 +227,9 @@ The party is hailed by a member of a group of refugees from a nearby village, wh
 
 ### 3. An accident in a necromancer's lab (Nayarak) releases an abomination
 A muffled BOOM emanates from a building just ahead.  DC 15 Wisdom (perception) to catch the shutters on a building shake, dust falling from them, and a small trickle of smoke to begin rising from them.  On a failure, as the party walks past, BANG, the door is smashed off the front and a monster burst out, engaging them.  On a success, if they investigate, they can peer through (Dexterity (stealth) 14) to see a Helmed Horror emerging from a basement, from which smoke is pouring.  It will start destroying some containers in the building before heading toward the door, which it will smash open, step into the street, and attack the nearest people it sees, unless the party intervenes first.
-{% include dnd/encounter.html name="Helmed Horror" %}
+{% include dnd/encounter-head.html name="Helmed Horror" %}
+{% include dnd/encounter-body.html name="Helmed Horror" %}
+{% capture text %}
 If they enter the building afterwords, they see a door to the basement that was smashed open and some smoke trickling out.  If they enter, downstairs they find a storage cellar with a few empty crates lying around and a dirt floor.  A DC 10 investigation reveals a false wall by the fact that the trickle of smoke is emitting from what appears to be solid stone.  The illusory segment of rock hides a lab with a two work benches in it, one of which was sundered through the middle, the other tipped over.  The floor is littered with broken glass and an assortment of metal tubes, wire frames, and broken alchemical tools.  Shelves ringed the perimeter, but have been mostly torn down off the walls.  Beneath them, there are various preserved organs and unidentifiable fleshy masses, in varying states of decay.  A floor to ceiling tank in the corner, about 3' in diameter, with tubes connecting to the top and bottom, is shattered.  The smoke is rising from it's base.  (After about one minute, a gout of flame will erupt from it, DEX 15 for 2d6 fire damage and the room begins to burn).
 - Investigation check
   - DC 12 find a newly finished teak cleat near the entrance
@@ -60,6 +237,11 @@ If they enter the building afterwords, they see a door to the basement that was 
   - DC 15 for a [Periapt of Health](https://www.dndbeyond.com/magic-items/periapt-of-health)
   - DC 18 to find spell notes etc
   - DC 20+ to notice that they bear many of the same markings that Wayra's did
+{% endcapture %}
+
+{{ text | markdownify }}
+
+{% include dnd/encounter-foot.html name="Helmed Horror" %}
 
 ### 4. Servant for a mid-level noble discovers their necromancy
 
@@ -139,12 +321,11 @@ Once they all have completed their individual puzzles (plans), they are dropped 
 
 #### Chamber 1
 
-The chamber has a simple orange door on one wall, and the other three have a mural on them, covered in numbers.
-
-Touching the right number on each wall will open the door.  Touching the wrong number causes a random negative effect.
+The chamber has a simple orange door on one wall, and the other three have a mural on them, each with the numbers 1 through 9 embedded somewhere in them.
+Touching the right numbers on each wall will open the door.
 
 Murals:
-1. (791) The interior of a tavern or mess hall.  Succeed on a DC 15 investigation or DC 18 perception check, to notice that the mugs are not simply painted, but appear to be sculpted out of the stone of the wall.
+1. (791) The interior of a large mess hall full of people in simple clothes and robes, some with shaved heads.  Succeed on a DC 15 investigation or DC 18 perception check, to notice that the mugs are not simply painted, but appear to be sculpted out of the stone of the wall.
 2. (362) The aftermath of a battle, the ground littered with bodies and equipment.  In the foreground, set to one side, is a group of people wearing robes with a figure in shining plate armor leaning on their longsword.  The figure is looking pensively toward a group of wounded on the other side.  Succeed on a DC 15 investigation to determine that they're trying to reach wounded on the other side of a no-man's-land littered with tetrahedral spikes.  Succeed on a DC 18 perception check to notice the region littered with tetrahedral spikes.
 3. (247) A dense treeline across a meadow, backed by snow-peaked mountains.  Succeed on a DC 15 investigation or DC 18 perception check, to see that perched on a branch near the center is a large bird of prey.
 
@@ -161,30 +342,38 @@ Chessboard addressing with the numbers to indicate the safe squares.  Blue for Y
 | Caltrop Bloodless | 1 b | 7 d | 4 c |
 |   Gluteus Maximus | 5 b | 1 c | 4 a |
 
-|   |   |   |   |   |   |   |   |   |
+**Board**
+
 |---|---|---|---|---|---|---|---|---|
-| 8 | b |   |   |   |   |   |   |   |
-| 7 |   |   |   | c |   |   |   |   |
+| 8 | B |   |   |   |   |   |   |   |
+| 7 |   |   |   | C |   |   |   |   |
 | 6 |   |   |   |   |   |   |   |   |
-| 5 |   | g |   |   |   |   |   | b |
-| 4 | g |   | c |   |   |   |   |   |
+| 5 |   | G |   |   |   |   |   | B |
+| 4 | G |   | C |   |   |   |   |   |
 | 3 |   |   |   |   |   |   |   |   |
 | 2 |   |   |   |   |   |   |   |   |
-| 1 |   | bc| g |   |   |   |   |   |
+| 1 |   | BC| G |   |   |   |   |   |
 |   | a | b | c | d | e | f | g | h |
 
+Bad square effects (all DCs are for saving throws)
+
+| Row | Effect
+|-----|--------
+|   1 | A barrier appears as you take a step that you collide with, like walking into a screen door you didn't notice, except it disappears when you take a step back
+|   2 | DC 13 DEX or slip, fall prone and slide to next square
+|   3 | DC 13 WIS or charmed for 1 round and compelled to leap back and look into the previous room for a second.  You could have *sworn* you left something in there for a second.
+|   4 | DC 13 CON or 1d4 poison damage, poisoned for one move (disadvantage on next skill check)
+|   5 | DC 13 INT or you're *convinced* the floor is starting to split open beneath your feet (as with <a href="https://www.dndbeyond.com/spells/{{ 'Phantasmal Force' | downcase | split: ' ' | join: '-' }}">Phantasmal Force</a>)
+|   6 | DC 13 STR as an unknown force impacts your side, trying to shove you 5' to the left.  If in a6, a fail is 1d6 bludgeoning damage instead.
+|   7 | DC 13 CHA or 1 round <a href="https://www.dndbeyond.com/spells/{{ 'Banish' | downcase | split: ' ' | join: '-' }}">Banish</a> to the Astral Plane.
+|   8 | You're blinded while standing on this square, roll 1d4 to determine the direction you move on your next round. 1/2/3/4 -> N/S/E/W
 
 #### Chamber 3
 
-Taruka Asto
-Yori Olaya
-Ilin Huaman
-Hawka Chipana
-Yuraq Cacha
 
 You enter the near the ceiling of a tall semi-circular room, with a narrow staircase carved into the stone to your right.  The floor is about 20' down, and slopes gently toward the center of the far wall.  There, you see a small semicircular depression in the floor, with narrow, shallow, channels radiating outward toward the walls.  Above it, on the wall, is a mural of a road and a river, heading up toward a city on a bluff overlooking a large bay.  Placed straddling each of the channels is a workbench, each with an array of different tools; blacksmith's tools, leatherworker's tools, even tinker's tools, and a jeweler's kit.  Standing near the center of the room, you see Mayua, and an older man with a shock of thin white hair.
 
-Mayua and the quartermaster greet the party, congratulating them on solving their puzzles and making their way through the rooms.  They explain the process of fabrication and have a variety of base equipment available that can be used to craft their items.
+Mayua and the quartermaster, Yori Olaya, greet the party, congratulating them on solving their puzzles and making their way through the rooms.  They explain the process of fabrication and have a variety of base equipment available that can be used to craft their items.
 
 Voice the quartermaster with "The Bernie."
 

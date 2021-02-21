@@ -6,14 +6,14 @@ title: Lightcraft
 
 Lightcraft is a very personal endeavor.  After an evaluation, prospective members are provided with instructions to imbue a weapon or piece of armor with radiant energy.  The actual [crafting](https://www.dndbeyond.com/sources/dmg/between-adventures#CraftingaMagicItem) must be done by the individual, who must demonstrate the completed item to have their membership recognized.  Only one Lightcraft weapon or piece of armor can be attuned at a time, though other Lightcraft items can be attuned additionally (i.e. Boots or a Cloak).
 
-|   Level | Cost | Min. Level | Materials |
-|---------|------|------------|-----------|
-|    Dawn |   50 |          3 | Item to imbue<br/>50gp worth of Carnelian, Citrine, Tiger Eye, Rhodochrosite, or Moss Agate.
-| Morning |  500 |          6 | Dawn Item<br/>500gp worth of Amber, Red Tourmaline, or Topaz.
-|     Sun | 1500 |         10 | Morning Item<br/>1500gp worth of Fire Opal, Star Ruby, or Yellow Sapphire.
-|  Zenith | 5000 |         15 | Sun Item<br/>5000gp worth of Jacinthe or Diamonds.
+|   Level |     Cost | Min. Level | Materials |
+|---------|----------|------------|-----------|
+|    Dawn |   150 gp |          3 | Item to imbue<br/>150 gp worth of Carnelian, Citrine, Tiger Eye, Rhodochrosite, or Moss Agate.
+| Morning |  1000 gp |          6 | Dawn Item<br/>1000 gp worth of Amber, Red Tourmaline, or Topaz.
+|     Sun |  5000 gp |         10 | Morning Item<br/>5000 gp worth of Fire Opal, Star Ruby, or Yellow Sapphire.
+|  Zenith | 10000 gp |         15 | Sun Item<br/>10000 gp worth of Jacinthe or Diamonds.
 
-Enchantment can be transferred to another item for 1/2 the cost, minus any unique components.
+Enchantment can be transferred to another item for 1/4 the cost, minus any unique components.
 
 ## Item Name Ideas:
 - Auroral
