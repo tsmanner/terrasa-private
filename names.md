@@ -2,7 +2,7 @@
 
 ## Female
 
-- Anku
+- Anku: rando at the jewelry shop
 - Canchon
 - Inti
 - Mayu
@@ -23,7 +23,6 @@
 - Hawka Chipana
 - Ilin Huaman
 - Killari
-- Kiwa
 - Oqllo
 - Shulla
 - Sumat'Ika
@@ -36,6 +35,7 @@
 - Izhi: Ryan's former pirate captain
 - Kayara: Corrupt member of City Council, lives in Hanaska District
 - Khuyana: pseudonym of Nayarak
+- Kiwa: Jewelry shop clerk
 - Llaska and Michik: Pair of former petty criminals, edged out by the new "king" in town.  Met the party at The Rusty Nail
 - Manco: Necromancer and current leader of the Cult of Myrkul (God of Death)
 - Myrkul: God of Death

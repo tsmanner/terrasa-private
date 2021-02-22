@@ -35,13 +35,15 @@ encounters:
       - dnd.monsters.srd.Zombie
       - dnd.monsters.srd.Zombie
       - dnd.monsters.srd.Zombie
-  - name: Helmed Horror
+  - name: Breached Lab
     entities:
       - dnd.common.players.Brother Gromag
       - dnd.common.players.Caltrop Bloodless
       - dnd.common.players.Gluteus Maximus
       - dnd.npcs.Kilvin Greyjaw
-      - dnd.monsters.nonsrd.Helmed Horror
+      - dnd.monsters.srd.Wight
+      - dnd.monsters.srd.Zombie
+      - dnd.monsters.srd.Zombie
   - name: Return to Wayra's Temple
     entities:
       - dnd.common.players.Brother Gromag
@@ -51,16 +53,8 @@ encounters:
       - dnd.monsters.srd.Flameskull
 ---
 
-Down time, if they want it.  Nothing _pressing_ is going on, the order is investigating the recent events in the area.  If they want to investigate, anything dock related can lead to the progression in [Izhi's Machinations](./Organizations/CultOfMyrkul/)
-
-### Pick back up at the Jewelry store at like 1-2 am, scoping it out.
-
-You talked to Mayua and Llaska about the latest investigations into cult activity in Yalaqta.  Llaska mentioned some irregularities in the patrols at the docks that occur every few days, but that he hasn't been able to detect a pattern, or connect them to the cult yet.  Some shenanigans ensue that evening at the dockside as you tried to goad the guards into a confrontation, unsuccessfully.  At the end of that, you notice that a ship must have set sail from the docks a few minutes before you got there, and see what looks like a small vessel headed toward it from the east.  The two meet in the harbor about a half mile out, so Gluteus flies out to get a closer look, while the others head toward the eastern waterfront to see if they can figure out where the second vessel came from.  Gluteus narrowly avoids a fight on the ship with a man holding an ornate scimitar and another with a longbow.  You all meet back up on the eastern waterfront, Llaska and Gromag go for a nice walk, while Caltrop, Gluteus, and Kilvin find evidence of frequent loading and unloading at one of the docks.  The subtle trail of a cart or wagon leads them up from a small private dock, to a set of cellar doors. in a dark alley behind a jewelry shop.  Caltrop tried to pick the lock on them, but wasn't able to open it.  As the exhaustion of a long day traversing the city starts to set in, you have to decide what to do next.
-
----
-
-<details><summary>Notes</summary>{% capture text %}
-Nayarak was visited by Izhi today.  Izhi is *furious* about Sayre and Wayra being found out.<br>
+<details><summary>Notes: Izhi's Visit to Yalaqta</summary>{% capture text %}
+Nayarak was visited by Izhi that day.  Izhi is *furious* about Sayre and Wayra being found out.<br>
 He doesn't care that they were killed, only that they were found and that it set him back in Yalaqta.<br>
 Izhi met his contacts in the city:
 - Nayarak to use his business contacts to find out who thwarted them
@@ -122,7 +116,7 @@ Items in the shop:
     - steel   (2 sp)  1d8
     - brass   (1 sp)  1d8
 
-**NAME:** Oh! Hello! *ahem* Well, yes, hi, welcome to uh, Pari's.  What can I do for you?
+**Kiwa:** Oh! Hello! *ahem* Well, yes, hi, welcome to uh, Pari's.  What can I do for you?
 AC 10, Perception +7
 
 DC 20 Persuasion or Intimidation to get past him, reduced if they bribe him, 1 DC per gp spent, minimum 15.
@@ -138,33 +132,6 @@ Trap door is DC 10 Thieves' Tools to unlock or STR to tear open.
 </details>
 
 
-
-<details>
-<summary>Nighttime</summary>
-{% capture text %}
-The shop is closed, and totally dark inside.  DC 10 Perception to read the sign "Pari's Apt Periapts."
-
-DC 15 Thieves' Tools to pick the shop door.<br>
-DC 12 STR to break the shop window followed by DC 15 DEX to muffle it if they try to carve a hole or something.
-
-Inside is a single wrap-around display counter with a few fairly simple rings and necklaces on display.  In the middle near the back, behind the counter, is another display case with a couple of pendants and brooches in it, and a single door.
-
-Items in the shop:
-  - Several rings and necklaces of
-    - mithral (2 gp)  1d4 - 2
-    - gold    (1 gp)  1d4 - 1
-    - silver  (5 sp)  1d6
-    - steel   (2 sp)  1d8
-    - brass   (1 sp)  1d8
-
-The back door is not locked, inside, there is a rug on the floor, a workbench, and a jeweler's kit as well as some uncut gems and other materials.
-The rug is a <a href="https://www.dndbeyond.com/magic-items/{{ 'Rug of Smothering' | downcase | split: ' ' | join: '-' }}">Rug of Smothering</a> covering a trap door to the lab.
-
-{% endcapture %}{{ text | markdownify }}
-</details>
-
-
-
 {% include dnd/encounter-head.html name="Pari's Basement Lab" %}
 {% capture text %}
 *Upon entering the basement, you see a medium sized jewelry workshop meets arcane study meets laboratory.  There is a a work bench with some jeweler's tools on it, a large desk with paper scattered around it, bookshelves filled with books with arcane sigils on their covers and jars with various reagents in them.  At the base of the stairs from the alley entrance are two suits of armor, and lying in the corner is a black, medium sized, two-headed dog.*
@@ -176,6 +143,29 @@ Opposed stealth/perception against the dog and armors.  If they notice the playe
 {% capture text %}
 DC 15 to find a <a class="uncommon" href="https://www.dndbeyond.com/magic-items/{{ 'Periapt of Health' | downcase | split: ' ' | join: '-' }}">Periapt of Health</a><br>
 DC 13 to find spell notes.  (remind them that they found similar notes in Wayra's temple).
+
+
+---
+
+## Resuming in the basement to the jewelry shop
+
+They didn't tie Kiwa up, just incapacitated him.  After 1 hour (30m remaining at the start) he regains consciousness with 1 hp, and will immediately flee (DC 18 Perception to hear his footsteps) so that he can describe what happened to the local authorities.  1 hour after that, they will arrive on the scene and start looking for clues, if the party is still there, they'll have to find a way to escape, talk their way out, fight, or get arrested.
+
+Llaska hears them approaching, giving the party a little bit of warning.
+
+Kiwa isn't sure what happened after he was taken down, only that it was *definitely* Gromag that hit him.  He came to in the back leaned against a table leg, near the remains of an utterly destroyed rug.  If they catch the party in the building still:
+
+**Lead:** You there!  Stop!  We've gotten word of an assault by one of you on a citizen of Yalaqta, and it would appear *he looks around the room* also the theft of several valuable items from this shop.  *Pointing to Gromag* You have been accused of the assault.
+
+If they show the secret lab and can convince them that something bad is going on here, then they will be warned and told to return what they took from the shop above.  Gromag will still have to answer for the assault, which can start with a chaperoned conversation with Kiwa.
+
+**Lead:** If you return what you took from the shop, we can let it go, considering what you found here today.  The assault, I'm afraid, I can't ignore.  Regardless of your intentions, you committed violence against a man innocent of all of this.  You may speak with him now if you wish, otherwise, we will need to contact you in a few days if he wishes to press charges.  I'll need an item of yours as collateral, we can't have you skipping town without resolving this after all.
+
+If they decide to check the cellar door right away, it starts an investigation by the town's guard into the party.  Add a few random events that involve them being caught or tracked down by investigators, town's guard members, and bounty hunters (yeah, they're totally on the job board now).  The investigation specifically centers on Gromag and Llaska, with some ancillary interest in Gluteus and Caltrop, but they're not certain if those two are involved.  Kilvin was not seen by Kiwa, so he is not implicated unless they're caught.
+
+---
+
+## If they manage to make it back to the chapel with the notes...
 
 Taking the notes back to the Chapel:
 
@@ -226,9 +216,9 @@ A heavy storm blows in in the night,  DC 12 Wisdom (perception) check to see or 
 The party is hailed by a member of a group of refugees from a nearby village, who is begging for help.  Their village was overrun by undead and they fled to Yalaqta.  One cannot find his daughter, he last saw her after they entered the city and is worried that she was kidnapped or is lost in Yalaqta.  Another's siblings refused to leave the village, insisting that they could take it back (breadcrumb to go to the village and find them planning their assault, along with a couple other tradespeople from the village).
 
 ### 3. An accident in a necromancer's lab (Nayarak) releases an abomination
-A muffled BOOM emanates from a building just ahead.  DC 15 Wisdom (perception) to catch the shutters on a building shake, dust falling from them, and a small trickle of smoke to begin rising from them.  On a failure, as the party walks past, BANG, the door is smashed off the front and a monster burst out, engaging them.  On a success, if they investigate, they can peer through (Dexterity (stealth) 14) to see a Helmed Horror emerging from a basement, from which smoke is pouring.  It will start destroying some containers in the building before heading toward the door, which it will smash open, step into the street, and attack the nearest people it sees, unless the party intervenes first.
-{% include dnd/encounter-head.html name="Helmed Horror" %}
-{% include dnd/encounter-body.html name="Helmed Horror" %}
+A muffled BOOM emanates from a building just ahead.  DC 15 Wisdom (perception) to catch the shutters on a building shake, dust falling from them, and a small trickle of smoke to begin rising from them.  On a failure, as the party walks past, BANG, the door is smashed off the front and a monster burst out, engaging them.  On a success, if they investigate, they can peer through (Dexterity (stealth) 14) to see a Breached Lab emerging from a basement, from which smoke is pouring.  It will start destroying some containers in the building before heading toward the door, which it will smash open, step into the street, and attack the nearest people it sees, unless the party intervenes first.
+{% include dnd/encounter-head.html name="Breached Lab" %}
+{% include dnd/encounter-body.html name="Breached Lab" %}
 {% capture text %}
 If they enter the building afterwords, they see a door to the basement that was smashed open and some smoke trickling out.  If they enter, downstairs they find a storage cellar with a few empty crates lying around and a dirt floor.  A DC 10 investigation reveals a false wall by the fact that the trickle of smoke is emitting from what appears to be solid stone.  The illusory segment of rock hides a lab with a two work benches in it, one of which was sundered through the middle, the other tipped over.  The floor is littered with broken glass and an assortment of metal tubes, wire frames, and broken alchemical tools.  Shelves ringed the perimeter, but have been mostly torn down off the walls.  Beneath them, there are various preserved organs and unidentifiable fleshy masses, in varying states of decay.  A floor to ceiling tank in the corner, about 3' in diameter, with tubes connecting to the top and bottom, is shattered.  The smoke is rising from it's base.  (After about one minute, a gout of flame will erupt from it, DEX 15 for 2d6 fire damage and the room begins to burn).
 - Investigation check
@@ -241,7 +231,7 @@ If they enter the building afterwords, they see a door to the basement that was 
 
 {{ text | markdownify }}
 
-{% include dnd/encounter-foot.html name="Helmed Horror" %}
+{% include dnd/encounter-foot.html name="Breached Lab" %}
 
 ### 4. Servant for a mid-level noble discovers their necromancy
 

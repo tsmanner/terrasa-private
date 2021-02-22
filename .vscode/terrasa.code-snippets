@@ -52,6 +52,30 @@
 		],
 		"description": "Insert a link to a spell"
 	},
+	"item-yaml": {
+		"scope": "yaml",
+		"prefix": "item",
+		"body": [
+			"https://www.dndbeyond.com/magic-items/$1"
+		],
+		"description": "Insert a link to a magic item"
+	},
+	"monster-yaml": {
+		"scope": "yaml",
+		"prefix": "monster",
+		"body": [
+			"https://www.dndbeyond.com/monsters/$1"
+		],
+		"description": "Insert a link to a monster"
+	},
+	"spell-yaml": {
+		"scope": "yaml",
+		"prefix": "spell",
+		"body": [
+			"https://www.dndbeyond.com/spells/$1"
+		],
+		"description": "Insert a link to a spell"
+	},
 	"entity": {
 		"scope": "yaml",
 		"prefix": "entity",

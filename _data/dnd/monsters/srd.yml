@@ -1,6 +1,6 @@
 "Animated Armor":
   name: Animated Armor
-  link:
+  link: https://www.dndbeyond.com/monsters/animated-armor
   size: medium
   type: construct
   alignment: unaligned
@@ -44,7 +44,7 @@
 
 "Death Dog":
   name: Death Dog
-  link:
+  link: https://www.dndbeyond.com/monsters/death-dog
   size: medium
   type: monstrosity
   alignment: neutral evil
@@ -324,7 +324,7 @@
 
 "Rug of Smothering":
   name: Rug of Smothering
-  link:
+  link: https://www.dndbeyond.com/monsters/rug-of-smothering
   size: large
   type: construct
   alignment: unaligned
