@@ -165,6 +165,21 @@ If they decide to check the cellar door right away, it starts an investigation b
 
 ---
 
+### Ryan's Reroll
+
+Still rogue - Tiefling Mastermind
+Same crew
+
+Vengeance on Izhi?  Caltrop's brother maybe, coming to find him.  He heard Caltrop was back on the mainland and is coming to look for him.  Maybe has been watching him from the shadows for the couple of days they've been here
+
+Already active in Yalaqta, investigating or infiltrating the Jeweler's.  Was already staking out the shop when the party approached, cased it, then entered and didn't leave.  Is already one of Llaska's contacts, they view each other as informants, not realizing that /new/ is actually a mastermind.
+
+Ryan is Spy background vs Llaska's Urban Bounty Hunter, they know each other.  Llaska thinks that Ryan is one of his informant contacts in "high society" when really he's basically a super-spy infiltrating the high society and using Llaska as an information broker.
+
+I can use this as a way to inject some more clues/knowledge in about the Jeweler and about the goings on in Yalaqta.  Also, Caltrop's journal was meant for /new/ the entire time, he just didn't realize that.  Once /new/ spends some time with it, he'll realize that there are parts in there that could never work and must be different, eventually realizing that Caltrop couldn't have known some of the things, only /new/ would be able to put them together.  Also, change his magic item to be a rapier or so, and include some different traits.  I am thinking that it can basically have a laser pointer in it to help with the 30' range *Help* bonus action that he gets with *Mastermind*.
+
+---
+
 ## If they manage to make it back to the chapel with the notes...
 
 Taking the notes back to the Chapel:
