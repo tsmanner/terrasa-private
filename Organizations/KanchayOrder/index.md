@@ -101,7 +101,23 @@ Tucked into quiet corners of the world, these locations are habitats tended by t
 ## Travel Between Locations
 ---
 
-Members of the K'anchay Order are able to travel between sites via portals to the gateway cities in the Outlands.  Travel is achieved through a re-skin of the [Astral Projection](https://www.dndbeyond.com/spells/astral-projection) spell which sends players to a particular location in the Outlands.  Less experienced members are chaperoned on their journeys, instructed not to stray, especially while traveling the region near Faunel.  This allows them to travel great distances often by simply walking a block or two through a Gate-Town, and doesn't technically violate the Cianni ban of teleportation circles.
+Members of the K'anchay Order are able to travel between sites via portals to the gateway cities in the Outlands.  Travel is achieved through a re-skin of the [Astral Projection](https://www.dndbeyond.com/spells/astral-projection) spell which sends players to a particular location in the Outlands.  Less experienced members are chaperoned on their journeys, instructed not to stray, especially while traveling the region near Faunel.  This allows them to travel great distances often by simply walking a block or two through a Gate-Town, and doesn't technically violate the Cianni ban of teleportation circles.  When a person traveling in this way dies in the other plane, they suffer permanent psychological damage as a result of experiencing that death.
+
+| Deaths | Effect
+|--------|--------
+|      1 | When a creature you can see is reduced to 0 hit points, you must succeed on a DC 10 Wisdom saving throw or be Frightened of the corpse for 1 minute.  You can repeat this saving throw at the end of each of your turns.
+|      2 |
+
+Effect Ideas:
+- Whenever you take a long rest, roll a d20.  On a roll of 10 or more you succeed.  On a failure, you have crippling nightmares about your experience(s) of death, you suffer the normal effects of missing a long rest, but may benefit from a short rest.
+  - If you fail one night, you don't need to roll on the next
+  - +1 Exhaustion
+  - No hit dice returned
+  - No automatic healing
+  - probably 3 or more deaths
+- When a creature you can see is reduced to 0 hit points, you must succeed on a DC X Wisdom saving throw or be Stunned until the end of your next turn.
+- When a creature you can see is reduced to 0 hit points, you must succeed on a DC X Wisdom saving throw or be Frightened of the corpse for 1 minute.  You can repeat this saving throw at the end of each of your turns.
+- When you roll initiative, you must also make an Intelligence saving throw or see the cause of one of your deaths manifest nearby, as if you were targeted by the <a href="https://www.dndbeyond.com/spells/{{ 'Phantasmal Force' | downcase | split: ' ' | join: '-' }}">Phantasmal Force</a> spell with a save DC of (% * Deaths).  If the cause of death was an enemy, then it attacks you at initiative 20, dealing 1d6 psychic damage.  If it is a hazard, you believe that the hazard is real, and thus avoid it on the battlefield.
 
 ### Monastery
 

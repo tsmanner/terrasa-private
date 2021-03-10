@@ -144,42 +144,6 @@ Opposed stealth/perception against the dog and armors.  If they notice the playe
 DC 15 to find a <a class="uncommon" href="https://www.dndbeyond.com/magic-items/{{ 'Periapt of Health' | downcase | split: ' ' | join: '-' }}">Periapt of Health</a><br>
 DC 13 to find spell notes.  (remind them that they found similar notes in Wayra's temple).
 
-
----
-
-## Resuming in the basement to the jewelry shop
-
-They didn't tie Kiwa up, just incapacitated him.  After 1 hour (30m remaining at the start) he regains consciousness with 1 hp, and will immediately flee (DC 18 Perception to hear his footsteps) so that he can describe what happened to the local authorities.  1 hour after that, they will arrive on the scene and start looking for clues, if the party is still there, they'll have to find a way to escape, talk their way out, fight, or get arrested.
-
-Llaska hears them approaching, giving the party a little bit of warning.
-
-Kiwa isn't sure what happened after he was taken down, only that it was *definitely* Gromag that hit him.  He came to in the back leaned against a table leg, near the remains of an utterly destroyed rug.  If they catch the party in the building still:
-
-**Lead:** You there!  Stop!  We've gotten word of an assault by one of you on a citizen of Yalaqta, and it would appear *he looks around the room* also the theft of several valuable items from this shop.  *Pointing to Gromag* You have been accused of the assault.
-
-If they show the secret lab and can convince them that something bad is going on here, then they will be warned and told to return what they took from the shop above.  Gromag will still have to answer for the assault, which can start with a chaperoned conversation with Kiwa.
-
-**Lead:** If you return what you took from the shop, we can let it go, considering what you found here today.  The assault, I'm afraid, I can't ignore.  Regardless of your intentions, you committed violence against a man innocent of all of this.  You may speak with him now if you wish, otherwise, we will need to contact you in a few days if he wishes to press charges.  I'll need an item of yours as collateral, we can't have you skipping town without resolving this after all.
-
-If they decide to check the cellar door right away, it starts an investigation by the town's guard into the party.  Add a few random events that involve them being caught or tracked down by investigators, town's guard members, and bounty hunters (yeah, they're totally on the job board now).  The investigation specifically centers on Gromag and Llaska, with some ancillary interest in Gluteus and Caltrop, but they're not certain if those two are involved.  Kilvin was not seen by Kiwa, so he is not implicated unless they're caught.
-
----
-
-### Ryan's Reroll
-
-Still rogue - Tiefling Mastermind
-Same crew
-
-Vengeance on Izhi?  Caltrop's brother maybe, coming to find him.  He heard Caltrop was back on the mainland and is coming to look for him.  Maybe has been watching him from the shadows for the couple of days they've been here
-
-Already active in Yalaqta, investigating or infiltrating the Jeweler's.  Was already staking out the shop when the party approached, cased it, then entered and didn't leave.  Is already one of Llaska's contacts, they view each other as informants, not realizing that /new/ is actually a mastermind.
-
-Ryan is Spy background vs Llaska's Urban Bounty Hunter, they know each other.  Llaska thinks that Ryan is one of his informant contacts in "high society" when really he's basically a super-spy infiltrating the high society and using Llaska as an information broker.
-
-I can use this as a way to inject some more clues/knowledge in about the Jeweler and about the goings on in Yalaqta.  Also, Caltrop's journal was meant for /new/ the entire time, he just didn't realize that.  Once /new/ spends some time with it, he'll realize that there are parts in there that could never work and must be different, eventually realizing that Caltrop couldn't have known some of the things, only /new/ would be able to put them together.  Also, change his magic item to be a rapier or so, and include some different traits.  I am thinking that it can basically have a laser pointer in it to help with the 30' range *Help* bonus action that he gets with *Mastermind*.
-
----
-
 ## If they manage to make it back to the chapel with the notes...
 
 Taking the notes back to the Chapel:
@@ -205,6 +169,66 @@ Chaplain Mayua puts on a pair of reading glasses and begins flipping through the
 {% endcapture %}{{ text | markdownify }}
 {% include dnd/encounter-foot.html name="Pari's Basement Lab" %}
 
+
+---
+
+## Resuming in the basement to the jewelry shop
+
+They didn't tie Kiwa up, just incapacitated him.  After 1 hour (30m remaining at the start) he regains consciousness with 1 hp, and will immediately flee (DC 18 Perception to hear his footsteps) so that he can describe what happened to the local authorities.  1 hour after that, they will arrive on the scene and start looking for clues, if the party is still there, they'll have to find a way to escape, talk their way out, fight, or get arrested.
+
+Llaska hears them approaching, giving the party a little bit of warning.
+
+Kiwa isn't sure what happened after he was taken down, only that it was *definitely* Gromag that hit him.  He came to in the back leaned against a table leg, near the remains of an utterly destroyed rug.
+
+If they catch the party in the building still:
+
+**Lead:** You there!  Stop!  We've gotten word of an assault by one of you on a citizen of Yalaqta, and it would appear *he looks around the room* also the theft of several valuable items from this shop.  *Pointing to Gromag* You have been accused of the assault.
+
+If they show the secret lab and can convince them that something bad is going on here, then they will be warned and told to return what they took from the shop above.  The <a href="https://www.dndbeyond.com/monsters/{{ 'Death Dog' | downcase | split: ' ' | join: '-' }}">Death Dog</a> will freak out the guards a bit and definitely points to something nefarious, so that'll help them out with the whole "something is up" narrative.  Gromag will still have to answer for the assault, which can start with a chaperoned conversation with Kiwa.
+
+**Lead:** If you return what you took from the shop, we can let it go, considering what you found here today.  The assault, I'm afraid, I can't ignore.  Regardless of your intentions, you committed violence against a man innocent of all of this.  You may speak with him now if you wish, otherwise, we will need to contact you in a few days if he wishes to press charges.  I'll need an item of yours as collateral, we can't have you skipping town without resolving this after all.
+
+
+If they decide to check the cellar door right away, it starts an investigation by the town's guard into the party.  Add a few random events that involve them being caught or tracked down by investigators, town's guard members, and bounty hunters (yeah, they're totally on the job board now).  The investigation specifically centers on Gromag and Llaska, with some ancillary interest in Gluteus and Caltrop, but they're not certain if those two are involved.  Kilvin was not seen by Kiwa, so he is not implicated unless they're caught.  Flyers posted for Gromag and Llaska may make their way back to Mayua, who will confront the party by asking them to see her in her office.  When they arrive:
+
+
+
+**Mayua:** *Slapping the flyer down on her desk* What is the meaning of this?  Am I to understand that you assaulted a young man at a store, then proceeded to destroy or steal nearly everything of value in it?  Explain yourselves.
+
+**Mayua:** Let me get this straight... you thought that because a store had something delivered to it, you should assault the staff and clean the place out.  Absurd.
+
+**Mayua:** If you are *ever* going to break into *anything*, you had better be DAMN sure you know what you're doing there.  We have no particular love for laws, only for the cause of good.  Breaking the law as a means to do good is acceptable, but it should be your last resort, not your first.  In any case, the K'anchay Order does not condone what you've done, and you'll have to answer to local authorities for it.  If you return the goods that you stole, I'm sure you can settle this without much fuss.  As far as your standing with us... well, that's between you and Lathander, I'm sure he'll be in touch.
+
+### TODO: Penance to Lathander
+
+Come up with the mechanism by which the party has to make amends with Lathander, convincing him that they were pursuing *good* and paying for the evil (assault and theft) they committed.
+
+---
+
+### Ryan's Reroll
+
+Still rogue - Tiefling Mastermind
+
+Vengeance on Izhi?  Caltrop's brother maybe, coming to find him.  He heard Caltrop was back on the mainland and is coming to look for him.  Maybe has been watching him from the shadows for the couple of days they've been here
+
+Already active in Yalaqta, investigating or infiltrating the Jeweler's.  Was already staking out the shop when the party approached, cased it, then entered and didn't leave.  Is already one of Llaska's contacts, they view each other as informants, not realizing that /new/ is actually a mastermind.
+
+Ryan is Spy background vs Llaska's Urban Bounty Hunter, they know each other.  Llaska thinks that Ryan is one of his informant contacts in "high society" when really he's basically a super-spy infiltrating the high society and using Llaska as an information broker.
+
+I can use this as a way to inject some more clues/knowledge in about the Jeweler and about the goings on in Yalaqta.  Also, Caltrop's journal was meant for /new/ the entire time, he just didn't realize that.  Once /new/ spends some time with it, he'll realize that there are parts in there that could never work and must be different, eventually realizing that Caltrop couldn't have known some of the things, only /new/ would be able to put them together.  Also, change his magic item to be a rapier or so, and include some different traits.  I am thinking that it can basically have a laser pointer in it to help with the 30' range *Help* bonus action that he gets with *Mastermind*.
+
+He has done some work with the K'anchay Order, but is not a member, because he thinks this religion stuff is nonsense.  The combination of /Rich/'s swarm, the contents of Caltrop's journal, and the subsequent meeting with Mayua and co, will convince him that there is more to it.
+
+Can he help the party get out of the charges against them with the jeweler shop worker and the stolen goods?  Probably, I'll have to convince Ryan to tell them that he can help smooth things over if they return the contents of the shop, but they can probably keep what they found below.
+
+**Questions:**
+
+Why is he in Yalaqta investigating the Jeweler?
+
+Why did he not reveal himself to Caltrop?  They had a bad parting of ways or so
+
+
+---
 
 **Mayua:** If I might ask, have you had a chance to look at your journals and quipu?  If you need some assistance, we might be able to give you a nudge in a helpful direction.
 
