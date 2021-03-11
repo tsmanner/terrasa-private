@@ -50,6 +50,7 @@ template <typename Operation, typename Source> struct UnaryAtom {
   int max() const { return mOperation(mSource.max()); }
 };
 
+
 template <typename Operation, typename SourceL, typename SourceR> struct BinaryAtom {
   const SourceL mSourceL {};
   const SourceR mSourceR {};
