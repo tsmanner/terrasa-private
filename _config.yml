@@ -32,6 +32,8 @@ defaults:
       path: ""
     values:
       layout: post
+      footer-extra:
+        - guilded.html
 
 collections:
   npcs:
@@ -48,3 +50,4 @@ social-network-links:
   email: tom.s.manner@gmail.com
   github: tsmanner
 
+guilded-id: gRGWdMAR
