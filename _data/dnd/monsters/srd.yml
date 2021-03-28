@@ -322,6 +322,28 @@
     - "Illusory Appearance": "The hag covers herself and anything she is wearing or carrying with a magical illusion that makes her look like another creature of her general size and humanoid shape. The illusion ends if the hag takes a bonus action to end it or if she dies.<br>The changes wrought by this effect fail to hold up to physical inspection. For example, the hag could appear to have smooth skin, but someone touching her would feel her rough flesh. Otherwise, a creature must take an action to visually inspect the illusion and succeed on a DC 20 Intelligence (Investigation) check to discern that the hag is disguised."
     - "Invisible Passage": "The hag magically turns invisible until she attacks or casts a spell, or until her concentration ends (as if concentrating on a spell). While invisible, she leaves no physical evidence of her passage, so she can be tracked only by magic. Any equipment she wears or carries is invisible with her."
 
+"Guard":
+  name: Guard
+  link: https://www.dndbeyond.com/monsters/guard
+  size: medium
+  type: humanoid
+  alignment: lawful neutral
+  challenge-rating: 1/8
+  proficiency: 2
+  str: 13
+  dex: 12
+  con: 12
+  int: 10
+  wis: 11
+  cha: 10
+  ac: 16
+  hp: 11
+  bonuses:
+    perception: 2
+  actions:
+    - "Spear": "Melee or Ranged Weapon Attack: +3 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 4 (1d6 + 1) piercing damage, or 5 (1d8 + 1) piercing damage if used with two hands to make a melee attack."
+    - "Shortbow": "Ranged Weapon Attack: +3 to hit, range 80/320 ft., one target. Hit: 4 (1d6 + 1) piercing damage, or 5 (1d8 + 1) piercing damage if used with two hands to make a melee attack."
+
 "Rug of Smothering":
   name: Rug of Smothering
   link: https://www.dndbeyond.com/monsters/rug-of-smothering

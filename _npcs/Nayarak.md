@@ -11,11 +11,9 @@ Now, in his middle age, he is searching for a way to prolong his life so he can 
 
 Shops:
   - Pari's Apt Periapts
-  - Nayarak
+  - Nayarak's Nicknacks
 
 Several of his shops and other pieces of real estate have laboratories beneath them where he conducts experiments and works on new items.
-  -
-
 
 He is in league with Izhi, though he does not subscribe to the Cult's beliefs or goals.  A middle aged man, he seeks power and youth, being drawn to the power of necromancy anyway, a relationship with the cult was symbiotic.
   - He has learned a couple of necromantic secrets and is able to imbue them into jewelry, saving the most powerful for himself.
@@ -23,5 +21,14 @@ He is in league with Izhi, though he does not subscribe to the Cult's beliefs or
   - He owns property all over the city, several pieces under a pseudonym.  One of these is the building used in the "Helmed Horror" event.
   - He lives on the waterfront in the Hanaska District, and has a small dock there.
 
-Pseudonyms
-  - Khuyana Pari
+## Names
+
+### Nayarak Cusi
+
+A master jeweler, his only store is in the Hanaska District and has only high end pieces in it.  There are an unusual number of enchanted works, which are priced on the high side, but not absurdly so.
+
+### Khuyana Pari (alias)
+
+A proficient jeweler, makes good quality jewelry, some with minor enchantments.  Nothing extravagant is found in his stores, at the high end is some gold with simply cut gems.  The enchanted items he sells tend to be very overpriced, in part to make the rest of the jewelry seems more reasonable by comparison.  His stores even have some pieces made of steel, brass, or copper, which would normally only be found in low end shops, but his are generally of higher quality, trying to sit squarely at the top of the range for "working class" jewelry.
+
+There are a couple of these stores around the eastern side of Yalaqta, catering to people living or working in the middle and upper-middle class neighborhoods.  He regularly uses the basements of these shops to experiment and to create pieces for his exclusive clients. One such shop

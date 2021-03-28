@@ -4,6 +4,23 @@ subtitle: Planning notes for ongoing themes and with excerpts etc for upcoming s
 full-width: true
 
 encounters:
+  - name: Guard Contingent
+    entities:
+      - dnd.common.players.Brother Gromag
+      - dnd.common.players.Kask Blightborn
+      - dnd.common.players.Gluteus Maximus
+      - dnd.npcs.Kilvin Greyjaw
+      - dnd.npcs.Llaska
+      - dnd.monsters.homebrew.Militia Captain
+      - dnd.monsters.homebrew.Militia Captain
+      - dnd.monsters.srd.Guard
+      - dnd.monsters.srd.Guard
+      - dnd.monsters.srd.Guard
+      - dnd.monsters.srd.Guard
+      - dnd.monsters.srd.Guard
+      - dnd.monsters.srd.Guard
+      - dnd.monsters.srd.Guard
+      - dnd.monsters.srd.Guard
   - name: Pari's Back Room
     entities:
       - dnd.common.players.Brother Gromag
@@ -174,9 +191,29 @@ Chaplain Mayua puts on a pair of reading glasses and begins flipping through the
 
 ## Resuming in the basement to the jewelry shop
 
-They didn't tie Kiwa up, just incapacitated him.  After 1 hour (30m remaining at the start) he regains consciousness with 1 hp, and will immediately flee (DC 18 Perception to hear his footsteps) so that he can describe what happened to the local authorities.  1 hour after that, they will arrive on the scene and start looking for clues, if the party is still there, they'll have to find a way to escape, talk their way out, fight, or get arrested.
+Kask, you find yourself on a moderately busy street, the morning after another middle-of-the-night delivery was made to Pari's.  Hoping to catch a glimpse of the proprietor, you instead see your estranged brother coming down the same street with a group of four: a halfling, a human, a dwarf, and a bird-person.  They clumsily scope out the shop, then start to talk about something, the halfling getting agitated and shouting at the human about "pitching."  The dwarf sits down behind a barrel in the alley, as the rest enter the store.  A few minutes later, through the window, you see the halfling throw himself at the shopkeeper, and they disappear from view.  A passerby going into the store, coming back out shortly after.  The halfling comes out to fetch the dwarf, who enters the shop, locking the door.  It's been an hour and nothing has happened, you're starting to get nervous, but aren't sure if you should enter and risk revealing yourself.  Suddenly, the door flies open and the shopkeeper, a boy no more than 18 years old, bursts into the street and starts to move down the street.
 
-Llaska hears them approaching, giving the party a little bit of warning.
+<details>
+<summary>If Kask tries to catch him</summary>
+{% capture text %}
+{% endcapture %}{{ text | markdownify }}
+</details>
+
+<details>
+<summary>If Kask doesn't try to catch him</summary>
+{% capture text %}
+
+Kiwa escapes and rouses a guard post.  The guards show up soon after.  If the party tries to escape, they get a couple of attempts before they hear the guards shouting to them from outside.  There are a total of ten outside, two with cloaks over their left shoulders with longswords at their sides, the rest with an assortment of spears and shortbows.
+
+{% include dnd/encounter.html name="Guard Contingent" %}
+
+{% endcapture %}{{ text | markdownify }}
+</details>
+
+
+### Notes
+
+They didn't tie Kiwa up, just incapacitated him.  After 1 hour (30m remaining at the start) he regains consciousness with 1 hp, and will immediately flee (DC 18 Perception to hear his footsteps) so that he can describe what happened to the local authorities.  1 hour after that, they will arrive on the scene and start looking for clues, if the party is still there, they'll have to find a way to escape, talk their way out, fight, or get arrested.
 
 Kiwa isn't sure what happened after he was taken down, only that it was *definitely* Gromag that hit him.  He came to in the back leaned against a table leg, near the remains of an utterly destroyed rug.
 
@@ -186,7 +223,7 @@ If they catch the party in the building still:
 
 If they show the secret lab and can convince them that something bad is going on here, then they will be warned and told to return what they took from the shop above.  The <a href="https://www.dndbeyond.com/monsters/{{ 'Death Dog' | downcase | split: ' ' | join: '-' }}">Death Dog</a> will freak out the guards a bit and definitely points to something nefarious, so that'll help them out with the whole "something is up" narrative.  Gromag will still have to answer for the assault, which can start with a chaperoned conversation with Kiwa.
 
-**Lead:** If you return what you took from the shop, we can let it go, considering what you found here today.  The assault, I'm afraid, I can't ignore.  Regardless of your intentions, you committed violence against a man innocent of all of this.  You may speak with him now if you wish, otherwise, we will need to contact you in a few days if he wishes to press charges.  I'll need an item of yours as collateral, we can't have you skipping town without resolving this after all.
+**Lead:** If you return what you took from the shop, we can let it go, considering what you found here today.  The assault, I'm afraid, I can't ignore.  Regardless of your intentions, you committed violence against an innocent man.  You can talk to him now if you want, otherwise, we will need to contact you in a few days if he wants press charges.  I'll need an item of yours as collateral, we can't have you skipping town without resolving this after all.
 
 
 If they decide to check the cellar door right away, it starts an investigation by the town's guard into the party.  Add a few random events that involve them being caught or tracked down by investigators, town's guard members, and bounty hunters (yeah, they're totally on the job board now).  The investigation specifically centers on Gromag and Llaska, with some ancillary interest in Gluteus and Caltrop, but they're not certain if those two are involved.  Kilvin was not seen by Kiwa, so he is not implicated unless they're caught.  Flyers posted for Gromag and Llaska may make their way back to Mayua, who will confront the party by asking them to see her in her office.  When they arrive:
@@ -220,13 +257,6 @@ I can use this as a way to inject some more clues/knowledge in about the Jeweler
 He has done some work with the K'anchay Order, but is not a member, because he thinks this religion stuff is nonsense.  The combination of /Rich/'s swarm, the contents of Caltrop's journal, and the subsequent meeting with Mayua and co, will convince him that there is more to it.
 
 Can he help the party get out of the charges against them with the jeweler shop worker and the stolen goods?  Probably, I'll have to convince Ryan to tell them that he can help smooth things over if they return the contents of the shop, but they can probably keep what they found below.
-
-**Questions:**
-
-Why is he in Yalaqta investigating the Jeweler?
-
-Why did he not reveal himself to Caltrop?  They had a bad parting of ways or so
-
 
 ---
 

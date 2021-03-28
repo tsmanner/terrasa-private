@@ -1,0 +1,23 @@
+"Militia Captain":
+  name: Militia Captain
+  link: https://www.dndbeyond.com/monsters/1094028-militia-captain
+  size: medium
+  type: humanoid
+  alignment: lawful neutral
+  challenge-rating: 2
+  proficiency: 2
+  str: 13
+  dex: 12
+  con: 12
+  int: 10
+  wis: 11
+  cha: 10
+  ac: 18
+  hp: 39
+  bonuses:
+    con-save: proficiency
+    wis-save: proficiency
+    perception: 2
+  actions:
+    - "Multiattack": "The militia captain makes two melee attacks."
+    - "Longsword": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 7 (1d6 + 3) slashing damage."
