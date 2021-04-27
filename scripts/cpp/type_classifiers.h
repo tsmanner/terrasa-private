@@ -6,6 +6,22 @@
 namespace typing {
 
 //
+// Any
+//   meta-class that will compare
+//   equal to all types
+//
+
+struct Any {};
+
+//
+// None
+//   meta-class that will compare
+//   not equal to all types
+//
+
+struct None {};
+
+//
 // Type
 //
 
@@ -31,10 +47,9 @@ template <typename...> struct TypeEQUAL;
 // NOT
 template <typename T>
 struct TypeNOT {
-  using type = Type<T>;
+  using type = T;
 
   constexpr TypeNOT<T>() {}
-  // constexpr operator!
 };
 
 // NOT Equal
@@ -82,6 +97,58 @@ struct TypeEQUAL<Type<TL>, Type<TR>> {
 
   constexpr operator bool() const {
     return std::is_same<typename type_left::type, typename type_right::type>::value;
+  }
+};
+
+
+template <typename T>
+struct TypeEQUAL<Type<Any>, Type<T>> {
+  using type_left = Type<Any>;
+  using type_right = Type<T>;
+
+  constexpr TypeEQUAL() {}
+
+  constexpr operator bool() const {
+    return true;
+  }
+};
+
+
+template <typename T>
+struct TypeEQUAL<Type<T>, Type<Any>> {
+  using type_left = Type<T>;
+  using type_right = Type<Any>;
+
+  constexpr TypeEQUAL() {}
+
+  constexpr operator bool() const {
+    return true;
+  }
+};
+
+
+template <typename T>
+struct TypeEQUAL<Type<None>, Type<T>> {
+  using type_left = Type<None>;
+  using type_right = Type<T>;
+
+  constexpr TypeEQUAL() {}
+
+  constexpr operator bool() const {
+    return false;
+  }
+};
+
+
+template <typename T>
+struct TypeEQUAL<Type<T>, Type<None>> {
+  using type_left = Type<T>;
+  using type_right = Type<None>;
+
+  constexpr TypeEQUAL() {}
+
+  constexpr operator bool() const {
+    return false;
   }
 };
 
@@ -243,6 +310,37 @@ struct TypeEQUAL<TypeAND<TLL, TLR>, TypeAND<TRL, TRR>> {
 
 
 }  // namespace typing::detail
+
+
+//
+// NOT
+//
+
+// Type
+template <typename T>
+constexpr auto operator!(Type<T>) -> decltype(detail::TypeNOT<Type<T>>()) {
+  return detail::TypeNOT<Type<T>>();
+}
+// TypeNOT
+template <typename T>
+constexpr auto operator!(detail::TypeNOT<T>) -> decltype(T()) {
+  return T();
+}
+// TypeEQUAL
+template <typename TL, typename TR>
+constexpr auto operator!(detail::TypeEQUAL<TL, TR>) -> decltype(detail::TypeNOT<detail::TypeEQUAL<TL, TR>>()) {
+  return detail::TypeNOT<detail::TypeEQUAL<TL, TR>>();
+}
+// TypeOR
+template <typename TL, typename TR>
+constexpr auto operator!(detail::TypeOR<TL, TR>) -> decltype(detail::TypeNOT<detail::TypeOR<TL, TR>>()) {
+  return detail::TypeNOT<detail::TypeOR<TL, TR>>();
+}
+// TypeAND
+template <typename TL, typename TR>
+constexpr auto operator!(detail::TypeAND<TL, TR>) -> decltype(detail::TypeNOT<detail::TypeAND<TL, TR>>()) {
+  return detail::TypeNOT<detail::TypeAND<TL, TR>>();
+}
 
 
 //
@@ -414,37 +512,6 @@ constexpr auto operator!=(detail::TypeAND<TLL, TLR>, detail::TypeOR<TRL, TRR>) -
 template <typename TLL, typename TLR, typename TRL, typename TRR>
 constexpr auto operator!=(detail::TypeAND<TLL, TLR>, detail::TypeAND<TRL, TRR>) -> decltype(!detail::TypeEQUAL<detail::TypeAND<TLL, TLR>, detail::TypeAND<TRL, TRR>>()) {
   return !detail::TypeEQUAL<detail::TypeAND<TLL, TLR>, detail::TypeAND<TRL, TRR>>();
-}
-
-
-//
-// NOT
-//
-
-// Type
-template <typename T>
-constexpr auto operator!(Type<T>) -> decltype(detail::TypeNOT<Type<T>>()) {
-  return detail::TypeNOT<Type<T>>();
-}
-// TypeNOT
-template <typename T>
-constexpr auto operator!(detail::TypeNOT<T>) -> decltype(T()) {
-  return T();
-}
-// TypeEQUAL
-template <typename TL, typename TR>
-constexpr auto operator!(detail::TypeEQUAL<TL, TR>) -> decltype(detail::TypeNOT<detail::TypeEQUAL<TL, TR>>()) {
-  return detail::TypeNOT<detail::TypeEQUAL<TL, TR>>();
-}
-// TypeOR
-template <typename TL, typename TR>
-constexpr auto operator!(detail::TypeOR<TL, TR>) -> decltype(detail::TypeNOT<detail::TypeOR<TL, TR>>()) {
-  return detail::TypeNOT<detail::TypeOR<TL, TR>>();
-}
-// TypeAND
-template <typename TL, typename TR>
-constexpr auto operator!(detail::TypeAND<TL, TR>) -> decltype(detail::TypeNOT<detail::TypeAND<TL, TR>>()) {
-  return detail::TypeNOT<detail::TypeAND<TL, TR>>();
 }
 
 
