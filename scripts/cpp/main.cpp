@@ -58,8 +58,15 @@ struct precedence<std::function<int()>> {
 int main() {
   using std::cout;
 
-  Entity<11, TypeSet<Dexterity, Intelligence>> TurminderXuss {
-    "Turminder Xuss", 10, 19, 10, 16, 12, 10
+  // TODO API Goal: kwargs approximation
+  Entity<11, TypeSet<Dexterity, Constitution>> TurminderXuss {
+    Name("Turminder Xuss"),
+    Dexterity(19),
+    Intelligence(16),
+    Wisdom(12),
+    Strength(10),
+    Constitution(10),
+    Charisma(10)
   };
 
   // Entity<> Balaam { "Balaam", 11, 14, 12, 15, 10, 10, 20 };

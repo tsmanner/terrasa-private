@@ -1,7 +1,8 @@
 #pragma once
 
 struct Ability {
-  constexpr Ability(int const &inScore): mScore(inScore) {}
+  explicit constexpr Ability(int const &inScore): mScore(inScore) {}
+  Ability(): mScore(10) {}
 
   int mScore;
   int mModifier { mScore / 2 - 5 };

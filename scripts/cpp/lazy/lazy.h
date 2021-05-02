@@ -11,21 +11,21 @@ inline std::ostream& operator<<(std::ostream& os, std::function<int()> const &) 
   return os << "std::function<int()>";
 }
 
-inline std::ostream& operator<<(std::ostream& os, std::function<int()> const) {
-  return os << "std::function<int()>";
-}
+// inline std::ostream& operator<<(std::ostream& os, std::function<int()> const) {
+//   return os << "std::function<int()>";
+// }
 
-inline std::ostream& operator<<(std::ostream& os, std::function<int()>) {
-  return os << "std::function<int()>";
-}
+// inline std::ostream& operator<<(std::ostream& os, std::function<int()>) {
+//   return os << "std::function<int()>";
+// }
 
-inline std::ostream& operator<<(std::ostream& os, std::function<int()> &&) {
-  return os << "std::function<int()>";
-}
+// inline std::ostream& operator<<(std::ostream& os, std::function<int()> &&) {
+//   return os << "std::function<int()>";
+// }
 
-inline std::ostream& operator<<(std::ostream& os, std::function<int()> &) {
-  return os << "std::function<int()>";
-}
+// inline std::ostream& operator<<(std::ostream& os, std::function<int()> &) {
+//   return os << "std::function<int()>";
+// }
 
 namespace lazy {
 

@@ -32,6 +32,24 @@ struct TypeSet<T> {
   static constexpr auto types = Type<T>();
 };
 
+template <typename T>
+struct Value {
+  explicit Value(T const &inValue): mValue(inValue) {}
+  Value() {}
+  T mValue;
+};
+
+
+struct Level : public Value<int> {
+  using Value<int>::Value;
+  int proficiency() const { return mValue / 5 + 2; }
+};
+std::ostream &operator<<(std::ostream &os, Level const &inLevel) { return os << "Level " << inLevel.mValue; }
+
+struct Name : public Value<std::string> { using Value<std::string>::Value; };
+std::ostream &operator<<(std::ostream &os, Name const &inName) { return os << inName.mValue; }
+
+
 template <>
 struct TypeSet<> {
   static constexpr auto types = Type<typing::None>();
@@ -110,7 +128,7 @@ struct Entity {
   static constexpr int proficiency = Level / 5 + 2;
 
   Entity(
-    std::string  const &inName,
+    Name         const &inName,
     Strength     const &inStrength,
     Dexterity    const &inDexterity,
     Constitution const &inConstitution,
@@ -129,7 +147,40 @@ struct Entity {
     )
   {}
 
-  std::string mName;
+  template <typename... Ts>
+  Entity(Ts const &... inTs) {
+    set(inTs...);
+  }
+
+  // TODO:
+  //   Implement a set function for each type, then
+  //   a variadic that recurses to call each one.  That
+  //   should then allow a variadic constructor that
+  //   approximates using keyword arguments.
+  void set(Name         const &inName        ) {                        mName       = inName;         }
+  // void set(Level        const &inLevel       ) {                        mLevel      = inLevel;        }
+  void set(Strength     const &inStrength    ) { std::get<Strength    >(mAbilities) = inStrength;     }
+  void set(Dexterity    const &inDexterity   ) { std::get<Dexterity   >(mAbilities) = inDexterity;    }
+  void set(Constitution const &inConstitution) { std::get<Constitution>(mAbilities) = inConstitution; }
+  void set(Intelligence const &inIntelligence) { std::get<Intelligence>(mAbilities) = inIntelligence; }
+  void set(Wisdom       const &inWisdom      ) { std::get<Wisdom      >(mAbilities) = inWisdom;       }
+  void set(Charisma     const &inCharisma    ) { std::get<Charisma    >(mAbilities) = inCharisma;     }
+
+  template <typename T, typename... Ts>
+  void set(T const &inT, Ts const &... inTs) {
+    set(inT);
+    set(inTs...);
+  }
+
+
+  template <typename T, typename std::enable_if_t<(typing::Type<T>() != Proficiency()), bool>...>
+  inline auto check() const { return d20 + std::get<T>(mAbilities).mModifier; }
+
+  // inline auto proficiency(Ability const &ability) const { return check(ability) + proficiency(); }
+  // inline auto expertise(Ability const &ability) const { return proficiency(ability) + proficiency(); }
+
+
+  Name mName;
   std::tuple<Strength, Dexterity, Constitution, Intelligence, Wisdom, Charisma> mAbilities;
 
 };
