@@ -48,13 +48,6 @@ template <typename T> auto owls_wisdom(    T const &t) { return OwlsWisdom    <T
 template <typename T> auto eagles_splendor(T const &t) { return EaglesSplendor<T>(t); }
 
 
-namespace lazy {
-template <>
-struct precedence<std::function<int()>> {
-  static constexpr int value = 0;
-};
-}
-
 int main() {
   using std::cout;
 
@@ -86,7 +79,7 @@ int main() {
 
   cout << '\n';
   std::function<int()> f = [](){ return 15; };
-  cout << (d20 + f) << '\n';
+  cout << (d20 + f) << " = " << (d20 + f)() << '\n';
 
   return 0;
 }
