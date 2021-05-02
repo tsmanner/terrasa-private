@@ -4,7 +4,8 @@
 
 
 struct Ability {
-  constexpr Ability(int const &inScore): mScore(inScore) {}
+  explicit constexpr Ability(int const &inScore): mScore(inScore) {}
+  Ability(): mScore(10) {}
 
   int const mScore;
   int const mModifier { mScore / 2 - 5 };
