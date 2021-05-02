@@ -408,6 +408,8 @@ If they clear the chamber:
 
 **Serana:** Ah! You managed to figure it out, I was wondering how much longer I would have to wait.
 
+##### Rebalance this with the level 4 party
+
 Iva attacks with advantage
 Initiative.
 
