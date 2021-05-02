@@ -97,3 +97,32 @@
   languages:
     - common
     - dwarvish
+
+"Tobin":
+  name: Tobin
+  link: https://www.dndbeyond.com/profile/tobindolphin/characters/45598596
+  level: 3
+  proficiency: 2
+  str: 12
+  dex: 19
+  con: 16
+  int: 17
+  wis: 16
+  cha: 13
+  ac: 16
+  hp: 31
+  bonuses:
+    str-save: proficiency
+    dex-save: proficiency
+    animal-handling: proficiency
+    history: proficiency
+    medicine: proficiency
+    survival: proficiency
+  movement:
+    walk: 25
+    climb: 10
+    swim: 10
+  languages:
+    - common
+    - giant
+    - gnomish

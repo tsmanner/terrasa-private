@@ -8,18 +8,21 @@ full-width: true
 ---
 [Gloves of Thievery](https://www.dndbeyond.com/magic-items/gloves-of-thievery)<br/>
 
-### Lightcraft Scimitar and Karambit
+### Lightcraft Rapier
 
 
-|    Name      (rarity) | Attack and<br/>Damage Bonus |                                Traits | Radiant Blade | Description
-|-----------------------|-----------------------------|---------------------------------------|---------------|-------------
-|    Dawn  (_uncommon_) |                          +0 | Radiant Blade<br/>Deceptive Precision |           1d4 | This scimitar is a leather wrapped grip with a slight forward curve at the bottom, ending with a two inch long barb-like pommel, and a semicircular rainguard with no crossguard, engraved with the outline of a road and river leading to a sunrise.<br/>This karambit has a roughly two inch long wooden handle with three curved channels running across one side and a metal ring on one end.  On the opposite end is a metal hilt with no blade that has an engraving of a road and river leading to a sunrise.
-| Morning      (_rare_) |                          +1 |                                       |           1d8 |
-|     Day (_very rare_) |                          +2 |                                       |           2d8 |
-|  Zenith (_legendary_) |                          +3 |                                       |           3d8 |
+|    Name      (rarity) | Attack and<br/>Damage Bonus |                      Traits | Radiant Blade | Description
+|-----------------------|-----------------------------|-----------------------------|---------------|-------------
+|    Dawn  (_uncommon_) |                          +0 | Radiant Blade<br/>Solar Aid |           1d4 | This rapier is a leather wrapped grip with a slight forward curve at the bottom, ending with a two inch long barb-like pommel, and a semicircular rainguard with no crossguard, engraved with the outline of a road and river leading to a sunrise.
+| Morning      (_rare_) |                          +1 |                             |           1d8 | The rainguard is etched with nine rays extending from the sunrise, the second, fourth, sixth, and eighth being a relief.  When the blade is activated, light orange light runs up the rays, extending as a blade from the center ray, and four crossguards from the first, third, seventh, and ninth rays.
+|     Day (_very rare_) |                          +2 |                             |           2d8 |
+|  Zenith (_legendary_) |                          +3 |                             |           3d8 |
 
-***Radiant Blade.*** While holding both the scimitar and karambit, you may use a bonus action to cause curved blades of pure radiance to spring into existence by tapping the sunrise symbols together, or to make the blades disappear.  The karambit blade can be thrown by swiping toward a target without releasing the handle.  The blade springs back into existence on the hilt immediately after the thrown blade comes to rest.  Attacks with these weapons deal extra radiant damage on hit to undead creatures.<br/>
-***Deceptive Precision.*** When you hit a second target with the bonus action attack as part of Two-Weapon Fighting using the karambit, you can make a Charisma (Deception) check contested by the target's Wisdom (Insight) check.  If you succeed on the check, you may roll your sneak dice and add half the total, rounded down, to the damage.
+***Radiant Blade.*** While holding the rapier, you may use a bonus action to cause curved blades of pure radiance to spring into existence by tapping the sunrise symbols together, or to make the blades disappear.  Attacks with this weapon deal extra radiant damage on hit to undead creatures.<br/>
+***Solar Aid.*** This rapier has 2 charges.  It regains all spent charges daily at dawn.  When you use your Cunning Action to take the Help action, you can expend one charge to force the target to make a Constitution saving throw with a DC of 8 + your proficiency bonus + your Dexterity modifier.  On a failed save, the target is blinded until the end of your next turn.
+
+
+
 
 
 ## Gluteus (Kurt)

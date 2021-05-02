@@ -77,6 +77,7 @@ Found in many cities, though most keep their ties to the K'anchay Order a secret
 |--------|--------|--------|
 | <img src="" alt="Temple" style="background: tan" width=200/> | <img src="../../docs/assets/KanchayOrderChapel.png" alt="Chapel" style="background: tan" width=200/> | <img src="" alt="Temple" style="background: tan" width=200/> |
 
+
 ### Gardens and Oases
 ---
 Tucked into quiet corners of the world, these locations are habitats tended by those that wish to protect and maintain the natural world.  Often headed by Druids, Gardens and Oases tend to focus their training on survival in the wilderness, encouraging natural growth, and channeling the energy of the natural world and it's spirits and gods.  Gardens can be anything from a tended area of forest or prairie, to a curated botanical garden at a university.  Oases are islands of life in otherwise lifeless regions, usually the result of a spring, they exist in deserts and wastelands.
@@ -96,6 +97,7 @@ Tucked into quiet corners of the world, these locations are habitats tended by t
     - Swarmkeeper
   - Warlock
     - The Undying
+    - The Celestial (Homebrew Wall of Fire to Wall of Light?)
 
 
 ## Travel Between Locations

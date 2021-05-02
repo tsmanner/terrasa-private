@@ -24,7 +24,7 @@ encounters:
   - name: Pari's Back Room
     entities:
       - dnd.common.players.Brother Gromag
-      - dnd.common.players.Caltrop Bloodless
+      - dnd.common.players.Kask Blightborn
       - dnd.common.players.Gluteus Maximus
       - dnd.npcs.Kilvin Greyjaw
       - dnd.npcs.Llaska
@@ -32,42 +32,48 @@ encounters:
   - name: Pari's Basement Lab
     entities:
       - dnd.common.players.Brother Gromag
-      - dnd.common.players.Caltrop Bloodless
+      - dnd.common.players.Kask Blightborn
       - dnd.common.players.Gluteus Maximus
       - dnd.npcs.Kilvin Greyjaw
       - dnd.npcs.Llaska
       - dnd.monsters.srd.Animated Armor
       - dnd.monsters.srd.Animated Armor
       - dnd.monsters.srd.Death Dog
-  - name: Refugees Being Chased
-    entities:
-      - dnd.common.players.Brother Gromag
-      - dnd.common.players.Caltrop Bloodless
-      - dnd.common.players.Gluteus Maximus
-      - dnd.npcs.Kilvin Greyjaw
-      - dnd.monsters.srd.Wight
-      - dnd.monsters.srd.Zombie
-      - dnd.monsters.srd.Zombie
-      - dnd.monsters.srd.Zombie
-      - dnd.monsters.srd.Zombie
-      - dnd.monsters.srd.Zombie
-      - dnd.monsters.srd.Zombie
   - name: Breached Lab
     entities:
       - dnd.common.players.Brother Gromag
-      - dnd.common.players.Caltrop Bloodless
+      - dnd.common.players.Kask Blightborn
       - dnd.common.players.Gluteus Maximus
       - dnd.npcs.Kilvin Greyjaw
       - dnd.monsters.srd.Wight
+      - dnd.monsters.srd.Zombie
+      - dnd.monsters.srd.Zombie
+  - name: Refugees Being Chased
+    entities:
+      - dnd.common.players.Brother Gromag
+      - dnd.common.players.Kask Blightborn
+      - dnd.common.players.Gluteus Maximus
+      - dnd.npcs.Kilvin Greyjaw
+      - dnd.npcs.Tobin
+      - dnd.monsters.srd.Zombie
+      - dnd.monsters.srd.Zombie
+      - dnd.monsters.srd.Zombie
+      - dnd.monsters.srd.Zombie
       - dnd.monsters.srd.Zombie
       - dnd.monsters.srd.Zombie
   - name: Return to Wayra's Temple
     entities:
       - dnd.common.players.Brother Gromag
-      - dnd.common.players.Caltrop Bloodless
+      - dnd.common.players.Kask Blightborn
       - dnd.common.players.Gluteus Maximus
       - dnd.npcs.Kilvin Greyjaw
+      - dnd.npcs.Tobin
+      - dnd.monsters.srd.Wight
       - dnd.monsters.srd.Flameskull
+      - dnd.monsters.srd.Zombie
+      - dnd.monsters.srd.Zombie
+      - dnd.monsters.srd.Skeleton
+      - dnd.monsters.srd.Skeleton
 ---
 
 <details><summary>Notes: Izhi's Visit to Yalaqta</summary>{% capture text %}
@@ -189,56 +195,51 @@ Chaplain Mayua puts on a pair of reading glasses and begins flipping through the
 
 ---
 
-## Resuming in the basement to the jewelry shop
 
-Kask, you find yourself on a moderately busy street, the morning after another middle-of-the-night delivery was made to Pari's.  Hoping to catch a glimpse of the proprietor, you instead see your estranged brother coming down the same street with a group of four: a halfling, a human, a dwarf, and a bird-person.  They clumsily scope out the shop, then start to talk about something, the halfling getting agitated and shouting at the human about "pitching."  The dwarf sits down behind a barrel in the alley, as the rest enter the store.  A few minutes later, through the window, you see the halfling throw himself at the shopkeeper, and they disappear from view.  A passerby going into the store, coming back out shortly after.  The halfling comes out to fetch the dwarf, who enters the shop, locking the door.  It's been an hour and nothing has happened, you're starting to get nervous, but aren't sure if you should enter and risk revealing yourself.  Suddenly, the door flies open and the shopkeeper, a boy no more than 18 years old, bursts into the street and starts to move down the street.
+### Return to Wayra's Temple
 
-<details>
-<summary>If Kask tries to catch him</summary>
+{% include dnd/encounter-head.html name="Refugees Being Chased" %}
+
 {% capture text %}
+As you approach the town gate, you see in the distance a group of people on the road.  Make a perception check.  DC 12 they're not traders, nor do they seem organized like travelers would.  DC 16 They seem to be fleeing from something.
+Getting closer you realize that some of the people at the back don't seem right, you thought they were injured or slower than the rest, but something is off about them.  Suddenly you see one shuffle up behind someone and slam both hands into their back.  Oh... these are zombies!
 {% endcapture %}{{ text | markdownify }}
-</details>
 
-<details>
-<summary>If Kask doesn't try to catch him</summary>
+{% include dnd/encounter-body.html name="Refugees Being Chased" %}
+
 {% capture text %}
-
-Kiwa escapes and rouses a guard post.  The guards show up soon after.  If the party tries to escape, they get a couple of attempts before they hear the guards shouting to them from outside.  There are a total of ten outside, two with cloaks over their left shoulders with longswords at their sides, the rest with an assortment of spears and shortbows.
-
-{% include dnd/encounter.html name="Guard Contingent" %}
-
+This is a group of refugees, mostly farmers and their families, displaced from their small village nearby by some undead.  They had escaped that danger, only to be attacked again just up there by more!
 {% endcapture %}{{ text | markdownify }}
-</details>
+
+{% include dnd/encounter-foot.html name="Refugees Being Chased" %}
 
 
-### Notes
+{% include dnd/encounter-head.html name="Return to Wayra's Temple" %}
 
-They didn't tie Kiwa up, just incapacitated him.  After 1 hour (30m remaining at the start) he regains consciousness with 1 hp, and will immediately flee (DC 18 Perception to hear his footsteps) so that he can describe what happened to the local authorities.  1 hour after that, they will arrive on the scene and start looking for clues, if the party is still there, they'll have to find a way to escape, talk their way out, fight, or get arrested.
+{% capture text %}
+The familiar looking temple here somehow looks even more decayed than it did just a few days ago.  There's no activity that you can see on it or in the area, but the tracks of those zombies clearly come from here.
 
-Kiwa isn't sure what happened after he was taken down, only that it was *definitely* Gromag that hit him.  He came to in the back leaned against a table leg, near the remains of an utterly destroyed rug.
+*Upon entering, there is a single skull lying on the ground on the bottom floor.  When they all enter the room, it's eyes suddenly flash with green flames and it rises with a cackle.*
 
-If they catch the party in the building still:
+**Wayra:** Ahahaha, I recognize you!  Welcome back, you rats, we're always looking for new friendsss
 
-**Lead:** You there!  Stop!  We've gotten word of an assault by one of you on a citizen of Yalaqta, and it would appear *he looks around the room* also the theft of several valuable items from this shop.  *Pointing to Gromag* You have been accused of the assault.
+At that moment, an armored skeletal form emerges from a passage to your left, as two zombies and two skeletons also enter your field of view.
+{% endcapture %}{{ text | markdownify }}
 
-If they show the secret lab and can convince them that something bad is going on here, then they will be warned and told to return what they took from the shop above.  The <a href="https://www.dndbeyond.com/monsters/{{ 'Death Dog' | downcase | split: ' ' | join: '-' }}">Death Dog</a> will freak out the guards a bit and definitely points to something nefarious, so that'll help them out with the whole "something is up" narrative.  Gromag will still have to answer for the assault, which can start with a chaperoned conversation with Kiwa.
+{% include dnd/encounter-body.html name="Return to Wayra's Temple" %}
 
-**Lead:** If you return what you took from the shop, we can let it go, considering what you found here today.  The assault, I'm afraid, I can't ignore.  Regardless of your intentions, you committed violence against an innocent man.  You can talk to him now if you want, otherwise, we will need to contact you in a few days if he wants press charges.  I'll need an item of yours as collateral, we can't have you skipping town without resolving this after all.
+{% capture text %}
+You find on the floor, a discarded black onyx gem.  There is a large crack running across it, and it is in a setting with a script NN on it.  History check to determine that that is Nayarak's Nicknacks' logo.  Kask and Tobin know that he's a shady jewelery mogul in town.  Cult members have bought from his stores before, but then, who hasn't?  You didn't realize he was providing *this* sort of merchandise to any of them.
+You also find the rest of Wayra's body, which as carved up as she was transformed into the fire-eyed skull.  DC 12 medicine check to see that it was done with an incredibly sharp curved blade, and must have happened about 3-4 days ago.  If they don't get the hint, INT check to realize that's about when they were at the docks and saw that suspicious ship leaving right before they found the jewelry shop that had taken a clandestine delivery.
 
+Also, Level 4!
+{% endcapture %}{{ text | markdownify }}
 
-If they decide to check the cellar door right away, it starts an investigation by the town's guard into the party.  Add a few random events that involve them being caught or tracked down by investigators, town's guard members, and bounty hunters (yeah, they're totally on the job board now).  The investigation specifically centers on Gromag and Llaska, with some ancillary interest in Gluteus and Caltrop, but they're not certain if those two are involved.  Kilvin was not seen by Kiwa, so he is not implicated unless they're caught.  Flyers posted for Gromag and Llaska may make their way back to Mayua, who will confront the party by asking them to see her in her office.  When they arrive:
+{% include dnd/encounter-foot.html name="Return to Wayra's Temple" %}
 
+Returning, Serana will talk to Tobin about his "gift" of the swarm of little lights, and offer to help train him.  She'll be leaving in a day or two, to return to the forests south east to her Garden.
 
-
-**Mayua:** *Slapping the flyer down on her desk* What is the meaning of this?  Am I to understand that you assaulted a young man at a store, then proceeded to destroy or steal nearly everything of value in it?  Explain yourselves.
-
-**Mayua:** Let me get this straight... you thought that because a store had something delivered to it, you should assault the staff and clean the place out.  Absurd.
-
-**Mayua:** If you are *ever* going to break into *anything*, you had better be DAMN sure you know what you're doing there.  We have no particular love for laws, only for the cause of good.  Breaking the law as a means to do good is acceptable, but it should be your last resort, not your first.  In any case, the K'anchay Order does not condone what you've done, and you'll have to answer to local authorities for it.  If you return the goods that you stole, I'm sure you can settle this without much fuss.  As far as your standing with us... well, that's between you and Lathander, I'm sure he'll be in touch.
-
-### TODO: Penance to Lathander
-
-Come up with the mechanism by which the party has to make amends with Lathander, convincing him that they were pursuing *good* and paying for the evil (assault and theft) they committed.
+Mayua will encourage the party to rest and then complete their initiation, using what they've learned from their recent exploits, and the journals and quipu they have.
 
 ---
 
@@ -380,14 +381,35 @@ Once they all have completed their individual puzzles (plans), they are dropped 
 
 #### Chamber 1
 
-The chamber has a simple orange door on one wall, and the other three have a mural on them, each with the numbers 1 through 9 embedded somewhere in them.
-Touching the right numbers on each wall will open the door.
+The chamber has a simple orange door on one wall, and the other three have a mural on them.  In the center of each, are a set of levers, labelled 1 through 9.  Pulling the right numbered levers on each wall will open the door.
 
 Murals:
-1. (791) The interior of a large mess hall full of people in simple clothes and robes, some with shaved heads.  Succeed on a DC 15 investigation or DC 18 perception check, to notice that the mugs are not simply painted, but appear to be sculpted out of the stone of the wall.
-2. (362) The aftermath of a battle, the ground littered with bodies and equipment.  In the foreground, set to one side, is a group of people wearing robes with a figure in shining plate armor leaning on their longsword.  The figure is looking pensively toward a group of wounded on the other side.  Succeed on a DC 15 investigation to determine that they're trying to reach wounded on the other side of a no-man's-land littered with tetrahedral spikes.  Succeed on a DC 18 perception check to notice the region littered with tetrahedral spikes.
-3. (247) A dense treeline across a meadow, backed by snow-peaked mountains.  Succeed on a DC 15 investigation or DC 18 perception check, to see that perched on a branch near the center is a large bird of prey.
+1. (791) The interior of a large mess hall full of people in simple clothes and robes, some with shaved heads.  Investigation check to notice that the mugs are not simply painted, but appear to be sculpted out of the stone of the wall.
+2. (362) A shoreline of cracked earth, where a ship off shore burns.  A shadowy figure stands with his arm extended, holding a rapier pointed toward a tattooed man with short horns and a wicked grin on his face.  A small expanse littered with tiny objects separates them.  Investigation check determine that the objects are tetrahedral spikes.
+3. (247) A dense treeline across a meadow, backed by snow-peaked mountains.  Squirrels, birds, and a small herd of deer can be seen on the border of the forest.  Perception 10 to realize that they're somehow slowly moving through the frame.  Investigation check to see that perched on a branch near the center is a large bird of prey, that seems to be watching Gluteus.
 
+
+| Mistakes | Iva DC | Effect
+|----------|--------|--------
+|        1 |    N/A | They hear something shift through the walls of the chamber.
+|        2 | Stealth| Iva enters through a small false wall.  If they notice her, they can't see, just catch some motion and then hear a sound inside the room
+|        3 |     15 | Iva attacks once.  If they fail the perception, she turns invisible again.
+|        4 |     10 | Iva attacks once.  If they fail the perception, she turns invisible again.
+|        5 |      5 | Iva attacks once.  If they fail the perception, she turns invisible again.
+|        6 |      0 | Iva attacks once.  Serena steps through another false wall and engages them.
+
+**Serana:** (Through Iva) Sorry, wrong again!
+**Serana:** (Through Iva) So close!
+**Serana:** (Through Iva) Oh come on, really?  That one?
+**Serana:** (Through Iva) *laughter*
+
+
+If they clear the chamber:
+
+**Serana:** Ah! You managed to figure it out, I was wondering how much longer I would have to wait.
+
+Iva attacks with advantage
+Initiative.
 
 #### Chamber 2
 
@@ -420,12 +442,12 @@ Bad square effects (all DCs are for saving throws)
 |-----|--------
 |   1 | A barrier appears as you take a step that you collide with, like walking into a screen door you didn't notice, except it disappears when you take a step back
 |   2 | DC 13 DEX or slip, fall prone and slide to next square
-|   3 | DC 13 WIS or charmed for 1 round and compelled to leap back and look into the previous room for a second.  You could have *sworn* you left something in there for a second.
+|   3 | DC 13 WIS or charmed for 1 round and compelled to leap back and look into the previous room for a second.  You could have *sworn* you left something in there...
 |   4 | DC 13 CON or 1d4 poison damage, poisoned for one move (disadvantage on next skill check)
 |   5 | DC 13 INT or you're *convinced* the floor is starting to split open beneath your feet (as with <a href="https://www.dndbeyond.com/spells/{{ 'Phantasmal Force' | downcase | split: ' ' | join: '-' }}">Phantasmal Force</a>)
 |   6 | DC 13 STR as an unknown force impacts your side, trying to shove you 5' to the left.  If in a6, a fail is 1d6 bludgeoning damage instead.
 |   7 | DC 13 CHA or 1 round <a href="https://www.dndbeyond.com/spells/{{ 'Banish' | downcase | split: ' ' | join: '-' }}">Banish</a> to the Astral Plane.
-|   8 | You're blinded while standing on this square, roll 1d4 to determine the direction you move on your next round. 1/2/3/4 -> N/S/E/W
+|   8 | You're blinded while standing on this square, DC 13 INT to work out your orientation, on a fail roll 1d4 to determine the direction you move on your next round. 1/2/3/4 -> N/S/E/W
 
 #### Chamber 3
 

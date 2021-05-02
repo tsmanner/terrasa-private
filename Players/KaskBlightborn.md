@@ -7,7 +7,7 @@ The name Blightborn comes from the area where my family has lived for generation
 
 While crops could not be cultivated, my family has always been able to trade and barter for anything that we needed. Working the markets, creating a demand, and knowing what people want has always been a small part of our family's nature.
 
-As the eldest son, this obligation fell to me. I was trained by my father's older brother to blend in with locals despite my Tiefling stature and appearance. From the art of disguise, to forgery, and even a little bit…. Well maybe a lot of gambling. Like all Blightborns, I was trained that ownership of an item is a bit ambiguous.
+As the eldest son, this obligation fell to me. I was trained by my father's older brother to blend in with locals despite my Tiefling stature and appearance. From the art of disguise, to forgery, and even a little bit, well... maybe a lot, of gambling. Like all Blightborns, I was trained that ownership of an item is a bit ambiguous.
 
 For the most part, our family does what it needs to in order to survive, and these skills are passed from generation to generation as a means to keep demand for salted fish high. However, after I made a deal that would lead to my father's death. I left the family and buried myself in the shadows.
 

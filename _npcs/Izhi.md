@@ -3,7 +3,7 @@ title: Izhi
 character_sheet: https://www.dndbeyond.com/profile/UngodlySalmon/characters/40583913
 ---
 
-Izhi is a pirate captain and warlock in the service of Myrkul.  He has always been ambitious and bloodthirsty, perpetrating a successful mutiny against the former captain of his pirate vessel.
+Izhi is a pirate captain and warlock in the service of Myrkul.  He has always been ambitious and bloodthirsty, perpetrating a successful mutiny against the former captain of his pirate vessel.  He is a purple tiefling, with several tattoos, and a pair of short horns with several gold rings piercing through them.
 
 Izhi is gearing up to fight his own.  He is searching out items that will protect him from poison, necrotic, and cold damage.
 

@@ -42,6 +42,10 @@ collections:
 
 enable_dnd: true
 
+site-js:
+  - https://threejs.org/build/three.js
+  - /assets/js/renders.js
+
 #
 # Footer
 #
