@@ -3,6 +3,7 @@
 #include <iomanip>
 #include <iostream>
 #include <string>
+
 #include "entity.h"
 #include "lazy/lazy.h"
 
@@ -47,6 +48,13 @@ template <typename T> auto owls_wisdom(    T const &t) { return OwlsWisdom    <T
 template <typename T> auto eagles_splendor(T const &t) { return EaglesSplendor<T>(t); }
 
 
+namespace lazy {
+template <>
+struct precedence<std::function<int()>> {
+  static constexpr int value = 0;
+};
+}
+
 int main() {
   using std::cout;
 
@@ -63,6 +71,16 @@ int main() {
   cout << "INT " << Save<INT>::of(TurminderXuss) << ", with Fox's Cunning "    << Save<INT>::of(foxs_cunning(   TurminderXuss)) << "\n";
   cout << "WIS " << Save<WIS>::of(TurminderXuss) << ", with Owl's Wisdom "     << Save<WIS>::of(owls_wisdom(    TurminderXuss)) << "\n";
   cout << "CHA " << Save<CHA>::of(TurminderXuss) << ", with Eagle's Splendor " << Save<CHA>::of(eagles_splendor(TurminderXuss)) << "\n";
+
+  cout << '\n';
+  cout << (1 + 2 + d20) << '\n';
+  cout << (d20 + 1 + 2) << '\n';
+  cout << (1 + d20 + 2) << '\n';
+
+  cout << '\n';
+  std::function<int()> f = [](){ return 15; };
+  // cout << f << '\n';
+  cout << (d20 + f) << '\n';
 
   return 0;
 }

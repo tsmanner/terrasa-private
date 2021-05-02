@@ -4,44 +4,30 @@
 #include <functional>
 #include <random>
 
+#include "is_callable.h"
+#include "operator_functions.h"
 
-template <typename T, typename RT>
-struct is_callable {
-private:
-  template <typename _T, RT (_T::*)() const = &_T::operator()>
-  static constexpr bool check(_T *) {
-    return true;
-  }
-  template <typename... Ts> static constexpr bool check(Ts&&...) {
-    return false;
-  }
+inline std::ostream& operator<<(std::ostream& os, std::function<int()> const &) {
+  return os << "std::function<int()>";
+}
 
-public:
-  static constexpr bool value = check(static_cast<T *>(nullptr));
+inline std::ostream& operator<<(std::ostream& os, std::function<int()> const) {
+  return os << "std::function<int()>";
+}
 
-};
+inline std::ostream& operator<<(std::ostream& os, std::function<int()>) {
+  return os << "std::function<int()>";
+}
 
+inline std::ostream& operator<<(std::ostream& os, std::function<int()> &&) {
+  return os << "std::function<int()>";
+}
+
+inline std::ostream& operator<<(std::ostream& os, std::function<int()> &) {
+  return os << "std::function<int()>";
+}
 
 namespace lazy {
-
-// template <typename=void>
-struct minimum {
-  constexpr minimum() {}
-  template <typename L, typename R>
-  constexpr auto operator()(L const &lhs, R const &rhs) const {
-    return (lhs < rhs) ? lhs : rhs;
-  }
-};
-
-// template <typename=void>
-struct maximum {
-  constexpr maximum() {}
-  template <typename L, typename R>
-  constexpr auto operator()(L const &lhs, R const &rhs) const {
-    return (lhs > rhs) ? lhs : rhs;
-  }
-};
-
 
 template <typename T> struct precedence;
 
@@ -88,7 +74,7 @@ struct UnaryOperator {
   Operand mOperand;
 };
 
-// Operand is not callable (e.e. `int`)
+// Operand is not callable (e.g. `int`)
 template <typename Operator, typename Operand>
 struct UnaryOperator<Operator, Operand, typename std::enable_if_t<!is_callable<Operand, int>::value>> {
   constexpr UnaryOperator(Operand const &inOperand): mOperand(inOperand) {}
@@ -106,7 +92,7 @@ struct BinaryOperator {
   RHS mRHS;
 };
 
-// LHS is not callable (i.e. `int`)
+// LHS is not callable (e.g. `int`)
 template <typename Operator, typename LHS, typename RHS>
 struct BinaryOperator<Operator, LHS, RHS, typename std::enable_if_t<(!is_callable<LHS, int>::value)>> {
   constexpr BinaryOperator(LHS const &inLHS, RHS const &inRHS): mLHS(inLHS), mRHS(inRHS) {}
@@ -115,7 +101,7 @@ struct BinaryOperator<Operator, LHS, RHS, typename std::enable_if_t<(!is_callabl
   RHS mRHS;
 };
 
-// RHS is not callable (i.e. `int`)
+// RHS is not callable (e.g. `int`)
 template <typename Operator, typename LHS, typename RHS>
 struct BinaryOperator<Operator, LHS, RHS, typename std::enable_if_t<(!is_callable<RHS, int>::value)>> {
   constexpr BinaryOperator(LHS const &inLHS, RHS const &inRHS): mLHS(inLHS), mRHS(inRHS) {}
@@ -125,25 +111,45 @@ struct BinaryOperator<Operator, LHS, RHS, typename std::enable_if_t<(!is_callabl
 };
 
 
+
+
+// // BinaryOperator<std::plus> with a LHS of BinaryOperator<std::plus>
+// template <typename LHSLHS, typename LHSRHS, typename RHS>
+// struct BinaryOperator<
+//   std::plus<>,
+//   BinaryOperator<std::plus<>, LHSLHS, LHSRHS>,
+//   RHS,
+//   typename std::enable_if_t<(LHSLHS)>
+// > {
+//   constexpr BinaryOperator(BinaryOperator<std::plus<>, LHSLHS, LHSRHS> const &inLHS, RHS const &inRHS): mLHS(inLHS), mRHS(inRHS) {}
+//   auto operator()() const { static constexpr auto op = Operator(); return op(mLHS(), mRHS); }
+//   BinaryOperator<std::plus<>, LHSLHS, LHSRHS> mLHS;
+//   RHS mRHS;
+// };
+
+
+
+
+
 // Operator Precedences
-template <typename Operand          > struct precedence<UnaryOperator <std::negate    <>, Operand >> { static constexpr int value =  3; };
-template <typename LHS, typename RHS> struct precedence<BinaryOperator<std::plus      <>, LHS, RHS>> { static constexpr int value =  6; };
-template <typename LHS, typename RHS> struct precedence<BinaryOperator<std::minus     <>, LHS, RHS>> { static constexpr int value =  6; };
-template <typename LHS, typename RHS> struct precedence<BinaryOperator<std::multiplies<>, LHS, RHS>> { static constexpr int value =  5; };
-template <typename LHS, typename RHS> struct precedence<BinaryOperator<std::divides   <>, LHS, RHS>> { static constexpr int value =  5; };
-template <typename LHS, typename RHS> struct precedence<BinaryOperator<std::modulus   <>, LHS, RHS>> { static constexpr int value =  5; };
-template <typename LHS, typename RHS> struct precedence<BinaryOperator<lazy::minimum,     LHS, RHS>> { static constexpr int value = 17; };  // Same as ',' operator
-template <typename LHS, typename RHS> struct precedence<BinaryOperator<lazy::maximum,     LHS, RHS>> { static constexpr int value = 17; };  // Same as ',' operator
+template <typename Operand          > struct precedence<UnaryOperator <lazy::negate,     Operand >> { static constexpr int value =  3; };
+template <typename LHS, typename RHS> struct precedence<BinaryOperator<lazy::plus,       LHS, RHS>> { static constexpr int value =  6; };
+template <typename LHS, typename RHS> struct precedence<BinaryOperator<lazy::minus,      LHS, RHS>> { static constexpr int value =  6; };
+template <typename LHS, typename RHS> struct precedence<BinaryOperator<lazy::multiplies, LHS, RHS>> { static constexpr int value =  5; };
+template <typename LHS, typename RHS> struct precedence<BinaryOperator<lazy::divides,    LHS, RHS>> { static constexpr int value =  5; };
+template <typename LHS, typename RHS> struct precedence<BinaryOperator<lazy::modulus,    LHS, RHS>> { static constexpr int value =  5; };
+template <typename LHS, typename RHS> struct precedence<BinaryOperator<lazy::minimum,    LHS, RHS>> { static constexpr int value = 17; };  // Same as ',' operator
+template <typename LHS, typename RHS> struct precedence<BinaryOperator<lazy::maximum,    LHS, RHS>> { static constexpr int value = 17; };  // Same as ',' operator
 
 // Operator Streams
-template <typename Operator> typename std::enable_if_t<(std::is_same<Operator, std::negate    <>>::value), std::ostream&> streamOperator(std::ostream& os) { return os << "-"; }
-template <typename Operator> typename std::enable_if_t<(std::is_same<Operator, std::plus      <>>::value), std::ostream&> streamOperator(std::ostream& os) { return os << " + "; }
-template <typename Operator> typename std::enable_if_t<(std::is_same<Operator, std::minus     <>>::value), std::ostream&> streamOperator(std::ostream& os) { return os << " - "; }
-template <typename Operator> typename std::enable_if_t<(std::is_same<Operator, std::multiplies<>>::value), std::ostream&> streamOperator(std::ostream& os) { return os << " * "; }
-template <typename Operator> typename std::enable_if_t<(std::is_same<Operator, std::divides   <>>::value), std::ostream&> streamOperator(std::ostream& os) { return os << " / "; }
-template <typename Operator> typename std::enable_if_t<(std::is_same<Operator, std::modulus   <>>::value), std::ostream&> streamOperator(std::ostream& os) { return os << " % "; }
-template <typename Operator> typename std::enable_if_t<(std::is_same<Operator, lazy::minimum    >::value), std::ostream&> streamOperator(std::ostream& os) { return os << " min "; }
-template <typename Operator> typename std::enable_if_t<(std::is_same<Operator, lazy::maximum    >::value), std::ostream&> streamOperator(std::ostream& os) { return os << " max "; }
+template <typename Operator> typename std::enable_if_t<(std::is_same<Operator, lazy::negate    >::value), std::ostream&> streamOperator(std::ostream& os) { return os << "-"; }
+template <typename Operator> typename std::enable_if_t<(std::is_same<Operator, lazy::plus      >::value), std::ostream&> streamOperator(std::ostream& os) { return os << " + "; }
+template <typename Operator> typename std::enable_if_t<(std::is_same<Operator, lazy::minus     >::value), std::ostream&> streamOperator(std::ostream& os) { return os << " - "; }
+template <typename Operator> typename std::enable_if_t<(std::is_same<Operator, lazy::multiplies>::value), std::ostream&> streamOperator(std::ostream& os) { return os << " * "; }
+template <typename Operator> typename std::enable_if_t<(std::is_same<Operator, lazy::divides   >::value), std::ostream&> streamOperator(std::ostream& os) { return os << " / "; }
+template <typename Operator> typename std::enable_if_t<(std::is_same<Operator, lazy::modulus   >::value), std::ostream&> streamOperator(std::ostream& os) { return os << " % "; }
+template <typename Operator> typename std::enable_if_t<(std::is_same<Operator, lazy::minimum   >::value), std::ostream&> streamOperator(std::ostream& os) { return os << " min "; }
+template <typename Operator> typename std::enable_if_t<(std::is_same<Operator, lazy::maximum   >::value), std::ostream&> streamOperator(std::ostream& os) { return os << " max "; }
 
 // Operand Streams
 template <typename Operator, typename Operand>
@@ -175,13 +181,13 @@ std::ostream& operator<<(std::ostream& os, BinaryOperator<Operator, L, R> const 
 }
 
 // Operator Overloads
-template <typename Operand      > constexpr auto operator-(Operand const &operand    ) { return UnaryOperator <std::negate    <>, Operand>(operand); }
-template <typename L, typename R> constexpr auto operator+(L const &lhs, R const &rhs) { return BinaryOperator<std::plus      <>, L, R>(lhs, rhs); }
-template <typename L, typename R> constexpr auto operator-(L const &lhs, R const &rhs) { return BinaryOperator<std::minus     <>, L, R>(lhs, rhs); }
-template <typename L, typename R> constexpr auto operator*(L const &lhs, R const &rhs) { return BinaryOperator<std::multiplies<>, L, R>(lhs, rhs); }
-template <typename L, typename R> constexpr auto operator/(L const &lhs, R const &rhs) { return BinaryOperator<std::divides   <>, L, R>(lhs, rhs); }
-template <typename L, typename R> constexpr auto operator%(L const &lhs, R const &rhs) { return BinaryOperator<std::modulus   <>, L, R>(lhs, rhs); }
-template <typename L, typename R> constexpr auto min      (L const &lhs, R const &rhs) { return BinaryOperator<lazy::minimum,     L, R>(lhs, rhs); }
-template <typename L, typename R> constexpr auto max      (L const &lhs, R const &rhs) { return BinaryOperator<lazy::maximum,     L, R>(lhs, rhs); }
+template <typename Operand      > constexpr auto operator-(Operand const &operand    ) { return UnaryOperator <lazy::negate,  Operand>(operand ); }
+template <typename L, typename R> constexpr auto operator+(L const &lhs, R const &rhs) { return BinaryOperator<lazy::plus,       L, R>(lhs, rhs); }
+template <typename L, typename R> constexpr auto operator-(L const &lhs, R const &rhs) { return BinaryOperator<lazy::minus,      L, R>(lhs, rhs); }
+template <typename L, typename R> constexpr auto operator*(L const &lhs, R const &rhs) { return BinaryOperator<lazy::multiplies, L, R>(lhs, rhs); }
+template <typename L, typename R> constexpr auto operator/(L const &lhs, R const &rhs) { return BinaryOperator<lazy::divides,    L, R>(lhs, rhs); }
+template <typename L, typename R> constexpr auto operator%(L const &lhs, R const &rhs) { return BinaryOperator<lazy::modulus,    L, R>(lhs, rhs); }
+template <typename L, typename R> constexpr auto min      (L const &lhs, R const &rhs) { return BinaryOperator<lazy::minimum,    L, R>(lhs, rhs); }
+template <typename L, typename R> constexpr auto max      (L const &lhs, R const &rhs) { return BinaryOperator<lazy::maximum,    L, R>(lhs, rhs); }
 
 }  // namespace lazy
