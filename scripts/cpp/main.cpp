@@ -58,35 +58,34 @@ struct precedence<std::function<int()>> {
 int main() {
   using std::cout;
 
-  // TODO API Goal: kwargs approximation
-  Entity<11, TypeSet<Dexterity, Constitution>> TurminderXuss {
-    Name("Turminder Xuss"),
-    Dexterity(19),
-    Intelligence(16),
-    Wisdom(12),
-    Strength(10),
-    Constitution(10),
-    Charisma(10)
-  };
+  // // TODO API Goal: kwargs approximation
+  // Entity<11, TypeSet<Dexterity, Constitution>> TurminderXuss {
+  //   Name("Turminder Xuss"),
+  //   Dexterity(19),
+  //   Intelligence(16),
+  //   Wisdom(12),
+  //   Strength(10),
+  //   Constitution(10),
+  //   Charisma(10)
+  // };
 
-  // Entity<> Balaam { "Balaam", 11, 14, 12, 15, 10, 10, 20 };
+  // // Entity<> Balaam { "Balaam", 11, 14, 12, 15, 10, 10, 20 };
 
-  cout << TurminderXuss;
-  cout << "STR " << Save<STR>::of(TurminderXuss) << ", with Bull's Strength "  << Save<STR>::of(bulls_strength( TurminderXuss)) << "\n";
-  cout << "DEX " << Save<DEX>::of(TurminderXuss) << ", with Cat's Grace "      << Save<DEX>::of(cats_grace(     TurminderXuss)) << "\n";
-  cout << "CON " << Save<CON>::of(TurminderXuss) << ", with Owl's Wisdom "     << Save<CON>::of(owls_wisdom(    TurminderXuss)) << "\n";
-  cout << "INT " << Save<INT>::of(TurminderXuss) << ", with Fox's Cunning "    << Save<INT>::of(foxs_cunning(   TurminderXuss)) << "\n";
-  cout << "WIS " << Save<WIS>::of(TurminderXuss) << ", with Owl's Wisdom "     << Save<WIS>::of(owls_wisdom(    TurminderXuss)) << "\n";
-  cout << "CHA " << Save<CHA>::of(TurminderXuss) << ", with Eagle's Splendor " << Save<CHA>::of(eagles_splendor(TurminderXuss)) << "\n";
+  // cout << TurminderXuss;
+  // cout << "STR " << Save<STR>::of(TurminderXuss) << ", with Bull's Strength "  << Save<STR>::of(bulls_strength( TurminderXuss)) << "\n";
+  // cout << "DEX " << Save<DEX>::of(TurminderXuss) << ", with Cat's Grace "      << Save<DEX>::of(cats_grace(     TurminderXuss)) << "\n";
+  // cout << "CON " << Save<CON>::of(TurminderXuss) << ", with Owl's Wisdom "     << Save<CON>::of(owls_wisdom(    TurminderXuss)) << "\n";
+  // cout << "INT " << Save<INT>::of(TurminderXuss) << ", with Fox's Cunning "    << Save<INT>::of(foxs_cunning(   TurminderXuss)) << "\n";
+  // cout << "WIS " << Save<WIS>::of(TurminderXuss) << ", with Owl's Wisdom "     << Save<WIS>::of(owls_wisdom(    TurminderXuss)) << "\n";
+  // cout << "CHA " << Save<CHA>::of(TurminderXuss) << ", with Eagle's Splendor " << Save<CHA>::of(eagles_splendor(TurminderXuss)) << "\n";
 
-  cout << '\n';
+  // cout << '\n';
   cout << (1 + 2 + d20) << '\n';
   cout << (d20 + 1 + 2) << '\n';
   cout << (1 + d20 + 2) << '\n';
 
   cout << '\n';
   std::function<int()> f = [](){ return 15; };
-  // cout << f << '\n';
   cout << (d20 + f) << '\n';
 
   return 0;

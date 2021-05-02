@@ -7,27 +7,17 @@
 #include "is_callable.h"
 #include "operator_functions.h"
 
-inline std::ostream& operator<<(std::ostream& os, std::function<int()> const &) {
-  return os << "std::function<int()>";
-}
-
-// inline std::ostream& operator<<(std::ostream& os, std::function<int()> const) {
-//   return os << "std::function<int()>";
-// }
-
-// inline std::ostream& operator<<(std::ostream& os, std::function<int()>) {
-//   return os << "std::function<int()>";
-// }
-
-// inline std::ostream& operator<<(std::ostream& os, std::function<int()> &&) {
-//   return os << "std::function<int()>";
-// }
-
-// inline std::ostream& operator<<(std::ostream& os, std::function<int()> &) {
-//   return os << "std::function<int()>";
-// }
 
 namespace lazy {
+
+template <typename T> struct Show {
+  static void show(std::ostream& os, T const &t) { os << t; }
+};
+
+template <> struct Show<std::function<int()>> {
+  static void show(std::ostream& os, std::function<int()> const &) { os << "f->int"; }
+};
+
 
 template <typename T> struct precedence;
 
@@ -155,13 +145,17 @@ template <typename Operator> typename std::enable_if_t<(std::is_same<Operator, l
 template <typename Operator, typename Operand>
 typename std::enable_if_t<(precedence<Operand>::value <= precedence<Operator>::value), std::ostream&>
 streamOperand(std::ostream& os, Operand const &operand) {
-  return os << operand;
+  Show<Operand>::show(os, operand);
+  return os;
 }
 
 template <typename Operator, typename Operand>
 typename std::enable_if_t<(precedence<Operand>::value > precedence<Operator>::value), std::ostream&>
 streamOperand(std::ostream& os, Operand const &operand) {
-  return os << '(' << operand << ')';
+  os << '(';
+  Show<Operand>::show(os, operand);
+  os << ')';
+  return os;
 }
 
 // Stream Operator
