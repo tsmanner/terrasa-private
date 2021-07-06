@@ -1,37 +1,49 @@
 #pragma once
 
+#include <concepts>
 #include <functional>
 #include <ostream>
 
-#include "is_callable.h"
 #include "operator_functions.h"
 #include "Precedence.h"
 
 namespace lazy {
 
-// Default, assumes both sides are callable
 template <typename Operator, typename LHS, typename RHS, typename=void>
-struct BinaryOperator {
+struct BinaryOperator;
+
+// LHS is invocable and RHS is invocable
+template <typename Operator, std::invocable LHS, std::invocable RHS>
+struct BinaryOperator<Operator, LHS, RHS> {
   constexpr BinaryOperator(LHS const &inLHS, RHS const &inRHS): mLHS(inLHS), mRHS(inRHS) {}
   auto operator()() const { static constexpr auto op = Operator(); return op(mLHS(), mRHS()); }
   LHS mLHS;
   RHS mRHS;
 };
 
-// LHS is not callable (e.g. `int`)
-template <typename Operator, typename LHS, typename RHS>
-struct BinaryOperator<Operator, LHS, RHS, typename std::enable_if_t<(!is_callable<LHS, int>::value)>> {
+// LHS is not invocable (e.g. `int`) and RHS is invocable
+template <typename Operator, typename LHS, std::invocable RHS>
+struct BinaryOperator<Operator, LHS, RHS> {
   constexpr BinaryOperator(LHS const &inLHS, RHS const &inRHS): mLHS(inLHS), mRHS(inRHS) {}
   auto operator()() const { static constexpr auto op = Operator(); return op(mLHS, mRHS()); }
   LHS mLHS;
   RHS mRHS;
 };
 
-// RHS is not callable (e.g. `int`)
-template <typename Operator, typename LHS, typename RHS>
-struct BinaryOperator<Operator, LHS, RHS, typename std::enable_if_t<(!is_callable<RHS, int>::value)>> {
+// LHS is invocable and RHS is not invocable (e.g. `int`)
+template <typename Operator, std::invocable LHS, typename RHS>
+struct BinaryOperator<Operator, LHS, RHS> {
   constexpr BinaryOperator(LHS const &inLHS, RHS const &inRHS): mLHS(inLHS), mRHS(inRHS) {}
   auto operator()() const { static constexpr auto op = Operator(); return op(mLHS(), mRHS); }
+  LHS mLHS;
+  RHS mRHS;
+};
+
+// LHS is not invocable (e.g. `int`) and RHS is not invocable (e.g. `int`)
+template <typename Operator, typename LHS, typename RHS>
+struct BinaryOperator<Operator, LHS, RHS> {
+  constexpr BinaryOperator(LHS const &inLHS, RHS const &inRHS): mLHS(inLHS), mRHS(inRHS) {}
+  auto operator()() const { static constexpr auto op = Operator(); return op(mLHS, mRHS); }
   LHS mLHS;
   RHS mRHS;
 };
