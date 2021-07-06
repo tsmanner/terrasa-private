@@ -58,6 +58,7 @@
 
 | Player |     Character     |  Class |      Race      |       Alignment |
 |  Nick  |   Brother Gromag  |  Monk  | Stout Halfling | Chaotic Neutral |
-|  Ryan  | Caltrop Bloodless |  Rogue |    Tiefling    | Chaotic Neutral |
+|  Ryan  |  Kask Blightborn  |  Rogue |    Tiefling    | Chaotic    Good |
 |  Kurt  |  Gluteus Maximus  | Ranger |   Aarakocra    |               ? |
+|  Ryan* | Caltrop Bloodless |  Rogue |    Tiefling    | Chaotic Neutral |
 

@@ -19,6 +19,8 @@ I do not know what happened that day, as I was working my leverage at the market
 
 I later found out that my brother had adopted the pirate life, and sailed under a new captain named Izhi. Rumors say that Izhi planned the mutiny that lead to my father's death, but only Caltrop knows the truth.
 
+---
+
 I now work as a member of small network of shadows. We are not spy's or criminals, but that does not mean we do not steal or gather information. We are currently investigating a cult like group that is in the area, but I have just received word that my brother is on the main land.
 
 I do not know why but it seems like he is also investigating the same cult as I, or maybe he is part of it? I have been following loosely for a day or so, but he seems to be working with one of my informants Llaska. While Llaska may not be the brightest, I know that he has the backing of one of the religious factions around here.

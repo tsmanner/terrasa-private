@@ -79,7 +79,7 @@ Common properties:
 
 ### **Heavy**
 Trait ideas
-- When you are struck, the armor glows, storing the energy of the attack.  The energy is released on your first successful attack before the end of your next turn, dealing an additional (1/2/3/4) radiant damage per strike made against you.
+- When you take damage from an attack, the armor glows, storing the energy of the attack.  The energy is released on your first successful attack before the end of your next turn, dealing an additional (1/2/3/4) radiant damage per strike made against you.
 
 
 ### **Medium**
@@ -99,7 +99,7 @@ Trait ideas
 
 ## Cloak
 Trait ideas
-- Player wearing this cloak may hide when in bright light, and they gain advantage on stealth checks that rely on sight.
+- A creature wearing this cloak may hide when in bright light, and they gain advantage on stealth checks that rely on sight.
 
 
 ## Boots

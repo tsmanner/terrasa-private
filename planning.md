@@ -4,50 +4,6 @@ subtitle: Planning notes for ongoing themes and with excerpts etc for upcoming s
 full-width: true
 
 encounters:
-  - name: Guard Contingent
-    entities:
-      - dnd.common.players.Brother Gromag
-      - dnd.common.players.Kask Blightborn
-      - dnd.common.players.Gluteus Maximus
-      - dnd.npcs.Kilvin Greyjaw
-      - dnd.npcs.Llaska
-      - dnd.monsters.homebrew.Militia Captain
-      - dnd.monsters.homebrew.Militia Captain
-      - dnd.monsters.srd.Guard
-      - dnd.monsters.srd.Guard
-      - dnd.monsters.srd.Guard
-      - dnd.monsters.srd.Guard
-      - dnd.monsters.srd.Guard
-      - dnd.monsters.srd.Guard
-      - dnd.monsters.srd.Guard
-      - dnd.monsters.srd.Guard
-  - name: Pari's Back Room
-    entities:
-      - dnd.common.players.Brother Gromag
-      - dnd.common.players.Kask Blightborn
-      - dnd.common.players.Gluteus Maximus
-      - dnd.npcs.Kilvin Greyjaw
-      - dnd.npcs.Llaska
-      - dnd.monsters.srd.Rug of Smothering
-  - name: Pari's Basement Lab
-    entities:
-      - dnd.common.players.Brother Gromag
-      - dnd.common.players.Kask Blightborn
-      - dnd.common.players.Gluteus Maximus
-      - dnd.npcs.Kilvin Greyjaw
-      - dnd.npcs.Llaska
-      - dnd.monsters.srd.Animated Armor
-      - dnd.monsters.srd.Animated Armor
-      - dnd.monsters.srd.Death Dog
-  - name: Breached Lab
-    entities:
-      - dnd.common.players.Brother Gromag
-      - dnd.common.players.Kask Blightborn
-      - dnd.common.players.Gluteus Maximus
-      - dnd.npcs.Kilvin Greyjaw
-      - dnd.monsters.srd.Wight
-      - dnd.monsters.srd.Zombie
-      - dnd.monsters.srd.Zombie
   - name: Refugees Being Chased
     entities:
       - dnd.common.players.Brother Gromag
@@ -61,19 +17,51 @@ encounters:
       - dnd.monsters.srd.Zombie
       - dnd.monsters.srd.Zombie
       - dnd.monsters.srd.Zombie
+  - name: (name of farming village)
+    entities:
+      - dnd.common.players.Brother Gromag
+      - dnd.common.players.Kask Blightborn
+      - dnd.common.players.Gluteus Maximus
+      - dnd.npcs.Kilvin Greyjaw
+      # - dnd.npcs.Llaska
+      # - dnd.npcs.Serana
+      - dnd.monsters.srd.Wight
+      - dnd.monsters.srd.Zombie
+      - dnd.monsters.srd.Zombie
+      - dnd.monsters.srd.Zombie
+      - dnd.monsters.srd.Zombie
+      - dnd.monsters.srd.Zombie
+      - dnd.monsters.srd.Zombie
+      - dnd.monsters.srd.Zombie
+      - dnd.monsters.srd.Zombie
+      - dnd.monsters.srd.Zombie
+      - dnd.monsters.srd.Zombie
+      - dnd.monsters.srd.Zombie
+      - dnd.monsters.srd.Zombie
   - name: Return to Wayra's Temple
     entities:
       - dnd.common.players.Brother Gromag
       - dnd.common.players.Kask Blightborn
       - dnd.common.players.Gluteus Maximus
       - dnd.npcs.Kilvin Greyjaw
-      - dnd.npcs.Tobin
-      - dnd.monsters.srd.Wight
+      # - dnd.npcs.Llaska
+      # - dnd.npcs.Serana
+      # - dnd.npcs.Tobin
       - dnd.monsters.srd.Flameskull
       - dnd.monsters.srd.Zombie
       - dnd.monsters.srd.Zombie
       - dnd.monsters.srd.Skeleton
       - dnd.monsters.srd.Skeleton
+      # More stuff!  They are level 4 for this
+  - name: Breached Lab
+    entities:
+      - dnd.common.players.Brother Gromag
+      - dnd.common.players.Kask Blightborn
+      - dnd.common.players.Gluteus Maximus
+      - dnd.npcs.Kilvin Greyjaw
+      - dnd.monsters.srd.Wight
+      - dnd.monsters.srd.Zombie
+      - dnd.monsters.srd.Zombie
 ---
 
 <details><summary>Notes: Izhi's Visit to Yalaqta</summary>{% capture text %}
@@ -120,99 +108,76 @@ Items that can be found in his shops:
 </details>
 
 
-DC 18 Thieves' Tools to pick the cellar door (if they leave and come back).<br>
-DC 18 STR check to break the door.
-
-DC 15 Thieves' Tools to pick the shop door.<br>
-DC 12 STR to break the shop window.
-
-<details>
-<summary>Daytime</summary>
-{% capture text %}
-This upscale, but not ostentatious, jewelry shop has a sign above the door that reads *Pari's Apt Periapts*.  Inside is a single wrap-around display counter with a few fairly simple rings and necklaces on display.  In the middle near the back, a young man is idling on a tall stool behind the counter.  Behind him is another display case with a couple of pendants and brooches in it, and a single door.  He hops up as you enter:
-
-Items in the shop:
-  - Several rings and necklaces of
-    - mithral (2 gp)  1d4 - 2
-    - gold    (1 gp)  1d4 - 1
-    - silver  (5 sp)  1d6
-    - steel   (2 sp)  1d8
-    - brass   (1 sp)  1d8
-
-**Kiwa:** Oh! Hello! *ahem* Well, yes, hi, welcome to uh, Pari's.  What can I do for you?
-AC 10, Perception +7
-
-DC 20 Persuasion or Intimidation to get past him, reduced if they bribe him, 1 DC per gp spent, minimum 15.
-
-In the back room is a <a href="https://www.dndbeyond.com/magic-items/{{ 'Rug of Smothering' | downcase | split: ' ' | join: '-' }}">Rug of Smothering</a> covering a trap door to the lab.
-{% endcapture %}{{ text | markdownify }}
-
-{% include dnd/encounter.html name="Pari's Back Room" %}
-
-{% capture text %}
-Trap door is DC 10 Thieves' Tools to unlock or STR to tear open.
-{% endcapture %}{{ text | markdownify }}
-</details>
-
-
-{% include dnd/encounter-head.html name="Pari's Basement Lab" %}
-{% capture text %}
-*Upon entering the basement, you see a medium sized jewelry workshop meets arcane study meets laboratory.  There is a a work bench with some jeweler's tools on it, a large desk with paper scattered around it, bookshelves filled with books with arcane sigils on their covers and jars with various reagents in them.  At the base of the stairs from the alley entrance are two suits of armor, and lying in the corner is a black, medium sized, two-headed dog.*
-
-Opposed stealth/perception against the dog and armors.  If they notice the players, initiative right away, if not, they players can get a surprise round.
-{% endcapture %}{{ text | markdownify }}
-
-{% include dnd/encounter-body.html name="Pari's Basement Lab" %}
-{% capture text %}
-DC 15 to find a <a class="uncommon" href="https://www.dndbeyond.com/magic-items/{{ 'Periapt of Health' | downcase | split: ' ' | join: '-' }}">Periapt of Health</a><br>
-DC 13 to find spell notes.  (remind them that they found similar notes in Wayra's temple).
-
-## If they manage to make it back to the chapel with the notes...
-
-Taking the notes back to the Chapel:
-
-Chaplain Mayua puts on a pair of reading glasses and begins flipping through the pages.
-
-**Mayua:** This looks like a project journal of some kind, it's full of designs for jewel settings, drawings of gem cuts, and arcane spell notes.  I think it's mostly transmutation and abjuration, though I'm far from an expert on arcane inscription.  I also see definite threads of necromancy throughout it.
-
-*She looks up from the pages*
-
-**Mayua:** Where did you find this?
-
-...
-
-**Mayua:** We need to know more about this, I'll sent it to one of our monasteries for some more information.  It is good you brought this to me, you have done us a service, and I am grateful.
-
-*Before they can protest, or if they do*
-
-**Mayua:** I understand that gratitude alone isn't enough, especially since we haven't worked together for very long.  The K'anchay Order appreciates your help, and has this for you.
-
-*She reaches into a small drawer in her desk and pulls out a pouch, handing it to them.  Inside is 1000 gp.*
-
-{% endcapture %}{{ text | markdownify }}
-{% include dnd/encounter-foot.html name="Pari's Basement Lab" %}
-
-
 ---
 
 
-### Return to Wayra's Temple
+## Return to Wayra's Temple Arc
 
-{% include dnd/encounter-head.html name="Refugees Being Chased" %}
+You emerge from the catacombs into the lower level of the chapel to see the end of another battle.  You see Dazoluk and Llaska finishing off a pair of skeletons in the next room, and Kilvin in the room directly in front of you.  He lunges forward, stabbing at a zombie with his spear, but loses his balance and stumbles forward.  He manages to stay standing by bracing his shield against it.  The zombie slams it's arms into him and his armor begins to glow where it was struck.  He stabs again with the spear, this time sinking it into the zombie's torso, as the glow in his armor flows down to his gauntlet and winks out.  There's a muffled "boom" and a flash of light erupts from the zombie's back.  It falls at his feet.
 
-{% capture text %}
+Chaplain Mayua and Yori Olaya come in behind you.
+
+**Kilvin:** (A bit out of breath, hails them all)
+
+During the conversation, Llaska starts investigating the remains.  Gromag notices Llaska crouch near one of the corpses, retrieve something from a pocket, and begin inspecting it.
+
+If they go over or ask, it's a trowel with a symbol carved stamped into the handle
+
+**Llaska:** This looks familiar to me... Mayua, Olaya, do you recognize it?  Wait, isn't this the mark for that smith north of town?
+
+**Mayua:** Hmm (she looks it over for a moment) It may be, I've seen this symbol in the market many times.  You don't think -- **Llaska:** I do, I think these people came from (name of farming village).
+
+**Llaska:** I mean, *look* at them, some of these corpses can't be more than a week or two old!
+
+**Mayua:** (Turning to the party) Can you help us start putting this back together?  Tomorrow, we can send a group up to check on (name of farming village).
+
+
+### The next morning.
+
+**Mayua:** (Turning to the party) We've got out hands full here (she gestures to the wreckage around you), would you mind checking it out?
+
+...
+
+**Mayua:** We can probably spare Llaska or Serana for a day or two if you'd like to take one of them along with you.
+
+---
+
 As you approach the town gate, you see in the distance a group of people on the road.  Make a perception check.  DC 12 they're not traders, nor do they seem organized like travelers would.  DC 16 They seem to be fleeing from something.
 Getting closer you realize that some of the people at the back don't seem right, you thought they were injured or slower than the rest, but something is off about them.  Suddenly you see one shuffle up behind someone and slam both hands into their back.  Oh... these are zombies!
-{% endcapture %}{{ text | markdownify }}
+
+{% include dnd/encounter-head.html name="Refugees Being Chased" %}
 
 {% include dnd/encounter-body.html name="Refugees Being Chased" %}
 
 {% capture text %}
-This is a group of refugees, mostly farmers and their families, displaced from their small village nearby by some undead.  They had escaped that danger, only to be attacked again just up there by more!
+This is a group of refugees, mostly farmers and their families, displaced from (name of farming village) nearby by some undead.  They had escaped that danger, only to be attacked again just up there by more!
 {% endcapture %}{{ text | markdownify }}
 
 {% include dnd/encounter-foot.html name="Refugees Being Chased" %}
 
+**Refugee Leader:** It all started a few weeks ago.  It's not common, but also not really *unusual* for someone to go missing in the forest around the village, there are dangerous things out there.  The last few months, more people disappeared than could be explained by wolves or other predators.  We even started being more careful, staying in groups and going outside only in broad daylight, unless we had no other choice.  But, people kept disappearing, and then a couple days ago a pair of zombies wandered into the village from the west.  We managed to destroy them, but more came.  Yesterday, we saw the bloated corpses of our friends shamble into the village, attacking their former families and friends.  It was horrible.  I remember seeing a slightly larger one in armor behind them, maybe that was their leader, I don't know, we just ran.  We gathered as many people as we could and fled south to Yalaqta, and thank the stars you came out when you did, I don't think we would have made it without you.
+
+**Level 4!**
+
+### (name of farming village)
+
+You approach (name of farming village) and find it lifeless.  Perception or investigation rolls to see what's up before going in.  15 to correctly count the enemies present, and for each 1 below that they'll be off by 1, minimum 10.  Below a 10, the village looks empty.  The enemies are spread out, some inside and some outside.  They can stealthily approach, opposed by passive perceptions, and even stealthily try to destroy enemies they come across.  If they find the Wight, all the zombies will aggro from wherever they are.
+
+{% include dnd/encounter-head.html name="(name of farming village)" %}
+
+{% capture text %}
+{% endcapture %}{{ text | markdownify }}
+
+{% include dnd/encounter-body.html name="(name of farming village)" %}
+
+{% capture text %}
+{% endcapture %}{{ text | markdownify }}
+
+{% include dnd/encounter-foot.html name="(name of farming village)" %}
+
+---
+
+### The Temple
 
 {% include dnd/encounter-head.html name="Return to Wayra's Temple" %}
 
@@ -229,17 +194,18 @@ At that moment, an armored skeletal form emerges from a passage to your left, as
 {% include dnd/encounter-body.html name="Return to Wayra's Temple" %}
 
 {% capture text %}
-You find on the floor, a discarded black onyx gem.  There is a large crack running across it, and it is in a setting with a script NN on it.  History check to determine that that is Nayarak's Nicknacks' logo.  Kask and Tobin know that he's a shady jewelery mogul in town.  Cult members have bought from his stores before, but then, who hasn't?  You didn't realize he was providing *this* sort of merchandise to any of them.
-You also find the rest of Wayra's body, which as carved up as she was transformed into the fire-eyed skull.  DC 12 medicine check to see that it was done with an incredibly sharp curved blade, and must have happened about 3-4 days ago.  If they don't get the hint, INT check to realize that's about when they were at the docks and saw that suspicious ship leaving right before they found the jewelry shop that had taken a clandestine delivery.
+You find on the floor, a discarded black onyx gem.  There is a large crack running across it, and it is in a setting with a script NN on it.  History check to determine that that is Nayarak's Nicknacks' logo.  Kask and Tobin know that he's a shady jewelry mogul in town.  Cult members have bought from his stores before, but then, who hasn't?  You didn't realize he was providing *this* sort of merchandise to any of them.
+You also find the rest of Wayra's body, which was carved up as she was transformed into the fire-eyed skull.  DC 12 medicine check to see that it was done with an incredibly sharp curved blade, and must have happened about 3-4 days ago.  If they don't get the hint, INT check to realize that's about when they were at the docks and saw that suspicious ship leaving right before they found the jewelry shop that had taken a clandestine delivery.
 
-Also, Level 4!
+Also, Level 5!
 {% endcapture %}{{ text | markdownify }}
 
 {% include dnd/encounter-foot.html name="Return to Wayra's Temple" %}
 
-Returning, Serana will talk to Tobin about his "gift" of the swarm of little lights, and offer to help train him.  She'll be leaving in a day or two, to return to the forests south east to her Garden.
 
-Mayua will encourage the party to rest and then complete their initiation, using what they've learned from their recent exploits, and the journals and quipu they have.
+---
+
+Returning, Serana will talk to Tobin about his "gift" of the swarm of little lights, and offer to help train him.  She'll be leaving in a day or two, to return to the forests south east to her Garden.
 
 ---
 
@@ -260,20 +226,6 @@ He has done some work with the K'anchay Order, but is not a member, because he t
 Can he help the party get out of the charges against them with the jeweler shop worker and the stolen goods?  Probably, I'll have to convince Ryan to tell them that he can help smooth things over if they return the contents of the shop, but they can probably keep what they found below.
 
 ---
-
-**Mayua:** If I might ask, have you had a chance to look at your journals and quipu?  If you need some assistance, we might be able to give you a nudge in a helpful direction.
-
-*The journals will require a couple of in-game days to study and complete*
-
-
-*When they're complete*
-
-**Mayua:** Ah, wonderful.  I'll get everything set up, come see me in the morning and we'll be able to start the final step.
-
-**Mayua:** Good morning, and welcome to the final stage of your initiation as associates of the K'anchay Order.  This part will require that you demonstrate teamwork, cleverness, and endurance.  Please, follow me.
-
-*She leads them through a doorway that they don't recognize, that leads further into the side of the hill, and then down.  They enter an unlit chamber, and the door closes, leaving them in complete darkness.  After a moment, braziers on the walls spring to life. (Jump to the bottom for the rest)*
-
 
 ## Yalaqta Random Events
 
@@ -317,146 +269,4 @@ If they enter the building afterwords, they see a door to the basement that was 
 
 ### 10. Heavy storm
 A heavy storm comes through at night, waking the party.  Skill carousel to minimize damage to the structure, followed by some repair mini-games?
-
-
-## K'anchay Order Investigations
-
-**Mayua:** We suspect that Wayra and the cult have connections inside the city other than Sayre.  She was able to win a turf war, taking control of the underground, too quickly to have done it alone, even with the help of a necromancer.  Her takeover was brutal, efficient, and quiet; it wasn't clear it was happening until it was almost complete, and even then, it wasn't obvious that the takeover was backed by an outside power.  Llaska has been investigating them for the last few weeks, and while he's good, we could use more help.  Any information you can bring back to us, or cultists you can stop, would be quite valuable to the order.
-
-
-**Llaska:** I'm hearing lots of things, but whoever these people are, they've been keeping a pretty tight lid on their identities and their goals.  They seem to have a presence in trading and shipping in the region, with the grain laundering and all that.  After what we saw with Sayre, I think there's a major push by the cult into Yalaqta.  To keep it this quiet, they must have some influential contacts in the city.  I'm thinking, probably a politician or two, or who knows, maybe all of 'em!  Hah!
-
-If they wait a bit and then talk to him
-
-
-**Llaska:** These guys are no joke, they're moving some sort of contraband through here, I'm just not sure how they're doing it yet, or what it is.  There are rumors of draughts that make you see spirits, jewels that cure disease, and something about animating runes.  Dunno what that's about, sounds bad for us though.  I keep hearing whispers about activity on the water, but I haven't been able to dredge anything concrete up at the docks yet...  Have you guys found anything?
-
-
-## Quipu Puzzles
-Fairly easy sudoku with extra hints/checks encoded on the quipu which correspond in color to the puzzle.  They're the digits on the string, in order from left to right, top to bottom of the sudoku.
-
-### Brother Gromag
-
-| Orange | Green | Blue |
-|--------|-------|------|
-|    7   |   2   |   1  |
-|    9   |   1   |   8  |
-|    1   |   8   |   5  |
-
-Numbers: 721, 918, 185
-
-![Sudoku](assets/img/gromag-sudoku.png)![Solution](assets/img/gromag-sudoku-solution.png)
-
-
-### Caltrop Bloodless
-
-| Green | Blue | Orange |
-|-------|------|--------|
-|   2   |   1  |    3   |
-|   4   |   7  |    6   |
-|   3   |   4  |    2   |
-
-Numbers: 213, 476, 342
-
-![Sudoku](assets/img/caltrop-sudoku.png)![Solution](assets/img/caltrop-sudoku-solution.png)
-
-
-### Gluteus Maximus
-
-| Blue | Orange | Green |
-|------|--------|-------|
-|   5  |    2   |   2   |
-|   1  |    4   |   3   |
-|   4  |    7   |   1   |
-
-Numbers: 522, 143, 471
-
-![Sudoku](assets/img/gluteus-sudoku.png)![Solution](assets/img/gluteus-sudoku-solution.png)
-
-
-
-### Combined Puzzle
-
-Once they all have completed their individual puzzles (plans), they are dropped into some catacombs below the chapel through a trap door, which is shut behind them, disappearing.  After a moment, of darkness, some braziers on the wall spring to life.
-
-#### Chamber 1
-
-The chamber has a simple orange door on one wall, and the other three have a mural on them.  In the center of each, are a set of levers, labelled 1 through 9.  Pulling the right numbered levers on each wall will open the door.
-
-Murals:
-1. (791) The interior of a large mess hall full of people in simple clothes and robes, some with shaved heads.  Investigation check to notice that the mugs are not simply painted, but appear to be sculpted out of the stone of the wall.
-2. (362) A shoreline of cracked earth, where a ship off shore burns.  A shadowy figure stands with his arm extended, holding a rapier pointed toward a tattooed man with short horns and a wicked grin on his face.  A small expanse littered with tiny objects separates them.  Investigation check determine that the objects are tetrahedral spikes.
-3. (247) A dense treeline across a meadow, backed by snow-peaked mountains.  Squirrels, birds, and a small herd of deer can be seen on the border of the forest.  Perception 10 to realize that they're somehow slowly moving through the frame.  Investigation check to see that perched on a branch near the center is a large bird of prey, that seems to be watching Gluteus.
-
-
-| Mistakes | Iva DC | Effect
-|----------|--------|--------
-|        1 |    N/A | They hear something shift through the walls of the chamber.
-|        2 | Stealth| Iva enters through a small false wall.  If they notice her, they can't see, just catch some motion and then hear a sound inside the room
-|        3 |     15 | Iva attacks once.  If they fail the perception, she turns invisible again.
-|        4 |     10 | Iva attacks once.  If they fail the perception, she turns invisible again.
-|        5 |      5 | Iva attacks once.  If they fail the perception, she turns invisible again.
-|        6 |      0 | Iva attacks once.  Serena steps through another false wall and engages them.
-
-**Serana:** (Through Iva) Sorry, wrong again!
-**Serana:** (Through Iva) So close!
-**Serana:** (Through Iva) Oh come on, really?  That one?
-**Serana:** (Through Iva) *laughter*
-
-
-If they clear the chamber:
-
-**Serana:** Ah! You managed to figure it out, I was wondering how much longer I would have to wait.
-
-##### Rebalance this with the level 4 party
-
-Iva attacks with advantage
-Initiative.
-
-#### Chamber 2
-
-You enter a large chamber with a low ceiling, about 40' wide and 70' long.  The center is dominated by an 8 by 8 grid of 5' by 5' tiles, that alternate black and white.  Written left to right on the floor in front of you, spaced 5' apart, are the letters a through h written in green.  On the left wall, also spaced 5' apart, are the numbers 1 through 8, written in blue.  If Gluteus tries to fly across, DC 15 DEX to make it (low ceiling) or to fall on a random square, triggering an effect.  If he makes it across, the door is locked.
-
-Chessboard addressing with the numbers to indicate the safe squares.  Blue for Y axis, Green for X axis.
-
-|         Character |  1  |  2  |  3  | Round
-|-------------------|-----|-----|-----|-------
-|    Brother Gromag | 1 b | 8 a | 5 h |
-| Caltrop Bloodless | 1 b | 7 d | 4 c |
-|   Gluteus Maximus | 5 b | 1 c | 4 a |
-
-**Board**
-
-|---|---|---|---|---|---|---|---|---|
-| 8 | B |   |   |   |   |   |   |   |
-| 7 |   |   |   | C |   |   |   |   |
-| 6 |   |   |   |   |   |   |   |   |
-| 5 |   | G |   |   |   |   |   | B |
-| 4 | G |   | C |   |   |   |   |   |
-| 3 |   |   |   |   |   |   |   |   |
-| 2 |   |   |   |   |   |   |   |   |
-| 1 |   | BC| G |   |   |   |   |   |
-|   | a | b | c | d | e | f | g | h |
-
-Bad square effects (all DCs are for saving throws)
-
-| Row | Effect
-|-----|--------
-|   1 | A barrier appears as you take a step that you collide with, like walking into a screen door you didn't notice, except it disappears when you take a step back
-|   2 | DC 13 DEX or slip, fall prone and slide to next square
-|   3 | DC 13 WIS or charmed for 1 round and compelled to leap back and look into the previous room for a second.  You could have *sworn* you left something in there...
-|   4 | DC 13 CON or 1d4 poison damage, poisoned for one move (disadvantage on next skill check)
-|   5 | DC 13 INT or you're *convinced* the floor is starting to split open beneath your feet (as with <a href="https://www.dndbeyond.com/spells/{{ 'Phantasmal Force' | downcase | split: ' ' | join: '-' }}">Phantasmal Force</a>)
-|   6 | DC 13 STR as an unknown force impacts your side, trying to shove you 5' to the left.  If in a6, a fail is 1d6 bludgeoning damage instead.
-|   7 | DC 13 CHA or 1 round <a href="https://www.dndbeyond.com/spells/{{ 'Banish' | downcase | split: ' ' | join: '-' }}">Banish</a> to the Astral Plane.
-|   8 | You're blinded while standing on this square, DC 13 INT to work out your orientation, on a fail roll 1d4 to determine the direction you move on your next round. 1/2/3/4 -> N/S/E/W
-
-#### Chamber 3
-
-
-You enter the near the ceiling of a tall semi-circular room, with a narrow staircase carved into the stone to your right.  The floor is about 20' down, and slopes gently toward the center of the far wall.  There, you see a small semicircular depression in the floor, with narrow, shallow, channels radiating outward toward the walls.  Above it, on the wall, is a mural of a road and a river, heading up toward a city on a bluff overlooking a large bay.  Placed straddling each of the channels is a workbench, each with an array of different tools; blacksmith's tools, leatherworker's tools, even tinker's tools, and a jeweler's kit.  Standing near the center of the room, you see Mayua, and an older man with a shock of thin white hair.
-
-Mayua and the quartermaster, Yori Olaya, greet the party, congratulating them on solving their puzzles and making their way through the rooms.  They explain the process of fabrication and have a variety of base equipment available that can be used to craft their items.
-
-Voice the quartermaster with "The Bernie."
 
