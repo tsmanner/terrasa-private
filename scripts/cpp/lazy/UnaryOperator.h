@@ -2,6 +2,7 @@
 
 #include <functional>
 #include <ostream>
+#include <fmt/format.h>
 
 #include "is_callable.h"
 #include "operator_functions.h"
@@ -25,15 +26,21 @@ struct UnaryOperator<Operator, Operand, typename std::enable_if_t<!is_callable<O
   Operand mOperand;
 };
 
-template <typename Operand          > struct Precedence<UnaryOperator <lazy::negate,     Operand >> { static constexpr int value =  3; };
+// Precedence
+template <typename Operator, typename Operand> struct Precedence<UnaryOperator<Operator, Operand>> : public Precedence<Operator> {};
 
-template <typename Operator, typename Operand>
-std::ostream& operator<<(std::ostream& os, UnaryOperator<Operator, Operand> const &inOperator) {
-  streamOperator<Operator>(os);
-  streamOperand<typename std::decay_t<decltype(inOperator)>>(os, inOperator.mOperand);
-  return os;
-}
-
-template <typename Operand      > constexpr auto operator-(Operand const &operand    ) { return UnaryOperator <lazy::negate,  Operand>(operand ); }
+// Operator Overloads
+template <typename Operand> constexpr auto operator-(Operand const &operand) { return UnaryOperator <lazy::negate, Operand>(operand ); }
 
 } // namespace lazy
+
+template <typename Operator, typename Operand>
+struct fmt::formatter<lazy::UnaryOperator<Operator, Operand>> : formatter<std::string_view> {
+  template <typename FormatContext>
+  auto format(lazy::UnaryOperator<Operator, Operand> const &inOperator, FormatContext &ctx) {
+    return formatter<std::string_view>::format(fmt::format("{}{}",
+      lazy::Show<Operator>::show,
+      inOperator.mOperand
+    ), ctx);
+  }
+};

@@ -2,6 +2,7 @@
 
 #include <ostream>
 #include <random>
+#include <fmt/format.h>
 
 #include "Precedence.h"
 

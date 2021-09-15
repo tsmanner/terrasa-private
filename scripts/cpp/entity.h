@@ -120,8 +120,12 @@ struct Save {
 };
 
 
+struct BaseEntity {
+  virtual int strengthSave() const = 0;
+};
+
 template <int Level, typename ProficiencyT = TypeSet<>, typename ExpertiseT = TypeSet<>>
-struct Entity {
+struct Entity : public BaseEntity {
   using Proficiency = ProficiencyT;
   using Expertise = ExpertiseT;
   static constexpr int level = Level;
@@ -148,9 +152,18 @@ struct Entity {
   {}
 
   template <typename... Ts>
-  Entity(Ts const &... inTs) {
-    set(inTs...);
-  }
+  Entity(Name         const &inName,         Ts const &... inTs): Entity(inTs...), mName(inName) {}
+  Entity(Strength     const &inStrength,     Ts const &... inTs): Entity(inTs...), mStrength(inStrength) {}
+  Entity(Dexterity    const &inDexterity,    Ts const &... inTs): Entity(inTs...), mDexterity(inDexterity) {}
+  Entity(Constitution const &inConstitution, Ts const &... inTs): Entity(inTs...), mConstitution(inConstitution) {}
+  Entity(Intelligence const &inIntelligence, Ts const &... inTs): Entity(inTs...), mIntelligence(inIntelligence) {}
+  Entity(Wisdom       const &inWisdom,       Ts const &... inTs): Entity(inTs...), mWisdom(inWisdom) {}
+  Entity(Charisma     const &inCharisma,     Ts const &... inTs): Entity(inTs...), mCharisma(inCharisma) {}
+
+  // template <typename... Ts>
+  // Entity(Ts const &... inTs) {
+  //   set(inTs...);
+  // }
 
   // TODO:
   //   Implement a set function for each type, then
@@ -182,6 +195,10 @@ struct Entity {
 
   Name mName;
   std::tuple<Strength, Dexterity, Constitution, Intelligence, Wisdom, Charisma> mAbilities;
+
+  virtual int strengthSave() const {
+    return Save<Strength>::of(*this)();
+  }
 
 };
 

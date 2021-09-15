@@ -2,6 +2,10 @@
 
 #include <functional>
 #include <ostream>
+#include <fmt/format.h>
+
+#include "Precedence.h"
+#include "Show.h"
 
 namespace lazy {
 
@@ -28,15 +32,25 @@ struct maximum {
   }
 };
 
-// Operator Streams
-template <typename Operator> typename std::enable_if_t<(std::is_same<Operator, lazy::negate    >::value), std::ostream&> streamOperator(std::ostream& os) { return os << "-"; }
-template <typename Operator> typename std::enable_if_t<(std::is_same<Operator, lazy::plus      >::value), std::ostream&> streamOperator(std::ostream& os) { return os << " + "; }
-template <typename Operator> typename std::enable_if_t<(std::is_same<Operator, lazy::minus     >::value), std::ostream&> streamOperator(std::ostream& os) { return os << " - "; }
-template <typename Operator> typename std::enable_if_t<(std::is_same<Operator, lazy::multiplies>::value), std::ostream&> streamOperator(std::ostream& os) { return os << " * "; }
-template <typename Operator> typename std::enable_if_t<(std::is_same<Operator, lazy::divides   >::value), std::ostream&> streamOperator(std::ostream& os) { return os << " / "; }
-template <typename Operator> typename std::enable_if_t<(std::is_same<Operator, lazy::modulus   >::value), std::ostream&> streamOperator(std::ostream& os) { return os << " % "; }
-template <typename Operator> typename std::enable_if_t<(std::is_same<Operator, lazy::minimum   >::value), std::ostream&> streamOperator(std::ostream& os) { return os << " min "; }
-template <typename Operator> typename std::enable_if_t<(std::is_same<Operator, lazy::maximum   >::value), std::ostream&> streamOperator(std::ostream& os) { return os << " max "; }
+// Operator Precedence
+template <> struct Precedence<lazy::negate    > { static constexpr int value =  3; };
+template <> struct Precedence<lazy::plus      > { static constexpr int value =  6; };
+template <> struct Precedence<lazy::minus     > { static constexpr int value =  6; };
+template <> struct Precedence<lazy::multiplies> { static constexpr int value =  5; };
+template <> struct Precedence<lazy::divides   > { static constexpr int value =  5; };
+template <> struct Precedence<lazy::modulus   > { static constexpr int value =  5; };
+template <> struct Precedence<lazy::minimum   > { static constexpr int value = 17; };
+template <> struct Precedence<lazy::maximum   > { static constexpr int value = 17; };
+
+// Operator Format
+template <> struct Show<lazy::negate    > { static constexpr auto show = "-"; };
+template <> struct Show<lazy::plus      > { static constexpr auto show = "+"; };
+template <> struct Show<lazy::minus     > { static constexpr auto show = "-"; };
+template <> struct Show<lazy::multiplies> { static constexpr auto show = "*"; };
+template <> struct Show<lazy::divides   > { static constexpr auto show = "/"; };
+template <> struct Show<lazy::modulus   > { static constexpr auto show = "%"; };
+template <> struct Show<lazy::minimum   > { static constexpr auto show = "min"; };
+template <> struct Show<lazy::maximum   > { static constexpr auto show = "max"; };
 
 } // namespace lazy
 
