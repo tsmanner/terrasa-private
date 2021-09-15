@@ -4,24 +4,7 @@ subtitle: Planning notes for ongoing themes and with excerpts etc for upcoming s
 full-width: true
 
 encounters:
-<<<<<<< HEAD
-  - name: Refugees Being Chased
-    entities:
-      - dnd.common.players.Brother Gromag
-      - dnd.common.players.Kask Blightborn
-      - dnd.common.players.Gluteus Maximus
-      - dnd.npcs.Kilvin Greyjaw
-      - dnd.npcs.Tobin
-      - dnd.monsters.srd.Zombie
-      - dnd.monsters.srd.Zombie
-      - dnd.monsters.srd.Zombie
-      - dnd.monsters.srd.Zombie
-      - dnd.monsters.srd.Zombie
-      - dnd.monsters.srd.Zombie
-  - name: (name of farming village)
-=======
   - name: Breached Lab
->>>>>>> e6c0b3927144a46f765f9edde02ab1d1fcb95ec4
     entities:
       - dnd.common.players.Brother Gromag
       - dnd.common.players.Kask Blightborn
@@ -32,15 +15,6 @@ encounters:
       - dnd.monsters.srd.Wight
       - dnd.monsters.srd.Zombie
       - dnd.monsters.srd.Zombie
-<<<<<<< HEAD
-      - dnd.monsters.srd.Zombie
-      - dnd.monsters.srd.Zombie
-      - dnd.monsters.srd.Zombie
-      - dnd.monsters.srd.Zombie
-      - dnd.monsters.srd.Zombie
-      - dnd.monsters.srd.Zombie
-      - dnd.monsters.srd.Zombie
-=======
   - name: Refugees Being Chased
     entities:
       - dnd.common.players.Brother Gromag
@@ -51,7 +25,6 @@ encounters:
       - dnd.monsters.srd.Skeleton
       - dnd.monsters.srd.Skeleton
       - dnd.monsters.srd.Skeleton
->>>>>>> e6c0b3927144a46f765f9edde02ab1d1fcb95ec4
       - dnd.monsters.srd.Zombie
       - dnd.monsters.srd.Zombie
       - dnd.monsters.srd.Zombie
@@ -61,31 +34,10 @@ encounters:
       - dnd.common.players.Kask Blightborn
       - dnd.common.players.Gluteus Maximus
       - dnd.npcs.Kilvin Greyjaw
-<<<<<<< HEAD
-      # - dnd.npcs.Llaska
-      # - dnd.npcs.Serana
-      # - dnd.npcs.Tobin
-      - dnd.monsters.srd.Flameskull
-      - dnd.monsters.srd.Zombie
-      - dnd.monsters.srd.Zombie
-      - dnd.monsters.srd.Skeleton
-      - dnd.monsters.srd.Skeleton
-      # More stuff!  They are level 4 for this
-  - name: Breached Lab
-    entities:
-      - dnd.common.players.Brother Gromag
-      - dnd.common.players.Kask Blightborn
-      - dnd.common.players.Gluteus Maximus
-      - dnd.npcs.Kilvin Greyjaw
-      - dnd.monsters.srd.Wight
-      - dnd.monsters.srd.Zombie
-      - dnd.monsters.srd.Zombie
-=======
       - dnd.npcs.Llaska
       - dnd.monsters.srd.Flameskull
       - dnd.monsters.srd.Ghoul
       - dnd.monsters.srd.Ghoul
->>>>>>> e6c0b3927144a46f765f9edde02ab1d1fcb95ec4
 ---
 
 <details><summary>Notes: Izhi's Visit to Yalaqta</summary>{% capture text %}
@@ -133,60 +85,11 @@ Items that can be found in his shops:
 
 
 ---
-<<<<<<< HEAD
-
-
-## Return to Wayra's Temple Arc
-
-You emerge from the catacombs into the lower level of the chapel to see the end of another battle.  You see Dazoluk and Llaska finishing off a pair of skeletons in the next room, and Kilvin in the room directly in front of you.  He lunges forward, stabbing at a zombie with his spear, but loses his balance and stumbles forward.  He manages to stay standing by bracing his shield against it.  The zombie slams it's arms into him and his armor begins to glow where it was struck.  He stabs again with the spear, this time sinking it into the zombie's torso, as the glow in his armor flows down to his gauntlet and winks out.  There's a muffled "boom" and a flash of light erupts from the zombie's back.  It falls at his feet.
-
-Chaplain Mayua and Yori Olaya come in behind you.
-
-**Kilvin:** (A bit out of breath, hails them all)
-
-During the conversation, Llaska starts investigating the remains.  Gromag notices Llaska crouch near one of the corpses, retrieve something from a pocket, and begin inspecting it.
-
-If they go over or ask, it's a trowel with a symbol carved stamped into the handle
-
-**Llaska:** This looks familiar to me... Mayua, Olaya, do you recognize it?  Wait, isn't this the mark for that smith north of town?
-
-**Mayua:** Hmm (she looks it over for a moment) It may be, I've seen this symbol in the market many times.  You don't think -- **Llaska:** I do, I think these people came from (name of farming village).
-
-**Llaska:** I mean, *look* at them, some of these corpses can't be more than a week or two old!
-
-**Mayua:** (Turning to the party) Can you help us start putting this back together?  Tomorrow, we can send a group up to check on (name of farming village).
-
-
-### The next morning.
-
-**Mayua:** (Turning to the party) We've got out hands full here (she gestures to the wreckage around you), would you mind checking it out?
-=======
 
 ### Aftermath of the invasion
->>>>>>> e6c0b3927144a46f765f9edde02ab1d1fcb95ec4
 
 Talk to Kilvin, Mayua, Yori, and Serana about the battle.  They're not sure where the undead came from, though they suspect the sewers under the city to be the likely source.  There doesn't appear to be any physical breach of the catacombs here, but a dimension door or something similar could have been used to cross from the sewers into the catacombs.
 
-<<<<<<< HEAD
-**Mayua:** We can probably spare Llaska or Serana for a day or two if you'd like to take one of them along with you.
-
----
-
-As you approach the town gate, you see in the distance a group of people on the road.  Make a perception check.  DC 12 they're not traders, nor do they seem organized like travelers would.  DC 16 They seem to be fleeing from something.
-Getting closer you realize that some of the people at the back don't seem right, you thought they were injured or slower than the rest, but something is off about them.  Suddenly you see one shuffle up behind someone and slam both hands into their back.  Oh... these are zombies!
-
-{% include dnd/encounter-head.html name="Refugees Being Chased" %}
-
-{% include dnd/encounter-body.html name="Refugees Being Chased" %}
-
-{% capture text %}
-This is a group of refugees, mostly farmers and their families, displaced from (name of farming village) nearby by some undead.  They had escaped that danger, only to be attacked again just up there by more!
-{% endcapture %}{{ text | markdownify }}
-
-{% include dnd/encounter-foot.html name="Refugees Being Chased" %}
-
-**Refugee Leader:** It all started a few weeks ago.  It's not common, but also not really *unusual* for someone to go missing in the forest around the village, there are dangerous things out there.  The last few months, more people disappeared than could be explained by wolves or other predators.  We even started being more careful, staying in groups and going outside only in broad daylight, unless we had no other choice.  But, people kept disappearing, and then a couple days ago a pair of zombies wandered into the village from the west.  We managed to destroy them, but more came.  Yesterday, we saw the bloated corpses of our friends shamble into the village, attacking their former families and friends.  It was horrible.  I remember seeing a slightly larger one in armor behind them, maybe that was their leader, I don't know, we just ran.  We gathered as many people as we could and fled south to Yalaqta, and thank the stars you came out when you did, I don't think we would have made it without you.
-=======
 *Rest for the night: it's a long rest so get everything back.*
 
 In the morning: Llaska is shouting at you and banging on your doors
@@ -195,7 +98,6 @@ In the morning: Llaska is shouting at you and banging on your doors
 
 **Llaska:** I think they came in through the river or the north gate, but they were somehow disguised long enough to get into the sewers at the north end of town.  You should be able to track them from there, if you know what to look for.
 
->>>>>>> e6c0b3927144a46f765f9edde02ab1d1fcb95ec4
 
 **Level 4!**
 
@@ -211,10 +113,7 @@ You approach (name of farming village) and find it lifeless.  Perception or inve
 {% include dnd/encounter-body.html name="(name of farming village)" %}
 
 {% capture text %}
-<<<<<<< HEAD
-=======
 This is a group of refugees, mostly farmers and their families, displaced from their small village nearby by some undead.  They had escaped that danger, only to be attacked again just up there by more!  Talking to one of the refugees, they reveal that they were attacked from the west about a mile north of town.  (That's near the old temple, if they don't remember, Kilvin will lulz).
->>>>>>> e6c0b3927144a46f765f9edde02ab1d1fcb95ec4
 {% endcapture %}{{ text | markdownify }}
 
 {% include dnd/encounter-foot.html name="(name of farming village)" %}
@@ -323,8 +222,6 @@ If they enter the building afterwords, they see a door to the basement that was 
 ### 10. Heavy storm
 A heavy storm comes through at night, waking the party.  Skill carousel to minimize damage to the structure, followed by some repair mini-games?
 
-<<<<<<< HEAD
-=======
 
 ## K'anchay Order Investigations
 
@@ -339,4 +236,3 @@ If they wait a bit and then talk to him
 **Llaska:** These guys are no joke, they're moving some sort of contraband through here, I'm just not sure how they're doing it yet, or what it is.  There are rumors of draughts that make you see spirits, jewels that cure disease, and something about animating runes.  Dunno what that's about, sounds bad for us though.  I keep hearing whispers about activity on the water, but I haven't been able to dredge anything concrete up at the docks yet...  Have you guys found anything?
 
 
->>>>>>> e6c0b3927144a46f765f9edde02ab1d1fcb95ec4
