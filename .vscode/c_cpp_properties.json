@@ -4,11 +4,13 @@
             "name": "Linux",
             "includePath": [
                 "${default}",
+                "${workspaceFolder}/scripts/cpp/lazy/include",
+                "${HOME}/.nix-profile/include"
                 "scripts/cpp",
                 "/home/tsmanner/fmt/include"
             ],
             "defines": [],
-            "compilerPath": "/usr/bin/gcc",
+            "compilerPath": "/nix/store/35pnk5kwi26m3ph2bc7dxwjnavpzl8cn-gcc-wrapper-10.3.0/bin/gcc",
             "cStandard": "gnu17",
             "cppStandard": "gnu++14",
             "intelliSenseMode": "linux-gcc-x64"

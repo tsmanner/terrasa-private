@@ -9,3 +9,7 @@ Gemfile.lock
 # Jekyll
 .jekyll-cache/
 _site/
+
+# nix artifacts
+result
+result-*
