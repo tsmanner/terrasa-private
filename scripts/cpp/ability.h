@@ -1,5 +1,7 @@
 #pragma once
 
+#include <ostream>
+
 struct Ability {
   explicit constexpr Ability(int const &inScore): mScore(inScore) {}
   Ability(): mScore(10) {}

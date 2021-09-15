@@ -3,6 +3,7 @@
 #include <concepts>
 #include <functional>
 #include <ostream>
+#include <fmt/format.h>
 
 #include "operator_functions.h"
 #include "Precedence.h"
@@ -44,3 +45,14 @@ std::ostream& operator<<(std::ostream& os, UnaryOperator<Operator, Operand> cons
 template <typename Operand> constexpr auto operator-(Operand const &operand) { return UnaryOperator<lazy::negate, Operand>(operand); }
 
 } // namespace lazy
+
+template <typename Operator, typename Operand>
+struct fmt::formatter<lazy::UnaryOperator<Operator, Operand>> : formatter<std::string_view> {
+  template <typename FormatContext>
+  auto format(lazy::UnaryOperator<Operator, Operand> const &inOperator, FormatContext &ctx) {
+    return formatter<std::string_view>::format(fmt::format("{}{}",
+      lazy::Show<Operator>::show,
+      inOperator.mOperand
+    ), ctx);
+  }
+};

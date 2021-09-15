@@ -42,6 +42,54 @@
     - "Multiattack": "The armor makes two melee attacks."
     - "Slam": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) bludgeoning damage."
 
+"Bandit":
+  name: Bandit
+  link: https://www.dndbeyond.com/monsters/bandit
+  size: medium
+  type: humanoid
+  alignment: any non-lawful
+  challenge-rating: 1/8
+  proficiency: 2
+  str: 11
+  dex: 12
+  con: 12
+  int: 10
+  wis: 10
+  cha: 10
+  ac: 12
+  hp: 11
+  movement:
+    walk: 30
+  actions:
+    - "Scimitar": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) slashing damage."
+    - "Light Crossbow": "Ranged Weapon Attack: +3 to hit, range 80 ft./320 ft., one target. Hit: 5 (1d8 + 1) piercing damage."
+
+"Bandit Captain":
+  name: Bandit Captain
+  link: https://www.dndbeyond.com/monsters/bandit-captain
+  size: medium
+  type: humanoid
+  alignment: any non-lawful
+  challenge-rating: 2
+  proficiency: 2
+  str: 15
+  dex: 16
+  con: 14
+  int: 14
+  wis: 11
+  cha: 14
+  ac: 15
+  hp: 65
+  bonuses:
+    athletics: 4
+    deception: 4
+  movement:
+    walk: 30
+  actions:
+    - "Multiattack": " The captain makes three melee attacks: two with its scimitar and one with its dagger. Or the captain makes two ranged attacks with its daggers."
+    - "Scimitar": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) slashing damage."
+    - "Dagger": "Melee or Ranged Weapon Attack: +5 to hit, reach 5 ft. or range 20/60 ft., one target. Hit: 5 (1d4 + 3) piercing damage."
+
 "Death Dog":
   name: Death Dog
   link: https://www.dndbeyond.com/monsters/death-dog

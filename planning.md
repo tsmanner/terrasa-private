@@ -4,6 +4,7 @@ subtitle: Planning notes for ongoing themes and with excerpts etc for upcoming s
 full-width: true
 
 encounters:
+<<<<<<< HEAD
   - name: Refugees Being Chased
     entities:
       - dnd.common.players.Brother Gromag
@@ -18,6 +19,9 @@ encounters:
       - dnd.monsters.srd.Zombie
       - dnd.monsters.srd.Zombie
   - name: (name of farming village)
+=======
+  - name: Breached Lab
+>>>>>>> e6c0b3927144a46f765f9edde02ab1d1fcb95ec4
     entities:
       - dnd.common.players.Brother Gromag
       - dnd.common.players.Kask Blightborn
@@ -28,6 +32,7 @@ encounters:
       - dnd.monsters.srd.Wight
       - dnd.monsters.srd.Zombie
       - dnd.monsters.srd.Zombie
+<<<<<<< HEAD
       - dnd.monsters.srd.Zombie
       - dnd.monsters.srd.Zombie
       - dnd.monsters.srd.Zombie
@@ -35,6 +40,18 @@ encounters:
       - dnd.monsters.srd.Zombie
       - dnd.monsters.srd.Zombie
       - dnd.monsters.srd.Zombie
+=======
+  - name: Refugees Being Chased
+    entities:
+      - dnd.common.players.Brother Gromag
+      - dnd.common.players.Kask Blightborn
+      - dnd.common.players.Gluteus Maximus
+      - dnd.npcs.Kilvin Greyjaw
+      - dnd.npcs.Llaska
+      - dnd.monsters.srd.Skeleton
+      - dnd.monsters.srd.Skeleton
+      - dnd.monsters.srd.Skeleton
+>>>>>>> e6c0b3927144a46f765f9edde02ab1d1fcb95ec4
       - dnd.monsters.srd.Zombie
       - dnd.monsters.srd.Zombie
       - dnd.monsters.srd.Zombie
@@ -44,6 +61,7 @@ encounters:
       - dnd.common.players.Kask Blightborn
       - dnd.common.players.Gluteus Maximus
       - dnd.npcs.Kilvin Greyjaw
+<<<<<<< HEAD
       # - dnd.npcs.Llaska
       # - dnd.npcs.Serana
       # - dnd.npcs.Tobin
@@ -62,6 +80,12 @@ encounters:
       - dnd.monsters.srd.Wight
       - dnd.monsters.srd.Zombie
       - dnd.monsters.srd.Zombie
+=======
+      - dnd.npcs.Llaska
+      - dnd.monsters.srd.Flameskull
+      - dnd.monsters.srd.Ghoul
+      - dnd.monsters.srd.Ghoul
+>>>>>>> e6c0b3927144a46f765f9edde02ab1d1fcb95ec4
 ---
 
 <details><summary>Notes: Izhi's Visit to Yalaqta</summary>{% capture text %}
@@ -109,6 +133,7 @@ Items that can be found in his shops:
 
 
 ---
+<<<<<<< HEAD
 
 
 ## Return to Wayra's Temple Arc
@@ -135,9 +160,14 @@ If they go over or ask, it's a trowel with a symbol carved stamped into the hand
 ### The next morning.
 
 **Mayua:** (Turning to the party) We've got out hands full here (she gestures to the wreckage around you), would you mind checking it out?
+=======
 
-...
+### Aftermath of the invasion
+>>>>>>> e6c0b3927144a46f765f9edde02ab1d1fcb95ec4
 
+Talk to Kilvin, Mayua, Yori, and Serana about the battle.  They're not sure where the undead came from, though they suspect the sewers under the city to be the likely source.  There doesn't appear to be any physical breach of the catacombs here, but a dimension door or something similar could have been used to cross from the sewers into the catacombs.
+
+<<<<<<< HEAD
 **Mayua:** We can probably spare Llaska or Serana for a day or two if you'd like to take one of them along with you.
 
 ---
@@ -156,6 +186,16 @@ This is a group of refugees, mostly farmers and their families, displaced from (
 {% include dnd/encounter-foot.html name="Refugees Being Chased" %}
 
 **Refugee Leader:** It all started a few weeks ago.  It's not common, but also not really *unusual* for someone to go missing in the forest around the village, there are dangerous things out there.  The last few months, more people disappeared than could be explained by wolves or other predators.  We even started being more careful, staying in groups and going outside only in broad daylight, unless we had no other choice.  But, people kept disappearing, and then a couple days ago a pair of zombies wandered into the village from the west.  We managed to destroy them, but more came.  Yesterday, we saw the bloated corpses of our friends shamble into the village, attacking their former families and friends.  It was horrible.  I remember seeing a slightly larger one in armor behind them, maybe that was their leader, I don't know, we just ran.  We gathered as many people as we could and fled south to Yalaqta, and thank the stars you came out when you did, I don't think we would have made it without you.
+=======
+*Rest for the night: it's a long rest so get everything back.*
+
+In the morning: Llaska is shouting at you and banging on your doors
+
+**Llaska:** Hey!  Get up!  I think I figured it out!  Hey! Guys!
+
+**Llaska:** I think they came in through the river or the north gate, but they were somehow disguised long enough to get into the sewers at the north end of town.  You should be able to track them from there, if you know what to look for.
+
+>>>>>>> e6c0b3927144a46f765f9edde02ab1d1fcb95ec4
 
 **Level 4!**
 
@@ -171,6 +211,10 @@ You approach (name of farming village) and find it lifeless.  Perception or inve
 {% include dnd/encounter-body.html name="(name of farming village)" %}
 
 {% capture text %}
+<<<<<<< HEAD
+=======
+This is a group of refugees, mostly farmers and their families, displaced from their small village nearby by some undead.  They had escaped that danger, only to be attacked again just up there by more!  Talking to one of the refugees, they reveal that they were attacked from the west about a mile north of town.  (That's near the old temple, if they don't remember, Kilvin will lulz).
+>>>>>>> e6c0b3927144a46f765f9edde02ab1d1fcb95ec4
 {% endcapture %}{{ text | markdownify }}
 
 {% include dnd/encounter-foot.html name="(name of farming village)" %}
@@ -184,11 +228,20 @@ You approach (name of farming village) and find it lifeless.  Perception or inve
 {% capture text %}
 The familiar looking temple here somehow looks even more decayed than it did just a few days ago.  There's no activity that you can see on it or in the area, but the tracks of those zombies clearly come from here.
 
-*Upon entering, there is a single skull lying on the ground on the bottom floor.  When they all enter the room, it's eyes suddenly flash with green flames and it rises with a cackle.*
+*Upon entering Wayra's study, there is a single skull lying on the ground on the desk.  When they all enter the room, it's eyes suddenly flash with green flames and it rises with a cackle.*
 
 **Wayra:** Ahahaha, I recognize you!  Welcome back, you rats, we're always looking for new friendsss
 
-At that moment, an armored skeletal form emerges from a passage to your left, as two zombies and two skeletons also enter your field of view.
+At that moment, the skull rolls off the desk, disappearing behind it.
+
+(Easy investigation to find the rug is uneven and find the door that opens into a staircase).
+
+The stairs are rough hewn from the stone, leading down a steep passage no more than 3' wide.  You can hear the sound of splashing water coming from the passage, but it's hard to tell how far away or how much water it is.  You descend through the darkness for a short time, when suddenly the walls of the passage fall away and you find yourself standing on a stone platform in the open.
+
+If they have light, or darkvision: you see that you're about 30' up the side of a large cavern.  There are stalagmites and stalactites all around the floor and ceiling of the cavern, a few of which have connected into large, twisting, pillars.  The stone in here is wet, and you can see on the far wall a waterfall that feeds a small pond, which drains through a small tunnel to your left.  On the far side of the pond, there is what appears to be a row boat lashed to one of the pillars.  On your right is a set of narrow stairs, carved into the wall that descends to the floor of the cavern.
+
+If they have a light, the Flameskull will cast fireball on the platform, hitting the underside of it for half damage.
+
 {% endcapture %}{{ text | markdownify }}
 
 {% include dnd/encounter-body.html name="Return to Wayra's Temple" %}
@@ -270,3 +323,20 @@ If they enter the building afterwords, they see a door to the basement that was 
 ### 10. Heavy storm
 A heavy storm comes through at night, waking the party.  Skill carousel to minimize damage to the structure, followed by some repair mini-games?
 
+<<<<<<< HEAD
+=======
+
+## K'anchay Order Investigations
+
+**Mayua:** We suspect that Wayra and the cult have connections inside the city other than Sayre.  She was able to win a turf war, taking control of the underground, too quickly to have done it alone, even with the help of a necromancer.  Her takeover was brutal, efficient, and quiet; it wasn't clear it was happening until it was almost complete, and even then, it wasn't obvious that the takeover was backed by an outside power.  Llaska has been investigating them for the last few weeks, and while he's good, we could use more help.  Any information you can bring back to us, or cultists you can stop, would be quite valuable to the order.
+
+
+**Llaska:** I'm hearing lots of things, but whoever these people are, they've been keeping a pretty tight lid on their identities and their goals.  They seem to have a presence in trading and shipping in the region, with the grain laundering and all that.  After what we saw with Sayre, I think there's a major push by the cult into Yalaqta.  To keep it this quiet, they must have some influential contacts in the city.  I'm thinking, probably a politician or two, or who knows, maybe all of 'em!  Hah!
+
+If they wait a bit and then talk to him
+
+
+**Llaska:** These guys are no joke, they're moving some sort of contraband through here, I'm just not sure how they're doing it yet, or what it is.  There are rumors of draughts that make you see spirits, jewels that cure disease, and something about animating runes.  Dunno what that's about, sounds bad for us though.  I keep hearing whispers about activity on the water, but I haven't been able to dredge anything concrete up at the docks yet...  Have you guys found anything?
+
+
+>>>>>>> e6c0b3927144a46f765f9edde02ab1d1fcb95ec4

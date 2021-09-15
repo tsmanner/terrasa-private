@@ -1,5 +1,10 @@
 #pragma once
 
+#include <sstream>
+#include <string_view>
+#include <fmt/color.h>
+#include <fmt/format.h>
+
 #include "lazy/lazy.h"
 
 template <int Sides>
@@ -16,9 +21,19 @@ namespace lazy {
 }  // namespace lazy
 
 template <int Sides>
-std::ostream& operator<<(std::ostream& os, Die<Sides> const &) {
-  return os << "d" << Sides;
-}
+struct fmt::formatter<Die<Sides>> {
+  constexpr format_parse_context::iterator parse(
+      format_parse_context& ctx) {
+    return ctx.begin();
+  }
+
+  template <typename FormatContext>
+  auto format(Die<Sides> const &, FormatContext &ctx) {
+    auto out = ctx.out();
+    out = fmt::format_to(out, fmt::emphasis::bold, "d{}", Sides);
+    return out;
+  }
+};
 
 
 static constinit auto d20 = Die<20>();

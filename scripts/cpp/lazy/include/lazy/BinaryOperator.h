@@ -3,6 +3,9 @@
 #include <concepts>
 #include <functional>
 #include <ostream>
+#include <string_view>
+#include <fmt/format.h>
+
 
 #include "operator_functions.h"
 #include "Precedence.h"
@@ -64,6 +67,7 @@ std::ostream& operator<<(std::ostream& os, BinaryOperator<Operator, L, R> const 
   return os;
 }
 
+// Operator Overloads
 template <typename L, typename R> constexpr auto operator+(L const &lhs, R const &rhs) { return BinaryOperator<lazy::plus,       L, R>(lhs, rhs); }
 template <typename L, typename R> constexpr auto operator-(L const &lhs, R const &rhs) { return BinaryOperator<lazy::minus,      L, R>(lhs, rhs); }
 template <typename L, typename R> constexpr auto operator*(L const &lhs, R const &rhs) { return BinaryOperator<lazy::multiplies, L, R>(lhs, rhs); }
@@ -73,3 +77,29 @@ template <typename L, typename R> constexpr auto min      (L const &lhs, R const
 template <typename L, typename R> constexpr auto max      (L const &lhs, R const &rhs) { return BinaryOperator<lazy::maximum,    L, R>(lhs, rhs); }
 
 } // namespace lazy
+
+
+template <typename Operator, typename L, typename R>
+struct fmt::formatter<lazy::BinaryOperator<Operator, L, R>> : formatter<std::string_view> {
+  template <typename Operand>
+  inline typename std::enable_if_t<(lazy::Precedence<Operand>::value <= lazy::Precedence<Operator>::value), std::string>
+  formatOperand(Operand const &inOperand) {
+    return fmt::format("{}", inOperand);
+  }
+
+  template <typename Operand>
+  inline typename std::enable_if_t<(lazy::Precedence<Operand>::value > lazy::Precedence<Operator>::value), std::string>
+  formatOperand(Operand const &inOperand) {
+    return fmt::format("({})", inOperand);
+  }
+
+  template <typename FormatContext>
+  auto format(lazy::BinaryOperator<Operator, L, R> const &inOperator, FormatContext &ctx) {
+    return formatter<std::string_view>::format(fmt::format("{} {} {}",
+      formatOperand(inOperator.mLHS),
+      lazy::Show<Operator>::show,
+      formatOperand(inOperator.mRHS)
+    ), ctx);
+  }
+};
+

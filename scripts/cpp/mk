@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+nix run nixpkgs.gcc10 -c g++ --std=c++20 -Wall -Wextra -Werror -shared -fPIC -o TurminderXuss.so TurminderXuss.cpp
+nix run nixpkgs.gcc10 -c g++ --std=c++20 -ldl -Wall -Wextra -Werror -fPIC main.cpp
+./a.out

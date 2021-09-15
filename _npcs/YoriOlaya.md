@@ -1,7 +1,8 @@
 ---
-title: Yori Olaya
+title: Serana
 ---
 
-K'anchay Order quartermaster for Mayua's Chapel.
+Yori Olaya is an aging dwarven smith.  He's sarcastic but good natured, and an master of lightcraft.  He is from the mountains in the north, but has been in Yalaqta for a few decades, working as the smith for Mayua's chapel.
 
-Voice: "The Bernie."
+
+Voiced with: *the Bernie*
