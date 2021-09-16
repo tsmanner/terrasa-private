@@ -6,20 +6,20 @@ full-width: true
 encounters:
   - name: Stuck in the mud
     entities:
-      - dnd.monsters.srd."Bandit Captain"
-      - dnd.monsters.srd."Bandit"
-      - dnd.monsters.srd."Bandit"
-      - dnd.monsters.srd."Bandit"
-      - dnd.monsters.srd."Bandit"
+      - dnd.monsters.srd.Bandit Captain
+      - dnd.monsters.srd.Bandit
+      - dnd.monsters.srd.Bandit
+      - dnd.monsters.srd.Bandit
+      - dnd.monsters.srd.Bandit
   - name: The old inn
     entities:
-      - dnd.monsters.srd."Bandit Captain"
-      - dnd.monsters.srd."Skelton"
-      - dnd.monsters.srd."Skeleton"
-      - dnd.monsters.srd."Bandit"
-      - dnd.monsters.srd."Bandit"
-      - dnd.monsters.srd."Bandit"
-      - dnd.monsters.srd."Bandit"
+      - dnd.monsters.srd.Bandit Captain
+      - dnd.monsters.srd.Skeleton
+      - dnd.monsters.srd.Skeleton
+      - dnd.monsters.srd.Bandit
+      - dnd.monsters.srd.Bandit
+      - dnd.monsters.srd.Bandit
+      - dnd.monsters.srd.Bandit
 
 ---
 
