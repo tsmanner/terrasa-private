@@ -13,3 +13,7 @@ _site/
 # nix artifacts
 result
 result-*
+
+# zig
+zig-cache/
+zig-out/
